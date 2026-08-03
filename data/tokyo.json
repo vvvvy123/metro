@@ -1,0 +1,44 @@
+{
+  "city": {
+    "id": "tokyo",
+    "country_id": "jp",
+    "country_cn": "日本",
+    "country_en": "Japan",
+    "name_cn": "东京",
+    "name_en": "Tokyo",
+    "alias": ["TK", "tokyo", "tk", "東京", "toukyou"],
+    "timezone": "Asia/Tokyo"
+  },
+  "system": { "id": "tokyo-metro", "name_cn": "东京地铁", "name_en": "Tokyo Metro / Toei" },
+  "lines": [
+    { "id": "tk-marunouchi", "name": "丸之内线", "name_en": "Marunouchi Line", "color": "#F62E36",
+      "directions": ["荻洼方面", "池袋方面"] },
+    { "id": "tk-oedo",       "name": "大江户线", "name_en": "Oedo Line", "color": "#B6007A",
+      "directions": ["都厅前・光丘方面", "六本木・大门方面"] },
+    { "id": "tk-yamanote",   "name": "山手线",   "name_en": "Yamanote Line", "color": "#9ACD32",
+      "directions": ["内回り", "外回り"] },
+    { "id": "tk-ginza",      "name": "银座线",   "name_en": "Ginza Line", "color": "#FF9500",
+      "directions": ["涩谷方面", "浅草方面"] },
+    { "id": "tk-fukutoshin", "name": "副都心线", "name_en": "Fukutoshin Line", "color": "#9C5E31",
+      "directions": ["和光市方面", "涩谷方面"] }
+  ],
+  "stations": [
+    { "id": "tk-shinjuku",  "name_cn": "新宿", "name_en": "Shinjuku",
+      "alias": ["shinjuku", "xinsu", "xs"], "lines": ["tk-marunouchi", "tk-oedo", "tk-yamanote"] },
+    { "id": "tk-shibuya",   "name_cn": "涩谷", "name_en": "Shibuya",
+      "alias": ["shibuya", "segu", "sg"], "lines": ["tk-ginza", "tk-fukutoshin", "tk-yamanote"] },
+    { "id": "tk-ikebukuro", "name_cn": "池袋", "name_en": "Ikebukuro",
+      "alias": ["ikebukuro", "chidai", "cd"], "lines": ["tk-marunouchi", "tk-fukutoshin", "tk-yamanote"] }
+  ],
+  "seed_answers": [
+    {
+      "station": "tk-shinjuku", "from_line": "tk-marunouchi", "from_dir": "池袋方面",
+      "to_line": "tk-oedo", "to_dir": "六本木・大门方面",
+      "author_email": "tokyorider@example.com", "author_nick": "东京漫步", "anon": true,
+      "position_type": "custom", "custom_text": "前1/4 靠近1号车门",
+      "description": "丸之内线到站后往列车前部走，直梯下一层即是大江户线检票口，避开中央大厅人流。",
+      "likes": 12, "dislikes": 1, "version": 1, "days_ago": 30,
+      "comments": []
+    }
+  ]
+}

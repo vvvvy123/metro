@@ -1,0 +1,9 @@
+# Metro Transfer — backend has ZERO third-party dependencies.
+# It uses only the Python standard library (http.server, sqlite3, json).
+# Requires Python 3.8+.
+#
+# There is nothing to `pip install`. This file exists only to document that.
+#
+# (Future: if you migrate server.py to FastAPI, add:)
+# fastapi>=0.110
+# uvicorn>=0.29

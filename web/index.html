@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Metro Transfer · 全球地铁最佳换乘位置社区</title>
+<style>
+  :root{
+    --bg:#0f1115; --surface:#171a21; --surface-2:#1e232c; --line:#2a303b;
+    --text:#e8ebf0; --text-dim:#9aa3b2; --text-faint:#6b7280;
+    --accent:#3b82f6; --accent-soft:#1d3557; --up:#22c55e; --down:#ef4444;
+    --radius:14px; --shadow:0 4px 24px rgba(0,0,0,.35); --maxw:720px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased;
+    padding-bottom:80px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif}
+  button{font-family:inherit;cursor:pointer}
+  input,select,textarea{font-family:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+
+  #modeBanner{font-size:12px;text-align:center;padding:5px;border-bottom:1px solid var(--line)}
+  #modeBanner.api{background:rgba(34,197,94,.12);color:#86efac}
+  #modeBanner.offline{background:rgba(234,179,8,.12);color:#fde68a}
+
+  header.topbar{position:sticky;top:0;z-index:40;background:rgba(15,17,21,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:var(--maxw);margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:17px;cursor:pointer;user-select:none}
+  .brand .logo{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,var(--accent),#22d3ee);display:grid;place-items:center;font-size:14px;color:#fff;font-weight:800}
+  .brand small{color:var(--text-faint);font-weight:400;font-size:12px}
+  .spacer{flex:1}
+
+  .btn{border:1px solid var(--line);background:var(--surface-2);color:var(--text);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;transition:.15s;white-space:nowrap}
+  .btn:hover{border-color:var(--accent)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .btn.primary:hover{filter:brightness(1.08)}
+  .btn.ghost{background:transparent}
+
+  .view{display:none;padding-top:22px}
+  .view.active{display:block;animation:fade .25s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+  /* combobox */
+  .combo{position:relative}
+  .combo-input{display:flex;align-items:center;gap:8px;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;transition:border-color .15s}
+  .combo-input:focus-within{border-color:var(--accent)}
+  .combo-input input{flex:1;background:transparent;border:none;outline:none;color:var(--text);font-size:15px;min-width:0}
+  .combo-input .chev{color:var(--text-faint);font-size:12px}
+  .combo-panel{position:absolute;left:0;right:0;top:calc(100% + 4px);background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);z-index:60;max-height:260px;overflow:auto;display:none}
+  .combo-panel.open{display:block}
+  .combo-opt{padding:10px 12px;display:flex;align-items:center;gap:9px;cursor:pointer;font-size:14px}
+  .combo-opt:hover{background:var(--surface-2)}
+  .combo-opt .sub{color:var(--text-faint);font-size:12px;margin-left:auto}
+  .combo-add{color:var(--accent);font-weight:600}
+  .combo-empty{padding:10px 12px;color:var(--text-faint);font-size:13px}
+  .city-slot{width:150px}
+  .city-slot .combo-input{border-radius:999px;padding:6px 12px}
+
+  .hero{text-align:center;padding:38px 0 20px}
+  .hero h1{font-size:29px;margin:0 0 8px}
+  .hero p{color:var(--text-dim);margin:0;font-size:15px}
+  .hero .tag{display:inline-block;margin-top:14px;font-size:12px;color:var(--accent);background:var(--accent-soft);padding:4px 12px;border-radius:999px}
+  .searchbox{margin-top:24px}
+  .searchbox .field{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px;box-shadow:var(--shadow)}
+  .searchbox .field:focus-within{border-color:var(--accent)}
+  .searchbox input{flex:1;background:transparent;border:none;outline:none;color:var(--text);font-size:17px}
+  .searchbox input::placeholder{color:var(--text-faint)}
+  .hint{margin-top:12px;text-align:center;color:var(--text-faint);font-size:13px}
+  .hint code{background:var(--surface-2);padding:2px 7px;border-radius:6px;color:var(--text-dim);font-size:12px;margin:0 2px}
+
+  .results-list{margin-top:10px}
+  .station-item{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--surface);margin-top:8px;cursor:pointer;transition:.15s}
+  .station-item:hover{border-color:var(--accent);background:var(--surface-2)}
+  .station-item .st-name{font-weight:600;font-size:16px}
+  .station-item .st-meta{color:var(--text-dim);font-size:13px}
+  .lines-mini{display:flex;gap:5px;margin-left:auto;flex-wrap:wrap;justify-content:flex-end}
+  .line-chip{font-size:11px;font-weight:700;color:#fff;border-radius:6px;padding:2px 8px;white-space:nowrap}
+  .empty{text-align:center;color:var(--text-faint);padding:30px 12px;font-size:14px;border:1px dashed var(--line);border-radius:12px;margin-top:8px}
+  .section-title{font-size:13px;color:var(--text-faint);text-transform:uppercase;letter-spacing:1px;margin:26px 0 12px}
+  .recent-chips{display:flex;gap:8px;flex-wrap:wrap}
+  .recent-chip{border:1px solid var(--line);background:var(--surface-2);border-radius:999px;padding:6px 13px;font-size:13px;cursor:pointer}
+  .recent-chip:hover{border-color:var(--accent)}
+
+  .breadcrumb{display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:var(--text-dim);font-size:14px;margin-bottom:20px}
+  .breadcrumb .back{color:var(--accent);cursor:pointer;font-weight:600}
+  .breadcrumb .sep{color:var(--text-faint)}
+
+  .step{margin-bottom:24px}
+  .step-label{font-size:13px;color:var(--text-faint);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .step-num{width:20px;height:20px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-size:11px;font-weight:700}
+  .options{display:flex;flex-wrap:wrap;gap:8px}
+  .opt{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:10px;padding:10px 16px;font-size:15px;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:.15s}
+  .opt:hover{border-color:var(--accent)}
+  .opt.selected{border-color:var(--accent);background:var(--accent-soft)}
+  .opt .dot{width:12px;height:12px;border-radius:3px}
+  .arrow-flow{color:var(--text-faint);font-size:20px;text-align:center;margin:2px 0}
+
+  .result-head{margin-bottom:16px}
+  .result-head h2{font-size:20px;margin:0 0 6px}
+  .result-head .path{color:var(--text-dim);font-size:14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .sort-note{font-size:12px;color:var(--text-faint);margin:8px 0 16px}
+  .divider{height:1px;background:var(--line);margin:18px 0}
+
+  .answer-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-bottom:14px}
+  .answer-card.top{border-color:var(--accent)}
+  .position-badge{display:inline-block;font-size:18px;font-weight:800;background:var(--surface-2);border:1px solid var(--line);padding:8px 14px;border-radius:10px;margin-bottom:12px}
+  .position-badge .lead{color:var(--accent)}
+  .answer-desc{font-size:15px;margin:4px 0 14px;white-space:pre-line}
+  .answer-meta{display:flex;align-items:center;gap:8px;color:var(--text-faint);font-size:12px;border-top:1px solid var(--line);padding-top:12px;flex-wrap:wrap}
+  .ver-tag{background:var(--surface-2);border:1px solid var(--line);border-radius:6px;padding:1px 7px}
+  .actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+  .vote-btn{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);background:var(--surface-2);color:var(--text-dim);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600;transition:.15s}
+  .vote-btn:hover{border-color:var(--accent);color:var(--text)}
+  .vote-btn.up.active{color:var(--up);border-color:var(--up);background:rgba(34,197,94,.12)}
+  .vote-btn.down.active{color:var(--down);border-color:var(--down);background:rgba(239,68,68,.12)}
+  .link-mini{color:var(--text-faint);font-size:12px;cursor:pointer}
+  .link-mini:hover{color:var(--down)}
+  .comments{margin-top:14px;border-top:1px dashed var(--line);padding-top:12px;display:none}
+  .comments.open{display:block}
+  .comment{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}
+  .comment:last-child{border-bottom:none}
+  .comment .c-user{font-size:13px;font-weight:600;color:var(--text-dim)}
+  .comment .c-time{font-size:11px;color:var(--text-faint);margin-left:6px}
+  .comment .c-text{font-size:14px;margin-top:2px}
+  .comment-form{display:flex;gap:8px;margin-top:10px}
+  .comment-form input{flex:1;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:9px 12px;color:var(--text);outline:none;font-size:14px}
+  .comment-form input:focus{border-color:var(--accent)}
+
+  .stepper{display:flex;align-items:center;gap:6px;margin-bottom:22px;flex-wrap:wrap}
+  .stepper .s{display:flex;align-items:center;gap:6px;color:var(--text-faint);font-size:13px}
+  .stepper .s .num{width:22px;height:22px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:12px}
+  .stepper .s.active{color:var(--text)}
+  .stepper .s.active .num{background:var(--accent);border-color:var(--accent);color:#fff}
+  .stepper .s.done .num{background:var(--up);border-color:var(--up);color:#04210f}
+  .stepper .bar{width:16px;height:1px;background:var(--line)}
+  .form-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .form-group{margin-bottom:18px}
+  .form-group label{display:block;font-size:13px;color:var(--text-dim);margin-bottom:7px;font-weight:600}
+  .form-control{width:100%;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:11px 13px;color:var(--text);font-size:15px;outline:none}
+  .form-control:focus{border-color:var(--accent)}
+  textarea.form-control{resize:vertical;min-height:70px}
+  .pos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px}
+  .pos-cell{border:1px solid var(--line);background:var(--surface-2);color:var(--text);border-radius:8px;padding:10px 4px;text-align:center;font-size:13px;font-weight:600;transition:.15s}
+  .pos-cell:hover{border-color:var(--accent)}
+  .pos-cell.selected{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+  .check-row{display:flex;align-items:center;gap:10px}
+  .check-row input{width:18px;height:18px;accent-color:var(--accent)}
+  .form-actions{display:flex;gap:10px;margin-top:8px}
+  .field-note{font-size:12px;color:var(--text-faint);margin-top:6px}
+  .review-box{background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:14px;font-size:14px;line-height:1.9}
+  .review-box b{color:var(--text)}
+
+  #toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--surface-2);border:1px solid var(--line);color:var(--text);padding:11px 18px;border-radius:999px;font-size:14px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.25s;z-index:200;max-width:90vw;text-align:center}
+  #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  .floating-add{position:fixed;bottom:22px;right:22px;z-index:50;width:56px;height:56px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:28px;box-shadow:0 6px 20px rgba(59,130,246,.5);display:grid;place-items:center;transition:.15s}
+  .floating-add:hover{filter:brightness(1.1);transform:scale(1.05)}
+  .muted-link{color:var(--accent);cursor:pointer}
+</style>
+</head>
+<body>
+<div id="modeBanner" class="offline">检测后端中…</div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand" onclick="go('home')"><span class="logo">M</span><span>Metro Transfer <small>换乘最优位置</small></span></div>
+    <div class="spacer"></div>
+    <div class="city-slot" id="citySlot"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- HOME -->
+  <section id="view-home" class="view active">
+    <div class="hero">
+      <h1>坐哪节车厢换乘最快？</h1>
+      <p>社区共同维护的全球地铁最佳换乘位置</p>
+      <span class="tag">Everything for Fast · 一切为了最快</span>
+    </div>
+    <div class="searchbox">
+      <div class="field"><span style="font-size:18px;opacity:.7">🔍</span>
+        <input id="stationSearch" type="text" autocomplete="off" placeholder="搜索车站 · 中文 / 拼音 / 首字母 / 英文" oninput="renderSearch(this.value)"/></div>
+      <div class="hint">试试 <code>西直门</code><code>xizhimen</code><code>xzm</code><code>Xujiahui</code></div>
+    </div>
+    <div id="searchResults" class="results-list"></div>
+    <div id="homeSuggest">
+      <div id="recentWrap" style="display:none"><p class="section-title">最近搜索</p><div id="recentChips" class="recent-chips"></div></div>
+      <p class="section-title">热门换乘站</p>
+      <div id="popularList" class="results-list"></div>
+    </div>
+  </section>
+
+  <!-- QUERY -->
+  <section id="view-query" class="view">
+    <div class="breadcrumb"><span class="back" onclick="go('home')">← 返回搜索</span><span class="sep">/</span><span id="queryStationName">车站</span></div>
+    <div id="wizard"></div>
+  </section>
+
+  <!-- RESULT -->
+  <section id="view-result" class="view">
+    <div class="breadcrumb"><span class="back" id="resultBack">← 修改换乘</span><span class="sep">/</span><span id="resultStationName">车站</span></div>
+    <div class="result-head" id="resultHead"></div>
+    <div class="sort-note">按综合得分排序：点赞率 × 热度 × 时间衰减。得分接近时更新更新的优先。</div>
+    <div id="answerList"></div>
+    <div class="divider"></div>
+    <button class="btn primary" style="width:100%" id="resultShareBtn">＋ 我也来分享这个换乘经验</button>
+  </section>
+
+  <!-- UPLOAD -->
+  <section id="view-upload" class="view">
+    <div class="breadcrumb"><span class="back" onclick="go('home')">← 返回</span><span class="sep">/</span><span>上传换乘经验</span></div>
+    <div class="stepper" id="stepper"></div>
+    <div class="form-card" id="uploadBody"></div>
+  </section>
+</main>
+
+<button class="floating-add" title="上传换乘经验" onclick="openUploadBlank()">＋</button>
+<div id="toast"></div>
+
+<script>
+/* =========================================================
+   Config, identity (no login — anonymous device id)
+   ========================================================= */
+const API_BASE = "http://localhost:8000";   // 改成后端机器地址即可让本机走 API
+let MODE = "offline";
+const DEVICE = (function(){ let d=localStorage.getItem("mt_device"); if(!d){ d="dev-"+Math.random().toString(36).slice(2)+Date.now().toString(36); localStorage.setItem("mt_device",d);} return d; })();
+let NICK = localStorage.getItem("mt_nick") || "匿名用户";
+
+/* =========================================================
+   Offline dataset (mirrors data/*.json)
+   ========================================================= */
+const OFFLINE_RAW = {
+  cities:[
+    {id:"beijing",name_cn:"北京",name_en:"Beijing",alias:["bj","beijing","peking"]},
+    {id:"shanghai",name_cn:"上海",name_en:"Shanghai",alias:["sh","shanghai"]},
+    {id:"tokyo",name_cn:"东京",name_en:"Tokyo",alias:["tk","tokyo","toukyou"]},
+  ],
+  lines:[
+    {id:"bj-l1",city:"beijing",name:"1号线",color:"#A60F2D",dirs:["往古城","往环球度假区"]},
+    {id:"bj-l2",city:"beijing",name:"2号线",color:"#006098",dirs:["内环","外环"]},
+    {id:"bj-l4",city:"beijing",name:"4号线",color:"#008E9C",dirs:["往安河桥北","往天宫院"]},
+    {id:"bj-l5",city:"beijing",name:"5号线",color:"#A6228E",dirs:["往天通苑北","往宋家庄"]},
+    {id:"bj-l6",city:"beijing",name:"6号线",color:"#D09A2E",dirs:["往金安桥","往潞城"]},
+    {id:"bj-l13",city:"beijing",name:"13号线",color:"#F0D500",dirs:["往东直门","往西直门"]},
+    {id:"bj-apt",city:"beijing",name:"机场线",color:"#B48CC4",dirs:["往北京首都机场","往北新桥"]},
+    {id:"sh-l1",city:"shanghai",name:"1号线",color:"#E3002B",dirs:["往莘庄","往富锦路"]},
+    {id:"sh-l2",city:"shanghai",name:"2号线",color:"#8DC63F",dirs:["往徐泾东","往浦东国际机场"]},
+    {id:"sh-l4",city:"shanghai",name:"4号线",color:"#5C0F8B",dirs:["内圈","外圈"]},
+    {id:"sh-l6",city:"shanghai",name:"6号线",color:"#D40068",dirs:["往港城路","往东方体育中心"]},
+    {id:"sh-l8",city:"shanghai",name:"8号线",color:"#0094D8",dirs:["往市光路","往沈杜公路"]},
+    {id:"sh-l9",city:"shanghai",name:"9号线",color:"#71C5E8",dirs:["往松江南站","往曹路"]},
+    {id:"sh-l11",city:"shanghai",name:"11号线",color:"#871C2B",dirs:["往迪士尼","往嘉定北/花桥"]},
+    {id:"tk-mar",city:"tokyo",name:"丸之内线",color:"#F62E36",dirs:["荻洼方面","池袋方面"]},
+    {id:"tk-oedo",city:"tokyo",name:"大江户线",color:"#B6007A",dirs:["都厅前・光丘方面","六本木・大门方面"]},
+    {id:"tk-yam",city:"tokyo",name:"山手线",color:"#9ACD32",dirs:["内回り","外回り"]},
+    {id:"tk-gin",city:"tokyo",name:"银座线",color:"#FF9500",dirs:["涩谷方面","浅草方面"]},
+    {id:"tk-fuk",city:"tokyo",name:"副都心线",color:"#9C5E31",dirs:["和光市方面","涩谷方面"]},
+  ],
+  stations:[
+    {id:"bj-xizhimen",city:"beijing",name_cn:"西直门",name_en:"Xizhimen",alias:["xizhimen","xzm"],lines:["bj-l2","bj-l4","bj-l13"]},
+    {id:"bj-dongzhimen",city:"beijing",name_cn:"东直门",name_en:"Dongzhimen",alias:["dongzhimen","dzm"],lines:["bj-l2","bj-l13","bj-apt"]},
+    {id:"bj-dongdan",city:"beijing",name_cn:"东单",name_en:"Dongdan",alias:["dongdan","dd"],lines:["bj-l1","bj-l5"]},
+    {id:"bj-jianguomen",city:"beijing",name_cn:"建国门",name_en:"Jianguomen",alias:["jianguomen","jgm"],lines:["bj-l1","bj-l2"]},
+    {id:"bj-xuanwumen",city:"beijing",name_cn:"宣武门",name_en:"Xuanwumen",alias:["xuanwumen","xwm"],lines:["bj-l2","bj-l4"]},
+    {id:"bj-pinganli",city:"beijing",name_cn:"平安里",name_en:"Ping'anli",alias:["pinganli","pal"],lines:["bj-l4","bj-l6"]},
+    {id:"sh-rmgc",city:"shanghai",name_cn:"人民广场",name_en:"People's Square",alias:["renminguangchang","rmgc","peoples square"],lines:["sh-l1","sh-l2","sh-l8"]},
+    {id:"sh-sjdd",city:"shanghai",name_cn:"世纪大道",name_en:"Century Avenue",alias:["shijidadao","sjdd","century avenue"],lines:["sh-l2","sh-l4","sh-l6","sh-l9"]},
+    {id:"sh-xjh",city:"shanghai",name_cn:"徐家汇",name_en:"Xujiahui",alias:["xujiahui","xjh"],lines:["sh-l1","sh-l9","sh-l11"]},
+    {id:"tk-shinjuku",city:"tokyo",name_cn:"新宿",name_en:"Shinjuku",alias:["shinjuku","xinsu","xs"],lines:["tk-mar","tk-oedo","tk-yam"]},
+    {id:"tk-shibuya",city:"tokyo",name_cn:"涩谷",name_en:"Shibuya",alias:["shibuya","segu","sg"],lines:["tk-gin","tk-fuk","tk-yam"]},
+    {id:"tk-ikebukuro",city:"tokyo",name_cn:"池袋",name_en:"Ikebukuro",alias:["ikebukuro","chidai","cd"],lines:["tk-mar","tk-fuk","tk-yam"]},
+  ],
+  answers:[
+    {station:"bj-xizhimen",fl:"bj-l2",fd:"内环",tl:"bj-l13",td:"往东直门",author:"通勤老王",owner:"seed-a",anon:true,
+     posType:"custom",custom:"车尾第1节",desc:"2号线内环下车后往车尾方向走，上扶梯右转约80米即可到13号线站台。",likes:42,dislikes:5,version:2,daysAgo:7,
+     comments:[{user:"匿名",daysAgo:5,text:"今天扶梯维修，现在改成另一侧了，注意一下。"},{user:"路人甲",daysAgo:9,text:"亲测有效，省了差不多两分钟。"}]},
+    {station:"bj-xizhimen",fl:"bj-l2",fd:"内环",tl:"bj-l13",td:"往东直门",author:"小林",owner:"seed-b",anon:false,
+     posType:"car",car:3,desc:"坐第3节车厢，出门正对楼梯，人少的时候更快。",likes:18,dislikes:2,version:1,daysAgo:88,comments:[]},
+    {station:"sh-rmgc",fl:"sh-l1",fd:"往莘庄",tl:"sh-l2",td:"往浦东国际机场",author:"申城通勤族",owner:"seed-c",anon:true,
+     posType:"car",car:6,desc:"1号线往莘庄方向坐第6节车厢，下车即见通往2号线的换乘通道口。",likes:31,dislikes:3,version:1,daysAgo:18,
+     comments:[{user:"匿名",daysAgo:16,text:"高峰期这里人巨多，建议错峰。"}]},
+    {station:"tk-shinjuku",fl:"tk-mar",fd:"池袋方面",tl:"tk-oedo",td:"六本木・大门方面",author:"东京漫步",owner:"seed-d",anon:true,
+     posType:"custom",custom:"前1/4 靠近1号车门",desc:"丸之内线到站后往列车前部走，直梯下一层即是大江户线检票口，避开中央大厅人流。",likes:12,dislikes:1,version:1,daysAgo:30,comments:[]},
+  ]
+};
+
+const OFF={cities:[],lines:{},stations:[],answers:[]};
+const OVERLAY_KEY="mt_overlay";
+let overlay=JSON.parse(localStorage.getItem(OVERLAY_KEY)||"null")||{cities:[],lines:[],stations:[],dirs:[],answers:[],votes:{},comments:{}};
+function saveOverlay(){localStorage.setItem(OVERLAY_KEY,JSON.stringify(overlay));}
+const todayISO=()=>new Date().toISOString().slice(0,10);
+function isoDaysAgo(n){const d=new Date();d.setDate(d.getDate()-n);return d.toISOString().slice(0,10);}
+
+function buildOffline(){
+  OFF.cities=OFFLINE_RAW.cities.map(c=>({...c}));
+  OFF.stations=OFFLINE_RAW.stations.map(s=>({...s,lines:[...s.lines]}));
+  OFF.lines={};
+  OFFLINE_RAW.lines.forEach(l=>{OFF.lines[l.id]={id:l.id,city:l.city,name:l.name,color:l.color,dirs:l.dirs.map((n,i)=>({id:l.id+"#"+i,name:n}))};});
+  OFF.answers=OFFLINE_RAW.answers.map((a,idx)=>{
+    const fd=OFF.lines[a.fl].dirs.find(d=>d.name===a.fd), td=OFF.lines[a.tl].dirs.find(d=>d.name===a.td);
+    return {id:"seed"+idx,station:a.station,from_line:a.fl,from_dir:fd.id,to_line:a.tl,to_dir:td.id,
+      author:a.author,owner:a.owner,is_anon:a.anon,position_type:a.posType,car_number:a.car||null,custom_text:a.custom||"",
+      description:a.desc,version:a.version,updated_at:isoDaysAgo(a.daysAgo),likes:a.likes,dislikes:a.dislikes,my_vote:null,
+      comments:(a.comments||[]).map(c=>({user:c.user,time:isoDaysAgo(c.daysAgo),text:c.text}))};
+  });
+  overlay.cities.forEach(c=>{if(!OFF.cities.find(x=>x.id===c.id))OFF.cities.push(c);});
+  overlay.lines.forEach(l=>{if(!OFF.lines[l.id])OFF.lines[l.id]={id:l.id,city:l.city,name:l.name,color:l.color||"#4b5563",dirs:[]};});
+  overlay.dirs.forEach(d=>{const L=OFF.lines[d.line];if(L&&!L.dirs.find(x=>x.id===d.id))L.dirs.push({id:d.id,name:d.name});});
+  overlay.stations.forEach(s=>{if(!OFF.stations.find(x=>x.id===s.id))OFF.stations.push({...s,lines:[...(s.lines||[])]});});
+  overlay.answers.forEach(a=>OFF.answers.push({...a,comments:[...(a.comments||[])]}));
+  Object.entries(overlay.votes).forEach(([aid,type])=>{const a=OFF.answers.find(x=>x.id===aid);if(!a)return;if(type==="LIKE")a.likes++;else a.dislikes++;a.my_vote=type;});
+  Object.entries(overlay.comments).forEach(([aid,list])=>{const a=OFF.answers.find(x=>x.id===aid);if(a)a.comments=a.comments.concat(list);});
+}
+
+/* =========================================================
+   Ranking (PRD §12)
+   ========================================================= */
+function daysSince(iso){const t=new Date(todayISO()),d=new Date(iso);return Math.max(0,Math.round((t-d)/864e5));}
+function timeDecay(days){if(days<=7)return 1;if(days<=30)return .98;if(days<=90)return .95;if(days<=180)return .9;if(days<=365)return .8;if(days<=730)return .6;return .5;}
+function scoreOf(a){const lr=a.likes/(a.likes+a.dislikes+5);const heat=Math.log(a.likes+a.dislikes+2);return lr*heat*timeDecay(daysSince(a.updated_at));}
+function sortAnswers(list){
+  const arr=list.map(a=>({...a,score:scoreOf(a)})).sort((x,y)=>y.score-x.score);
+  for(let i=0;i<arr.length-1;i++){const hi=Math.max(arr[i].score,arr[i+1].score)||1;
+    if(Math.abs(arr[i].score-arr[i+1].score)/hi<0.03&&daysSince(arr[i].updated_at)>daysSince(arr[i+1].updated_at)){[arr[i],arr[i+1]]=[arr[i+1],arr[i]];if(i>0)i-=2;}}
+  return arr;
+}
+
+/* =========================================================
+   Data access layer — branches on MODE. Every method returns a Promise.
+   ========================================================= */
+function devHeaders(extra){return Object.assign({"X-Device-Id":DEVICE},extra||{});}
+async function apiGET(path){const r=await fetch(API_BASE+path,{headers:devHeaders()});const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||("HTTP "+r.status));return j;}
+async function apiSEND(path,method,body){const r=await fetch(API_BASE+path,{method,headers:devHeaders({"Content-Type":"application/json"}),body:body?JSON.stringify(body):null});const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||("HTTP "+r.status));return j;}
+function matchText(q,...f){q=(q||"").trim().toLowerCase();if(!q)return true;return f.some(x=>String(x||"").toLowerCase().includes(q));}
+
+/* Built-in CN<->EN dictionary for common metro cities. Typing either name resolves
+   both, so added cities stay bilingual and de-duplicated. Cities outside this list
+   can't be machine-translated offline — we keep the entered name honestly. */
+const CITY_DICT=[
+  ["北京","Beijing"],["上海","Shanghai"],["广州","Guangzhou"],["深圳","Shenzhen"],
+  ["成都","Chengdu"],["杭州","Hangzhou"],["苏州","Suzhou"],["南京","Nanjing"],
+  ["武汉","Wuhan"],["重庆","Chongqing"],["天津","Tianjin"],["西安","Xi'an"],
+  ["青岛","Qingdao"],["长沙","Changsha"],["郑州","Zhengzhou"],["昆明","Kunming"],
+  ["沈阳","Shenyang"],["大连","Dalian"],["宁波","Ningbo"],["无锡","Wuxi"],
+  ["香港","Hong Kong"],["台北","Taipei"],["东京","Tokyo"],["大阪","Osaka"],
+  ["名古屋","Nagoya"],["首尔","Seoul"],["釜山","Busan"],["新加坡","Singapore"],
+  ["曼谷","Bangkok"],["吉隆坡","Kuala Lumpur"],["雅加达","Jakarta"],["纽约","New York"],
+  ["伦敦","London"],["巴黎","Paris"],["柏林","Berlin"],["莫斯科","Moscow"],
+  ["马德里","Madrid"],["巴塞罗那","Barcelona"],["罗马","Rome"],["米兰","Milan"],
+  ["多伦多","Toronto"],["芝加哥","Chicago"],["洛杉矶","Los Angeles"],["华盛顿","Washington"],
+  ["旧金山","San Francisco"],["悉尼","Sydney"],["墨尔本","Melbourne"],["迪拜","Dubai"],
+];
+function looksAscii(s){return /^[\x00-\x7F]+$/.test(s);}
+function resolveCityNames(input){
+  const q=(input||"").trim(),low=q.toLowerCase();
+  const hit=CITY_DICT.find(([cn,en])=>cn===q||en.toLowerCase()===low);
+  if(hit){const[cn,en]=hit;return {name_cn:cn,name_en:en,alias:[en.toLowerCase(),cn]};}
+  if(looksAscii(q))return {name_cn:q,name_en:q,alias:[low]};   // English-only input, no CN known
+  return {name_cn:q,name_en:"",alias:[q]};                     // CN input, no EN known
+}
+
+const DL={
+  async searchCities(q){
+    if(MODE==="api")return apiGET("/api/cities?q="+encodeURIComponent(q||""));
+    return OFF.cities.filter(c=>matchText(q,c.id,c.name_cn,c.name_en,(c.alias||[]).join(" "))).map(c=>({id:c.id,name_cn:c.name_cn,name_en:c.name_en}));
+  },
+  async addCity(name){
+    const info=resolveCityNames(name);
+    // de-dupe: if a city with the same CN or EN already exists, reuse it
+    const seen=await this.searchCities(info.name_cn);
+    if(info.name_en&&info.name_en!==info.name_cn)seen.push(...await this.searchCities(info.name_en));
+    const dup=seen.find(c=>c.name_cn===info.name_cn||(info.name_en&&(c.name_en||"").toLowerCase()===info.name_en.toLowerCase()));
+    if(dup)return {id:dup.id,name_cn:dup.name_cn,name_en:dup.name_en};
+    if(MODE==="api")return apiSEND("/api/cities","POST",info);
+    const id="city-"+Math.random().toString(36).slice(2,8);const c={id,...info};overlay.cities.push(c);saveOverlay();OFF.cities.push(c);return c;
+  },
+  async stations(cityId,q){
+    if(MODE==="api")return apiGET(`/api/cities/${cityId}/stations?q=`+encodeURIComponent(q||""));
+    return OFF.stations.filter(s=>s.city===cityId&&matchText(q,s.name_cn,s.name_en,(s.alias||[]).join(" ")))
+      .map(s=>({...s,lines:s.lines.map(id=>OFF.lines[id]).filter(Boolean).map(l=>({id:l.id,name:l.name,color:l.color}))}));
+  },
+  async addStation(cityId,name){
+    if(MODE==="api")return apiSEND(`/api/cities/${cityId}/stations`,"POST",{name_cn:name,name_en:name,alias:[name],lines:[]});
+    const id="st-"+Math.random().toString(36).slice(2,8);const s={id,city:cityId,name_cn:name,name_en:name,alias:[name],lines:[]};overlay.stations.push(s);saveOverlay();OFF.stations.push({...s});return {id,name_cn:name,name_en:name,lines:[]};
+  },
+  async stationLines(stationId){
+    if(MODE==="api")return apiGET(`/api/stations/${stationId}/lines`);
+    const s=OFF.stations.find(x=>x.id===stationId);if(!s)return[];return s.lines.map(id=>OFF.lines[id]).filter(Boolean).map(l=>({id:l.id,name:l.name,color:l.color}));
+  },
+  async cityLines(cityId){   // all lines in the city — reusable across stations (archive)
+    if(MODE==="api")return apiGET(`/api/cities/${cityId}/lines`);
+    return Object.values(OFF.lines).filter(l=>l.city===cityId).map(l=>({id:l.id,name:l.name,color:l.color}));
+  },
+  async addLine(cityId,stationId,name){
+    if(MODE==="api"){const l=await apiSEND(`/api/cities/${cityId}/lines`,"POST",{name,color:"#4b5563",directions:[]});if(stationId)await apiSEND(`/api/stations/${stationId}/lines`,"POST",{line_id:l.id});return {id:l.id,name:l.name,color:l.color};}
+    const id="line-"+Math.random().toString(36).slice(2,8);overlay.lines.push({id,city:cityId,name,color:"#4b5563"});OFF.lines[id]={id,city:cityId,name,color:"#4b5563",dirs:[]};
+    if(stationId){const s=OFF.stations.find(x=>x.id===stationId);if(s&&!s.lines.includes(id))s.lines.push(id);const os=overlay.stations.find(x=>x.id===stationId);if(os&&!os.lines.includes(id))os.lines.push(id);}
+    saveOverlay();return {id,name,color:"#4b5563"};
+  },
+  async directions(lineId){
+    if(MODE==="api")return apiGET(`/api/lines/${lineId}/directions`);
+    return (OFF.lines[lineId]?.dirs||[]).map(d=>({id:d.id,name:d.name}));
+  },
+  async addDirection(lineId,name){
+    if(MODE==="api")return apiSEND(`/api/lines/${lineId}/directions`,"POST",{name});
+    const id=lineId+"#x"+Math.random().toString(36).slice(2,6);overlay.dirs.push({id,line:lineId,name});OFF.lines[lineId]?.dirs.push({id,name});saveOverlay();return {id,name};
+  },
+  async answers(t){
+    if(MODE==="api"){const qs=new URLSearchParams({station:t.station,from_line:t.from_line,from_dir:t.from_dir,to_line:t.to_line,to_dir:t.to_dir});return apiGET("/api/answers?"+qs);}
+    const list=OFF.answers.filter(a=>a.station===t.station&&a.from_line===t.from_line&&a.from_dir===t.from_dir&&a.to_line===t.to_line&&a.to_dir===t.to_dir&&!a.deleted);
+    return sortAnswers(list).map(a=>({...a,is_mine:a.owner===DEVICE}));
+  },
+  async postAnswer(p){
+    if(MODE==="api")return apiSEND("/api/answers","POST",p);
+    const sig=x=>x.station===p.station&&x.from_line===p.from_line&&x.from_dir===p.from_dir&&x.to_line===p.to_line&&x.to_dir===p.to_dir;
+    let a=OFF.answers.find(x=>sig(x)&&x.owner===DEVICE&&!x.deleted);
+    if(a){a.version++;a.position_type=p.position_type;a.car_number=p.car_number;a.custom_text=p.custom_text;a.description=p.description;a.is_anon=p.is_anon;a.author=p.nickname||a.author;a.updated_at=todayISO();
+      const oa=overlay.answers.find(x=>x.id===a.id);if(oa)Object.assign(oa,a);saveOverlay();return {version:a.version,created:false};}
+    const id="off"+Math.random().toString(36).slice(2,8);
+    a={id,station:p.station,from_line:p.from_line,from_dir:p.from_dir,to_line:p.to_line,to_dir:p.to_dir,author:p.nickname||NICK,owner:DEVICE,is_anon:p.is_anon,
+      position_type:p.position_type,car_number:p.car_number,custom_text:p.custom_text,description:p.description,version:1,updated_at:todayISO(),likes:0,dislikes:0,my_vote:null,comments:[]};
+    OFF.answers.push(a);overlay.answers.push({...a});saveOverlay();return {version:1,created:true};
+  },
+  async vote(id,type){
+    if(MODE==="api")return apiSEND(`/api/answers/${id}/vote`,"POST",{type});
+    const a=OFF.answers.find(x=>x.id===id);if(!a)return;const prev=overlay.votes[id]||null;
+    if(prev==="LIKE")a.likes--;if(prev==="DISLIKE")a.dislikes--;
+    if(prev===type){delete overlay.votes[id];a.my_vote=null;}else{overlay.votes[id]=type;a.my_vote=type;if(type==="LIKE")a.likes++;else a.dislikes++;}
+    saveOverlay();return {likes:a.likes,dislikes:a.dislikes};
+  },
+  async comment(id,content){
+    if(MODE==="api")return apiSEND(`/api/answers/${id}/comments`,"POST",{content,nickname:NICK});
+    const c={user:NICK,time:todayISO(),text:content};const a=OFF.answers.find(x=>x.id===id);if(a)a.comments.push(c);(overlay.comments[id]=overlay.comments[id]||[]).push(c);saveOverlay();
+  },
+  async del(id){
+    if(MODE==="api")return apiSEND(`/api/answers/${id}`,"DELETE");
+    const a=OFF.answers.find(x=>x.id===id);if(a)a.deleted=true;const oa=overlay.answers.find(x=>x.id===id);if(oa)oa.deleted=true;saveOverlay();
+  },
+};
+
+/* =========================================================
+   UI helpers
+   ========================================================= */
+const $=id=>document.getElementById(id);
+function esc(s){return (s==null?"":String(s)).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+function toast(m){const t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),2400);}
+function chip(name,color){return `<span class="line-chip" style="background:${color||"#4b5563"}">${esc(name)}</span>`;}
+function go(v){document.querySelectorAll(".view").forEach(x=>x.classList.remove("active"));$("view-"+v).classList.add("active");window.scrollTo({top:0,behavior:"smooth"});}
+
+/* =========================================================
+   Combobox: searchable + add-new
+   ========================================================= */
+function makeCombo(mount,opts){
+  mount.innerHTML=`<div class="combo"><div class="combo-input"><input type="text" placeholder="${esc(opts.placeholder||"搜索…")}"><span class="chev">▾</span></div><div class="combo-panel"></div></div>`;
+  const input=mount.querySelector("input"),panel=mount.querySelector(".combo-panel");
+  let items=[],selected=null;
+  async function refresh(){
+    const q=input.value.trim();
+    try{ items=await opts.fetchItems(q); }catch(e){ items=[]; }
+    let html=items.map((it,i)=>`<div class="combo-opt" data-i="${i}">${it.color?`<span class="line-chip" style="background:${it.color}">${esc(it.label)}</span>`:esc(it.label)}${it.sub?`<span class="sub">${esc(it.sub)}</span>`:""}</div>`).join("");
+    const exact=items.some(it=>it.label===q);
+    if(q&&!exact&&opts.onAdd)html+=`<div class="combo-opt combo-add" data-add="1">＋ ${esc((opts.addLabel&&opts.addLabel(q))||("添加「"+q+"」"))}</div>`;
+    if(!html)html=`<div class="combo-empty">无匹配</div>`;
+    panel.innerHTML=html;panel.classList.add("open");
+  }
+  function close(){panel.classList.remove("open");}
+  input.addEventListener("focus",refresh);
+  input.addEventListener("input",refresh);
+  panel.addEventListener("mousedown",async e=>{
+    const opt=e.target.closest(".combo-opt");if(!opt)return;e.preventDefault();
+    if(opt.dataset.add){const it=await opts.onAdd(input.value.trim());if(it)pick(it);}
+    else pick(items[+opt.dataset.i]);
+  });
+  document.addEventListener("mousedown",e=>{if(!mount.contains(e.target))close();});
+  function pick(it){selected=it;input.value=it.label;close();opts.onSelect&&opts.onSelect(it);}
+  return {get value(){return selected;},setText(t){input.value=t;}};
+}
+
+/* =========================================================
+   City picker
+   ========================================================= */
+let CITY=null;
+function initCityPicker(){
+  makeCombo($("citySlot"),{placeholder:"城市",
+    fetchItems:async q=>(await DL.searchCities(q)).map(c=>({id:c.id,label:c.name_cn,sub:c.name_en})),
+    onAdd:async q=>{const c=await DL.addCity(q);toast("已添加城市："+q);return {id:c.id,label:c.name_cn};},
+    addLabel:q=>"添加城市「"+q+"」",
+    onSelect:async it=>{CITY={id:it.id,name_cn:it.label};localStorage.setItem("mt_city",it.id);$("stationSearch").value="";await renderSearch("");await loadPopular();}});
+}
+async function restoreCity(){
+  const saved=localStorage.getItem("mt_city");
+  const list=await DL.searchCities("");
+  const c=list.find(x=>x.id===saved)||list[0];
+  if(c){CITY={id:c.id,name_cn:c.name_cn};$("citySlot").querySelector("input").value=c.name_cn;}
+}
+
+/* =========================================================
+   Home: search + recent + popular
+   ========================================================= */
+const stationCache={};
+function cacheStations(list){list.forEach(s=>stationCache[s.id]=s);}
+function recentGet(){return JSON.parse(localStorage.getItem("mt_recent")||"[]");}
+function recentPush(s){let r=recentGet().filter(x=>x.id!==s.id);r.unshift(s);r=r.slice(0,6);localStorage.setItem("mt_recent",JSON.stringify(r));}
+function renderRecent(){
+  const r=recentGet(),wrap=$("recentWrap");
+  if(!r.length){wrap.style.display="none";return;}
+  wrap.style.display="block";
+  $("recentChips").innerHTML=r.map(s=>`<span class="recent-chip" onclick="enterStationById('${s.id}')">${esc(s.name_cn)} · ${esc(s.cityName)}</span>`).join("");
+}
+async function renderSearch(q){
+  const box=$("searchResults"),sug=$("homeSuggest");
+  if(!q.trim()){box.innerHTML="";sug.style.display="block";return;}
+  sug.style.display="none";
+  const list=await DL.stations(CITY.id,q);cacheStations(list);
+  if(!list.length){box.innerHTML=`<div class="empty">没有找到「${esc(q)}」相关车站<br/><span class="muted-link" onclick="openUploadBlank()">去补充一条经验 →</span></div>`;return;}
+  box.innerHTML=list.map(stationRow).join("");
+}
+function stationRow(s){
+  const lines=(s.lines||[]).map(l=>chip(l.name,l.color)).join("");
+  return `<div class="station-item" data-station="${esc(s.id)}"><div><div class="st-name">${esc(s.name_cn)}</div><div class="st-meta">${esc(CITY.name_cn)} · ${esc(s.name_en||"")}</div></div><div class="lines-mini">${lines}</div></div>`;
+}
+async function loadPopular(){
+  if(!CITY){return;}
+  const list=await DL.stations(CITY.id,"");cacheStations(list);
+  $("popularList").innerHTML=list.slice(0,6).map(stationRow).join("")||`<div class="empty">该城市暂无数据，可前往上传。<br/><span class="muted-link" onclick="openUploadBlank()">去上传第一条 →</span></div>`;
+  renderRecent();
+}
+async function enterStationById(id){
+  let s=stationCache[id];
+  if(!s){const list=await DL.stations(CITY.id,"");cacheStations(list);s=stationCache[id];}
+  if(s)enterStation(s);
+}
+
+/* =========================================================
+   Query wizard — event delegation, all awaited, empty-safe
+   ========================================================= */
+let Q={};
+function enterStation(s){
+  Q={station:s.id,stationObj:s,from_line:null,from_line_name:null,from_line_color:null,from_dir:null,from_dir_name:null,to_line:null,to_line_name:null,to_line_color:null,to_dir:null,to_dir_name:null};
+  recentPush({id:s.id,name_cn:s.name_cn,cityName:CITY.name_cn});
+  $("queryStationName").textContent=s.name_cn;
+  renderWizard().then(()=>go("query"));
+}
+function optChip(kind,id,name,color,sel){
+  const dot=color?`<span class="dot" style="background:${color}"></span>`:"";
+  return `<button class="opt ${sel?"selected":""}" data-kind="${kind}" data-id="${esc(id)}" data-name="${esc(name)}" data-color="${esc(color||"")}">${dot}${esc(name)}</button>`;
+}
+function stepBlock(n,label,body){return `<div class="step"><div class="step-label"><span class="step-num">${n}</span>${esc(label)}</div><div class="options">${body}</div></div>`;}
+function flow(){return `<div class="arrow-flow">↓</div>`;}
+function emptyStep(msg){return `<div class="empty">${esc(msg)}<br/><span class="muted-link" onclick="openUploadForCurrent()">前往上传 →</span></div>`;}
+
+async function renderWizard(){
+  const s=Q.stationObj,w=$("wizard");
+  const lines=(s.lines&&s.lines.length)?s.lines:await DL.stationLines(s.id);
+  if(!lines.length){w.innerHTML=emptyStep("该车站暂无线路数据");return;}
+  let html=stepBlock(1,"进入线路",lines.map(l=>optChip("fl",l.id,l.name,l.color,Q.from_line===l.id)).join(""));
+  if(Q.from_line){
+    const dirs=await DL.directions(Q.from_line);
+    html+=flow()+(dirs.length?stepBlock(2,"进入方向",dirs.map(d=>optChip("fd",d.id,d.name,"",Q.from_dir===d.id)).join("")):emptyStep("该线路暂无方向数据"));
+  }
+  if(Q.from_dir){
+    const others=lines.filter(l=>l.id!==Q.from_line);
+    html+=flow()+(others.length?stepBlock(3,"换乘线路",others.map(l=>optChip("tl",l.id,l.name,l.color,Q.to_line===l.id)).join("")):emptyStep("该站仅此一条线路，暂无换乘"));
+  }
+  if(Q.to_line){
+    const dirs=await DL.directions(Q.to_line);
+    html+=flow()+(dirs.length?stepBlock(4,"换乘方向",dirs.map(d=>optChip("td",d.id,d.name,"",Q.to_dir===d.id)).join("")):emptyStep("该线路暂无方向数据"));
+  }
+  w.innerHTML=html;
+}
+async function onWizardClick(e){
+  const b=e.target.closest(".opt[data-kind]");if(!b)return;
+  const {kind,id,name,color}=b.dataset;
+  if(kind==="fl"){Q.from_line=id;Q.from_line_name=name;Q.from_line_color=color;Q.from_dir=Q.from_dir_name=Q.to_line=Q.to_line_name=Q.to_dir=Q.to_dir_name=null;}
+  else if(kind==="fd"){Q.from_dir=id;Q.from_dir_name=name;Q.to_line=Q.to_line_name=Q.to_dir=Q.to_dir_name=null;}
+  else if(kind==="tl"){Q.to_line=id;Q.to_line_name=name;Q.to_line_color=color;Q.to_dir=Q.to_dir_name=null;}
+  else if(kind==="td"){Q.to_dir=id;Q.to_dir_name=name;await showResult("query");return;}
+  await renderWizard();
+}
+function backToWizard(){renderWizard().then(()=>go("query"));}
+
+/* =========================================================
+   Result page
+   ========================================================= */
+let resultFrom="query";   // "query" (browsing) | "upload" (just published)
+function setResultChrome(){
+  const back=$("resultBack"),share=$("resultShareBtn");
+  if(resultFrom==="upload"){
+    back.textContent="← 回到首页";back.onclick=()=>go("home");
+    share.textContent="＋ 再分享一条";share.onclick=openUploadForAnother;
+  }else{
+    back.textContent="← 修改换乘";back.onclick=backToWizard;
+    share.textContent="＋ 我也来分享这个换乘经验";share.onclick=openUploadForCurrent;
+  }
+}
+function openUploadForAnother(){startUpload({city:CITY,station:Q.stationObj});}
+async function showResult(from){
+  resultFrom=from||"query";
+  $("resultStationName").textContent=Q.stationObj.name_cn;
+  $("resultHead").innerHTML=`<h2>${esc(Q.stationObj.name_cn)} 换乘攻略</h2>
+    <div class="path">${chip(Q.from_line_name,Q.from_line_color)} <span style="color:var(--text-faint)">${esc(Q.from_dir_name)}</span>
+    <span style="color:var(--text-faint)">→</span> ${chip(Q.to_line_name,Q.to_line_color)} <span style="color:var(--text-faint)">${esc(Q.to_dir_name)}</span></div>`;
+  setResultChrome();
+  await renderAnswers();go("result");
+}
+async function renderAnswers(){
+  let list=[];
+  try{ list=await DL.answers({station:Q.station,from_line:Q.from_line,from_dir:Q.from_dir,to_line:Q.to_line,to_dir:Q.to_dir}); }catch(e){ toast("加载失败："+e.message); }
+  const box=$("answerList");
+  if(!list.length){box.innerHTML=`<div class="empty">暂无数据，可前往上传。<br/><span class="muted-link" onclick="openUploadForCurrent()">成为第一个贡献者 →</span></div>`;return;}
+  box.innerHTML=list.map((a,i)=>answerCard(a,i===0)).join("");
+}
+function positionText(a){return a.position_type==="custom"?a.custom_text:("第 "+a.car_number+" 节");}
+function answerCard(a,top){
+  const who=a.is_anon?"@匿名":"@"+esc(a.author);const cs=a.comments||[];
+  return `<div class="answer-card ${top?"top":""}">
+    <div class="position-badge">🚇 <span class="lead">${esc(positionText(a))}</span></div>
+    <div class="answer-desc">${esc(a.description)}</div>
+    <div class="answer-meta"><span>${who}</span>${a.version>1?`<span class="ver-tag">V${a.version}</span>`:""}<span>· 更新于 ${esc(a.updated_at)}</span>
+      ${a.is_mine?`<span class="link-mini" onclick="delAnswer('${a.id}')">删除</span>`:""}
+      <div class="actions">
+        <button class="vote-btn up ${a.my_vote==="LIKE"?"active":""}" onclick="voteAns('${a.id}','LIKE')">👍 ${a.likes}</button>
+        <button class="vote-btn down ${a.my_vote==="DISLIKE"?"active":""}" onclick="voteAns('${a.id}','DISLIKE')">👎 ${a.dislikes}</button>
+        <button class="vote-btn" onclick="toggleC('${a.id}')">💬 ${cs.length}</button></div></div>
+    <div class="comments" id="c-${a.id}">
+      ${cs.map(c=>`<div class="comment"><div><span class="c-user">${esc(c.user)}</span><span class="c-time">${esc(c.time)}</span><div class="c-text">${esc(c.text)}</div></div></div>`).join("")||`<div style="color:var(--text-faint);font-size:13px;padding:6px 0">还没有评论，来补充点实时情况吧。</div>`}
+      <div class="comment-form"><input id="ci-${a.id}" placeholder="补充说明，例如：扶梯维修中…" onkeydown="if(event.key==='Enter')sendC('${a.id}')"><button class="btn primary" onclick="sendC('${a.id}')">发送</button></div>
+    </div></div>`;
+}
+function toggleC(id){$("c-"+id).classList.toggle("open");}
+async function voteAns(id,type){try{await DL.vote(id,type);await renderAnswers();}catch(e){toast(e.message);}}
+async function sendC(id){const inp=$("ci-"+id);const t=inp.value.trim();if(!t)return;try{await DL.comment(id,t);await renderAnswers();$("c-"+id).classList.add("open");toast("评论已发布");}catch(e){toast(e.message);}}
+async function delAnswer(id){if(!confirm("删除自己的这条回答？历史版本后台保留。"))return;try{await DL.del(id);await renderAnswers();toast("已删除");}catch(e){toast(e.message);}}
+function openUploadForCurrent(){
+  const pre={city:CITY,station:Q.stationObj};
+  if(Q.from_line)pre.from_line={id:Q.from_line,name:Q.from_line_name,color:Q.from_line_color};
+  if(Q.from_dir)pre.from_dir={id:Q.from_dir,name:Q.from_dir_name};
+  if(Q.to_line)pre.to_line={id:Q.to_line,name:Q.to_line_name,color:Q.to_line_color};
+  if(Q.to_dir)pre.to_dir={id:Q.to_dir,name:Q.to_dir_name};
+  startUpload(pre);
+}
+
+/* =========================================================
+   Upload — step wizard. Next is ALWAYS clickable; validate on click.
+   ========================================================= */
+let U={};
+const STEPS=["城市","车站","线路方向","位置","确认"];
+function openUploadBlank(){startUpload({city:CITY});}
+function startUpload(pre){
+  U={step:0,city:pre.city||CITY,station:pre.station||null,from_line:pre.from_line||null,from_dir:pre.from_dir||null,
+     to_line:pre.to_line||null,to_dir:pre.to_dir||null,pos:null,custom:"",reason:"",anon:true,nick:NICK};
+  if(U.city&&U.station&&U.from_line&&U.from_dir&&U.to_line&&U.to_dir)U.step=3;
+  else if(U.city&&U.station)U.step=2;
+  else if(U.city)U.step=1;
+  renderUpload();go("upload");
+}
+function renderStepper(){
+  $("stepper").innerHTML=STEPS.map((s,i)=>{const cls=i===U.step?"active":(i<U.step?"done":"");return `<div class="s ${cls}"><span class="num">${i<U.step?"✓":i+1}</span>${s}</div>`+(i<STEPS.length-1?`<span class="bar"></span>`:"");}).join("");
+}
+function navBtns(back){return `<div class="form-actions">${back?`<button class="btn ghost" onclick="uStep(-1)">上一步</button>`:""}<button class="btn primary" onclick="uStep(1)">下一步</button></div>`;}
+function renderUpload(){
+  renderStepper();const b=$("uploadBody");
+  if(U.step===0)b.innerHTML=`<div class="form-group"><label>① 选择或新增城市</label><div id="uCity"></div></div>${navBtns(false)}`;
+  else if(U.step===1)b.innerHTML=`<div class="form-group"><label>② 车站（当前城市：${esc(U.city.name_cn)}）</label><div id="uStation"></div><div class="field-note">搜不到就点“添加”，全球任何车站都能录。</div></div>${navBtns(true)}`;
+  else if(U.step===2)b.innerHTML=
+    `<div class="form-group"><label>进入线路</label><div id="uFL"></div></div>
+     <div class="form-group"><label>进入方向</label><div id="uFD"></div></div>
+     <div class="form-group"><label>换乘线路</label><div id="uTL"></div></div>
+     <div class="form-group"><label>换乘方向</label><div id="uTD"></div></div>${navBtns(true)}`;
+  else if(U.step===3)b.innerHTML=
+    `<div class="form-group"><label>④ 最佳位置</label><div class="pos-grid" id="posGrid"></div>
+      <div id="customWrap" style="display:none;margin-top:10px"><input class="form-control" id="customText" placeholder="自定义位置，例如：车尾第1节 / 前1/4 / 靠近司机室"></div></div>
+     <div class="form-group"><label>原因（可选）</label><textarea class="form-control" id="reason" placeholder="例如：扶梯就在车门旁边，下车右转即到。">${esc(U.reason)}</textarea></div>
+     <div class="form-group"><div class="check-row"><input type="checkbox" id="anon" ${U.anon?"checked":""}><label for="anon" style="margin:0;cursor:pointer">匿名发布（仅隐藏昵称）</label></div></div>
+     <div class="form-group"><label>昵称（取消匿名时对外显示）</label><input class="form-control" id="nick" value="${esc(U.nick)}" placeholder="匿名用户"></div>
+     ${navBtns(true)}`;
+  else if(U.step===4)b.innerHTML=
+    `<div class="form-group"><label>⑤ 确认并发布</label><div class="review-box">
+      <div><b>城市</b>：${esc(U.city.name_cn)}</div><div><b>车站</b>：${esc(U.station.name_cn)}</div>
+      <div><b>进入</b>：${esc(U.from_line.name)} · ${esc(U.from_dir.name)}</div>
+      <div><b>换乘</b>：${esc(U.to_line.name)} · ${esc(U.to_dir.name)}</div>
+      <div><b>位置</b>：${esc(U.pos==="custom"?U.custom:("第 "+U.pos+" 节"))}</div>
+      <div><b>原因</b>：${esc(U.reason||"（未填）")}</div>
+      <div><b>匿名</b>：${U.anon?"是":"否（显示："+esc(U.nick)+"）"}</div></div>
+      <div class="field-note">同一换乘每人只保留一条回答；若你已发过，将生成新版本并刷新排序时间。</div></div>
+     <div class="form-actions"><button class="btn ghost" onclick="uStep(-1)">上一步</button><button class="btn primary" onclick="submitUpload()">发布经验</button></div>`;
+  mountUploadControls();
+}
+function mountUploadControls(){
+  if(U.step===0){
+    makeCombo($("uCity"),{placeholder:"搜索或新增城市",
+      fetchItems:async q=>(await DL.searchCities(q)).map(c=>({id:c.id,label:c.name_cn,sub:c.name_en})),
+      onAdd:async q=>{const c=await DL.addCity(q);return {id:c.id,label:c.name_cn};},addLabel:q=>"添加城市「"+q+"」",
+      onSelect:it=>{U.city={id:it.id,name_cn:it.label};U.station=U.from_line=U.from_dir=U.to_line=U.to_dir=null;}});
+    if(U.city)$("uCity").querySelector("input").value=U.city.name_cn;
+  }
+  else if(U.step===1){
+    makeCombo($("uStation"),{placeholder:"搜索或新增车站",
+      fetchItems:async q=>(await DL.stations(U.city.id,q)).map(s=>({id:s.id,label:s.name_cn,sub:s.name_en,_o:s})),
+      onAdd:async q=>{const s=await DL.addStation(U.city.id,q);toast("已添加车站："+q);return {id:s.id,label:s.name_cn,_o:s};},addLabel:q=>"添加车站「"+q+"」",
+      onSelect:it=>{U.station={id:it.id,name_cn:it.label,_o:it._o};U.from_line=U.from_dir=U.to_line=U.to_dir=null;}});
+    if(U.station)$("uStation").querySelector("input").value=U.station.name_cn;
+  }
+  else if(U.step===2)mountLineDir();
+  else if(U.step===3){
+    const g=$("posGrid");let h="";
+    for(let i=1;i<=12;i++)h+=`<div class="pos-cell ${U.pos==i?"selected":""}" onclick="pickPos(${i})">第${i}节</div>`;
+    h+=`<div class="pos-cell ${U.pos==="custom"?"selected":""}" onclick="pickPos('custom')" style="grid-column:span 2">自定义…</div>`;
+    g.innerHTML=h;$("customWrap").style.display=U.pos==="custom"?"block":"none";if(U.pos==="custom")$("customText").value=U.custom;
+  }
+}
+function mountLineDir(){
+  const st=U.station.id;
+  // Reuse ALL city lines (archived, with their directions). Selecting one links it
+  // to this station so we never create a duplicate line just to re-enter directions.
+  makeCombo($("uFL"),{placeholder:"选择或新增进入线路",
+    fetchItems:async q=>(await DL.cityLines(U.city.id)).filter(l=>!q||l.name.includes(q)).map(l=>({id:l.id,label:l.name,color:l.color})),
+    onAdd:async q=>{const l=await DL.addLine(U.city.id,st,q);toast("已添加线路："+q);return {id:l.id,label:l.name,color:l.color};},addLabel:q=>"添加线路「"+q+"」",
+    onSelect:async it=>{U.from_line={id:it.id,name:it.label,color:it.color};U.from_dir=null;await DL.linkLine(st,it.id);if(U.to_line&&U.to_line.id===it.id){U.to_line=null;U.to_dir=null;mountTL();mountTD();}mountFD();}});
+  if(U.from_line)$("uFL").querySelector("input").value=U.from_line.name;
+  mountFD();mountTL();mountTD();
+}
+function mountTL(){
+  const st=U.station.id;
+  makeCombo($("uTL"),{placeholder:"选择或新增换乘线路",
+    fetchItems:async q=>(await DL.cityLines(U.city.id)).filter(l=>l.id!==(U.from_line&&U.from_line.id)).filter(l=>!q||l.name.includes(q)).map(l=>({id:l.id,label:l.name,color:l.color})),
+    onAdd:async q=>{const l=await DL.addLine(U.city.id,st,q);toast("已添加线路："+q);return {id:l.id,label:l.name,color:l.color};},addLabel:q=>"添加线路「"+q+"」",
+    onSelect:async it=>{U.to_line={id:it.id,name:it.label,color:it.color};U.to_dir=null;await DL.linkLine(st,it.id);mountTD();}});
+  if(U.to_line)$("uTL").querySelector("input").value=U.to_line.name;
+}
+function mountFD(){
+  if(!$("uFD"))return;
+  if(!U.from_line){$("uFD").innerHTML=`<div class="combo-empty" style="border:1px solid var(--line);border-radius:10px">先选进入线路</div>`;return;}
+  makeCombo($("uFD"),{placeholder:"选择或新增进入方向",
+    fetchItems:async q=>(await DL.directions(U.from_line.id)).filter(d=>!q||d.name.includes(q)).map(d=>({id:d.id,label:d.name})),
+    onAdd:async q=>{const d=await DL.addDirection(U.from_line.id,q);toast("已添加方向："+q);return {id:d.id,label:d.name};},addLabel:q=>"添加方向「"+q+"」",
+    onSelect:it=>{U.from_dir={id:it.id,name:it.label};}});
+  if(U.from_dir)$("uFD").querySelector("input").value=U.from_dir.name;
+}
+function mountTD(){
+  if(!$("uTD"))return;
+  if(!U.to_line){$("uTD").innerHTML=`<div class="combo-empty" style="border:1px solid var(--line);border-radius:10px">先选换乘线路</div>`;return;}
+  makeCombo($("uTD"),{placeholder:"选择或新增换乘方向",
+    fetchItems:async q=>(await DL.directions(U.to_line.id)).filter(d=>!q||d.name.includes(q)).map(d=>({id:d.id,label:d.name})),
+    onAdd:async q=>{const d=await DL.addDirection(U.to_line.id,q);toast("已添加方向："+q);return {id:d.id,label:d.name};},addLabel:q=>"添加方向「"+q+"」",
+    onSelect:it=>{U.to_dir={id:it.id,name:it.label};}});
+  if(U.to_dir)$("uTD").querySelector("input").value=U.to_dir.name;
+}
+function pickPos(p){U.pos=p;document.querySelectorAll("#posGrid .pos-cell").forEach(c=>c.classList.remove("selected"));
+  const cells=document.querySelectorAll("#posGrid .pos-cell");cells.forEach(c=>{if(c.textContent==("第"+p+"节")||(p==="custom"&&c.textContent==="自定义…"))c.classList.add("selected");});
+  $("customWrap").style.display=p==="custom"?"block":"none";}
+function stepInvalidMsg(){
+  if(U.step===0)return U.city?null:"请选择城市";
+  if(U.step===1)return U.station?null:"请选择车站";
+  if(U.step===2){if(!U.from_line)return "请选择进入线路";if(!U.from_dir)return "请选择进入方向";if(!U.to_line)return "请选择换乘线路";if(!U.to_dir)return "请选择换乘方向";return null;}
+  if(U.step===3){if(U.pos===null)return "请选择位置";if(U.pos==="custom"&&!(U.custom||"").trim())return "请输入自定义位置";return null;}
+  return null;
+}
+function uStep(d){
+  if(d>0){
+    if(U.step===3){U.reason=($("reason")?($("reason").value||"").trim():U.reason);U.anon=$("anon")?$("anon").checked:U.anon;U.nick=($("nick")&&$("nick").value.trim())||"匿名用户";if(U.pos==="custom"&&$("customText"))U.custom=$("customText").value.trim();}
+    const msg=stepInvalidMsg();if(msg){toast(msg);return;}
+  }
+  U.step=Math.max(0,Math.min(STEPS.length-1,U.step+d));
+  renderUpload();
+}
+async function submitUpload(){
+  const payload={station:U.station.id,from_line:U.from_line.id,from_dir:U.from_dir.id,to_line:U.to_line.id,to_dir:U.to_dir.id,
+    position_type:U.pos==="custom"?"custom":"car",car_number:U.pos==="custom"?null:Number(U.pos),
+    custom_text:U.pos==="custom"?U.custom:"",description:U.reason||(U.pos==="custom"?U.custom:`建议坐第${U.pos}节车厢换乘。`),
+    is_anon:U.anon,nickname:U.nick};
+  if(!U.anon){NICK=U.nick;localStorage.setItem("mt_nick",U.nick);}
+  try{
+    const r=await DL.postAnswer(payload);
+    toast(r.created?"发布成功，感谢分享！":("已更新为 V"+r.version+"（旧版本保留）"));
+    const so=U.station._o||{id:U.station.id,name_cn:U.station.name_cn,lines:[]};
+    Q={station:U.station.id,stationObj:so,from_line:U.from_line.id,from_line_name:U.from_line.name,from_line_color:U.from_line.color,
+       from_dir:U.from_dir.id,from_dir_name:U.from_dir.name,to_line:U.to_line.id,to_line_name:U.to_line.name,to_line_color:U.to_line.color,
+       to_dir:U.to_dir.id,to_dir_name:U.to_dir.name};
+    await showResult("upload");
+  }catch(e){toast("发布失败："+e.message);}
+}
+
+/* =========================================================
+   Boot
+   ========================================================= */
+async function detectMode(){
+  try{const ctrl=new AbortController();const t=setTimeout(()=>ctrl.abort(),1200);
+    const r=await fetch(API_BASE+"/api/health",{signal:ctrl.signal});clearTimeout(t);if(r.ok){MODE="api";return;}}catch(e){}
+  MODE="offline";
+}
+async function boot(){
+  await detectMode();
+  const banner=$("modeBanner");
+  if(MODE==="api"){banner.className="api";banner.textContent="🟢 已连接后端 API（"+API_BASE+"）· 数据落库 SQLite";}
+  else{buildOffline();banner.className="offline";banner.textContent="🟡 离线预览模式 · 数据内联，改动存于本浏览器（localStorage）";}
+  initCityPicker();
+  await restoreCity();
+  await loadPopular();
+  // delegated handlers (bound once)
+  $("wizard").addEventListener("click",onWizardClick);
+  document.addEventListener("click",e=>{const st=e.target.closest(".station-item[data-station]");if(st)enterStationById(st.dataset.station);});
+}
+boot();
+</script>
+</body>
+</html>
