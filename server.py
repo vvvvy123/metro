@@ -20,6 +20,7 @@ import sqlite3
 import uuid
 import math
 import os
+import unicodedata
 from datetime import date
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs
@@ -29,15 +30,35 @@ DB_PATH = os.path.join(ROOT, "metro.db")
 HOST, PORT = "0.0.0.0", 8000
 
 
+# whitespace + every hyphen/dash variant (ASCII -, U+2010–2015 hyphen..horiz bar,
+# U+2212 minus) so 'Saint-Germain-en-Laye' == 'saintgermainenlaye'.
+_FOLD_DROP = re.compile(r"[\s\u002d\u2010-\u2015\u2212]")
+
+
+def fold(s):
+    """Search key insensitive to case, whitespace, diacritics (accents) and
+    hyphens/dashes. NFKD-decompose, drop combining marks, lowercase, then strip
+    whitespace + dashes, so 'La Défense' == 'la defense' and
+    'Châtelet–Les Halles' == 'chateletleshalles'. CJK names are unaffected."""
+    s = unicodedata.normalize("NFKD", s or "")
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    return _FOLD_DROP.sub("", s.lower())
+
+
 def db():
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA foreign_keys = ON")
+    conn.create_function("fold", 1, fold)   # usable inside SQL: fold(name_cn)
     return conn
 
 
 def like(q):
     return f"%{(q or '').strip().lower()}%"
+
+
+def like_fold(q):
+    return f"%{fold(q)}%"
 
 
 # --------------------------------------------------------------------------
@@ -202,20 +223,20 @@ class Handler(BaseHTTPRequestHandler):
             return self._json({"ok": True, "cities": n})
 
         if p == "/api/cities":
-            qq = like(q.get("q", [""])[0])
+            qq = like_fold(q.get("q", [""])[0])
             rows = conn.execute(
-                """SELECT * FROM city WHERE lower(id) LIKE ? OR lower(name_cn) LIKE ?
-                   OR lower(name_en) LIKE ? OR lower(alias) LIKE ? ORDER BY name_cn""",
+                """SELECT * FROM city WHERE fold(id) LIKE ? OR fold(name_cn) LIKE ?
+                   OR fold(name_en) LIKE ? OR fold(alias) LIKE ? ORDER BY name_cn""",
                 (qq, qq, qq, qq)).fetchall()
             return self._json([{"id": r["id"], "name_cn": r["name_cn"], "name_en": r["name_en"],
                                 "alias": json.loads(r["alias"] or "[]")} for r in rows])
 
         m = re.match(r"^/api/cities/([^/]+)/stations$", p)
         if m:
-            qq = like(q.get("q", [""])[0])
+            qq = like_fold(q.get("q", [""])[0])
             rows = conn.execute(
                 """SELECT * FROM station WHERE city_id=? AND
-                   (lower(name_cn) LIKE ? OR lower(name_en) LIKE ? OR lower(alias) LIKE ?)
+                   (fold(name_cn) LIKE ? OR fold(name_en) LIKE ? OR fold(alias) LIKE ?)
                    ORDER BY name_cn""", (m.group(1), qq, qq, qq)).fetchall()
             return self._json([station_json(conn, r) for r in rows])
 

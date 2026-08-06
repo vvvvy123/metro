@@ -1,0 +1,3452 @@
+{
+  "city": {
+    "id": "shenzhen",
+    "country_id": "cn",
+    "country_cn": "中国",
+    "country_en": "China",
+    "name_cn": "深圳",
+    "name_en": "Shenzhen",
+    "alias": [
+      "shenzhen",
+      "szn",
+      "深圳市",
+      "鹏城"
+    ],
+    "timezone": "Asia/Shanghai"
+  },
+  "system": {
+    "id": "shenzhen-metro",
+    "name_cn": "深圳地铁",
+    "name_en": "Shenzhen Metro"
+  },
+  "lines": [
+    {
+      "id": "szn-l1",
+      "name": "1号线",
+      "name_en": "Line 1",
+      "color": "#00a651",
+      "directions": [
+        "开往机场东",
+        "开往罗湖"
+      ]
+    },
+    {
+      "id": "szn-l2-8",
+      "name": "2号线 & 8号线",
+      "name_en": "Line 2 & 8",
+      "color": "#e60012",
+      "directions": [
+        "开往溪涌",
+        "开往赤湾"
+      ]
+    },
+    {
+      "id": "szn-l3",
+      "name": "3号线",
+      "name_en": "Line 3",
+      "color": "#0072bc",
+      "directions": [
+        "开往坪地六联",
+        "开往福保"
+      ]
+    },
+    {
+      "id": "szn-l4",
+      "name": "4号线",
+      "name_en": "Line 4",
+      "color": "#d20962",
+      "directions": [
+        "开往牛湖",
+        "开往福田口岸"
+      ]
+    },
+    {
+      "id": "szn-l5",
+      "name": "5号线",
+      "name_en": "Line 5",
+      "color": "#a3238e",
+      "directions": [
+        "开往大剧院",
+        "开往赤湾"
+      ]
+    },
+    {
+      "id": "szn-l6",
+      "name": "6号线",
+      "name_en": "Line 6",
+      "color": "#52c1d6",
+      "directions": [
+        "开往松岗",
+        "开往科学馆"
+      ]
+    },
+    {
+      "id": "szn-l6b",
+      "name": "6号线支线",
+      "name_en": "Line 6 Branch",
+      "color": "#52c1d6",
+      "directions": [
+        "开往光明城",
+        "开往深理工"
+      ]
+    },
+    {
+      "id": "szn-l7",
+      "name": "7号线",
+      "name_en": "Line 7",
+      "color": "#ef7fb0",
+      "directions": [
+        "开往太安",
+        "开往深大丽湖"
+      ]
+    },
+    {
+      "id": "szn-l9",
+      "name": "9号线",
+      "name_en": "Line 9",
+      "color": "#8c6239",
+      "directions": [
+        "开往文锦",
+        "开往前湾"
+      ]
+    },
+    {
+      "id": "szn-l10",
+      "name": "10号线",
+      "name_en": "Line 10",
+      "color": "#f7a800",
+      "directions": [
+        "开往福田口岸",
+        "开往双拥街"
+      ]
+    },
+    {
+      "id": "szn-l11",
+      "name": "11号线",
+      "name_en": "Line 11",
+      "color": "#6d4a99",
+      "directions": [
+        "开往碧头",
+        "开往红岭南"
+      ]
+    },
+    {
+      "id": "szn-l12",
+      "name": "12号线",
+      "name_en": "Line 12",
+      "color": "#008e9b",
+      "directions": [
+        "开往松岗",
+        "开往左炮台东"
+      ]
+    },
+    {
+      "id": "szn-l13",
+      "name": "13号线",
+      "name_en": "Line 13",
+      "color": "#00a3a6",
+      "directions": [
+        "开往李松蓢",
+        "开往深圳湾口岸"
+      ]
+    },
+    {
+      "id": "szn-l14",
+      "name": "14号线",
+      "name_en": "Line 14",
+      "color": "#c8a063",
+      "directions": [
+        "开往岗厦北",
+        "开往沙田"
+      ]
+    },
+    {
+      "id": "szn-l16",
+      "name": "16号线",
+      "name_en": "Line 16",
+      "color": "#85c440",
+      "directions": [
+        "开往园山西坑",
+        "开往田心"
+      ]
+    },
+    {
+      "id": "szn-l20",
+      "name": "20号线",
+      "name_en": "Line 20",
+      "color": "#b0afae",
+      "directions": [
+        "开往会展城",
+        "开往机场北"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "szn-001",
+      "name_cn": "罗湖",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1"
+      ]
+    },
+    {
+      "id": "szn-002",
+      "name_cn": "国贸",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1"
+      ]
+    },
+    {
+      "id": "szn-003",
+      "name_cn": "老街",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1",
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-004",
+      "name_cn": "大剧院",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1",
+        "szn-l2-8",
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-005",
+      "name_cn": "科学馆",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1",
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-006",
+      "name_cn": "华强路",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1"
+      ]
+    },
+    {
+      "id": "szn-007",
+      "name_cn": "岗厦",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1",
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-008",
+      "name_cn": "会展中心",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1",
+        "szn-l4"
+      ]
+    },
+    {
+      "id": "szn-009",
+      "name_cn": "购物公园",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1",
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-010",
+      "name_cn": "香蜜湖",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1"
+      ]
+    },
+    {
+      "id": "szn-011",
+      "name_cn": "车公庙",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1",
+        "szn-l7",
+        "szn-l9",
+        "szn-l11"
+      ]
+    },
+    {
+      "id": "szn-012",
+      "name_cn": "竹子林",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1"
+      ]
+    },
+    {
+      "id": "szn-013",
+      "name_cn": "侨城东",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1"
+      ]
+    },
+    {
+      "id": "szn-014",
+      "name_cn": "华侨城",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1"
+      ]
+    },
+    {
+      "id": "szn-015",
+      "name_cn": "世界之窗",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1",
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-016",
+      "name_cn": "白石洲",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1"
+      ]
+    },
+    {
+      "id": "szn-017",
+      "name_cn": "高新园",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1"
+      ]
+    },
+    {
+      "id": "szn-018",
+      "name_cn": "深大",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1",
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-019",
+      "name_cn": "桃园",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1",
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-020",
+      "name_cn": "大新",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1"
+      ]
+    },
+    {
+      "id": "szn-021",
+      "name_cn": "鲤鱼门",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1"
+      ]
+    },
+    {
+      "id": "szn-022",
+      "name_cn": "前海湾",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1",
+        "szn-l5",
+        "szn-l11"
+      ]
+    },
+    {
+      "id": "szn-023",
+      "name_cn": "新安",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1"
+      ]
+    },
+    {
+      "id": "szn-024",
+      "name_cn": "宝安中心",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1",
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-025",
+      "name_cn": "宝体",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1"
+      ]
+    },
+    {
+      "id": "szn-026",
+      "name_cn": "坪洲",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1"
+      ]
+    },
+    {
+      "id": "szn-027",
+      "name_cn": "西乡",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1"
+      ]
+    },
+    {
+      "id": "szn-028",
+      "name_cn": "固戍",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1"
+      ]
+    },
+    {
+      "id": "szn-029",
+      "name_cn": "后瑞",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1"
+      ]
+    },
+    {
+      "id": "szn-030",
+      "name_cn": "机场东",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l1",
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-031",
+      "name_cn": "赤湾",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8",
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-032",
+      "name_cn": "蛇口港",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-033",
+      "name_cn": "海上世界",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8",
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-034",
+      "name_cn": "水湾",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-035",
+      "name_cn": "东角头",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-036",
+      "name_cn": "湾厦",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-037",
+      "name_cn": "海月",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-038",
+      "name_cn": "登良",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-039",
+      "name_cn": "后海",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8",
+        "szn-l11",
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-040",
+      "name_cn": "科苑",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8",
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-041",
+      "name_cn": "红树湾",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-042",
+      "name_cn": "侨城北",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-043",
+      "name_cn": "深康",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-044",
+      "name_cn": "安托山",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8",
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-045",
+      "name_cn": "侨香",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-046",
+      "name_cn": "香蜜",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-047",
+      "name_cn": "香梅北",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-048",
+      "name_cn": "景田",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8",
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-049",
+      "name_cn": "莲花西",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-050",
+      "name_cn": "福田",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8",
+        "szn-l3",
+        "szn-l11"
+      ]
+    },
+    {
+      "id": "szn-051",
+      "name_cn": "市民中心",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8",
+        "szn-l4"
+      ]
+    },
+    {
+      "id": "szn-052",
+      "name_cn": "岗厦北",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8",
+        "szn-l10",
+        "szn-l11",
+        "szn-l14"
+      ]
+    },
+    {
+      "id": "szn-053",
+      "name_cn": "华强北",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8",
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-054",
+      "name_cn": "燕南",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-055",
+      "name_cn": "湖贝",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8",
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-056",
+      "name_cn": "黄贝岭",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8",
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-057",
+      "name_cn": "新秀",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-058",
+      "name_cn": "莲塘口岸",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-059",
+      "name_cn": "仙湖路",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-060",
+      "name_cn": "莲塘",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-061",
+      "name_cn": "梧桐山南",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-062",
+      "name_cn": "沙头角",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-063",
+      "name_cn": "海山",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-064",
+      "name_cn": "盐田港西",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-065",
+      "name_cn": "深外高中",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-066",
+      "name_cn": "盐田路",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-067",
+      "name_cn": "鸿安围",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-068",
+      "name_cn": "盐田墟",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-069",
+      "name_cn": "大梅沙",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-070",
+      "name_cn": "小梅沙",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-071",
+      "name_cn": "溪涌",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l2-8"
+      ]
+    },
+    {
+      "id": "szn-072",
+      "name_cn": "福保",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-073",
+      "name_cn": "益田",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-074",
+      "name_cn": "石厦",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3",
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-075",
+      "name_cn": "少年宫",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3",
+        "szn-l4"
+      ]
+    },
+    {
+      "id": "szn-076",
+      "name_cn": "莲花村",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3",
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-077",
+      "name_cn": "华新",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3",
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-078",
+      "name_cn": "通新岭",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3",
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-079",
+      "name_cn": "红岭",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3",
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-080",
+      "name_cn": "晒布",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-081",
+      "name_cn": "翠竹",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-082",
+      "name_cn": "田贝",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3",
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-083",
+      "name_cn": "水贝",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-084",
+      "name_cn": "草埔",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-085",
+      "name_cn": "布吉",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3",
+        "szn-l5",
+        "szn-l14"
+      ]
+    },
+    {
+      "id": "szn-086",
+      "name_cn": "木棉湾",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-087",
+      "name_cn": "大芬",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-088",
+      "name_cn": "丹竹头",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-089",
+      "name_cn": "六约",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-090",
+      "name_cn": "塘坑",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-091",
+      "name_cn": "横岗",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-092",
+      "name_cn": "永湖",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-093",
+      "name_cn": "荷坳",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-094",
+      "name_cn": "大运",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3",
+        "szn-l14",
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-095",
+      "name_cn": "爱联",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-096",
+      "name_cn": "吉祥",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-097",
+      "name_cn": "龙城广场",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-098",
+      "name_cn": "南联",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-099",
+      "name_cn": "双龙",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3",
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-100",
+      "name_cn": "梨园",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-101",
+      "name_cn": "新生",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-102",
+      "name_cn": "坪西",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-103",
+      "name_cn": "低碳城",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-104",
+      "name_cn": "白石塘",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-105",
+      "name_cn": "富坪",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-106",
+      "name_cn": "坪地六联",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l3"
+      ]
+    },
+    {
+      "id": "szn-107",
+      "name_cn": "福田口岸",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4",
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-108",
+      "name_cn": "福民",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4",
+        "szn-l7",
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-109",
+      "name_cn": "莲花北",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4"
+      ]
+    },
+    {
+      "id": "szn-110",
+      "name_cn": "上梅林",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4",
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-111",
+      "name_cn": "民乐",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4"
+      ]
+    },
+    {
+      "id": "szn-112",
+      "name_cn": "白石龙",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4"
+      ]
+    },
+    {
+      "id": "szn-113",
+      "name_cn": "深圳北站",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4",
+        "szn-l5",
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-114",
+      "name_cn": "红山",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4",
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-115",
+      "name_cn": "上塘",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4"
+      ]
+    },
+    {
+      "id": "szn-116",
+      "name_cn": "龙胜",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4"
+      ]
+    },
+    {
+      "id": "szn-117",
+      "name_cn": "龙华",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4"
+      ]
+    },
+    {
+      "id": "szn-118",
+      "name_cn": "清湖",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4"
+      ]
+    },
+    {
+      "id": "szn-119",
+      "name_cn": "清湖北",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4"
+      ]
+    },
+    {
+      "id": "szn-120",
+      "name_cn": "竹村",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4"
+      ]
+    },
+    {
+      "id": "szn-121",
+      "name_cn": "茜坑",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4"
+      ]
+    },
+    {
+      "id": "szn-122",
+      "name_cn": "长湖",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4"
+      ]
+    },
+    {
+      "id": "szn-123",
+      "name_cn": "观澜",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4"
+      ]
+    },
+    {
+      "id": "szn-124",
+      "name_cn": "松元厦",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4"
+      ]
+    },
+    {
+      "id": "szn-125",
+      "name_cn": "观澜湖",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4"
+      ]
+    },
+    {
+      "id": "szn-126",
+      "name_cn": "牛湖",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l4"
+      ]
+    },
+    {
+      "id": "szn-127",
+      "name_cn": "荔湾",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-128",
+      "name_cn": "铁路公园",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-129",
+      "name_cn": "妈湾",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-130",
+      "name_cn": "前湾公园",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-131",
+      "name_cn": "前湾",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5",
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-132",
+      "name_cn": "桂湾",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-133",
+      "name_cn": "临海",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-134",
+      "name_cn": "宝华",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-135",
+      "name_cn": "翻身",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-136",
+      "name_cn": "灵芝",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5",
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-137",
+      "name_cn": "洪浪北",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-138",
+      "name_cn": "兴东",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-139",
+      "name_cn": "留仙洞",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5",
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-140",
+      "name_cn": "西丽",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5",
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-141",
+      "name_cn": "学城",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-142",
+      "name_cn": "塘朗",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-143",
+      "name_cn": "长岭陂",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-144",
+      "name_cn": "民治",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-145",
+      "name_cn": "五和",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5",
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-146",
+      "name_cn": "坂田",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-147",
+      "name_cn": "杨美",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-148",
+      "name_cn": "上水径",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-149",
+      "name_cn": "下水径",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-150",
+      "name_cn": "长龙",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-151",
+      "name_cn": "百鸽笼",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-152",
+      "name_cn": "布心",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-153",
+      "name_cn": "太安",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5",
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-154",
+      "name_cn": "怡景",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-155",
+      "name_cn": "东门",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l5"
+      ]
+    },
+    {
+      "id": "szn-156",
+      "name_cn": "体育中心",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-157",
+      "name_cn": "八卦岭",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6",
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-158",
+      "name_cn": "银湖",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6",
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-159",
+      "name_cn": "翰岭",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-160",
+      "name_cn": "梅林关",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-161",
+      "name_cn": "上芬",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-162",
+      "name_cn": "元芬",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-163",
+      "name_cn": "阳台山东",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-164",
+      "name_cn": "官田",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-165",
+      "name_cn": "上屋",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6",
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-166",
+      "name_cn": "长圳",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-167",
+      "name_cn": "凤凰城",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6",
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-168",
+      "name_cn": "光明大街",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-169",
+      "name_cn": "光明",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6",
+        "szn-l6b"
+      ]
+    },
+    {
+      "id": "szn-170",
+      "name_cn": "科学公园",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-171",
+      "name_cn": "楼村",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-172",
+      "name_cn": "红花山",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-173",
+      "name_cn": "公明广场",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6",
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-174",
+      "name_cn": "合水口",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-175",
+      "name_cn": "薯田埔",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-176",
+      "name_cn": "松岗公园",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-177",
+      "name_cn": "溪头",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6"
+      ]
+    },
+    {
+      "id": "szn-178",
+      "name_cn": "松岗",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6",
+        "szn-l11",
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-179",
+      "name_cn": "深理工",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6b"
+      ]
+    },
+    {
+      "id": "szn-180",
+      "name_cn": "中大",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6b"
+      ]
+    },
+    {
+      "id": "szn-181",
+      "name_cn": "圳美",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6b"
+      ]
+    },
+    {
+      "id": "szn-182",
+      "name_cn": "碧眼",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6b"
+      ]
+    },
+    {
+      "id": "szn-183",
+      "name_cn": "虹桥公园",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6b"
+      ]
+    },
+    {
+      "id": "szn-184",
+      "name_cn": "光明城",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l6b",
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-185",
+      "name_cn": "深大丽湖",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-186",
+      "name_cn": "北大",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-187",
+      "name_cn": "西丽湖",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-188",
+      "name_cn": "茶光",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-189",
+      "name_cn": "珠光",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-190",
+      "name_cn": "龙井",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-191",
+      "name_cn": "桃源村",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-192",
+      "name_cn": "深云",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-193",
+      "name_cn": "农林",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-194",
+      "name_cn": "上沙",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-195",
+      "name_cn": "沙尾",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-196",
+      "name_cn": "皇岗村",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-197",
+      "name_cn": "皇岗口岸",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-198",
+      "name_cn": "赤尾",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-199",
+      "name_cn": "华强南",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7",
+        "szn-l11"
+      ]
+    },
+    {
+      "id": "szn-200",
+      "name_cn": "黄木岗",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7",
+        "szn-l14"
+      ]
+    },
+    {
+      "id": "szn-201",
+      "name_cn": "红岭北",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7",
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-202",
+      "name_cn": "笋岗",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-203",
+      "name_cn": "洪湖",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l7"
+      ]
+    },
+    {
+      "id": "szn-204",
+      "name_cn": "梦海",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-205",
+      "name_cn": "怡海",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-206",
+      "name_cn": "荔林",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-207",
+      "name_cn": "南油西",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-208",
+      "name_cn": "南油",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9",
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-209",
+      "name_cn": "南山书城",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-210",
+      "name_cn": "深大南",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-211",
+      "name_cn": "粤海门",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9",
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-212",
+      "name_cn": "高新南",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-213",
+      "name_cn": "红树湾南",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9",
+        "szn-l11"
+      ]
+    },
+    {
+      "id": "szn-214",
+      "name_cn": "深湾",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-215",
+      "name_cn": "深圳湾公园",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-216",
+      "name_cn": "下沙",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-217",
+      "name_cn": "香梅",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-218",
+      "name_cn": "梅景",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-219",
+      "name_cn": "下梅林",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-220",
+      "name_cn": "梅村",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-221",
+      "name_cn": "孖岭",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9",
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-222",
+      "name_cn": "泥岗",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-223",
+      "name_cn": "园岭",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-224",
+      "name_cn": "红岭南",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9",
+        "szn-l11"
+      ]
+    },
+    {
+      "id": "szn-225",
+      "name_cn": "鹿丹村",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-226",
+      "name_cn": "人民",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-227",
+      "name_cn": "向西村",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-228",
+      "name_cn": "文锦",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l9"
+      ]
+    },
+    {
+      "id": "szn-229",
+      "name_cn": "双拥街",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-230",
+      "name_cn": "平湖",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-231",
+      "name_cn": "禾花",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-232",
+      "name_cn": "华南城",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-233",
+      "name_cn": "木古",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-234",
+      "name_cn": "上李朗",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-235",
+      "name_cn": "凉帽山",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-236",
+      "name_cn": "甘坑",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-237",
+      "name_cn": "雪象",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-238",
+      "name_cn": "岗头",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-239",
+      "name_cn": "华为",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-240",
+      "name_cn": "贝尔路",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-241",
+      "name_cn": "坂田北",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-242",
+      "name_cn": "光雅园",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-243",
+      "name_cn": "南坑",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-244",
+      "name_cn": "雅宝",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-245",
+      "name_cn": "冬瓜岭",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l10"
+      ]
+    },
+    {
+      "id": "szn-246",
+      "name_cn": "福星",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l11"
+      ]
+    },
+    {
+      "id": "szn-247",
+      "name_cn": "南山",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l11",
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-248",
+      "name_cn": "宝安",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l11"
+      ]
+    },
+    {
+      "id": "szn-249",
+      "name_cn": "碧海湾",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l11"
+      ]
+    },
+    {
+      "id": "szn-250",
+      "name_cn": "机场",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l11"
+      ]
+    },
+    {
+      "id": "szn-251",
+      "name_cn": "机场北",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l11",
+        "szn-l20"
+      ]
+    },
+    {
+      "id": "szn-252",
+      "name_cn": "福永",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l11",
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-253",
+      "name_cn": "桥头",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l11"
+      ]
+    },
+    {
+      "id": "szn-254",
+      "name_cn": "塘尾",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l11"
+      ]
+    },
+    {
+      "id": "szn-255",
+      "name_cn": "马安山",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l11"
+      ]
+    },
+    {
+      "id": "szn-256",
+      "name_cn": "沙井",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l11"
+      ]
+    },
+    {
+      "id": "szn-257",
+      "name_cn": "后亭",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l11"
+      ]
+    },
+    {
+      "id": "szn-258",
+      "name_cn": "碧头",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l11"
+      ]
+    },
+    {
+      "id": "szn-259",
+      "name_cn": "左炮台东",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-260",
+      "name_cn": "太子湾",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-261",
+      "name_cn": "花果山",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-262",
+      "name_cn": "四海",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-263",
+      "name_cn": "南光",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-264",
+      "name_cn": "南头古城",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-265",
+      "name_cn": "中山公园",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-266",
+      "name_cn": "同乐南",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-267",
+      "name_cn": "新安公园",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-268",
+      "name_cn": "上川",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-269",
+      "name_cn": "流塘",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-270",
+      "name_cn": "宝安客运站",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-271",
+      "name_cn": "宝田一路",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-272",
+      "name_cn": "平峦山",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-273",
+      "name_cn": "西乡桃源",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-274",
+      "name_cn": "钟屋南",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-275",
+      "name_cn": "黄田",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-276",
+      "name_cn": "兴围",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-277",
+      "name_cn": "福围",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-278",
+      "name_cn": "怀德",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-279",
+      "name_cn": "桥头西",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-280",
+      "name_cn": "福海西",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-281",
+      "name_cn": "国展",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12",
+        "szn-l20"
+      ]
+    },
+    {
+      "id": "szn-282",
+      "name_cn": "国展北",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12",
+        "szn-l20"
+      ]
+    },
+    {
+      "id": "szn-283",
+      "name_cn": "海上田园南",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-284",
+      "name_cn": "海上田园东",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-285",
+      "name_cn": "蚝乡",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-286",
+      "name_cn": "沙蚝",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-287",
+      "name_cn": "沙井古墟",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-288",
+      "name_cn": "步涌",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-289",
+      "name_cn": "朗下",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l12"
+      ]
+    },
+    {
+      "id": "szn-290",
+      "name_cn": "深圳湾口岸",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-291",
+      "name_cn": "人才公园",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-292",
+      "name_cn": "高新中",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-293",
+      "name_cn": "高新北",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-294",
+      "name_cn": "石鼓",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-295",
+      "name_cn": "百旺",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-296",
+      "name_cn": "应人石",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-297",
+      "name_cn": "罗租",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-298",
+      "name_cn": "石岩",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-299",
+      "name_cn": "红坳公园",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-300",
+      "name_cn": "德雅路",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-301",
+      "name_cn": "月亮路",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-302",
+      "name_cn": "将围",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-303",
+      "name_cn": "新庄",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-304",
+      "name_cn": "上村",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-305",
+      "name_cn": "下村",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-306",
+      "name_cn": "李松蓢",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l13"
+      ]
+    },
+    {
+      "id": "szn-307",
+      "name_cn": "沙田",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l14"
+      ]
+    },
+    {
+      "id": "szn-308",
+      "name_cn": "坑梓",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l14"
+      ]
+    },
+    {
+      "id": "szn-309",
+      "name_cn": "坪山中心",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l14"
+      ]
+    },
+    {
+      "id": "szn-310",
+      "name_cn": "坪山广场",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l14"
+      ]
+    },
+    {
+      "id": "szn-311",
+      "name_cn": "坪山围",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l14",
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-312",
+      "name_cn": "锦龙",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l14"
+      ]
+    },
+    {
+      "id": "szn-313",
+      "name_cn": "宝龙",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l14"
+      ]
+    },
+    {
+      "id": "szn-314",
+      "name_cn": "南约",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l14"
+      ]
+    },
+    {
+      "id": "szn-315",
+      "name_cn": "嶂背",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l14"
+      ]
+    },
+    {
+      "id": "szn-316",
+      "name_cn": "坳背",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l14"
+      ]
+    },
+    {
+      "id": "szn-317",
+      "name_cn": "四联",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l14"
+      ]
+    },
+    {
+      "id": "szn-318",
+      "name_cn": "六约北",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l14"
+      ]
+    },
+    {
+      "id": "szn-319",
+      "name_cn": "石芽岭",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l14"
+      ]
+    },
+    {
+      "id": "szn-320",
+      "name_cn": "罗湖北",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l14"
+      ]
+    },
+    {
+      "id": "szn-321",
+      "name_cn": "田心",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-322",
+      "name_cn": "技术大学",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-323",
+      "name_cn": "石井",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-324",
+      "name_cn": "燕子湖",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-325",
+      "name_cn": "沙壆",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-326",
+      "name_cn": "东纵纪念馆",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-327",
+      "name_cn": "坪环",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-328",
+      "name_cn": "六和",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-329",
+      "name_cn": "新和",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-330",
+      "name_cn": "坪山",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-331",
+      "name_cn": "宝龙同乐",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-332",
+      "name_cn": "龙东",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-333",
+      "name_cn": "新塘围",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-334",
+      "name_cn": "龙园",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-335",
+      "name_cn": "盛平",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-336",
+      "name_cn": "尚景",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-337",
+      "name_cn": "回龙埔",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-338",
+      "name_cn": "愉园",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-339",
+      "name_cn": "黄阁坑",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-340",
+      "name_cn": "龙城公园",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-341",
+      "name_cn": "大运中心",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-342",
+      "name_cn": "金源",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-343",
+      "name_cn": "吉溪",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-344",
+      "name_cn": "大安",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-345",
+      "name_cn": "园山",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-346",
+      "name_cn": "大康",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-347",
+      "name_cn": "福坑",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-348",
+      "name_cn": "安良",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-349",
+      "name_cn": "园山西坑",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l16"
+      ]
+    },
+    {
+      "id": "szn-350",
+      "name_cn": "国展南",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l20"
+      ]
+    },
+    {
+      "id": "szn-351",
+      "name_cn": "会展城",
+      "name_en": "",
+      "alias": [],
+      "lines": [
+        "szn-l20"
+      ]
+    }
+  ],
+  "seed_answers": [
+    {
+      "station": "szn-011",
+      "from_line": "szn-l1",
+      "from_dir": "开往机场东",
+      "to_line": "szn-l11",
+      "to_dir": "开往碧头",
+      "author_email": "penglai@example.com",
+      "author_nick": "鹏城通勤",
+      "anon": true,
+      "position_type": "car",
+      "car_number": 5,
+      "description": "1号线往机场东方向坐第5节车厢，下车正对11号线换乘通道，不用穿过整个站厅。",
+      "likes": 23,
+      "dislikes": 2,
+      "version": 1,
+      "days_ago": 10,
+      "comments": [
+        {
+          "nick": "匿名",
+          "days_ago": 6,
+          "text": "11号线站台深，换乘扶梯挺长的，预留点时间。"
+        }
+      ]
+    }
+  ]
+}

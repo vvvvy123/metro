@@ -330,7 +330,10 @@ function sortAnswers(list){
 function devHeaders(extra){return Object.assign({"X-Device-Id":DEVICE},extra||{});}
 async function apiGET(path){const r=await fetch(API_BASE+path,{headers:devHeaders()});const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||("HTTP "+r.status));return j;}
 async function apiSEND(path,method,body){const r=await fetch(API_BASE+path,{method,headers:devHeaders({"Content-Type":"application/json"}),body:body?JSON.stringify(body):null});const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||("HTTP "+r.status));return j;}
-function matchText(q,...f){q=(q||"").trim().toLowerCase();if(!q)return true;return f.some(x=>String(x||"").toLowerCase().includes(q));}
+// fold: search key insensitive to case, whitespace and diacritics (accents),
+// mirrors server.py fold() so French names match regardless of accents/spaces.
+function fold(s){return String(s==null?"":s).normalize("NFKD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[\s-\u2010-\u2015\u2212]/g,"");}
+function matchText(q,...f){q=fold(q);if(!q)return true;return f.some(x=>fold(x).includes(q));}
 
 /* Built-in CN<->EN dictionary for common metro cities. Typing either name resolves
    both, so added cities stay bilingual and de-duplicated. Cities outside this list
@@ -647,7 +650,7 @@ const STEPS=["城市","车站","线路方向","位置","确认"];
 function openUploadBlank(){startUpload({city:CITY});}
 function startUpload(pre){
   U={step:0,city:pre.city||CITY,station:pre.station||null,from_line:pre.from_line||null,from_dir:pre.from_dir||null,
-     to_line:pre.to_line||null,to_dir:pre.to_dir||null,pos:null,custom:"",reason:"",anon:true,nick:NICK};
+     to_line:pre.to_line||null,to_dir:pre.to_dir||null,posMode:"car",pos:null,custom:"",reason:"",anon:true,nick:NICK};
   if(U.city&&U.station&&U.from_line&&U.from_dir&&U.to_line&&U.to_dir)U.step=3;
   else if(U.city&&U.station)U.step=2;
   else if(U.city)U.step=1;
@@ -667,7 +670,9 @@ function renderUpload(){
      <div class="form-group"><label>换乘线路</label><div id="uTL"></div></div>
      <div class="form-group"><label>换乘方向</label><div id="uTD"></div></div>${navBtns(true)}`;
   else if(U.step===3)b.innerHTML=
-    `<div class="form-group"><label>④ 最佳位置</label><div class="pos-grid" id="posGrid"></div>
+    `<div class="form-group"><label>④ 最佳位置</label>
+      <div id="posModeToggle" style="display:flex;gap:8px;margin-bottom:10px"></div>
+      <div class="pos-grid" id="posGrid"></div>
       <div id="customWrap" style="display:none;margin-top:10px"><input class="form-control" id="customText" placeholder="自定义位置，例如：车尾第1节 / 前1/4 / 靠近司机室"></div></div>
      <div class="form-group"><label>原因（可选）</label><textarea class="form-control" id="reason" placeholder="例如：扶梯就在车门旁边，下车右转即到。">${esc(U.reason)}</textarea></div>
      <div class="form-group"><div class="check-row"><input type="checkbox" id="anon" ${U.anon?"checked":""}><label for="anon" style="margin:0;cursor:pointer">匿名发布（仅隐藏昵称）</label></div></div>
@@ -678,10 +683,9 @@ function renderUpload(){
       <div><b>城市</b>：${esc(U.city.name_cn)}</div><div><b>车站</b>：${esc(U.station.name_cn)}</div>
       <div><b>进入</b>：${esc(U.from_line.name)} · ${esc(U.from_dir.name)}</div>
       <div><b>换乘</b>：${esc(U.to_line.name)} · ${esc(U.to_dir.name)}</div>
-      <div><b>位置</b>：${esc(U.pos==="custom"?U.custom:("第 "+U.pos+" 节"))}</div>
+      <div><b>位置</b>：${esc(posLabel())}</div>
       <div><b>原因</b>：${esc(U.reason||"（未填）")}</div>
-      <div><b>匿名</b>：${U.anon?"是":"否（显示："+esc(U.nick)+"）"}</div></div>
-      <div class="field-note">同一换乘每人只保留一条回答；若你已发过，将生成新版本并刷新排序时间。</div></div>
+      <div><b>匿名</b>：${U.anon?"是":"否（显示："+esc(U.nick)+"）"}</div></div></div>
      <div class="form-actions"><button class="btn ghost" onclick="uStep(-1)">上一步</button><button class="btn primary" onclick="submitUpload()">发布经验</button></div>`;
   mountUploadControls();
 }
@@ -702,10 +706,8 @@ function mountUploadControls(){
   }
   else if(U.step===2)mountLineDir();
   else if(U.step===3){
-    const g=$("posGrid");let h="";
-    for(let i=1;i<=12;i++)h+=`<div class="pos-cell ${U.pos==i?"selected":""}" onclick="pickPos(${i})">第${i}节</div>`;
-    h+=`<div class="pos-cell ${U.pos==="custom"?"selected":""}" onclick="pickPos('custom')" style="grid-column:span 2">自定义…</div>`;
-    g.innerHTML=h;$("customWrap").style.display=U.pos==="custom"?"block":"none";if(U.pos==="custom")$("customText").value=U.custom;
+    renderPosStep();
+    $("customWrap").style.display=U.pos==="custom"?"block":"none";if(U.pos==="custom")$("customText").value=U.custom;
   }
 }
 function mountLineDir(){
@@ -713,7 +715,7 @@ function mountLineDir(){
   // Reuse ALL city lines (archived, with their directions). Selecting one links it
   // to this station so we never create a duplicate line just to re-enter directions.
   makeCombo($("uFL"),{placeholder:"选择或新增进入线路",
-    fetchItems:async q=>(await DL.cityLines(U.city.id)).filter(l=>!q||l.name.includes(q)).map(l=>({id:l.id,label:l.name,color:l.color})),
+    fetchItems:async q=>(await DL.cityLines(U.city.id)).filter(l=>matchText(q,l.name)).map(l=>({id:l.id,label:l.name,color:l.color})),
     onAdd:async q=>{const l=await DL.addLine(U.city.id,st,q);toast("已添加线路："+q);return {id:l.id,label:l.name,color:l.color};},addLabel:q=>"添加线路「"+q+"」",
     onSelect:async it=>{U.from_line={id:it.id,name:it.label,color:it.color};U.from_dir=null;await DL.linkLine(st,it.id);if(U.to_line&&U.to_line.id===it.id){U.to_line=null;U.to_dir=null;mountTL();mountTD();}mountFD();}});
   if(U.from_line)$("uFL").querySelector("input").value=U.from_line.name;
@@ -722,7 +724,7 @@ function mountLineDir(){
 function mountTL(){
   const st=U.station.id;
   makeCombo($("uTL"),{placeholder:"选择或新增换乘线路",
-    fetchItems:async q=>(await DL.cityLines(U.city.id)).filter(l=>l.id!==(U.from_line&&U.from_line.id)).filter(l=>!q||l.name.includes(q)).map(l=>({id:l.id,label:l.name,color:l.color})),
+    fetchItems:async q=>(await DL.cityLines(U.city.id)).filter(l=>l.id!==(U.from_line&&U.from_line.id)).filter(l=>matchText(q,l.name)).map(l=>({id:l.id,label:l.name,color:l.color})),
     onAdd:async q=>{const l=await DL.addLine(U.city.id,st,q);toast("已添加线路："+q);return {id:l.id,label:l.name,color:l.color};},addLabel:q=>"添加线路「"+q+"」",
     onSelect:async it=>{U.to_line={id:it.id,name:it.label,color:it.color};U.to_dir=null;await DL.linkLine(st,it.id);mountTD();}});
   if(U.to_line)$("uTL").querySelector("input").value=U.to_line.name;
@@ -731,7 +733,7 @@ function mountFD(){
   if(!$("uFD"))return;
   if(!U.from_line){$("uFD").innerHTML=`<div class="combo-empty" style="border:1px solid var(--line);border-radius:10px">先选进入线路</div>`;return;}
   makeCombo($("uFD"),{placeholder:"选择或新增进入方向",
-    fetchItems:async q=>(await DL.directions(U.from_line.id)).filter(d=>!q||d.name.includes(q)).map(d=>({id:d.id,label:d.name})),
+    fetchItems:async q=>(await DL.directions(U.from_line.id)).filter(d=>matchText(q,d.name)).map(d=>({id:d.id,label:d.name})),
     onAdd:async q=>{const d=await DL.addDirection(U.from_line.id,q);toast("已添加方向："+q);return {id:d.id,label:d.name};},addLabel:q=>"添加方向「"+q+"」",
     onSelect:it=>{U.from_dir={id:it.id,name:it.label};}});
   if(U.from_dir)$("uFD").querySelector("input").value=U.from_dir.name;
@@ -740,14 +742,27 @@ function mountTD(){
   if(!$("uTD"))return;
   if(!U.to_line){$("uTD").innerHTML=`<div class="combo-empty" style="border:1px solid var(--line);border-radius:10px">先选换乘线路</div>`;return;}
   makeCombo($("uTD"),{placeholder:"选择或新增换乘方向",
-    fetchItems:async q=>(await DL.directions(U.to_line.id)).filter(d=>!q||d.name.includes(q)).map(d=>({id:d.id,label:d.name})),
+    fetchItems:async q=>(await DL.directions(U.to_line.id)).filter(d=>matchText(q,d.name)).map(d=>({id:d.id,label:d.name})),
     onAdd:async q=>{const d=await DL.addDirection(U.to_line.id,q);toast("已添加方向："+q);return {id:d.id,label:d.name};},addLabel:q=>"添加方向「"+q+"」",
     onSelect:it=>{U.to_dir={id:it.id,name:it.label};}});
   if(U.to_dir)$("uTD").querySelector("input").value=U.to_dir.name;
 }
-function pickPos(p){U.pos=p;document.querySelectorAll("#posGrid .pos-cell").forEach(c=>c.classList.remove("selected"));
-  const cells=document.querySelectorAll("#posGrid .pos-cell");cells.forEach(c=>{if(c.textContent==("第"+p+"节")||(p==="custom"&&c.textContent==="自定义…"))c.classList.add("selected");});
-  $("customWrap").style.display=p==="custom"?"block":"none";}
+function posCellLabel(i){return U.posMode==="door"?(i+"号车门"):("第"+i+"节");}
+function posLabel(){if(U.pos==="custom")return U.custom;return U.posMode==="door"?(U.pos+"号车门"):("第 "+U.pos+" 节");}
+function renderPosStep(){
+  const tg=$("posModeToggle");
+  if(tg)tg.innerHTML=
+    `<button type="button" class="btn ${U.posMode==="car"?"primary":"ghost"}" onclick="setPosMode('car')">车厢</button>`+
+    `<button type="button" class="btn ${U.posMode==="door"?"primary":"ghost"}" onclick="setPosMode('door')">车门</button>`;
+  const g=$("posGrid");if(!g)return;
+  const n=U.posMode==="door"?24:12;let h="";
+  for(let i=1;i<=n;i++)h+=`<div class="pos-cell ${U.pos==i?"selected":""}" onclick="pickPos(${i})">${posCellLabel(i)}</div>`;
+  h+=`<div class="pos-cell ${U.pos==="custom"?"selected":""}" onclick="pickPos('custom')" style="grid-column:span 2">自定义…</div>`;
+  g.innerHTML=h;
+}
+function setPosMode(m){if(U.posMode===m)return;U.posMode=m;U.pos=null;U.custom="";renderPosStep();$("customWrap").style.display="none";}
+function pickPos(p){U.pos=p;renderPosStep();
+  $("customWrap").style.display=p==="custom"?"block":"none";if(p==="custom"&&$("customText"))$("customText").value=U.custom||"";}
 function stepInvalidMsg(){
   if(U.step===0)return U.city?null:"请选择城市";
   if(U.step===1)return U.station?null:"请选择车站";
@@ -764,9 +779,13 @@ function uStep(d){
   renderUpload();
 }
 async function submitUpload(){
+  const isCustom=U.pos==="custom",isDoor=U.posMode==="door";
+  let position_type,car_number,custom_text,defDesc;
+  if(isCustom){position_type="custom";car_number=null;custom_text=U.custom;defDesc=U.custom;}
+  else if(isDoor){position_type="custom";car_number=null;custom_text=U.pos+"号车门";defDesc=`建议在${U.pos}号车门位置上车换乘。`;}
+  else{position_type="car";car_number=Number(U.pos);custom_text="";defDesc=`建议坐第${U.pos}节车厢换乘。`;}
   const payload={station:U.station.id,from_line:U.from_line.id,from_dir:U.from_dir.id,to_line:U.to_line.id,to_dir:U.to_dir.id,
-    position_type:U.pos==="custom"?"custom":"car",car_number:U.pos==="custom"?null:Number(U.pos),
-    custom_text:U.pos==="custom"?U.custom:"",description:U.reason||(U.pos==="custom"?U.custom:`建议坐第${U.pos}节车厢换乘。`),
+    position_type,car_number,custom_text,description:U.reason||defDesc,
     is_anon:U.anon,nickname:U.nick};
   if(!U.anon){NICK=U.nick;localStorage.setItem("mt_nick",U.nick);}
   try{
