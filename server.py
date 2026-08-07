@@ -240,6 +240,10 @@ class Handler(BaseHTTPRequestHandler):
                    ORDER BY name_cn""", (m.group(1), qq, qq, qq)).fetchall()
             return self._json([station_json(conn, r) for r in rows])
 
+        m = re.match(r"^/api/cities/([^/]+)/popular$", p)
+        if m:
+            return self._popular(conn, m.group(1), q)
+
         m = re.match(r"^/api/cities/([^/]+)/lines$", p)
         if m:
             rows = conn.execute("SELECT * FROM line WHERE city_id=? ORDER BY name", (m.group(1),)).fetchall()
@@ -261,6 +265,63 @@ class Handler(BaseHTTPRequestHandler):
             return self._answers(conn, q)
 
         self._err("not found", 404)
+
+    def _popular(self, conn, cid, q):
+        """热门换乘站 — community heat first, interchange degree as filler.
+
+        1. stations that actually have experiences, ranked by
+           (answers, likes, comments) desc — real community signal;
+        2. if fewer than `limit`, top up with the city's biggest interchanges
+           (>=2 lines) by line count desc, so the section is never sparse.
+        Read-only; every station keeps the /stations payload shape plus counters.
+        """
+        try:
+            limit = max(1, min(50, int(q.get("limit", ["6"])[0])))
+        except (TypeError, ValueError):
+            limit = 6
+
+        hot = conn.execute(
+            """SELECT s.id AS sid,
+                      COUNT(DISTINCT a.id) AS answers,
+                      COUNT(DISTINCT CASE WHEN v.type='LIKE' THEN v.id END) AS likes,
+                      COUNT(DISTINCT c.id) AS comments
+                 FROM station s
+                 JOIN transfer t ON t.station_id = s.id
+                 JOIN answer a ON a.transfer_id = t.id AND a.is_deleted = 0
+                 LEFT JOIN vote v ON v.answer_id = a.id
+                 LEFT JOIN comment c ON c.answer_id = a.id
+                WHERE s.city_id = ?
+                GROUP BY s.id
+                ORDER BY answers DESC, likes DESC, comments DESC, s.name_cn
+                LIMIT ?""", (cid, limit)).fetchall()
+        picked = [dict(r) for r in hot]
+        seen = {r["sid"] for r in picked}
+
+        if len(picked) < limit:
+            fill = conn.execute(
+                """SELECT s.id AS sid, COUNT(sl.line_id) AS n
+                     FROM station s JOIN station_line sl ON sl.station_id = s.id
+                    WHERE s.city_id = ?
+                    GROUP BY s.id HAVING n >= 2
+                    ORDER BY n DESC, s.name_cn
+                    LIMIT ?""", (cid, limit * 4)).fetchall()
+            for r in fill:
+                if r["sid"] in seen:
+                    continue
+                picked.append({"sid": r["sid"], "answers": 0, "likes": 0, "comments": 0})
+                seen.add(r["sid"])
+                if len(picked) >= limit:
+                    break
+
+        out = []
+        for r in picked:
+            row = conn.execute("SELECT * FROM station WHERE id=?", (r["sid"],)).fetchone()
+            if not row:
+                continue
+            item = station_json(conn, row)
+            item.update(answers=r["answers"], likes=r["likes"], comments=r["comments"])
+            out.append(item)
+        self._json(out)
 
     def _answers(self, conn, q):
         g = lambda k: q.get(k, [""])[0]
