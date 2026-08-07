@@ -1,0 +1,2567 @@
+{
+  "city": {
+    "id": "nanjing",
+    "country_id": "cn",
+    "country_cn": "中国",
+    "country_en": "China",
+    "timezone": "Asia/Shanghai",
+    "name_cn": "南京",
+    "name_en": "Nanjing",
+    "alias": [
+      "nanjing",
+      "nj",
+      "南京市",
+      "金陵"
+    ]
+  },
+  "system": {
+    "id": "nanjing-metro",
+    "name_cn": "南京地铁",
+    "name_en": "Nanjing Metro"
+  },
+  "lines": [
+    {
+      "id": "nj-l1",
+      "name": "1号线",
+      "name_en": "Line 1",
+      "color": "#009ACE",
+      "directions": [
+        "开往中国药科大学",
+        "开往八卦洲大桥南"
+      ]
+    },
+    {
+      "id": "nj-l2",
+      "name": "2号线",
+      "name_en": "Line 2",
+      "color": "#A6093D",
+      "directions": [
+        "开往经天路",
+        "开往鱼嘴"
+      ]
+    },
+    {
+      "id": "nj-l3",
+      "name": "3号线",
+      "name_en": "Line 3",
+      "color": "#009A44",
+      "directions": [
+        "开往秣陵",
+        "开往林场"
+      ]
+    },
+    {
+      "id": "nj-l4",
+      "name": "4号线",
+      "name_en": "Line 4",
+      "color": "#7D55C7",
+      "directions": [
+        "开往仙林湖",
+        "开往龙江"
+      ]
+    },
+    {
+      "id": "nj-l5",
+      "name": "5号线",
+      "name_en": "Line 5",
+      "color": "#F2DA51",
+      "directions": [
+        "开往方家营",
+        "开往吉印大道"
+      ]
+    },
+    {
+      "id": "nj-l7",
+      "name": "7号线",
+      "name_en": "Line 7",
+      "color": "#4A7729",
+      "directions": [
+        "开往西善桥",
+        "开往仙新路"
+      ]
+    },
+    {
+      "id": "nj-l10",
+      "name": "10号线",
+      "name_en": "Line 10",
+      "color": "#B9975B",
+      "directions": [
+        "开往雨山路",
+        "开往东麒路"
+      ]
+    },
+    {
+      "id": "nj-s1",
+      "name": "S1号线（机场线）",
+      "name_en": "Line S1",
+      "color": "#4BBBB4",
+      "directions": [
+        "开往空港新城江宁",
+        "开往南京南站"
+      ]
+    },
+    {
+      "id": "nj-s2",
+      "name": "S2号线（宁马线）",
+      "name_en": "Line S2",
+      "color": "#93282C",
+      "directions": [
+        "开往太白",
+        "开往西善桥"
+      ]
+    },
+    {
+      "id": "nj-s3",
+      "name": "S3号线（宁和线）",
+      "name_en": "Line S3",
+      "color": "#BA84AC",
+      "directions": [
+        "开往高家冲",
+        "开往南京南站"
+      ]
+    },
+    {
+      "id": "nj-s6",
+      "name": "S6号线（宁句线）",
+      "name_en": "Line S6",
+      "color": "#C98BDB",
+      "directions": [
+        "开往句容",
+        "开往马群"
+      ]
+    },
+    {
+      "id": "nj-s7",
+      "name": "S7号线（宁溧线）",
+      "name_en": "Line S7",
+      "color": "#B46B7A",
+      "directions": [
+        "开往无想山",
+        "开往空港新城江宁"
+      ]
+    },
+    {
+      "id": "nj-s8",
+      "name": "S8号线（宁天线）",
+      "name_en": "Line S8",
+      "color": "#FF8000",
+      "directions": [
+        "开往金牛湖",
+        "开往长江大桥北"
+      ]
+    },
+    {
+      "id": "nj-s9",
+      "name": "S9号线（宁高线）",
+      "name_en": "Line S9",
+      "color": "#FFC600",
+      "directions": [
+        "开往高淳",
+        "开往翔宇路南"
+      ]
+    },
+    {
+      "id": "nj-nc",
+      "name": "宁滁线",
+      "name_en": "Ningchu Line",
+      "color": "#4b5563",
+      "directions": [
+        "开往滁州高铁站",
+        "开往汊河"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "nj-001",
+      "name_cn": "八卦洲大桥南",
+      "name_en": "BAGUAZHOUDAQIAONAN",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-002",
+      "name_cn": "笆斗山",
+      "name_en": "BADOUSHAN",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-003",
+      "name_cn": "燕子矶",
+      "name_en": "YANZIJI",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-004",
+      "name_cn": "吉祥庵",
+      "name_en": "JIXIANG'AN",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-005",
+      "name_cn": "晓庄",
+      "name_en": "XIAOZHUANG",
+      "alias": [],
+      "lines": [
+        "nj-l1",
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-006",
+      "name_cn": "迈皋桥",
+      "name_en": "MAIGAOQIAO",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-007",
+      "name_cn": "红山动物园",
+      "name_en": "HONGSHAN Zoo",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-008",
+      "name_cn": "南京站",
+      "name_en": "Nanjing Railway Station",
+      "alias": [],
+      "lines": [
+        "nj-l1",
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-009",
+      "name_cn": "新模范马路",
+      "name_en": "XINMOFANMALU",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-010",
+      "name_cn": "玄武门",
+      "name_en": "XUANWUMEN",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-011",
+      "name_cn": "鼓楼",
+      "name_en": "GULOU",
+      "alias": [],
+      "lines": [
+        "nj-l1",
+        "nj-l4"
+      ]
+    },
+    {
+      "id": "nj-012",
+      "name_cn": "珠江路",
+      "name_en": "ZHUJIANGLU",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-013",
+      "name_cn": "新街口",
+      "name_en": "XINJIEKOU",
+      "alias": [],
+      "lines": [
+        "nj-l1",
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-014",
+      "name_cn": "张府园",
+      "name_en": "ZHANGFUYUAN",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-015",
+      "name_cn": "三山街",
+      "name_en": "SANSHANJIE",
+      "alias": [],
+      "lines": [
+        "nj-l1",
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-016",
+      "name_cn": "中华门",
+      "name_en": "ZHONGHUAMEN",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-017",
+      "name_cn": "安德门",
+      "name_en": "ANDEMEN",
+      "alias": [],
+      "lines": [
+        "nj-l1",
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-018",
+      "name_cn": "天隆寺",
+      "name_en": "TIANLONGSI",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-019",
+      "name_cn": "软件大道",
+      "name_en": "RUANJIANDADAO",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-020",
+      "name_cn": "花神庙",
+      "name_en": "HUASHENMIAO",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-021",
+      "name_cn": "南京南站",
+      "name_en": "Nanjing South Railway Station",
+      "alias": [],
+      "lines": [
+        "nj-l1",
+        "nj-l3",
+        "nj-s1",
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-022",
+      "name_cn": "双龙大道",
+      "name_en": "SHUANGLONGDADAO",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-023",
+      "name_cn": "河定桥",
+      "name_en": "HEDINGQIAO",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-024",
+      "name_cn": "胜太路",
+      "name_en": "SHENGTAILU",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-025",
+      "name_cn": "百家湖",
+      "name_en": "BAIJIAHU",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-026",
+      "name_cn": "小龙湾",
+      "name_en": "XIAOLONGWAN",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-027",
+      "name_cn": "竹山路",
+      "name_en": "ZHUSHANLU",
+      "alias": [],
+      "lines": [
+        "nj-l1",
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-028",
+      "name_cn": "天印大道",
+      "name_en": "TIANYINDADAO",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-029",
+      "name_cn": "龙眠大道",
+      "name_en": "LONGMIANDADAO",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-030",
+      "name_cn": "南医大/江苏经贸学院",
+      "name_en": "NMU·JIETT",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-031",
+      "name_cn": "南京交院",
+      "name_en": "NJCI",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-032",
+      "name_cn": "中国药科大学",
+      "name_en": "CPU",
+      "alias": [],
+      "lines": [
+        "nj-l1"
+      ]
+    },
+    {
+      "id": "nj-033",
+      "name_cn": "鱼嘴",
+      "name_en": "YUZUI",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-034",
+      "name_cn": "天保街",
+      "name_en": "TIANBAOJIE",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-035",
+      "name_cn": "青莲街",
+      "name_en": "QINGLIANJIE",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-036",
+      "name_cn": "螺塘路",
+      "name_en": "LUOTANGLU",
+      "alias": [],
+      "lines": [
+        "nj-l2",
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-037",
+      "name_cn": "油坊桥",
+      "name_en": "YOUFANGQIAO",
+      "alias": [],
+      "lines": [
+        "nj-l2",
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-038",
+      "name_cn": "雨润大街",
+      "name_en": "YURUNDAJIE",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-039",
+      "name_cn": "元通",
+      "name_en": "YUANTONG",
+      "alias": [],
+      "lines": [
+        "nj-l2",
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-040",
+      "name_cn": "奥体东",
+      "name_en": "Olympic Stadium East",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-041",
+      "name_cn": "兴隆大街",
+      "name_en": "XINGLONGDAJIE",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-042",
+      "name_cn": "集庆门大街",
+      "name_en": "JIQINGMENDAJIE",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-043",
+      "name_cn": "云锦路",
+      "name_en": "YUNJINLU",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-044",
+      "name_cn": "莫愁湖",
+      "name_en": "MOCHOUHU",
+      "alias": [],
+      "lines": [
+        "nj-l2",
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-045",
+      "name_cn": "汉中门",
+      "name_en": "HANZHONGMEN",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-046",
+      "name_cn": "上海路",
+      "name_en": "SHANGHAILU",
+      "alias": [],
+      "lines": [
+        "nj-l2",
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-047",
+      "name_cn": "大行宫",
+      "name_en": "DAXINGGONG",
+      "alias": [],
+      "lines": [
+        "nj-l2",
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-048",
+      "name_cn": "西安门",
+      "name_en": "XI'ANMEN",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-049",
+      "name_cn": "明故宫",
+      "name_en": "MINGGUGONG",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-050",
+      "name_cn": "苜蓿园",
+      "name_en": "MUXUYUAN",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-051",
+      "name_cn": "下马坊",
+      "name_en": "XIAMAFANG",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-052",
+      "name_cn": "孝陵卫",
+      "name_en": "XIAOLINGWEI",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-053",
+      "name_cn": "钟灵街",
+      "name_en": "ZHONGLINGJIE",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-054",
+      "name_cn": "马群",
+      "name_en": "MAQUN",
+      "alias": [],
+      "lines": [
+        "nj-l2",
+        "nj-s6"
+      ]
+    },
+    {
+      "id": "nj-055",
+      "name_cn": "金马路",
+      "name_en": "JINMALU",
+      "alias": [],
+      "lines": [
+        "nj-l2",
+        "nj-l4"
+      ]
+    },
+    {
+      "id": "nj-056",
+      "name_cn": "仙鹤门",
+      "name_en": "XIANHEMEN",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-057",
+      "name_cn": "学则路",
+      "name_en": "XUEZELU",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-058",
+      "name_cn": "仙林中心",
+      "name_en": "XIANLIN ZHONGXIN",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-059",
+      "name_cn": "羊山公园",
+      "name_en": "YANGSHAN GONGYUAN",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-060",
+      "name_cn": "南大仙林校区",
+      "name_en": "NJU XIANLIN Campus",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-061",
+      "name_cn": "经天路",
+      "name_en": "JINGTIANLU",
+      "alias": [],
+      "lines": [
+        "nj-l2"
+      ]
+    },
+    {
+      "id": "nj-062",
+      "name_cn": "林场",
+      "name_en": "LINCHANG",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-063",
+      "name_cn": "星火路",
+      "name_en": "XINGHUOLU",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-064",
+      "name_cn": "东大成贤学院",
+      "name_en": "SEU CHENGXIAN College",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-065",
+      "name_cn": "泰冯路",
+      "name_en": "TAIFENGLU",
+      "alias": [],
+      "lines": [
+        "nj-l3",
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-066",
+      "name_cn": "天润城",
+      "name_en": "TIANRUNCHENG",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-067",
+      "name_cn": "柳洲东路",
+      "name_en": "LIUZHOUDONGLU",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-068",
+      "name_cn": "上元门",
+      "name_en": "SHANGYUANMEN",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-069",
+      "name_cn": "五塘广场",
+      "name_en": "WUTANGGUANGCHANG",
+      "alias": [],
+      "lines": [
+        "nj-l3",
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-070",
+      "name_cn": "小市",
+      "name_en": "XIAOSHI",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-071",
+      "name_cn": "南京林业大学·新庄",
+      "name_en": "NFU·XINZHUANG",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-072",
+      "name_cn": "鸡鸣寺",
+      "name_en": "JIMINGSI",
+      "alias": [],
+      "lines": [
+        "nj-l3",
+        "nj-l4"
+      ]
+    },
+    {
+      "id": "nj-073",
+      "name_cn": "浮桥",
+      "name_en": "FUQIAO",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-074",
+      "name_cn": "常府街",
+      "name_en": "CHANGFUJIE",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-075",
+      "name_cn": "夫子庙",
+      "name_en": "FUZIMIAO",
+      "alias": [],
+      "lines": [
+        "nj-l3",
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-076",
+      "name_cn": "武定门",
+      "name_en": "WUDINGMEN",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-077",
+      "name_cn": "雨花门",
+      "name_en": "YUHUAMEN",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-078",
+      "name_cn": "卡子门",
+      "name_en": "KAZIMEN",
+      "alias": [],
+      "lines": [
+        "nj-l3",
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-079",
+      "name_cn": "大明路",
+      "name_en": "DAMINGLU",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-080",
+      "name_cn": "明发广场",
+      "name_en": "MINGFAGUANGCHANG",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-081",
+      "name_cn": "宏运大道",
+      "name_en": "HONGYUNDAODAO",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-082",
+      "name_cn": "胜太西路",
+      "name_en": "SHENGTAIXILU",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-083",
+      "name_cn": "天元西路",
+      "name_en": "TIANYUANXILU",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-084",
+      "name_cn": "九龙湖",
+      "name_en": "JIULONGHU",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-085",
+      "name_cn": "诚信大道",
+      "name_en": "CHENGXINDADAO",
+      "alias": [],
+      "lines": [
+        "nj-l3",
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-086",
+      "name_cn": "东大九龙湖校区",
+      "name_en": "SEU JIULONGHU Campus",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-087",
+      "name_cn": "秣周东路",
+      "name_en": "MOZHOUDONGLU",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-088",
+      "name_cn": "上秦淮西",
+      "name_en": "SHANGQINHUAIXI",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-089",
+      "name_cn": "秣陵",
+      "name_en": "MOLING",
+      "alias": [],
+      "lines": [
+        "nj-l3"
+      ]
+    },
+    {
+      "id": "nj-090",
+      "name_cn": "龙江",
+      "name_en": "LONGJIANG",
+      "alias": [],
+      "lines": [
+        "nj-l4"
+      ]
+    },
+    {
+      "id": "nj-091",
+      "name_cn": "草场门",
+      "name_en": "CAOCHANGMEN",
+      "alias": [],
+      "lines": [
+        "nj-l4",
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-092",
+      "name_cn": "云南路",
+      "name_en": "YUNNANLU",
+      "alias": [],
+      "lines": [
+        "nj-l4",
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-093",
+      "name_cn": "九华山",
+      "name_en": "JIUHUASHAN",
+      "alias": [],
+      "lines": [
+        "nj-l4"
+      ]
+    },
+    {
+      "id": "nj-094",
+      "name_cn": "岗子村",
+      "name_en": "GANGZICUN",
+      "alias": [],
+      "lines": [
+        "nj-l4"
+      ]
+    },
+    {
+      "id": "nj-095",
+      "name_cn": "蒋王庙",
+      "name_en": "JIANGWANGMIAO",
+      "alias": [],
+      "lines": [
+        "nj-l4"
+      ]
+    },
+    {
+      "id": "nj-096",
+      "name_cn": "王家湾",
+      "name_en": "WANGJIAWAN",
+      "alias": [],
+      "lines": [
+        "nj-l4"
+      ]
+    },
+    {
+      "id": "nj-097",
+      "name_cn": "聚宝山",
+      "name_en": "JUBAOSHAN",
+      "alias": [],
+      "lines": [
+        "nj-l4"
+      ]
+    },
+    {
+      "id": "nj-098",
+      "name_cn": "徐庄",
+      "name_en": "XUZHUANG",
+      "alias": [],
+      "lines": [
+        "nj-l4"
+      ]
+    },
+    {
+      "id": "nj-099",
+      "name_cn": "汇通路",
+      "name_en": "HUITONGLU",
+      "alias": [],
+      "lines": [
+        "nj-l4"
+      ]
+    },
+    {
+      "id": "nj-100",
+      "name_cn": "灵山",
+      "name_en": "LINGSHAN",
+      "alias": [],
+      "lines": [
+        "nj-l4"
+      ]
+    },
+    {
+      "id": "nj-101",
+      "name_cn": "东流",
+      "name_en": "DONGLIU",
+      "alias": [],
+      "lines": [
+        "nj-l4"
+      ]
+    },
+    {
+      "id": "nj-102",
+      "name_cn": "孟北",
+      "name_en": "MENGBEI",
+      "alias": [],
+      "lines": [
+        "nj-l4"
+      ]
+    },
+    {
+      "id": "nj-103",
+      "name_cn": "西岗桦墅",
+      "name_en": "XIGANG HUASHU",
+      "alias": [],
+      "lines": [
+        "nj-l4"
+      ]
+    },
+    {
+      "id": "nj-104",
+      "name_cn": "仙林湖",
+      "name_en": "XIANLINHU",
+      "alias": [],
+      "lines": [
+        "nj-l4"
+      ]
+    },
+    {
+      "id": "nj-105",
+      "name_cn": "吉印大道",
+      "name_en": "JIYINDADAO",
+      "alias": [],
+      "lines": [
+        "nj-l5",
+        "nj-s1"
+      ]
+    },
+    {
+      "id": "nj-106",
+      "name_cn": "九龙湖南",
+      "name_en": "JIULONGHUNAN",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-107",
+      "name_cn": "前庄",
+      "name_en": "QIANZHUANG",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-108",
+      "name_cn": "科宁路",
+      "name_en": "KENINGLU",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-109",
+      "name_cn": "新亭路",
+      "name_en": "XINTINGLU",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-110",
+      "name_cn": "东山",
+      "name_en": "DONGSHAN",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-111",
+      "name_cn": "文靖路",
+      "name_en": "WENJINGLU",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-112",
+      "name_cn": "东山香樟园",
+      "name_en": "DONGSHANXIANGZHANGYUAN",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-113",
+      "name_cn": "神机营",
+      "name_en": "SHENJIYING",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-114",
+      "name_cn": "大校场",
+      "name_en": "DAJIAOCHANG",
+      "alias": [],
+      "lines": [
+        "nj-l5",
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-115",
+      "name_cn": "七桥瓮",
+      "name_en": "QIQIAOWENG",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-116",
+      "name_cn": "石门坎",
+      "name_en": "SHIMENKAN",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-117",
+      "name_cn": "光华门",
+      "name_en": "GUANGHUAMEN",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-118",
+      "name_cn": "通济门",
+      "name_en": "TONGJIMEN",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-119",
+      "name_cn": "朝天宫",
+      "name_en": "CHAOTIANGONG",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-120",
+      "name_cn": "五台山",
+      "name_en": "WUTAISHAN",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-121",
+      "name_cn": "青春广场",
+      "name_en": "QINGCHUNGUANGCHANG",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-122",
+      "name_cn": "虹桥",
+      "name_en": "HONGQIAO",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-123",
+      "name_cn": "福建路",
+      "name_en": "FUJIANLU",
+      "alias": [],
+      "lines": [
+        "nj-l5",
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-124",
+      "name_cn": "盐仓桥",
+      "name_en": "YANCANGQIAO",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-125",
+      "name_cn": "下关",
+      "name_en": "XIAGUAN",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-126",
+      "name_cn": "静海寺",
+      "name_en": "JINGHAISI",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-127",
+      "name_cn": "南京西站",
+      "name_en": "Nanjingxi Railway Station",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-128",
+      "name_cn": "方家营",
+      "name_en": "FANGJIAYING",
+      "alias": [],
+      "lines": [
+        "nj-l5"
+      ]
+    },
+    {
+      "id": "nj-129",
+      "name_cn": "仙新路",
+      "name_en": "XIANXINLU",
+      "alias": [],
+      "lines": [
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-130",
+      "name_cn": "尧化门",
+      "name_en": "YAOHUAMEN",
+      "alias": [],
+      "lines": [
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-131",
+      "name_cn": "尧化新村",
+      "name_en": "YAOHUAXINCUN",
+      "alias": [],
+      "lines": [
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-132",
+      "name_cn": "丁家庄南",
+      "name_en": "DINGJIAZHUANGNAN",
+      "alias": [],
+      "lines": [
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-133",
+      "name_cn": "丁家庄",
+      "name_en": "DINGJIAZHUANG",
+      "alias": [],
+      "lines": [
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-134",
+      "name_cn": "万寿",
+      "name_en": "WANSHOU",
+      "alias": [],
+      "lines": [
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-135",
+      "name_cn": "幕府山",
+      "name_en": "MUFUSHAN",
+      "alias": [],
+      "lines": [
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-136",
+      "name_cn": "幕府西路",
+      "name_en": "MUFUXILU",
+      "alias": [],
+      "lines": [
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-137",
+      "name_cn": "钟阜路",
+      "name_en": "ZHONGFULU",
+      "alias": [],
+      "lines": [
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-138",
+      "name_cn": "古平岗",
+      "name_en": "GUPINGGANG",
+      "alias": [],
+      "lines": [
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-139",
+      "name_cn": "清凉山",
+      "name_en": "QINGLIANGSHAN",
+      "alias": [],
+      "lines": [
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-140",
+      "name_cn": "大士茶亭",
+      "name_en": "DASHICHATING",
+      "alias": [],
+      "lines": [
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-141",
+      "name_cn": "南湖",
+      "name_en": "NANHU",
+      "alias": [],
+      "lines": [
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-142",
+      "name_cn": "应天大街",
+      "name_en": "YINGTIANDAJIE",
+      "alias": [],
+      "lines": [
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-143",
+      "name_cn": "梦都大街东",
+      "name_en": "MENGDUDAJIEDONG",
+      "alias": [],
+      "lines": [
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-144",
+      "name_cn": "新城科技园",
+      "name_en": "XINCHENGKEJIYUAN",
+      "alias": [],
+      "lines": [
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-145",
+      "name_cn": "中胜",
+      "name_en": "ZHONGSHENG",
+      "alias": [],
+      "lines": [
+        "nj-l7",
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-146",
+      "name_cn": "嘉陵江东街",
+      "name_en": "JIALINGJIANGDONGJIE",
+      "alias": [],
+      "lines": [
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-147",
+      "name_cn": "永初路",
+      "name_en": "YONGCHULU",
+      "alias": [],
+      "lines": [
+        "nj-l7",
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-148",
+      "name_cn": "太清路",
+      "name_en": "TAIQINGLU",
+      "alias": [],
+      "lines": [
+        "nj-l7"
+      ]
+    },
+    {
+      "id": "nj-149",
+      "name_cn": "西善桥",
+      "name_en": "XISHANQIAO",
+      "alias": [],
+      "lines": [
+        "nj-l7",
+        "nj-s2"
+      ]
+    },
+    {
+      "id": "nj-150",
+      "name_cn": "东麒路",
+      "name_en": "DONGQILU",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-151",
+      "name_cn": "石杨路",
+      "name_en": "SHIYANGLU",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-152",
+      "name_cn": "杨庄",
+      "name_en": "YANGZHUANG",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-153",
+      "name_cn": "高桥门",
+      "name_en": "GAOQIAOMEN",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-154",
+      "name_cn": "承天大道",
+      "name_en": "CHENGTIANDADAO",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-155",
+      "name_cn": "机场跑道旧址",
+      "name_en": "JICHANGPAODAO JIUZHI",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-156",
+      "name_cn": "雨花台",
+      "name_en": "YUHUATAI",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-157",
+      "name_cn": "共青团路",
+      "name_en": "GONGQINGTUANLU",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-158",
+      "name_cn": "小行",
+      "name_en": "XIAOHANG",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-159",
+      "name_cn": "奥体中心",
+      "name_en": "Olympic Stadium",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-160",
+      "name_cn": "梦都大街",
+      "name_en": "MENGDUDAJIE",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-161",
+      "name_cn": "绿博园",
+      "name_en": "LVBOYUAN",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-162",
+      "name_cn": "江心洲",
+      "name_en": "JIANGXINZHOU",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-163",
+      "name_cn": "临江·青奥体育公园",
+      "name_en": "LINJIANG·YOGSP",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-164",
+      "name_cn": "浦口万汇城",
+      "name_en": "PUKOUWANHUICHENG",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-165",
+      "name_cn": "南京工业大学",
+      "name_en": "NJUT",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-166",
+      "name_cn": "龙华路",
+      "name_en": "LONGHUALU",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-167",
+      "name_cn": "文德路",
+      "name_en": "WENDELU",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-168",
+      "name_cn": "雨山路",
+      "name_en": "YUSHANLU",
+      "alias": [],
+      "lines": [
+        "nj-l10"
+      ]
+    },
+    {
+      "id": "nj-169",
+      "name_cn": "翠屏山",
+      "name_en": "CUIPINGSHAN",
+      "alias": [],
+      "lines": [
+        "nj-s1"
+      ]
+    },
+    {
+      "id": "nj-170",
+      "name_cn": "河海大学·佛城西路",
+      "name_en": "HHU·FOCHENGXILU",
+      "alias": [],
+      "lines": [
+        "nj-s1"
+      ]
+    },
+    {
+      "id": "nj-171",
+      "name_cn": "正方中路",
+      "name_en": "ZHENGFANGZHONGLU",
+      "alias": [],
+      "lines": [
+        "nj-s1"
+      ]
+    },
+    {
+      "id": "nj-172",
+      "name_cn": "翔宇路北",
+      "name_en": "XIANGYULUBEI",
+      "alias": [],
+      "lines": [
+        "nj-s1"
+      ]
+    },
+    {
+      "id": "nj-173",
+      "name_cn": "翔宇路南",
+      "name_en": "XIANGYULUNAN",
+      "alias": [],
+      "lines": [
+        "nj-s1",
+        "nj-s9"
+      ]
+    },
+    {
+      "id": "nj-174",
+      "name_cn": "禄口机场",
+      "name_en": "LUKOU International Airport",
+      "alias": [],
+      "lines": [
+        "nj-s1"
+      ]
+    },
+    {
+      "id": "nj-175",
+      "name_cn": "空港新城江宁",
+      "name_en": "KONGGANGXINCHENGJIANGNING",
+      "alias": [],
+      "lines": [
+        "nj-s1",
+        "nj-s7"
+      ]
+    },
+    {
+      "id": "nj-176",
+      "name_cn": "雨花经济开发区",
+      "name_en": "YUHUA JINGJI Development Zone",
+      "alias": [],
+      "lines": [
+        "nj-s2"
+      ]
+    },
+    {
+      "id": "nj-177",
+      "name_cn": "板桥",
+      "name_en": "BANQIAO",
+      "alias": [],
+      "lines": [
+        "nj-s2"
+      ]
+    },
+    {
+      "id": "nj-178",
+      "name_cn": "板桥南",
+      "name_en": "BANQIAONAN",
+      "alias": [],
+      "lines": [
+        "nj-s2"
+      ]
+    },
+    {
+      "id": "nj-179",
+      "name_cn": "江宁镇",
+      "name_en": "JIANGNINGZHEN",
+      "alias": [],
+      "lines": [
+        "nj-s2"
+      ]
+    },
+    {
+      "id": "nj-180",
+      "name_cn": "江宁滨江开发区",
+      "name_en": "JIANGNING BINJIANG Development Zone",
+      "alias": [],
+      "lines": [
+        "nj-s2"
+      ]
+    },
+    {
+      "id": "nj-181",
+      "name_cn": "牧龙",
+      "name_en": "MULONG",
+      "alias": [],
+      "lines": [
+        "nj-s2"
+      ]
+    },
+    {
+      "id": "nj-182",
+      "name_cn": "铜井",
+      "name_en": "TONGJING",
+      "alias": [],
+      "lines": [
+        "nj-s2"
+      ]
+    },
+    {
+      "id": "nj-183",
+      "name_cn": "慈湖高新区",
+      "name_en": "CIHUGAOXINQU",
+      "alias": [],
+      "lines": [
+        "nj-s2"
+      ]
+    },
+    {
+      "id": "nj-184",
+      "name_cn": "湖北路·二中",
+      "name_en": "HUBEILU·ERZHONG",
+      "alias": [],
+      "lines": [
+        "nj-s2"
+      ]
+    },
+    {
+      "id": "nj-185",
+      "name_cn": "湖南路·安工大",
+      "name_en": "HUNANLU·ANGONGDA",
+      "alias": [],
+      "lines": [
+        "nj-s2"
+      ]
+    },
+    {
+      "id": "nj-186",
+      "name_cn": "雨山东路",
+      "name_en": "YUSHANDONGLU",
+      "alias": [],
+      "lines": [
+        "nj-s2"
+      ]
+    },
+    {
+      "id": "nj-187",
+      "name_cn": "阳湖",
+      "name_en": "YANGHU",
+      "alias": [],
+      "lines": [
+        "nj-s2"
+      ]
+    },
+    {
+      "id": "nj-188",
+      "name_cn": "马鞍山经开区",
+      "name_en": "MA'ANSHANJINGKAIQU",
+      "alias": [],
+      "lines": [
+        "nj-s2"
+      ]
+    },
+    {
+      "id": "nj-189",
+      "name_cn": "姑孰",
+      "name_en": "GUSHU",
+      "alias": [],
+      "lines": [
+        "nj-s2"
+      ]
+    },
+    {
+      "id": "nj-190",
+      "name_cn": "太白",
+      "name_en": "TAIBAI",
+      "alias": [],
+      "lines": [
+        "nj-s2"
+      ]
+    },
+    {
+      "id": "nj-191",
+      "name_cn": "景明佳园",
+      "name_en": "JINGMINGJIAYUAN",
+      "alias": [],
+      "lines": [
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-192",
+      "name_cn": "铁心桥",
+      "name_en": "TIEXINQIAO",
+      "alias": [],
+      "lines": [
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-193",
+      "name_cn": "春江路",
+      "name_en": "CHUNJIANGLU",
+      "alias": [],
+      "lines": [
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-194",
+      "name_cn": "贾西",
+      "name_en": "JIAXI",
+      "alias": [],
+      "lines": [
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-195",
+      "name_cn": "平良大街",
+      "name_en": "PINGLIANGDAJIE",
+      "alias": [],
+      "lines": [
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-196",
+      "name_cn": "吴侯街",
+      "name_en": "WUHOUJIE",
+      "alias": [],
+      "lines": [
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-197",
+      "name_cn": "高庙路",
+      "name_en": "GAOMIAOLU",
+      "alias": [],
+      "lines": [
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-198",
+      "name_cn": "天保",
+      "name_en": "TIANBAO",
+      "alias": [],
+      "lines": [
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-199",
+      "name_cn": "刘村",
+      "name_en": "LIUCUN",
+      "alias": [],
+      "lines": [
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-200",
+      "name_cn": "马骡圩",
+      "name_en": "MALUOWEI",
+      "alias": [],
+      "lines": [
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-201",
+      "name_cn": "兰花塘",
+      "name_en": "LANHUATANG",
+      "alias": [],
+      "lines": [
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-202",
+      "name_cn": "双垄",
+      "name_en": "SHUANGLONG",
+      "alias": [],
+      "lines": [
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-203",
+      "name_cn": "石碛河",
+      "name_en": "SHIQIHE",
+      "alias": [],
+      "lines": [
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-204",
+      "name_cn": "桥林新城",
+      "name_en": "QIAOLIN XINCHENG",
+      "alias": [],
+      "lines": [
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-205",
+      "name_cn": "林山",
+      "name_en": "LINSHAN",
+      "alias": [],
+      "lines": [
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-206",
+      "name_cn": "高家冲",
+      "name_en": "GAOJIACHONG",
+      "alias": [],
+      "lines": [
+        "nj-s3"
+      ]
+    },
+    {
+      "id": "nj-207",
+      "name_cn": "百水桥",
+      "name_en": "BAISHUIQIAO",
+      "alias": [],
+      "lines": [
+        "nj-s6"
+      ]
+    },
+    {
+      "id": "nj-208",
+      "name_cn": "麒麟门",
+      "name_en": "QILINMEN",
+      "alias": [],
+      "lines": [
+        "nj-s6"
+      ]
+    },
+    {
+      "id": "nj-209",
+      "name_cn": "东郊小镇",
+      "name_en": "DONGJIAOXIAOZHEN",
+      "alias": [],
+      "lines": [
+        "nj-s6"
+      ]
+    },
+    {
+      "id": "nj-210",
+      "name_cn": "古泉",
+      "name_en": "GUQUAN",
+      "alias": [],
+      "lines": [
+        "nj-s6"
+      ]
+    },
+    {
+      "id": "nj-211",
+      "name_cn": "南京猿人洞",
+      "name_en": "NANJINGYUANRENDONG",
+      "alias": [],
+      "lines": [
+        "nj-s6"
+      ]
+    },
+    {
+      "id": "nj-212",
+      "name_cn": "汤山",
+      "name_en": "TANGSHAN",
+      "alias": [],
+      "lines": [
+        "nj-s6"
+      ]
+    },
+    {
+      "id": "nj-213",
+      "name_cn": "泉都大街",
+      "name_en": "QUANDUDAJIE",
+      "alias": [],
+      "lines": [
+        "nj-s6"
+      ]
+    },
+    {
+      "id": "nj-214",
+      "name_cn": "黄梅",
+      "name_en": "HUANGMEI",
+      "alias": [],
+      "lines": [
+        "nj-s6"
+      ]
+    },
+    {
+      "id": "nj-215",
+      "name_cn": "童世界",
+      "name_en": "TONGSHIJIE",
+      "alias": [],
+      "lines": [
+        "nj-s6"
+      ]
+    },
+    {
+      "id": "nj-216",
+      "name_cn": "华阳",
+      "name_en": "HUAYANG",
+      "alias": [],
+      "lines": [
+        "nj-s6"
+      ]
+    },
+    {
+      "id": "nj-217",
+      "name_cn": "崇明",
+      "name_en": "CHONGMING",
+      "alias": [],
+      "lines": [
+        "nj-s6"
+      ]
+    },
+    {
+      "id": "nj-218",
+      "name_cn": "句容",
+      "name_en": "JURONG",
+      "alias": [],
+      "lines": [
+        "nj-s6"
+      ]
+    },
+    {
+      "id": "nj-219",
+      "name_cn": "柘塘",
+      "name_en": "ZHETANG",
+      "alias": [],
+      "lines": [
+        "nj-s7"
+      ]
+    },
+    {
+      "id": "nj-220",
+      "name_cn": "空港新城溧水",
+      "name_en": "KONGGANGXINCHENGLISHUI",
+      "alias": [],
+      "lines": [
+        "nj-s7"
+      ]
+    },
+    {
+      "id": "nj-221",
+      "name_cn": "群力",
+      "name_en": "QUNLI",
+      "alias": [],
+      "lines": [
+        "nj-s7"
+      ]
+    },
+    {
+      "id": "nj-222",
+      "name_cn": "卧龙湖",
+      "name_en": "WOLONGHU",
+      "alias": [],
+      "lines": [
+        "nj-s7"
+      ]
+    },
+    {
+      "id": "nj-223",
+      "name_cn": "溧水",
+      "name_en": "LISHUI",
+      "alias": [],
+      "lines": [
+        "nj-s7"
+      ]
+    },
+    {
+      "id": "nj-224",
+      "name_cn": "中山湖",
+      "name_en": "ZHONGSHANHU",
+      "alias": [],
+      "lines": [
+        "nj-s7"
+      ]
+    },
+    {
+      "id": "nj-225",
+      "name_cn": "幸庄",
+      "name_en": "XINGZHUANG",
+      "alias": [],
+      "lines": [
+        "nj-s7"
+      ]
+    },
+    {
+      "id": "nj-226",
+      "name_cn": "无想山",
+      "name_en": "WUXIANGSHAN",
+      "alias": [],
+      "lines": [
+        "nj-s7"
+      ]
+    },
+    {
+      "id": "nj-227",
+      "name_cn": "长江大桥北",
+      "name_en": "CHANGJIANGDAQIAOBEI",
+      "alias": [],
+      "lines": [
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-228",
+      "name_cn": "毛纺厂路",
+      "name_en": "MAOFANGCHANGLU",
+      "alias": [],
+      "lines": [
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-229",
+      "name_cn": "泰山新村",
+      "name_en": "TAISHAN XINCUN",
+      "alias": [],
+      "lines": [
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-230",
+      "name_cn": "高新开发区",
+      "name_en": "GAOXIN Development Zone",
+      "alias": [],
+      "lines": [
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-231",
+      "name_cn": "信息工程大学",
+      "name_en": "NUIST",
+      "alias": [],
+      "lines": [
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-232",
+      "name_cn": "卸甲甸",
+      "name_en": "XIEJIADIAN",
+      "alias": [],
+      "lines": [
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-233",
+      "name_cn": "大厂",
+      "name_en": "DACHANG",
+      "alias": [],
+      "lines": [
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-234",
+      "name_cn": "葛塘",
+      "name_en": "GETANG",
+      "alias": [],
+      "lines": [
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-235",
+      "name_cn": "长芦",
+      "name_en": "CHANGLU",
+      "alias": [],
+      "lines": [
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-236",
+      "name_cn": "化工园",
+      "name_en": "Chemical Industry Park",
+      "alias": [],
+      "lines": [
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-237",
+      "name_cn": "六合开发区",
+      "name_en": "LUHE Economic Development",
+      "alias": [],
+      "lines": [
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-238",
+      "name_cn": "龙池",
+      "name_en": "LONGCHI",
+      "alias": [],
+      "lines": [
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-239",
+      "name_cn": "雄州",
+      "name_en": "XIONGZHOU",
+      "alias": [],
+      "lines": [
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-240",
+      "name_cn": "凤凰山公园",
+      "name_en": "FENGHUANGSHAN GONGYUAN",
+      "alias": [],
+      "lines": [
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-241",
+      "name_cn": "方州广场",
+      "name_en": "FANGZHOU GUANGCHANG",
+      "alias": [],
+      "lines": [
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-242",
+      "name_cn": "沈桥",
+      "name_en": "SHENQIAO",
+      "alias": [],
+      "lines": [
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-243",
+      "name_cn": "八百桥",
+      "name_en": "BABAIQIAO",
+      "alias": [],
+      "lines": [
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-244",
+      "name_cn": "金牛湖",
+      "name_en": "JINNIUHU",
+      "alias": [],
+      "lines": [
+        "nj-s8"
+      ]
+    },
+    {
+      "id": "nj-245",
+      "name_cn": "铜山",
+      "name_en": "TONGSHAN",
+      "alias": [],
+      "lines": [
+        "nj-s9"
+      ]
+    },
+    {
+      "id": "nj-246",
+      "name_cn": "石湫",
+      "name_en": "SHIQIU",
+      "alias": [],
+      "lines": [
+        "nj-s9"
+      ]
+    },
+    {
+      "id": "nj-247",
+      "name_cn": "明觉",
+      "name_en": "MINGJUE",
+      "alias": [],
+      "lines": [
+        "nj-s9"
+      ]
+    },
+    {
+      "id": "nj-248",
+      "name_cn": "团结圩",
+      "name_en": "TUANJIEWEI",
+      "alias": [],
+      "lines": [
+        "nj-s9"
+      ]
+    },
+    {
+      "id": "nj-249",
+      "name_cn": "高淳",
+      "name_en": "GAOCHUN",
+      "alias": [],
+      "lines": [
+        "nj-s9"
+      ]
+    },
+    {
+      "id": "nj-250",
+      "name_cn": "汊河",
+      "name_en": "CHAHE",
+      "alias": [],
+      "lines": [
+        "nj-nc"
+      ]
+    },
+    {
+      "id": "nj-251",
+      "name_cn": "汊河新城",
+      "name_en": "CHAHEXINCHENG",
+      "alias": [],
+      "lines": [
+        "nj-nc"
+      ]
+    },
+    {
+      "id": "nj-252",
+      "name_cn": "十二里半",
+      "name_en": "SHIERLIBAN",
+      "alias": [],
+      "lines": [
+        "nj-nc"
+      ]
+    },
+    {
+      "id": "nj-253",
+      "name_cn": "林楼",
+      "name_en": "LINLOU",
+      "alias": [],
+      "lines": [
+        "nj-nc"
+      ]
+    },
+    {
+      "id": "nj-254",
+      "name_cn": "大王郢",
+      "name_en": "DAWANGYING",
+      "alias": [],
+      "lines": [
+        "nj-nc"
+      ]
+    },
+    {
+      "id": "nj-255",
+      "name_cn": "苏滁商务中心",
+      "name_en": "SUCHU Business Center",
+      "alias": [],
+      "lines": [
+        "nj-nc"
+      ]
+    },
+    {
+      "id": "nj-256",
+      "name_cn": "滁州政务中心",
+      "name_en": "Chuzhou Government Affairs Center",
+      "alias": [],
+      "lines": [
+        "nj-nc"
+      ]
+    },
+    {
+      "id": "nj-257",
+      "name_cn": "琅琊山",
+      "name_en": "LANGYASHAN",
+      "alias": [],
+      "lines": [
+        "nj-nc"
+      ]
+    },
+    {
+      "id": "nj-258",
+      "name_cn": "花博园",
+      "name_en": "HUABOYUAN",
+      "alias": [],
+      "lines": [
+        "nj-nc"
+      ]
+    },
+    {
+      "id": "nj-259",
+      "name_cn": "滁州高铁站",
+      "name_en": "Chuzhou Railway Station",
+      "alias": [],
+      "lines": [
+        "nj-nc"
+      ]
+    }
+  ],
+  "seed_answers": [
+    {
+      "station": "nj-013",
+      "from_line": "nj-l1",
+      "from_dir": "开往中国药科大学",
+      "to_line": "nj-l2",
+      "to_dir": "开往经天路",
+      "author_email": "jinling@example.com",
+      "author_nick": "金陵通勤",
+      "anon": true,
+      "position_type": "car",
+      "car_number": 3,
+      "description": "1号线往中国药科大学方向坐第3节车厢，下车右转直走就是2号线往经天路的换乘口，不用穿整个站厅。",
+      "likes": 21,
+      "dislikes": 2,
+      "version": 1,
+      "days_ago": 11,
+      "comments": [
+        {
+          "nick": "匿名",
+          "days_ago": 9,
+          "text": "新街口站出入口特别多，换乘跟着线路色标走，别跟着商场指示牌。"
+        }
+      ]
+    }
+  ]
+}

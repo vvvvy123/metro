@@ -1,0 +1,1427 @@
+{
+  "city": {
+    "id": "changsha",
+    "country_id": "cn",
+    "country_cn": "中国",
+    "country_en": "China",
+    "timezone": "Asia/Shanghai",
+    "name_cn": "长沙",
+    "name_en": "Changsha",
+    "alias": [
+      "changsha",
+      "cs",
+      "长沙市",
+      "星城"
+    ]
+  },
+  "system": {
+    "id": "changsha-metro",
+    "name_cn": "长沙地铁",
+    "name_en": "Changsha Metro"
+  },
+  "lines": [
+    {
+      "id": "cs-l1",
+      "name": "1号线",
+      "name_en": "Line 1",
+      "color": "#E60012",
+      "directions": [
+        "开往尚双塘",
+        "开往金盆丘(铜官窑巴士站)"
+      ]
+    },
+    {
+      "id": "cs-l2",
+      "name": "2号线",
+      "name_en": "Line 2",
+      "color": "#00AFEC",
+      "directions": [
+        "开往光达(会展中心)",
+        "开往梅溪湖西"
+      ]
+    },
+    {
+      "id": "cs-l3",
+      "name": "3号线",
+      "name_en": "Line 3",
+      "color": "#ABCD03",
+      "directions": [
+        "开往广生",
+        "开往湘潭北站"
+      ]
+    },
+    {
+      "id": "cs-l4",
+      "name": "4号线",
+      "name_en": "Line 4",
+      "color": "#920783",
+      "directions": [
+        "开往杜家坪",
+        "开往罐子岭"
+      ]
+    },
+    {
+      "id": "cs-l5",
+      "name": "5号线",
+      "name_en": "Line 5",
+      "color": "#FFE200",
+      "directions": [
+        "开往水渡河",
+        "开往毛竹塘"
+      ]
+    },
+    {
+      "id": "cs-l6",
+      "name": "6号线",
+      "name_en": "Line 6",
+      "color": "#005BAC",
+      "directions": [
+        "开往黄花机场T1T2",
+        "开往谢家桥"
+      ]
+    },
+    {
+      "id": "cs-s2",
+      "name": "S2磁浮快线",
+      "name_en": "Line S2",
+      "color": "#F891A5",
+      "directions": [
+        "开往磁浮机场",
+        "开往磁浮高铁"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "cs-001",
+      "name_cn": "金盆丘(铜官窑巴士站)",
+      "name_en": "Jinpenqiu (Tong Guan Kiln Bus Station)",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-002",
+      "name_cn": "金霞",
+      "name_en": "Jinxia",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-003",
+      "name_cn": "鹅羊山",
+      "name_en": "Eyangshan",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-004",
+      "name_cn": "秀峰山",
+      "name_en": "Xiufengshan",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-005",
+      "name_cn": "宿龙桥",
+      "name_en": "Sulongqiao",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-006",
+      "name_cn": "开福区政府",
+      "name_en": "Kaifu District Government",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-007",
+      "name_cn": "马厂",
+      "name_en": "Machang",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-008",
+      "name_cn": "北辰三角洲",
+      "name_en": "Beichen Delta",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-009",
+      "name_cn": "开福寺",
+      "name_en": "Kaifu Temple",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-010",
+      "name_cn": "文昌阁",
+      "name_en": "Wenchangge",
+      "alias": [],
+      "lines": [
+        "cs-l1",
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-011",
+      "name_cn": "培元桥",
+      "name_en": "Peiyuanqiao",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-012",
+      "name_cn": "五一广场",
+      "name_en": "Wuyi Square",
+      "alias": [],
+      "lines": [
+        "cs-l1",
+        "cs-l2"
+      ]
+    },
+    {
+      "id": "cs-013",
+      "name_cn": "黄兴广场",
+      "name_en": "Huangxing Square",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-014",
+      "name_cn": "南门口(天心阁)",
+      "name_en": "Nanmenkou (Tianxin Pavilion)",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-015",
+      "name_cn": "侯家塘",
+      "name_en": "Houjiatang",
+      "alias": [],
+      "lines": [
+        "cs-l1",
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-016",
+      "name_cn": "南湖路",
+      "name_en": "Nanhu Road",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-017",
+      "name_cn": "黄土岭",
+      "name_en": "Huangtuling",
+      "alias": [],
+      "lines": [
+        "cs-l1",
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-018",
+      "name_cn": "涂家冲",
+      "name_en": "Tujiachong",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-019",
+      "name_cn": "铁道学院(爱尔眼科)",
+      "name_en": "Railway Campus (CSU) (Aier Eye Hospital)",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-020",
+      "name_cn": "友谊路",
+      "name_en": "Youyi Road",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-021",
+      "name_cn": "省政府",
+      "name_en": "Provincial Government",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-022",
+      "name_cn": "桂花坪",
+      "name_en": "Guihuaping",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-023",
+      "name_cn": "大托",
+      "name_en": "Datuo",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-024",
+      "name_cn": "中信广场(城际先锋站)",
+      "name_en": "Zhongxin Square (Intercity Train Xianfeng Railway Station)",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-025",
+      "name_cn": "尚双塘",
+      "name_en": "Shangshuangtang",
+      "alias": [],
+      "lines": [
+        "cs-l1"
+      ]
+    },
+    {
+      "id": "cs-026",
+      "name_cn": "梅溪湖西",
+      "name_en": "West Meixi Lake",
+      "alias": [],
+      "lines": [
+        "cs-l2"
+      ]
+    },
+    {
+      "id": "cs-027",
+      "name_cn": "麓云路",
+      "name_en": "Luyun Road",
+      "alias": [],
+      "lines": [
+        "cs-l2"
+      ]
+    },
+    {
+      "id": "cs-028",
+      "name_cn": "文化艺术中心",
+      "name_en": "Culture and Art Center",
+      "alias": [],
+      "lines": [
+        "cs-l2"
+      ]
+    },
+    {
+      "id": "cs-029",
+      "name_cn": "梅溪湖东",
+      "name_en": "East Meixi Lake",
+      "alias": [],
+      "lines": [
+        "cs-l2"
+      ]
+    },
+    {
+      "id": "cs-030",
+      "name_cn": "望城坡(汽车西站)",
+      "name_en": "Wangchengpo (West Bus Station)",
+      "alias": [],
+      "lines": [
+        "cs-l2"
+      ]
+    },
+    {
+      "id": "cs-031",
+      "name_cn": "金星路",
+      "name_en": "Jinxing Road",
+      "alias": [],
+      "lines": [
+        "cs-l2"
+      ]
+    },
+    {
+      "id": "cs-032",
+      "name_cn": "西湖公园",
+      "name_en": "Xihu Park",
+      "alias": [],
+      "lines": [
+        "cs-l2"
+      ]
+    },
+    {
+      "id": "cs-033",
+      "name_cn": "溁湾镇",
+      "name_en": "Yingwanzhen",
+      "alias": [],
+      "lines": [
+        "cs-l2",
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-034",
+      "name_cn": "橘子洲",
+      "name_en": "Juzizhou",
+      "alias": [],
+      "lines": [
+        "cs-l2"
+      ]
+    },
+    {
+      "id": "cs-035",
+      "name_cn": "湘江中路",
+      "name_en": "Xiangjiang Middle Road",
+      "alias": [],
+      "lines": [
+        "cs-l2"
+      ]
+    },
+    {
+      "id": "cs-036",
+      "name_cn": "芙蓉广场",
+      "name_en": "Furong Square",
+      "alias": [],
+      "lines": [
+        "cs-l2"
+      ]
+    },
+    {
+      "id": "cs-037",
+      "name_cn": "迎宾路口",
+      "name_en": "Yingbin Road",
+      "alias": [],
+      "lines": [
+        "cs-l2",
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-038",
+      "name_cn": "袁家岭",
+      "name_en": "Yuanjialing",
+      "alias": [],
+      "lines": [
+        "cs-l2"
+      ]
+    },
+    {
+      "id": "cs-039",
+      "name_cn": "长沙火车站",
+      "name_en": "Railway Station",
+      "alias": [],
+      "lines": [
+        "cs-l2",
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-040",
+      "name_cn": "锦泰广场(城际长沙站)",
+      "name_en": "Jintai Square (Intercity Train Changsha Railway Station)",
+      "alias": [],
+      "lines": [
+        "cs-l2"
+      ]
+    },
+    {
+      "id": "cs-041",
+      "name_cn": "万家丽广场",
+      "name_en": "Wanjiali Square",
+      "alias": [],
+      "lines": [
+        "cs-l2",
+        "cs-l5"
+      ]
+    },
+    {
+      "id": "cs-042",
+      "name_cn": "人民东路",
+      "name_en": "Renmin East Road",
+      "alias": [],
+      "lines": [
+        "cs-l2",
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-043",
+      "name_cn": "长沙大道",
+      "name_en": "Changsha Avenue",
+      "alias": [],
+      "lines": [
+        "cs-l2"
+      ]
+    },
+    {
+      "id": "cs-044",
+      "name_cn": "沙湾公园",
+      "name_en": "Shawan Park",
+      "alias": [],
+      "lines": [
+        "cs-l2",
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-045",
+      "name_cn": "杜花路",
+      "name_en": "Duhua Road",
+      "alias": [],
+      "lines": [
+        "cs-l2"
+      ]
+    },
+    {
+      "id": "cs-046",
+      "name_cn": "长沙火车南站",
+      "name_en": "South Railway Station",
+      "alias": [],
+      "lines": [
+        "cs-l2",
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-047",
+      "name_cn": "光达(会展中心)",
+      "name_en": "Guangda (Changsha Convention and Exhibition Center)",
+      "alias": [],
+      "lines": [
+        "cs-l2",
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-048",
+      "name_cn": "湘潭北站",
+      "name_en": "Xiangtan North Railway Station",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-049",
+      "name_cn": "船形山",
+      "name_en": "Chuanxingshan",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-050",
+      "name_cn": "黄家湾",
+      "name_en": "Huangjiawan",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-051",
+      "name_cn": "双湖",
+      "name_en": "Shuanghu",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-052",
+      "name_cn": "坪塘",
+      "name_en": "Pingtang",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-053",
+      "name_cn": "红桥",
+      "name_en": "Hongqiao",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-054",
+      "name_cn": "桐溪",
+      "name_en": "Tongxi",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-055",
+      "name_cn": "大王山",
+      "name_en": "Dawangshan",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-056",
+      "name_cn": "山塘",
+      "name_en": "Shantang",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-057",
+      "name_cn": "洋湖湿地",
+      "name_en": "Yanghu Wetland",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-058",
+      "name_cn": "洋湖新城",
+      "name_en": "Yanghu ECO Town",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-059",
+      "name_cn": "阳光",
+      "name_en": "Yangguang",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-060",
+      "name_cn": "中南大学",
+      "name_en": "Central South University",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-061",
+      "name_cn": "阜埠河",
+      "name_en": "Fubuhe",
+      "alias": [],
+      "lines": [
+        "cs-l3",
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-062",
+      "name_cn": "灵官渡(第一师范)",
+      "name_en": "Lingguandu (Hunan First Normal University)",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-063",
+      "name_cn": "东塘",
+      "name_en": "Dongtang",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-064",
+      "name_cn": "桂花公园",
+      "name_en": "Guihua Park",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-065",
+      "name_cn": "阿弥岭",
+      "name_en": "Emiling",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-066",
+      "name_cn": "朝阳村",
+      "name_en": "Chaoyangcun",
+      "alias": [],
+      "lines": [
+        "cs-l3",
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-067",
+      "name_cn": "烈士公园东",
+      "name_en": "East Martyrs Park",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-068",
+      "name_cn": "丝茅冲",
+      "name_en": "Simaochong",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-069",
+      "name_cn": "四方坪",
+      "name_en": "Sifangping",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-070",
+      "name_cn": "雅雀湖",
+      "name_en": "Yaquehu",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-071",
+      "name_cn": "长沙大学",
+      "name_en": "Changsha University",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-072",
+      "name_cn": "月湖公园北(湖南广电)",
+      "name_en": "North Yuehu Park (Hunan Broadcasting System)",
+      "alias": [],
+      "lines": [
+        "cs-l3",
+        "cs-l5"
+      ]
+    },
+    {
+      "id": "cs-073",
+      "name_cn": "湘龙",
+      "name_en": "Xianglong",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-074",
+      "name_cn": "星沙",
+      "name_en": "Xingsha",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-075",
+      "name_cn": "松雅湖(南)",
+      "name_en": "Songya Lake (South)",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-076",
+      "name_cn": "星沙文体中心",
+      "name_en": "Xingsha Culture and Sports Center",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-077",
+      "name_cn": "螺丝塘",
+      "name_en": "Luositang",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-078",
+      "name_cn": "广生",
+      "name_en": "Guangsheng",
+      "alias": [],
+      "lines": [
+        "cs-l3"
+      ]
+    },
+    {
+      "id": "cs-079",
+      "name_cn": "罐子岭",
+      "name_en": "Guanziling",
+      "alias": [],
+      "lines": [
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-080",
+      "name_cn": "月亮岛西",
+      "name_en": "West Yueliangdao",
+      "alias": [],
+      "lines": [
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-081",
+      "name_cn": "湘江新城",
+      "name_en": "Xiangjiang New Town",
+      "alias": [],
+      "lines": [
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-082",
+      "name_cn": "汉王陵公园",
+      "name_en": "Hanwangling Park",
+      "alias": [],
+      "lines": [
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-083",
+      "name_cn": "福元大桥西",
+      "name_en": "West Fuyuan Bridge",
+      "alias": [],
+      "lines": [
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-084",
+      "name_cn": "茶子山",
+      "name_en": "Chazishan",
+      "alias": [],
+      "lines": [
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-085",
+      "name_cn": "观沙岭",
+      "name_en": "Guanshaling",
+      "alias": [],
+      "lines": [
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-086",
+      "name_cn": "六沟垄",
+      "name_en": "Liugoulong",
+      "alias": [],
+      "lines": [
+        "cs-l4",
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-087",
+      "name_cn": "望月湖",
+      "name_en": "Wangyuehu",
+      "alias": [],
+      "lines": [
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-088",
+      "name_cn": "湖南师大",
+      "name_en": "Hunan Normal University",
+      "alias": [],
+      "lines": [
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-089",
+      "name_cn": "湖南大学(岳麓书院)",
+      "name_en": "Hunan University (Yuelu Academy)",
+      "alias": [],
+      "lines": [
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-090",
+      "name_cn": "碧沙湖(恰同学少年广场)",
+      "name_en": "Bishahu (Youth Square)",
+      "alias": [],
+      "lines": [
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-091",
+      "name_cn": "砂子塘",
+      "name_en": "Shazitang",
+      "alias": [],
+      "lines": [
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-092",
+      "name_cn": "赤岗岭",
+      "name_en": "Chigangling",
+      "alias": [],
+      "lines": [
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-093",
+      "name_cn": "树木岭",
+      "name_en": "Shumuling",
+      "alias": [],
+      "lines": [
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-094",
+      "name_cn": "圭塘",
+      "name_en": "Guitang",
+      "alias": [],
+      "lines": [
+        "cs-l4",
+        "cs-l5"
+      ]
+    },
+    {
+      "id": "cs-095",
+      "name_cn": "粟塘",
+      "name_en": "Sutang",
+      "alias": [],
+      "lines": [
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-096",
+      "name_cn": "平阳",
+      "name_en": "Pingyang",
+      "alias": [],
+      "lines": [
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-097",
+      "name_cn": "杜家坪",
+      "name_en": "Dujiaping",
+      "alias": [],
+      "lines": [
+        "cs-l4"
+      ]
+    },
+    {
+      "id": "cs-098",
+      "name_cn": "毛竹塘",
+      "name_en": "Maozhutang",
+      "alias": [],
+      "lines": [
+        "cs-l5"
+      ]
+    },
+    {
+      "id": "cs-099",
+      "name_cn": "板塘冲",
+      "name_en": "Bantangchong",
+      "alias": [],
+      "lines": [
+        "cs-l5"
+      ]
+    },
+    {
+      "id": "cs-100",
+      "name_cn": "大塘",
+      "name_en": "Datang",
+      "alias": [],
+      "lines": [
+        "cs-l5"
+      ]
+    },
+    {
+      "id": "cs-101",
+      "name_cn": "雨花区政府",
+      "name_en": "Yuhua District Government",
+      "alias": [],
+      "lines": [
+        "cs-l5"
+      ]
+    },
+    {
+      "id": "cs-102",
+      "name_cn": "木桥",
+      "name_en": "Muqiao",
+      "alias": [],
+      "lines": [
+        "cs-l5"
+      ]
+    },
+    {
+      "id": "cs-103",
+      "name_cn": "高桥南",
+      "name_en": "South Gaoqiao",
+      "alias": [],
+      "lines": [
+        "cs-l5"
+      ]
+    },
+    {
+      "id": "cs-104",
+      "name_cn": "高桥北",
+      "name_en": "North Gaoqiao",
+      "alias": [],
+      "lines": [
+        "cs-l5"
+      ]
+    },
+    {
+      "id": "cs-105",
+      "name_cn": "芙蓉区政府",
+      "name_en": "Furong District Government",
+      "alias": [],
+      "lines": [
+        "cs-l5",
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-106",
+      "name_cn": "马王堆",
+      "name_en": "Mawangdui",
+      "alias": [],
+      "lines": [
+        "cs-l5"
+      ]
+    },
+    {
+      "id": "cs-107",
+      "name_cn": "火炬村",
+      "name_en": "Huojucun",
+      "alias": [],
+      "lines": [
+        "cs-l5"
+      ]
+    },
+    {
+      "id": "cs-108",
+      "name_cn": "鸭子铺(马栏山文创园)",
+      "name_en": "Yazipu (Malanshan Video Cultural and Creative Industrial Park)",
+      "alias": [],
+      "lines": [
+        "cs-l5"
+      ]
+    },
+    {
+      "id": "cs-109",
+      "name_cn": "马栏山",
+      "name_en": "Malanshan",
+      "alias": [],
+      "lines": [
+        "cs-l5"
+      ]
+    },
+    {
+      "id": "cs-110",
+      "name_cn": "白茅铺",
+      "name_en": "Baimaopu",
+      "alias": [],
+      "lines": [
+        "cs-l5"
+      ]
+    },
+    {
+      "id": "cs-111",
+      "name_cn": "土桥",
+      "name_en": "Tuqiao",
+      "alias": [],
+      "lines": [
+        "cs-l5"
+      ]
+    },
+    {
+      "id": "cs-112",
+      "name_cn": "水渡河",
+      "name_en": "Shuiduhe",
+      "alias": [],
+      "lines": [
+        "cs-l5"
+      ]
+    },
+    {
+      "id": "cs-113",
+      "name_cn": "谢家桥",
+      "name_en": "Xiejiaqiao",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-114",
+      "name_cn": "象鼻窝",
+      "name_en": "Xiangbiwo",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-115",
+      "name_cn": "中塘",
+      "name_en": "Zhongtang",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-116",
+      "name_cn": "一师范西校区",
+      "name_en": "Hunan First Normal University (West Campus)",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-117",
+      "name_cn": "长庆",
+      "name_en": "Changqing",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-118",
+      "name_cn": "和馨园",
+      "name_en": "Hexinyuan",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-119",
+      "name_cn": "长丰",
+      "name_en": "Changfeng",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-120",
+      "name_cn": "麓谷体育公园",
+      "name_en": "Lugu Sports Park",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-121",
+      "name_cn": "麓谷公园",
+      "name_en": "Lugu Park",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-122",
+      "name_cn": "涧塘",
+      "name_en": "Jiantang",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-123",
+      "name_cn": "湖南工商大学",
+      "name_en": "Hunan University of Technology & Business",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-124",
+      "name_cn": "白鸽咀(省肿瘤医院)",
+      "name_en": "Baigezui (Hunan Cancer Hospital)",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-125",
+      "name_cn": "湘雅三医院",
+      "name_en": "The Third Xiangya Hospital",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-126",
+      "name_cn": "湘雅医院",
+      "name_en": "Xiangya Hospital",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-127",
+      "name_cn": "烈士公园南(湖南博物院)",
+      "name_en": "South Martyrs Park (Hunan Museum)",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-128",
+      "name_cn": "窑岭湘雅二医院",
+      "name_en": "Yaoling & The Second Xiangya Hospital",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-129",
+      "name_cn": "花桥",
+      "name_en": "Huaqiao",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-130",
+      "name_cn": "隆平水稻博物馆",
+      "name_en": "Longping Rice Museum",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-131",
+      "name_cn": "农科院农大",
+      "name_en": "Acad. of Agri-Sciences & Agri-University",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-132",
+      "name_cn": "东湖(隆平芯谷)",
+      "name_en": "Donghu (Longping Core Valley)",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-133",
+      "name_cn": "韶光",
+      "name_en": "Shaoguang",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-134",
+      "name_cn": "龙华",
+      "name_en": "Longhua",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-135",
+      "name_cn": "檀木桥",
+      "name_en": "Tanmuqiao",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-136",
+      "name_cn": "曹家坪",
+      "name_en": "Caojiaping",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-137",
+      "name_cn": "龙峰",
+      "name_en": "Longfeng",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-138",
+      "name_cn": "大路村",
+      "name_en": "Dalucun",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-139",
+      "name_cn": "木马塅",
+      "name_en": "Mumaduan",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-140",
+      "name_cn": "黄花机场T1T2",
+      "name_en": "Huanghua Airport T1 & T2",
+      "alias": [],
+      "lines": [
+        "cs-l6"
+      ]
+    },
+    {
+      "id": "cs-141",
+      "name_cn": "磁浮高铁",
+      "name_en": "Changshanan Maglev Station",
+      "alias": [],
+      "lines": [
+        "cs-s2"
+      ]
+    },
+    {
+      "id": "cs-142",
+      "name_cn": "磁浮榔梨",
+      "name_en": "Langli Maglev Station",
+      "alias": [],
+      "lines": [
+        "cs-s2"
+      ]
+    },
+    {
+      "id": "cs-143",
+      "name_cn": "磁浮机场",
+      "name_en": "Huanghua Airport Maglev Station",
+      "alias": [],
+      "lines": [
+        "cs-s2"
+      ]
+    }
+  ],
+  "seed_answers": [
+    {
+      "station": "cs-012",
+      "from_line": "cs-l1",
+      "from_dir": "开往尚双塘",
+      "to_line": "cs-l2",
+      "to_dir": "开往光达(会展中心)",
+      "author_email": "xingcheng@example.com",
+      "author_nick": "星城通勤",
+      "anon": true,
+      "position_type": "car",
+      "car_number": 4,
+      "description": "1号线往尚双塘方向坐第4节车厢，下车即到2号线换乘扶梯口，走过去不到一分钟。",
+      "likes": 13,
+      "dislikes": 1,
+      "version": 1,
+      "days_ago": 5,
+      "comments": [
+        {
+          "nick": "匿名",
+          "days_ago": 3,
+          "text": "五一广场是长沙最挤的换乘站，周末下午人流很大，留点余量。"
+        }
+      ]
+    }
+  ]
+}
