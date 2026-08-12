@@ -43,6 +43,13 @@ class handler(Handler):
     def _route(self, verb):
         u = urlparse(_original_path(self))
         p = u.path.rstrip("/")
+        # TEMPORARY, deleted together with api/ping.py. /api/ping is served by its
+        # own file, so it cannot answer the one question the router depends on:
+        # what does a REWRITTEN request see? This route is reached only via the
+        # /api/(.*) rewrite, touches no database, and echoes the raw path back.
+        if p == "/api/__echo":
+            return self._json({"self_path": self.path, "routed_path": p,
+                               "headers": {k.lower(): v for k, v in self.headers.items()}})
         try:
             if verb == "GET":
                 self.route_get(p, parse_qs(u.query))
