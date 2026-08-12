@@ -302,7 +302,15 @@ function loadOverlay(key){
   // or `votes` existed would otherwise throw in applyOverlay().
   overlay=Object.assign(overlayDefaults(),saved||{});
 }
-function saveOverlay(){localStorage.setItem(OVERLAY_KEY,JSON.stringify(overlay));}
+function saveOverlay(){try{localStorage.setItem(OVERLAY_KEY,JSON.stringify(overlay));}catch(e){toast("本地保存失败（存储已满？）");}}
+/* Shape an answer for persistence. Two things must NOT be stored on the row:
+   - comments: overlay.comments[id] is the single source of truth. A shallow
+     {...a} shared the same array object, so a comment landed in both places and
+     applyOverlay concatenated it again on the next load — duplicated every time.
+   - _ovCmt/_ovVote: these mark "already folded in" for THIS session only.
+     Persisting them made applyOverlay skip the fold after a reload, which loses
+     the comments entirely. */
+const forOverlay=a=>{const {comments,_ovCmt,_ovVote,...rest}=a;return {...rest,comments:[]};};
 const todayISO=()=>new Date().toISOString().slice(0,10);
 function isoDaysAgo(n){const d=new Date();d.setDate(d.getDate()-n);return d.toISOString().slice(0,10);}
 
@@ -332,7 +340,9 @@ function applyOverlay(){
   const seenSt=new Set(OFF.stations.map(s=>s.id));   // Set, not find(): OFF.stations can hold 3353 rows
   overlay.stations.forEach(s=>{if(!seenSt.has(s.id)){seenSt.add(s.id);OFF.stations.push({...s,lines:[...(s.lines||[])]});}});
   const seenAns=new Set(OFF.answers.map(a=>a.id));
-  overlay.answers.forEach(a=>{if(!seenAns.has(a.id)){seenAns.add(a.id);OFF.answers.push({...a,comments:[...(a.comments||[])]});}});
+  overlay.answers.forEach(a=>{if(!seenAns.has(a.id)){seenAns.add(a.id);
+    const {_ovCmt,_ovVote,...row}=a;   // defensive: fold markers are per-session, never trusted from storage
+    OFF.answers.push({...row,comments:[...(a.comments||[])]});}});
   Object.entries(overlay.votes).forEach(([aid,type])=>{const a=OFF.answers.find(x=>x.id===aid);if(!a||a._ovVote)return;
     if(type==="LIKE")a.likes++;else a.dislikes++;a.my_vote=type;a._ovVote=true;});
   Object.entries(overlay.comments).forEach(([aid,list])=>{const a=OFF.answers.find(x=>x.id===aid);if(!a||a._ovCmt)return;
@@ -589,11 +599,11 @@ const DL={
     const sig=x=>x.station===p.station&&x.from_line===p.from_line&&x.from_dir===p.from_dir&&x.to_line===p.to_line&&x.to_dir===p.to_dir;
     let a=OFF.answers.find(x=>sig(x)&&x.owner===DEVICE&&!x.deleted);
     if(a){a.version++;a.position_type=p.position_type;a.car_number=p.car_number;a.custom_text=p.custom_text;a.description=p.description;a.is_anon=p.is_anon;a.author=p.nickname||a.author;a.updated_at=todayISO();
-      const oa=overlay.answers.find(x=>x.id===a.id);if(oa)Object.assign(oa,a);saveOverlay();return {version:a.version,created:false};}
+      const oa=overlay.answers.find(x=>x.id===a.id);if(oa)Object.assign(oa,forOverlay(a));saveOverlay();return {version:a.version,created:false};}
     const id="off"+Math.random().toString(36).slice(2,8);
     a={id,station:p.station,from_line:p.from_line,from_dir:p.from_dir,to_line:p.to_line,to_dir:p.to_dir,author:p.nickname||NICK,owner:DEVICE,is_anon:p.is_anon,
       position_type:p.position_type,car_number:p.car_number,custom_text:p.custom_text,description:p.description,version:1,updated_at:todayISO(),likes:0,dislikes:0,my_vote:null,comments:[]};
-    OFF.answers.push(a);overlay.answers.push({...a});saveOverlay();return {version:1,created:true};
+    OFF.answers.push(a);overlay.answers.push(forOverlay(a));saveOverlay();return {version:1,created:true};
   },
   async vote(id,type){
     if(MODE==="api")return apiSEND(`/api/answers/${id}/vote`,"POST",{type});
@@ -652,10 +662,19 @@ function makeCombo(mount,opts){
       else await pick(items[+opt.dataset.i]);               // onAdd/onSelect used to leave the
     }catch(err){toast("操作失败："+((err&&err.message)||err));}   // next field dead with no clue
   });
-  document.addEventListener("mousedown",e=>{if(!mount.contains(e.target))close();});
   function pick(it){selected=it;input.value=it.label;close();return opts.onSelect&&opts.onSelect(it);}
   return {get value(){return selected;},setText(t){input.value=t;}};
 }
+// One delegated listener for every combo, bound once. makeCombo used to add its
+// own document-level mousedown per call, and it re-mounts on every upload-wizard
+// step (mountFD/mountTD/mountTL), so they accumulated without limit — each
+// closure also pinning a detached mount node.
+document.addEventListener("mousedown",e=>{
+  document.querySelectorAll(".combo-panel.open").forEach(p=>{
+    const combo=p.closest(".combo");
+    if(!combo||!combo.contains(e.target))p.classList.remove("open");
+  });
+});
 
 /* =========================================================
    City picker
@@ -680,8 +699,17 @@ async function restoreCity(){
    ========================================================= */
 const stationCache={};
 function cacheStations(list){list.forEach(s=>stationCache[s.id]=s);}
-function recentGet(){return JSON.parse(localStorage.getItem("mt_recent")||"[]");}
-function recentPush(s){let r=recentGet().filter(x=>x.id!==s.id);r.unshift(s);r=r.slice(0,6);localStorage.setItem("mt_recent",JSON.stringify(r));}
+// Guarded like cityRecentGet(): a bare JSON.parse here meant one malformed
+// mt_recent value (truncated write, quota failure) threw inside recentPush ->
+// enterStation -> a delegated listener, so clicking any station silently did
+// nothing, forever, with no toast and no way for the user to recover.
+function recentGet(){
+  try{const v=JSON.parse(localStorage.getItem("mt_recent")||"[]");
+    if(Array.isArray(v))return v.filter(x=>x&&typeof x.id==="string");}catch(e){}
+  return [];
+}
+function recentPush(s){let r=recentGet().filter(x=>x.id!==s.id);r.unshift(s);r=r.slice(0,6);
+  try{localStorage.setItem("mt_recent",JSON.stringify(r));}catch(e){}}
 function renderRecent(){
   const r=recentGet(),wrap=$("recentWrap");
   if(!r.length){wrap.style.display="none";return;}
@@ -698,7 +726,10 @@ async function renderSearch(q){
 }
 function stationRow(s){
   const lines=(s.lines||[]).map(l=>chip(l.name,l.color)).join("");
-  return `<div class="station-item" data-station="${esc(s.id)}"><div><div class="st-name">${esc(s.name_cn)}</div><div class="st-meta">${esc(CITY.name_cn)} · ${esc(s.name_en||"")}</div></div><div class="lines-mini">${lines}</div></div>`;
+  // 1416 of 3353 stations have no official English name, so the separator has to
+  // be conditional or they all render a dangling "城市 · "
+  const meta=esc(CITY.name_cn)+(s.name_en?" · "+esc(s.name_en):"");
+  return `<div class="station-item" data-station="${esc(s.id)}"><div><div class="st-name">${esc(s.name_cn)}</div><div class="st-meta">${meta}</div></div><div class="lines-mini">${lines}</div></div>`;
 }
 async function loadPopular(){
   if(!CITY){return;}
@@ -709,7 +740,13 @@ async function loadPopular(){
 async function enterStationById(id){
   let s=stationCache[id];
   if(!s){const list=await DL.stations(CITY.id,"");cacheStations(list);s=stationCache[id];}
-  if(s)enterStation(s);
+  if(s)return enterStation(s);
+  // A recent chip from another city can never resolve here — enterStationById only
+  // ever searches the CURRENT city. It used to be a completely silent dead click.
+  const chip=recentGet().find(x=>x.id===id);
+  toast(chip&&chip.cityName&&CITY&&chip.cityName!==CITY.name_cn
+    ? `「${chip.name_cn}」属于${chip.cityName}，请先把城市切换过去`
+    : "没找到这个车站，可能已被删除");
 }
 
 /* =========================================================
@@ -719,6 +756,8 @@ let Q={};
 function enterStation(s){
   Q={station:s.id,stationObj:s,from_line:null,from_line_name:null,from_line_color:null,from_dir:null,from_dir_name:null,to_line:null,to_line_name:null,to_line_color:null,to_dir:null,to_dir_name:null};
   recentPush({id:s.id,name_cn:s.name_cn,cityName:CITY.name_cn});
+  renderRecent();   // was only refreshed by loadPopular(), so a station you just
+                    // visited didn't appear under 最近搜索 until a city switch or reload
   $("queryStationName").textContent=s.name_cn;
   renderWizard().then(()=>go("query")).catch(e=>toast("加载失败："+((e&&e.message)||e)));
 }

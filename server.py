@@ -27,7 +27,11 @@ from urllib.parse import urlparse, parse_qs
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(ROOT, "metro.db")
-HOST, PORT = "0.0.0.0", 8000
+# Localhost only. This was "0.0.0.0", which exposed the dev backend — and the
+# real metro.db behind it — to every device on the LAN, with no authentication
+# on any write endpoint. Making HOST/PORT/DB_PATH configurable via env is still
+# on the pre-deploy list; this is just the safe default.
+HOST, PORT = "127.0.0.1", 8000
 
 
 # whitespace + every hyphen/dash variant (ASCII -, U+2010–2015 hyphen..horiz bar,
@@ -179,6 +183,29 @@ class Handler(BaseHTTPRequestHandler):
     def log_message(self, *a):
         pass
 
+    def _db(self):
+        """One connection per request, always closed by the do_* handlers below.
+
+        Nothing used to close or roll back: an exception part-way through a write
+        left an open transaction on a connection that only CPython's cyclic GC
+        reclaimed (exception -> traceback -> frame -> connection), and until it
+        did, EVERY other write failed with 'database is locked' after burning the
+        full 5s busy timeout. It did not recover on a timer.
+        """
+        if getattr(self, "_conn", None) is None:
+            self._conn = db()
+        return self._conn
+
+    def _close_db(self):
+        conn = getattr(self, "_conn", None)
+        self._conn = None
+        if conn is not None:
+            try:
+                conn.rollback()      # discard anything not explicitly committed
+            except Exception:
+                pass
+            conn.close()
+
     def do_OPTIONS(self):
         self.send_response(204)
         self._cors()
@@ -190,6 +217,8 @@ class Handler(BaseHTTPRequestHandler):
             self.route_get(u.path.rstrip("/"), parse_qs(u.query))
         except Exception as e:
             self._err(f"server error: {e}", 500)
+        finally:
+            self._close_db()
 
     def do_POST(self):
         p = urlparse(self.path).path.rstrip("/")
@@ -197,13 +226,25 @@ class Handler(BaseHTTPRequestHandler):
             self.route_post(p, self._body())
         except Exception as e:
             self._err(f"server error: {e}", 500)
+        finally:
+            self._close_db()
 
     def do_DELETE(self):
-        p = urlparse(self.path).path.rstrip("/")
+        # This had no try/except: an exception escaped into socketserver and the
+        # client got NO response at all — indistinguishable from a dropped
+        # connection, so the UI could not tell "failed" from "deleted".
+        try:
+            self.route_delete(urlparse(self.path).path.rstrip("/"))
+        except Exception as e:
+            self._err(f"server error: {e}", 500)
+        finally:
+            self._close_db()
+
+    def route_delete(self, p):
         m = re.match(r"^/api/answers/(\d+)$", p)
         if not m:
             return self._err("not found", 404)
-        conn = db()
+        conn = self._db()
         uid = self._uid_lookup(conn)
         row = conn.execute("SELECT user_id FROM answer WHERE id=?", (m.group(1),)).fetchone()
         if not row:
@@ -216,7 +257,7 @@ class Handler(BaseHTTPRequestHandler):
 
     # ---- GET ----
     def route_get(self, p, q):
-        conn = db()
+        conn = self._db()
 
         if p == "/api/health":
             n = conn.execute("SELECT COUNT(*) c FROM city").fetchone()["c"]
@@ -348,7 +389,11 @@ class Handler(BaseHTTPRequestHandler):
             answers.append({
                 "id": a["id"], "position_type": a["position_type"], "car_number": a["car_number"],
                 "custom_text": a["custom_text"], "description": a["description"], "is_anon": bool(a["is_anon"]),
-                "author": user["nickname"] if user else "匿名", "is_mine": uid == a["user_id"],
+                # Anonymity has to hold in the payload, not just in the UI: this
+                # used to ship the real nickname alongside is_anon=true, so
+                # anyone reading the API could de-anonymise every contributor.
+                "author": ("匿名" if a["is_anon"] else (user["nickname"] if user else "匿名")),
+                "is_mine": uid == a["user_id"],
                 "version": a["version"], "updated_at": a["updated_at"][:10],
                 "likes": likes, "dislikes": dislikes, "my_vote": my,
                 "score": round(score(likes, dislikes, a["updated_at"]), 4),
@@ -358,7 +403,7 @@ class Handler(BaseHTTPRequestHandler):
 
     # ---- POST ----
     def route_post(self, p, b):
-        conn = db()
+        conn = self._db()
 
         if p == "/api/cities":
             cn = (b["name_cn"] or "").strip()
@@ -462,11 +507,16 @@ class Handler(BaseHTTPRequestHandler):
         existing = conn.execute("SELECT * FROM answer WHERE transfer_id=? AND user_id=?", (tid, uid)).fetchone()
         if existing:
             ver = existing["version"] + 1
+            # is_deleted=0 matters: UNIQUE(transfer_id, user_id) means a user who
+            # deleted their answer can never insert a new row for that transfer,
+            # so without resetting the flag here their next post updated a row
+            # that /api/answers filters out — reported as success, invisible
+            # forever. Reviving it also reads as a fresh post, hence `created`.
             conn.execute(
                 """UPDATE answer SET position_type=?, car_number=?, custom_text=?, description=?,
-                   is_anon=?, version=?, updated_at=? WHERE id=?""",
+                   is_anon=?, version=?, updated_at=?, is_deleted=0 WHERE id=?""",
                 (ptype, car, custom, desc, anon, ver, today, existing["id"]))
-            ans_id, is_new = existing["id"], False
+            ans_id, is_new = existing["id"], bool(existing["is_deleted"])
         else:
             cur = conn.execute(
                 """INSERT INTO answer (transfer_id, user_id, position_type, car_number, custom_text,
