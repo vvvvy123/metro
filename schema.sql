@@ -32,7 +32,13 @@ CREATE TABLE IF NOT EXISTS city (
     name_en     TEXT NOT NULL,             -- Beijing
     alias       TEXT DEFAULT '',           -- JSON array string, searchable: "BJ","Peking","beijing","bj"
     timezone    TEXT DEFAULT 'UTC',
-    created_at  TEXT DEFAULT (datetime('now'))
+    created_at  TEXT DEFAULT (datetime('now')),
+    -- Pre-folded search key (db.search_key of id|name_cn|name_en|alias).
+    -- Replaces the old fold() SQL callback, which Postgres has no equivalent for.
+    -- NOT NULL DEFAULT '' is load-bearing: the list-everything path searches with
+    -- pattern '%%', and NULL LIKE '%%' is NULL, which would drop the row from the
+    -- UI entirely rather than merely making it unsearchable.
+    search_fold TEXT NOT NULL DEFAULT ''
 );
 
 -- A city can host more than one operator/system; optional but future-proof.
@@ -71,7 +77,12 @@ CREATE TABLE IF NOT EXISTS station (
     name_cn     TEXT NOT NULL,             -- 西直门
     name_en     TEXT DEFAULT '',           -- Xizhimen
     alias       TEXT DEFAULT '',           -- JSON array string: pinyin / initials / en
-    created_at  TEXT DEFAULT (datetime('now'))
+    created_at  TEXT DEFAULT (datetime('now')),
+    -- db.search_key of name_cn|name_en|alias. Deliberately NOT including id:
+    -- every station id contains a '-', which fold() strips, so folding ids would
+    -- make ?q=bj match all 423 Beijing stations. See city.search_fold for why
+    -- NOT NULL DEFAULT '' matters.
+    search_fold TEXT NOT NULL DEFAULT ''
 );
 CREATE INDEX IF NOT EXISTS idx_station_city ON station(city_id);
 
@@ -98,7 +109,10 @@ CREATE TABLE IF NOT EXISTS transfer (
 -- ---------------------------------------------------------------------
 -- Accounts — email + verification code (no password, PRD 五 登录)
 -- ---------------------------------------------------------------------
-CREATE TABLE IF NOT EXISTS user (
+-- Named app_user, NOT user: `user` is a reserved word in Postgres (shorthand for
+-- current_user), so every unquoted reference there is a syntax error. Renamed on
+-- the SQLite side too so both engines share one SQL text.
+CREATE TABLE IF NOT EXISTS app_user (
     id          INTEGER PRIMARY KEY AUTOINCREMENT,
     email       TEXT UNIQUE NOT NULL,      -- one account per email
     nickname    TEXT NOT NULL,
@@ -112,7 +126,7 @@ CREATE TABLE IF NOT EXISTS user (
 CREATE TABLE IF NOT EXISTS answer (
     id            INTEGER PRIMARY KEY AUTOINCREMENT,
     transfer_id   INTEGER NOT NULL REFERENCES transfer(id),
-    user_id       INTEGER NOT NULL REFERENCES user(id),
+    user_id       INTEGER NOT NULL REFERENCES app_user(id),
     position_type TEXT NOT NULL,           -- 'car' | 'custom'
     car_number    INTEGER,                 -- when position_type='car'
     custom_text   TEXT DEFAULT '',         -- when position_type='custom'
@@ -143,7 +157,7 @@ CREATE INDEX IF NOT EXISTS idx_version_answer ON answer_version(answer_id);
 CREATE TABLE IF NOT EXISTS vote (
     id          INTEGER PRIMARY KEY AUTOINCREMENT,
     answer_id   INTEGER NOT NULL REFERENCES answer(id),
-    user_id     INTEGER NOT NULL REFERENCES user(id),
+    user_id     INTEGER NOT NULL REFERENCES app_user(id),
     type        TEXT NOT NULL CHECK (type IN ('LIKE','DISLIKE')),
     created_at  TEXT DEFAULT (datetime('now')),
     UNIQUE (answer_id, user_id)
@@ -153,8 +167,26 @@ CREATE TABLE IF NOT EXISTS vote (
 CREATE TABLE IF NOT EXISTS comment (
     id          INTEGER PRIMARY KEY AUTOINCREMENT,
     answer_id   INTEGER NOT NULL REFERENCES answer(id),
-    user_id     INTEGER NOT NULL REFERENCES user(id),
+    user_id     INTEGER NOT NULL REFERENCES app_user(id),
     content     TEXT NOT NULL,
     created_at  TEXT DEFAULT (datetime('now'))
 );
 CREATE INDEX IF NOT EXISTS idx_comment_answer ON comment(answer_id);
+
+-- ---------------------------------------------------------------------
+-- Abuse control
+-- ---------------------------------------------------------------------
+-- One row per successful write, so a per-device daily quota can be enforced.
+-- This is NOT authentication: the device id is self-asserted and cheap to rotate.
+-- It exists because every write endpoint is otherwise unlimited, and an in-memory
+-- counter is useless on serverless where each invocation is a fresh process.
+-- `day` is stored as YYYY-MM-DD and computed in Python, so the quota query is an
+-- equality match with no date functions (portable to Postgres unchanged).
+CREATE TABLE IF NOT EXISTS write_log (
+    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    device      TEXT NOT NULL,
+    kind        TEXT NOT NULL,             -- 'answer' | 'vote' | 'comment' | 'city' | ...
+    day         TEXT NOT NULL,
+    created_at  TEXT DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_write_log_quota ON write_log(device, day, kind);

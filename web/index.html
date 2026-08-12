@@ -631,7 +631,13 @@ const DL={
 const $=id=>document.getElementById(id);
 function esc(s){return (s==null?"":String(s)).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
 function toast(m){const t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),2400);}
-function chip(name,color){return `<span class="line-chip" style="background:${color||"#4b5563"}">${esc(name)}</span>`;}
+/* Line colour goes into a style="..." attribute, and esc() only covers & < > " —
+   it was never applied here anyway. An unvalidated colour is therefore stored XSS:
+   one unauthenticated POST could put `x" onmouseover="…` on the home page of a city
+   and run script for every visitor. Allowlist rather than escape, because the only
+   legitimate value is a hex colour. The backend validates too; this is the sink. */
+const safeColor=c=>/^#[0-9a-fA-F]{3,8}$/.test(String(c||"").trim())?String(c).trim():"#4b5563";
+function chip(name,color){return `<span class="line-chip" style="background:${safeColor(color)}">${esc(name)}</span>`;}
 function go(v){document.querySelectorAll(".view").forEach(x=>x.classList.remove("active"));$("view-"+v).classList.add("active");window.scrollTo({top:0,behavior:"smooth"});}
 
 /* =========================================================
@@ -646,7 +652,7 @@ function makeCombo(mount,opts){
     // surface the failure: since fetchItems now does network I/O in static mode,
     // swallowing here would render "无匹配" for a station that actually exists
     try{ items=await opts.fetchItems(q); }catch(e){ items=[]; toast("加载失败："+((e&&e.message)||e)); }
-    let html=items.map((it,i)=>`<div class="combo-opt" data-i="${i}">${it.color?`<span class="line-chip" style="background:${it.color}">${esc(it.label)}</span>`:esc(it.label)}${it.sub?`<span class="sub">${esc(it.sub)}</span>`:""}</div>`).join("");
+    let html=items.map((it,i)=>`<div class="combo-opt" data-i="${i}">${it.color?`<span class="line-chip" style="background:${safeColor(it.color)}">${esc(it.label)}</span>`:esc(it.label)}${it.sub?`<span class="sub">${esc(it.sub)}</span>`:""}</div>`).join("");
     const exact=items.some(it=>it.label===q);
     if(q&&!exact&&opts.onAdd)html+=`<div class="combo-opt combo-add" data-add="1">＋ ${esc((opts.addLabel&&opts.addLabel(q))||("添加「"+q+"」"))}</div>`;
     if(!html)html=`<div class="combo-empty">${esc((!q&&opts.emptyHint)||"无匹配")}</div>`;
@@ -762,7 +768,7 @@ function enterStation(s){
   renderWizard().then(()=>go("query")).catch(e=>toast("加载失败："+((e&&e.message)||e)));
 }
 function optChip(kind,id,name,color,sel){
-  const dot=color?`<span class="dot" style="background:${color}"></span>`:"";
+  const dot=color?`<span class="dot" style="background:${safeColor(color)}"></span>`:"";
   return `<button class="opt ${sel?"selected":""}" data-kind="${kind}" data-id="${esc(id)}" data-name="${esc(name)}" data-color="${esc(color||"")}">${dot}${esc(name)}</button>`;
 }
 function stepBlock(n,label,body){return `<div class="step"><div class="step-label"><span class="step-num">${n}</span>${esc(label)}</div><div class="options">${body}</div></div>`;}
