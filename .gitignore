@@ -5,6 +5,15 @@ metro.db-journal
 metro.db-wal
 metro.db-shm
 
+# 凭据：DATABASE_URL 里带密码。仓库是公开的，务必保持忽略。
+.env
+.env.*
+!.env.example
+
+# 数据库快照（含设备身份）应放在仓库外，这条只是兜底
+*.bak.db
+metro.pre-*.db
+
 # Python
 __pycache__/
 *.py[cod]

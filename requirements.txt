@@ -1,9 +1,14 @@
-# Metro Transfer — backend has ZERO third-party dependencies.
-# It uses only the Python standard library (http.server, sqlite3, json).
+# Metro Transfer — dependencies
+#
+# LOCAL DEVELOPMENT NEEDS NOTHING FROM THIS FILE.
+# With no DATABASE_URL set, the app runs on SQLite using only the standard
+# library (http.server, sqlite3, json) — `python server.py` and you are done.
 # Requires Python 3.8+.
 #
-# There is nothing to `pip install`. This file exists only to document that.
+# The single entry below is needed ONLY when DATABASE_URL is set, i.e. when
+# running against Postgres (deployment). db.py imports psycopg lazily inside the
+# Postgres branch precisely so the SQLite path stays dependency-free.
 #
-# (Future: if you migrate server.py to FastAPI, add:)
-# fastapi>=0.110
-# uvicorn>=0.29
+# [binary] ships a prebuilt libpq wheel, so no local Postgres client or compiler
+# is required — that is what makes it installable in a Vercel build.
+psycopg[binary]>=3.2
