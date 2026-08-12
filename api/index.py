@@ -20,36 +20,20 @@ if ROOT not in sys.path:
 from server import Handler  # noqa: E402  (importing server also loads db + .env)
 
 
-def _original_path(h):
-    """The path server.py should route on.
-
-    A rewrite sends every /api/* request to /api/index, and it is not documented
-    whether the function then sees the original path or the rewritten one — so
-    take the original from whichever source actually has it, and fall back to
-    self.path. (api/ping.py was deployed first purely to find out which of these
-    is populated; keep the belt and braces, it costs two dict lookups.)
-    """
-    for k in ("x-vercel-original-path", "x-original-uri", "x-forwarded-uri"):
-        v = h.headers.get(k)
-        if v:
-            return v
-    return h.path
-
-
 class handler(Handler):
     # Vercel terminates TLS and applies its own limits; the per-connection socket
     # timeout in Handler is for the standalone server and is harmless here.
+    #
+    # `self.path` is the ORIGINAL request path, not the rewrite destination —
+    # measured on a deployed preview, not assumed: a request to /api/__echo?x=1
+    # (reachable only through the /api/(.*) -> /api/index rewrite) reported
+    # self_path == "/api/__echo?x=1", and none of x-vercel-original-path /
+    # x-original-uri / x-matched-path existed. So routing on self.path is correct
+    # and the header fallbacks that used to be here were dead code.
 
     def _route(self, verb):
-        u = urlparse(_original_path(self))
+        u = urlparse(self.path)
         p = u.path.rstrip("/")
-        # TEMPORARY, deleted together with api/ping.py. /api/ping is served by its
-        # own file, so it cannot answer the one question the router depends on:
-        # what does a REWRITTEN request see? This route is reached only via the
-        # /api/(.*) rewrite, touches no database, and echoes the raw path back.
-        if p == "/api/__echo":
-            return self._json({"self_path": self.path, "routed_path": p,
-                               "headers": {k.lower(): v for k, v in self.headers.items()}})
         try:
             if verb == "GET":
                 self.route_get(p, parse_qs(u.query))
