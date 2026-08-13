@@ -158,7 +158,9 @@
 </style>
 </head>
 <body>
-<div id="modeBanner" class="offline">检测后端中…</div>
+<!-- hidden by default: on the deployed site the banner never shows, and starting
+     visible would flash "检测后端中…" then collapse on every single page load -->
+<div id="modeBanner" class="offline" style="display:none">检测后端中…</div>
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -1054,9 +1056,18 @@ async function boot(){
   }
   // api mode reads the DB, never OFF — leave both untouched there, exactly as before
   if(MODE!=="api"){loadOverlay(MODE==="static"?"mt_overlay_s":"mt_overlay");applyOverlay();}
-  if(MODE==="api"){banner.className="api";banner.textContent="🟢 已连接后端 API（"+(API_BASE||location.origin)+"）· 数据落库 SQLite";}
-  else if(MODE==="static"){banner.className="offline";banner.textContent="🟡 只读演示版 · 全部 10 城线路数据齐全，但投票/评论/上传只存在你自己的浏览器里，不会共享给其他人";}
-  else{banner.className="offline";banner.textContent="🟡 离线预览模式 · 数据内联，改动存于本浏览器（localStorage）";}
+  // The banner is a WARNING, not a status line. In api mode a visitor has nothing
+  // to act on, so it stays hidden — it was also lying by then, still claiming
+  // "数据落库 SQLite" after the backend moved to Postgres.
+  // In static/offline mode it is the ONLY thing telling people their votes are not
+  // shared with anyone, so there it must stay.
+  if(MODE!=="api"){
+    banner.className="offline";
+    banner.textContent = MODE==="static"
+      ? "🟡 只读演示版 · 全部 10 城线路数据齐全，但投票/评论/上传只存在你自己的浏览器里，不会共享给其他人"
+      : "🟡 离线预览模式 · 数据内联，改动存于本浏览器（localStorage）";
+    banner.style.display="";
+  }
   initCityPicker();
   // delegated handlers (bound once) — bound before the awaits below so that a
   // data-loading failure can't leave the page inert with no click handling
@@ -1067,7 +1078,9 @@ async function boot(){
 }
 boot().catch(e=>{
   const b=$("modeBanner");
-  if(b){b.className="offline";b.textContent="⚠️ 数据加载失败："+((e&&e.message)||e)+" · 请刷新重试";}
+  // must un-hide: the banner now starts display:none, and a boot failure is
+  // exactly the case where the user needs to be told something
+  if(b){b.className="offline";b.textContent="⚠️ 数据加载失败："+((e&&e.message)||e)+" · 请刷新重试";b.style.display="";}
 });
 </script>
 </body>
