@@ -307,7 +307,17 @@ def main():
         print("available:", ", ".join(list_cities()))
         return
 
-    print(f"importing into {DB_PATH}")
+    # Name the target the connection actually has. Printing DB_PATH unconditionally
+    # is actively misleading: db.py auto-loads the gitignored .env, so IS_PG is true
+    # for *every* local invocation even when DATABASE_URL is absent from the shell —
+    # i.e. the default local run writes to production while claiming to write to
+    # metro.db. Redact the credentials; the host is what you need to see.
+    if db.IS_PG:
+        parts = db.DSN.split("/")
+        host = parts[2].split("@")[-1] if len(parts) > 2 else "?"
+        print(f"importing into postgres {host} (DATABASE_URL is set)")
+    else:
+        print(f"importing into {DB_PATH}")
     for cid in cities:
         try:
             import_city(conn, cid)
