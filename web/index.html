@@ -27,6 +27,17 @@
   .topbar-inner{max-width:var(--maxw);margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:12px}
   .brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:17px;cursor:pointer;user-select:none}
   .brand .logo{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,var(--accent),#22d3ee);display:grid;place-items:center;font-size:14px;color:#fff;font-weight:800}
+  /* Fixed two-line lockup: "Metro Transfer" over "换乘最优位置", both flush left.
+     This was one inline text run, so a phone wrapped it wherever it happened to
+     run out of width — "Metro Transfer 换乘" / "最优位置", i.e. the Chinese phrase
+     was cut in half at a point that depended on the viewport. A column flex box
+     puts the break where it belongs instead of leaving it up to the screen.
+     .brand-en needs the nowrap: as a flex item the column can shrink to its
+     min-content width, and at 320px it lands ~1px short of "Metro Transfer",
+     which splits the English into "Metro" / "Transfer". Measured 240→900px:
+     with nowrap the lockup is byte-identical at every width. */
+  .brand-text{display:flex;flex-direction:column;line-height:1.15}
+  .brand-en{white-space:nowrap}
   .brand small{color:var(--text-faint);font-weight:400;font-size:12px}
   .spacer{flex:1}
 
@@ -164,7 +175,7 @@
 
 <header class="topbar">
   <div class="topbar-inner">
-    <div class="brand" onclick="go('home')"><span class="logo">M</span><span>Metro Transfer <small>换乘最优位置</small></span></div>
+    <div class="brand" onclick="go('home')"><span class="logo">M</span><span class="brand-text"><span class="brand-en">Metro Transfer</span><small>换乘最优位置</small></span></div>
     <div class="spacer"></div>
     <div class="city-slot" id="citySlot"></div>
   </div>
