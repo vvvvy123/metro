@@ -1,0 +1,1761 @@
+{
+  "city": {
+    "id": "taipei",
+    "country_id": "cn",
+    "country_cn": "中国",
+    "country_en": "China",
+    "name_cn": "台北",
+    "name_en": "Taipei",
+    "alias": [
+      "taipei",
+      "tp",
+      "臺北",
+      "台北市",
+      "臺北市"
+    ],
+    "timezone": "Asia/Taipei"
+  },
+  "system": {
+    "id": "taipei-metro",
+    "name_cn": "台北捷運",
+    "name_en": "Taipei Metro"
+  },
+  "lines": [
+    {
+      "id": "tp-br",
+      "name": "文湖線",
+      "name_en": "Wenhu Line",
+      "color": "#C48C31",
+      "directions": [
+        "開往南港展覽館",
+        "開往動物園"
+      ]
+    },
+    {
+      "id": "tp-r",
+      "name": "淡水信義線",
+      "name_en": "Tamsui-Xinyi Line",
+      "color": "#E3002C",
+      "directions": [
+        "開往淡水",
+        "開往象山"
+      ]
+    },
+    {
+      "id": "tp-rb",
+      "name": "新北投支線",
+      "name_en": "Xinbeitou Branch Line",
+      "color": "#FD92A3",
+      "directions": [
+        "開往新北投",
+        "開往北投"
+      ]
+    },
+    {
+      "id": "tp-g",
+      "name": "松山新店線",
+      "name_en": "Songshan-Xindian Line",
+      "color": "#008659",
+      "directions": [
+        "開往松山",
+        "開往新店"
+      ]
+    },
+    {
+      "id": "tp-gb",
+      "name": "小碧潭支線",
+      "name_en": "Xiaobitan Branch Line",
+      "color": "#CFDB00",
+      "directions": [
+        "開往小碧潭",
+        "開往七張"
+      ]
+    },
+    {
+      "id": "tp-o",
+      "name": "中和新蘆線",
+      "name_en": "Zhonghe-Xinlu Line",
+      "color": "#F8B61C",
+      "directions": [
+        "開往迴龍",
+        "開往蘆洲",
+        "開往南勢角"
+      ]
+    },
+    {
+      "id": "tp-bl",
+      "name": "板南線",
+      "name_en": "Bannan Line",
+      "color": "#0070BD",
+      "directions": [
+        "開往南港展覽館",
+        "開往頂埔"
+      ]
+    },
+    {
+      "id": "tp-y",
+      "name": "環狀線（第一階段）",
+      "name_en": "Circular Line",
+      "color": "#FFDB00",
+      "directions": [
+        "開往新北產業園區",
+        "開往大坪林"
+      ]
+    },
+    {
+      "id": "tp-a",
+      "name": "桃園機場捷運",
+      "name_en": "Taoyuan Airport MRT",
+      "color": "#8246AF",
+      "directions": [
+        "開往老街溪",
+        "開往台北車站(A)"
+      ]
+    },
+    {
+      "id": "tp-v",
+      "name": "淡海輕軌",
+      "name_en": "Danhai Light Rail",
+      "color": "#E5554F",
+      "directions": [
+        "開往崁頂",
+        "開往淡水漁人碼頭",
+        "開往紅樹林"
+      ]
+    },
+    {
+      "id": "tp-k",
+      "name": "安坑輕軌",
+      "name_en": "Ankeng Light Rail",
+      "color": "#C3B091",
+      "directions": [
+        "開往十四張",
+        "開往雙城"
+      ]
+    },
+    {
+      "id": "tp-lb",
+      "name": "三鶯線",
+      "name_en": "Sanying Line",
+      "color": "#79BCE8",
+      "directions": [
+        "開往鶯桃福德",
+        "開往頂埔(LB)"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "tp-001",
+      "name_cn": "動物園",
+      "name_en": "Taipei Zoo",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-002",
+      "name_cn": "木柵",
+      "name_en": "Muzha",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-003",
+      "name_cn": "萬芳社區",
+      "name_en": "Wanfang Community",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-004",
+      "name_cn": "萬芳醫院",
+      "name_en": "Wanfang Hospital",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-005",
+      "name_cn": "辛亥",
+      "name_en": "Xinhai",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-006",
+      "name_cn": "麟光",
+      "name_en": "Linguang",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-007",
+      "name_cn": "六張犁",
+      "name_en": "Liuzhangli",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-008",
+      "name_cn": "科技大樓",
+      "name_en": "Technology Building",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-009",
+      "name_cn": "大安",
+      "name_en": "Daan",
+      "alias": [],
+      "lines": [
+        "tp-br",
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-010",
+      "name_cn": "忠孝復興",
+      "name_en": "Zhongxiao Fuxing",
+      "alias": [],
+      "lines": [
+        "tp-br",
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-011",
+      "name_cn": "南京復興",
+      "name_en": "Nanjing Fuxing",
+      "alias": [],
+      "lines": [
+        "tp-br",
+        "tp-g"
+      ]
+    },
+    {
+      "id": "tp-012",
+      "name_cn": "中山國中",
+      "name_en": "Zhongshan Junior High School",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-013",
+      "name_cn": "松山機場",
+      "name_en": "Songshan Airport",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-014",
+      "name_cn": "大直",
+      "name_en": "Dazhi",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-015",
+      "name_cn": "劍南路",
+      "name_en": "Jiannan Rd.",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-016",
+      "name_cn": "西湖",
+      "name_en": "Xihu",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-017",
+      "name_cn": "港墘",
+      "name_en": "Gangqian",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-018",
+      "name_cn": "文德",
+      "name_en": "Wende",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-019",
+      "name_cn": "內湖",
+      "name_en": "Neihu",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-020",
+      "name_cn": "大湖公園",
+      "name_en": "Dahu Park",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-021",
+      "name_cn": "葫洲",
+      "name_en": "Huzhou",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-022",
+      "name_cn": "東湖",
+      "name_en": "Donghu",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-023",
+      "name_cn": "南港軟體園區",
+      "name_en": "Nangang Software Park",
+      "alias": [],
+      "lines": [
+        "tp-br"
+      ]
+    },
+    {
+      "id": "tp-024",
+      "name_cn": "南港展覽館",
+      "name_en": "Taipei Nangang Exhibition Center",
+      "alias": [],
+      "lines": [
+        "tp-br",
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-025",
+      "name_cn": "象山",
+      "name_en": "Xiangshan",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-026",
+      "name_cn": "台北101/世貿",
+      "name_en": "Taipei 101 / World Trade Center",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-027",
+      "name_cn": "信義安和",
+      "name_en": "Xinyi Anhe",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-028",
+      "name_cn": "大安森林公園",
+      "name_en": "Daan Park",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-029",
+      "name_cn": "東門",
+      "name_en": "Dongmen",
+      "alias": [],
+      "lines": [
+        "tp-r",
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-030",
+      "name_cn": "中正紀念堂",
+      "name_en": "Chiang Kai-shek Memorial Hall",
+      "alias": [],
+      "lines": [
+        "tp-r",
+        "tp-g"
+      ]
+    },
+    {
+      "id": "tp-031",
+      "name_cn": "台大醫院",
+      "name_en": "NTU Hospital",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-032",
+      "name_cn": "台北車站",
+      "name_en": "Taipei Main Station",
+      "alias": [],
+      "lines": [
+        "tp-r",
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-033",
+      "name_cn": "中山",
+      "name_en": "Zhongshan",
+      "alias": [],
+      "lines": [
+        "tp-r",
+        "tp-g"
+      ]
+    },
+    {
+      "id": "tp-034",
+      "name_cn": "雙連",
+      "name_en": "Shuanglian",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-035",
+      "name_cn": "民權西路",
+      "name_en": "Minquan W. Rd.",
+      "alias": [],
+      "lines": [
+        "tp-r",
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-036",
+      "name_cn": "圓山",
+      "name_en": "Yuanshan",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-037",
+      "name_cn": "劍潭",
+      "name_en": "Jiantan",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-038",
+      "name_cn": "士林",
+      "name_en": "Shilin",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-039",
+      "name_cn": "芝山",
+      "name_en": "Zhishan",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-040",
+      "name_cn": "明德",
+      "name_en": "Mingde",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-041",
+      "name_cn": "石牌",
+      "name_en": "Shipai",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-042",
+      "name_cn": "唭哩岸",
+      "name_en": "Qilian",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-043",
+      "name_cn": "奇岩",
+      "name_en": "Qiyan",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-044",
+      "name_cn": "北投",
+      "name_en": "Beitou",
+      "alias": [],
+      "lines": [
+        "tp-r",
+        "tp-rb"
+      ]
+    },
+    {
+      "id": "tp-045",
+      "name_cn": "復興崗",
+      "name_en": "Fuxinggang",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-046",
+      "name_cn": "忠義",
+      "name_en": "Zhongyi",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-047",
+      "name_cn": "關渡",
+      "name_en": "Guandu",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-048",
+      "name_cn": "竹圍",
+      "name_en": "Zhuwei",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-049",
+      "name_cn": "紅樹林",
+      "name_en": "Hongshulin",
+      "alias": [],
+      "lines": [
+        "tp-r",
+        "tp-v"
+      ]
+    },
+    {
+      "id": "tp-050",
+      "name_cn": "淡水",
+      "name_en": "Tamsui",
+      "alias": [],
+      "lines": [
+        "tp-r"
+      ]
+    },
+    {
+      "id": "tp-051",
+      "name_cn": "新北投",
+      "name_en": "Xinbeitou",
+      "alias": [],
+      "lines": [
+        "tp-rb"
+      ]
+    },
+    {
+      "id": "tp-052",
+      "name_cn": "新店",
+      "name_en": "Xindian",
+      "alias": [],
+      "lines": [
+        "tp-g"
+      ]
+    },
+    {
+      "id": "tp-053",
+      "name_cn": "新店區公所",
+      "name_en": "Xindian District Office",
+      "alias": [],
+      "lines": [
+        "tp-g"
+      ]
+    },
+    {
+      "id": "tp-054",
+      "name_cn": "七張",
+      "name_en": "Qizhang",
+      "alias": [],
+      "lines": [
+        "tp-g",
+        "tp-gb"
+      ]
+    },
+    {
+      "id": "tp-055",
+      "name_cn": "大坪林",
+      "name_en": "Dapinglin",
+      "alias": [],
+      "lines": [
+        "tp-g",
+        "tp-y"
+      ]
+    },
+    {
+      "id": "tp-056",
+      "name_cn": "景美",
+      "name_en": "Jingmei",
+      "alias": [],
+      "lines": [
+        "tp-g"
+      ]
+    },
+    {
+      "id": "tp-057",
+      "name_cn": "萬隆",
+      "name_en": "Wanlong",
+      "alias": [],
+      "lines": [
+        "tp-g"
+      ]
+    },
+    {
+      "id": "tp-058",
+      "name_cn": "公館",
+      "name_en": "Gongguan",
+      "alias": [],
+      "lines": [
+        "tp-g"
+      ]
+    },
+    {
+      "id": "tp-059",
+      "name_cn": "台電大樓",
+      "name_en": "Taipower Building",
+      "alias": [],
+      "lines": [
+        "tp-g"
+      ]
+    },
+    {
+      "id": "tp-060",
+      "name_cn": "古亭",
+      "name_en": "Guting",
+      "alias": [],
+      "lines": [
+        "tp-g",
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-061",
+      "name_cn": "小南門",
+      "name_en": "Xiaonanmen",
+      "alias": [],
+      "lines": [
+        "tp-g"
+      ]
+    },
+    {
+      "id": "tp-062",
+      "name_cn": "西門",
+      "name_en": "Ximen",
+      "alias": [],
+      "lines": [
+        "tp-g",
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-063",
+      "name_cn": "北門",
+      "name_en": "Beimen",
+      "alias": [],
+      "lines": [
+        "tp-g"
+      ]
+    },
+    {
+      "id": "tp-064",
+      "name_cn": "松江南京",
+      "name_en": "Songjiang Nanjing",
+      "alias": [],
+      "lines": [
+        "tp-g",
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-065",
+      "name_cn": "台北小巨蛋",
+      "name_en": "Taipei Arena",
+      "alias": [],
+      "lines": [
+        "tp-g"
+      ]
+    },
+    {
+      "id": "tp-066",
+      "name_cn": "南京三民",
+      "name_en": "Nanjing Sanmin",
+      "alias": [],
+      "lines": [
+        "tp-g"
+      ]
+    },
+    {
+      "id": "tp-067",
+      "name_cn": "松山",
+      "name_en": "Songshan",
+      "alias": [],
+      "lines": [
+        "tp-g"
+      ]
+    },
+    {
+      "id": "tp-068",
+      "name_cn": "小碧潭",
+      "name_en": "Xiaobitan",
+      "alias": [],
+      "lines": [
+        "tp-gb"
+      ]
+    },
+    {
+      "id": "tp-069",
+      "name_cn": "南勢角",
+      "name_en": "Nanshijiao",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-070",
+      "name_cn": "景安",
+      "name_en": "Jingan",
+      "alias": [],
+      "lines": [
+        "tp-o",
+        "tp-y"
+      ]
+    },
+    {
+      "id": "tp-071",
+      "name_cn": "永安市場",
+      "name_en": "Yongan Market",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-072",
+      "name_cn": "頂溪",
+      "name_en": "Dingxi",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-073",
+      "name_cn": "忠孝新生",
+      "name_en": "Zhongxiao Xinsheng",
+      "alias": [],
+      "lines": [
+        "tp-o",
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-074",
+      "name_cn": "行天宮",
+      "name_en": "Xingtian Temple",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-075",
+      "name_cn": "中山國小",
+      "name_en": "Zhongshan Elementary School",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-076",
+      "name_cn": "大橋頭",
+      "name_en": "Daqiaotou",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-077",
+      "name_cn": "三重國小",
+      "name_en": "Sanchong Elementary School",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-078",
+      "name_cn": "三和國中",
+      "name_en": "Sanhe Junior High School",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-079",
+      "name_cn": "徐匯中學",
+      "name_en": "St. Ignatius High School",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-080",
+      "name_cn": "三民高中",
+      "name_en": "Sanmin Senior High School",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-081",
+      "name_cn": "蘆洲",
+      "name_en": "Luzhou",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-082",
+      "name_cn": "台北橋",
+      "name_en": "Taipei Bridge",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-083",
+      "name_cn": "菜寮",
+      "name_en": "Cailiao",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-084",
+      "name_cn": "三重",
+      "name_en": "Sanchong",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-085",
+      "name_cn": "先嗇宮",
+      "name_en": "Xianse Temple",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-086",
+      "name_cn": "頭前庄",
+      "name_en": "Touqianzhuang",
+      "alias": [],
+      "lines": [
+        "tp-o",
+        "tp-y"
+      ]
+    },
+    {
+      "id": "tp-087",
+      "name_cn": "新莊",
+      "name_en": "Xinzhuang",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-088",
+      "name_cn": "輔大",
+      "name_en": "Fu Jen University",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-089",
+      "name_cn": "丹鳳",
+      "name_en": "Danfeng",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-090",
+      "name_cn": "迴龍",
+      "name_en": "Huilong",
+      "alias": [],
+      "lines": [
+        "tp-o"
+      ]
+    },
+    {
+      "id": "tp-091",
+      "name_cn": "頂埔",
+      "name_en": "Dingpu",
+      "alias": [],
+      "lines": [
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-092",
+      "name_cn": "永寧",
+      "name_en": "Yongning",
+      "alias": [],
+      "lines": [
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-093",
+      "name_cn": "土城",
+      "name_en": "Tucheng",
+      "alias": [],
+      "lines": [
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-094",
+      "name_cn": "海山",
+      "name_en": "Haishan",
+      "alias": [],
+      "lines": [
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-095",
+      "name_cn": "亞東醫院",
+      "name_en": "Far Eastern Hospital",
+      "alias": [],
+      "lines": [
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-096",
+      "name_cn": "府中",
+      "name_en": "Fuzhong",
+      "alias": [],
+      "lines": [
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-097",
+      "name_cn": "板橋",
+      "name_en": "Banqiao",
+      "alias": [],
+      "lines": [
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-098",
+      "name_cn": "新埔",
+      "name_en": "Xinpu",
+      "alias": [],
+      "lines": [
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-099",
+      "name_cn": "江子翠",
+      "name_en": "Jiangzicui",
+      "alias": [],
+      "lines": [
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-100",
+      "name_cn": "龍山寺",
+      "name_en": "Longshan Temple",
+      "alias": [],
+      "lines": [
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-101",
+      "name_cn": "善導寺",
+      "name_en": "Shandao Temple",
+      "alias": [],
+      "lines": [
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-102",
+      "name_cn": "忠孝敦化",
+      "name_en": "Zhongxiao Dunhua",
+      "alias": [],
+      "lines": [
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-103",
+      "name_cn": "國父紀念館",
+      "name_en": "Sun Yat-Sen Memorial Hall",
+      "alias": [],
+      "lines": [
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-104",
+      "name_cn": "市政府",
+      "name_en": "Taipei City Hall",
+      "alias": [],
+      "lines": [
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-105",
+      "name_cn": "永春",
+      "name_en": "Yongchun",
+      "alias": [],
+      "lines": [
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-106",
+      "name_cn": "後山埤",
+      "name_en": "Houshanpi",
+      "alias": [],
+      "lines": [
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-107",
+      "name_cn": "昆陽",
+      "name_en": "Kunyang",
+      "alias": [],
+      "lines": [
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-108",
+      "name_cn": "南港",
+      "name_en": "Nangang",
+      "alias": [],
+      "lines": [
+        "tp-bl"
+      ]
+    },
+    {
+      "id": "tp-109",
+      "name_cn": "十四張",
+      "name_en": "Shisizhang",
+      "alias": [],
+      "lines": [
+        "tp-y",
+        "tp-k"
+      ]
+    },
+    {
+      "id": "tp-110",
+      "name_cn": "秀朗橋",
+      "name_en": "Xiulang Bridge",
+      "alias": [],
+      "lines": [
+        "tp-y"
+      ]
+    },
+    {
+      "id": "tp-111",
+      "name_cn": "景平",
+      "name_en": "Jingping",
+      "alias": [],
+      "lines": [
+        "tp-y"
+      ]
+    },
+    {
+      "id": "tp-112",
+      "name_cn": "中和",
+      "name_en": "Zhonghe",
+      "alias": [],
+      "lines": [
+        "tp-y"
+      ]
+    },
+    {
+      "id": "tp-113",
+      "name_cn": "橋和",
+      "name_en": "Qiaohe",
+      "alias": [],
+      "lines": [
+        "tp-y"
+      ]
+    },
+    {
+      "id": "tp-114",
+      "name_cn": "中原",
+      "name_en": "Zhongyuan",
+      "alias": [],
+      "lines": [
+        "tp-y"
+      ]
+    },
+    {
+      "id": "tp-115",
+      "name_cn": "板新",
+      "name_en": "Banxin",
+      "alias": [],
+      "lines": [
+        "tp-y"
+      ]
+    },
+    {
+      "id": "tp-116",
+      "name_cn": "板橋(Y)",
+      "name_en": "Banqiao (Y)",
+      "alias": [],
+      "lines": [
+        "tp-y"
+      ]
+    },
+    {
+      "id": "tp-117",
+      "name_cn": "新埔民生",
+      "name_en": "Xinpu Minsheng",
+      "alias": [],
+      "lines": [
+        "tp-y"
+      ]
+    },
+    {
+      "id": "tp-118",
+      "name_cn": "幸福",
+      "name_en": "Xingfu",
+      "alias": [],
+      "lines": [
+        "tp-y"
+      ]
+    },
+    {
+      "id": "tp-119",
+      "name_cn": "新北產業園區",
+      "name_en": "New Taipei Industrial Park",
+      "alias": [],
+      "lines": [
+        "tp-y"
+      ]
+    },
+    {
+      "id": "tp-120",
+      "name_cn": "台北車站(A)",
+      "name_en": "Taipei Main Station (A)",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-121",
+      "name_cn": "三重(A)",
+      "name_en": "Sanchong (A)",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-122",
+      "name_cn": "新北產業園區(A)",
+      "name_en": "New Taipei Industrial Park (A)",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-123",
+      "name_cn": "新莊副都心",
+      "name_en": "Xinzhuang Fuduxin",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-124",
+      "name_cn": "泰山",
+      "name_en": "Taishan",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-125",
+      "name_cn": "泰山貴和",
+      "name_en": "Taishan Guihe",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-126",
+      "name_cn": "體育大學",
+      "name_en": "National Taiwan Sport University",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-127",
+      "name_cn": "長庚醫院",
+      "name_en": "Chang Gung Memorial Hospital",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-128",
+      "name_cn": "林口",
+      "name_en": "Linkou",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-129",
+      "name_cn": "山鼻",
+      "name_en": "Shanbi",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-130",
+      "name_cn": "坑口",
+      "name_en": "Kengkou",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-131",
+      "name_cn": "機場第一航廈",
+      "name_en": "Airport Terminal 1",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-132",
+      "name_cn": "機場第二航廈",
+      "name_en": "Airport Terminal 2",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-133",
+      "name_cn": "機場旅館",
+      "name_en": "Airport Hotel",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-134",
+      "name_cn": "大園",
+      "name_en": "Dayuan",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-135",
+      "name_cn": "橫山",
+      "name_en": "Hengshan",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-136",
+      "name_cn": "領航",
+      "name_en": "Linghang",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-137",
+      "name_cn": "高鐵桃園站",
+      "name_en": "HSR Taoyuan Station",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-138",
+      "name_cn": "桃園體育園區",
+      "name_en": "Taoyuan Sports Park",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-139",
+      "name_cn": "興南",
+      "name_en": "Xingnan",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-140",
+      "name_cn": "環北",
+      "name_en": "Huanbei",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-141",
+      "name_cn": "老街溪",
+      "name_en": "Laojie River",
+      "alias": [],
+      "lines": [
+        "tp-a"
+      ]
+    },
+    {
+      "id": "tp-142",
+      "name_cn": "竿蓁林",
+      "name_en": "Ganzhenlin",
+      "alias": [],
+      "lines": [
+        "tp-v"
+      ]
+    },
+    {
+      "id": "tp-143",
+      "name_cn": "淡金鄧公",
+      "name_en": "Danjin Denggong",
+      "alias": [],
+      "lines": [
+        "tp-v"
+      ]
+    },
+    {
+      "id": "tp-144",
+      "name_cn": "淡江大學",
+      "name_en": "Tamkang University",
+      "alias": [],
+      "lines": [
+        "tp-v"
+      ]
+    },
+    {
+      "id": "tp-145",
+      "name_cn": "淡金北新",
+      "name_en": "Danjin Beixin",
+      "alias": [],
+      "lines": [
+        "tp-v"
+      ]
+    },
+    {
+      "id": "tp-146",
+      "name_cn": "新市一路",
+      "name_en": "Xinshi 1st Rd.",
+      "alias": [],
+      "lines": [
+        "tp-v"
+      ]
+    },
+    {
+      "id": "tp-147",
+      "name_cn": "淡水行政中心",
+      "name_en": "Tamsui District Office",
+      "alias": [],
+      "lines": [
+        "tp-v"
+      ]
+    },
+    {
+      "id": "tp-148",
+      "name_cn": "濱海義山",
+      "name_en": "Binhai Yishan",
+      "alias": [],
+      "lines": [
+        "tp-v"
+      ]
+    },
+    {
+      "id": "tp-149",
+      "name_cn": "濱海沙崙",
+      "name_en": "Binhai Shalun",
+      "alias": [],
+      "lines": [
+        "tp-v"
+      ]
+    },
+    {
+      "id": "tp-150",
+      "name_cn": "台北海洋大學",
+      "name_en": "Taipei University of Marine Technology",
+      "alias": [],
+      "lines": [
+        "tp-v"
+      ]
+    },
+    {
+      "id": "tp-151",
+      "name_cn": "沙崙",
+      "name_en": "Shalun",
+      "alias": [],
+      "lines": [
+        "tp-v"
+      ]
+    },
+    {
+      "id": "tp-152",
+      "name_cn": "淡水漁人碼頭",
+      "name_en": "Tamsui Fisherman's Wharf",
+      "alias": [],
+      "lines": [
+        "tp-v"
+      ]
+    },
+    {
+      "id": "tp-153",
+      "name_cn": "淡海新市鎮",
+      "name_en": "Danhai New Town",
+      "alias": [],
+      "lines": [
+        "tp-v"
+      ]
+    },
+    {
+      "id": "tp-154",
+      "name_cn": "崁頂",
+      "name_en": "Kanding",
+      "alias": [],
+      "lines": [
+        "tp-v"
+      ]
+    },
+    {
+      "id": "tp-155",
+      "name_cn": "雙城",
+      "name_en": "Shuangcheng",
+      "alias": [],
+      "lines": [
+        "tp-k"
+      ]
+    },
+    {
+      "id": "tp-156",
+      "name_cn": "玫瑰中國城",
+      "name_en": "Rose China Town",
+      "alias": [],
+      "lines": [
+        "tp-k"
+      ]
+    },
+    {
+      "id": "tp-157",
+      "name_cn": "台北小城",
+      "name_en": "Taipei Xiaocheng",
+      "alias": [],
+      "lines": [
+        "tp-k"
+      ]
+    },
+    {
+      "id": "tp-158",
+      "name_cn": "耕莘安康院區",
+      "name_en": "Cardinal Tien Hospital An Kang Branch",
+      "alias": [],
+      "lines": [
+        "tp-k"
+      ]
+    },
+    {
+      "id": "tp-159",
+      "name_cn": "景文科大",
+      "name_en": "Jinwen University of Science and Technology",
+      "alias": [],
+      "lines": [
+        "tp-k"
+      ]
+    },
+    {
+      "id": "tp-160",
+      "name_cn": "安康",
+      "name_en": "Ankang",
+      "alias": [],
+      "lines": [
+        "tp-k"
+      ]
+    },
+    {
+      "id": "tp-161",
+      "name_cn": "陽光運動公園",
+      "name_en": "Sunshine Sports Park",
+      "alias": [],
+      "lines": [
+        "tp-k"
+      ]
+    },
+    {
+      "id": "tp-162",
+      "name_cn": "新和國小",
+      "name_en": "Xinhe Elementary School",
+      "alias": [],
+      "lines": [
+        "tp-k"
+      ]
+    },
+    {
+      "id": "tp-163",
+      "name_cn": "頂埔(LB)",
+      "name_en": "Dingpu (LB)",
+      "alias": [],
+      "lines": [
+        "tp-lb"
+      ]
+    },
+    {
+      "id": "tp-164",
+      "name_cn": "媽祖田",
+      "name_en": "Mazutian",
+      "alias": [],
+      "lines": [
+        "tp-lb"
+      ]
+    },
+    {
+      "id": "tp-165",
+      "name_cn": "長壽山",
+      "name_en": "Changshoushan",
+      "alias": [],
+      "lines": [
+        "tp-lb"
+      ]
+    },
+    {
+      "id": "tp-166",
+      "name_cn": "橫溪",
+      "name_en": "Hengxi",
+      "alias": [],
+      "lines": [
+        "tp-lb"
+      ]
+    },
+    {
+      "id": "tp-167",
+      "name_cn": "龍埔",
+      "name_en": "Longpu",
+      "alias": [],
+      "lines": [
+        "tp-lb"
+      ]
+    },
+    {
+      "id": "tp-168",
+      "name_cn": "三峽",
+      "name_en": "Sanxia",
+      "alias": [],
+      "lines": [
+        "tp-lb"
+      ]
+    },
+    {
+      "id": "tp-169",
+      "name_cn": "臺北大學",
+      "name_en": "National Taipei University",
+      "alias": [],
+      "lines": [
+        "tp-lb"
+      ]
+    },
+    {
+      "id": "tp-170",
+      "name_cn": "鶯歌車站",
+      "name_en": "Yingge Station",
+      "alias": [],
+      "lines": [
+        "tp-lb"
+      ]
+    },
+    {
+      "id": "tp-171",
+      "name_cn": "陶瓷老街",
+      "name_en": "Ceramics Old Street",
+      "alias": [],
+      "lines": [
+        "tp-lb"
+      ]
+    },
+    {
+      "id": "tp-172",
+      "name_cn": "國華",
+      "name_en": "Guohua",
+      "alias": [],
+      "lines": [
+        "tp-lb"
+      ]
+    },
+    {
+      "id": "tp-173",
+      "name_cn": "永吉公園",
+      "name_en": "Yongji Park",
+      "alias": [],
+      "lines": [
+        "tp-lb"
+      ]
+    },
+    {
+      "id": "tp-174",
+      "name_cn": "鶯桃福德",
+      "name_en": "Yingtao Fude",
+      "alias": [],
+      "lines": [
+        "tp-lb"
+      ]
+    }
+  ],
+  "seed_answers": [
+    {
+      "station": "tp-032",
+      "from_line": "tp-r",
+      "from_dir": "開往淡水",
+      "to_line": "tp-bl",
+      "to_dir": "開往南港展覽館",
+      "author_email": "taipei@example.com",
+      "author_nick": "台北通勤",
+      "anon": true,
+      "position_type": "car",
+      "car_number": 3,
+      "description": "淡水信義線往淡水方向坐第3節車廂，下車後往前走的樓梯直接下到板南線往南港展覽館的月台，不用繞到站廳層。",
+      "likes": 18,
+      "dislikes": 1,
+      "version": 1,
+      "days_ago": 7,
+      "comments": [
+        {
+          "nick": "匿名",
+          "days_ago": 5,
+          "text": "台北車站地下街出口很多，換乘跟著月台編號走比跟著出口指示牌快。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1051 @@
+{
+  "city": {
+    "id": "hongkong",
+    "country_id": "cn",
+    "country_cn": "中国",
+    "country_en": "China",
+    "name_cn": "香港",
+    "name_en": "Hong Kong",
+    "alias": [
+      "hongkong",
+      "hong kong",
+      "hk",
+      "香港特別行政區",
+      "香港特别行政区"
+    ],
+    "timezone": "Asia/Hong_Kong"
+  },
+  "system": {
+    "id": "hongkong-mtr",
+    "name_cn": "港鐵",
+    "name_en": "MTR"
+  },
+  "lines": [
+    {
+      "id": "hk-i",
+      "name": "港島綫",
+      "name_en": "Island Line",
+      "color": "#0860a8",
+      "directions": [
+        "開往柴灣",
+        "開往堅尼地城"
+      ]
+    },
+    {
+      "id": "hk-kt",
+      "name": "觀塘綫",
+      "name_en": "Kwun Tong Line",
+      "color": "#1a9431",
+      "directions": [
+        "開往調景嶺",
+        "開往黃埔"
+      ]
+    },
+    {
+      "id": "hk-tw",
+      "name": "荃灣綫",
+      "name_en": "Tsuen Wan Line",
+      "color": "#ff0000",
+      "directions": [
+        "開往荃灣",
+        "開往中環"
+      ]
+    },
+    {
+      "id": "hk-tk",
+      "name": "將軍澳綫",
+      "name_en": "Tseung Kwan O Line",
+      "color": "#6b208b",
+      "directions": [
+        "開往寶琳",
+        "開往康城",
+        "開往北角"
+      ]
+    },
+    {
+      "id": "hk-tc",
+      "name": "東涌綫",
+      "name_en": "Tung Chung Line",
+      "color": "#fe7f1d",
+      "directions": [
+        "開往東涌",
+        "開往香港"
+      ]
+    },
+    {
+      "id": "hk-dr",
+      "name": "迪士尼綫",
+      "name_en": "Disneyland Resort Line",
+      "color": "#f550a6",
+      "directions": [
+        "開往迪士尼",
+        "開往欣澳"
+      ]
+    },
+    {
+      "id": "hk-er",
+      "name": "東鐵綫",
+      "name_en": "East Rail Line",
+      "color": "#53b7e8",
+      "directions": [
+        "開往羅湖",
+        "開往落馬洲",
+        "開往金鐘"
+      ]
+    },
+    {
+      "id": "hk-tm",
+      "name": "屯馬綫",
+      "name_en": "Tuen Ma Line",
+      "color": "#9a3b26",
+      "directions": [
+        "開往屯門",
+        "開往烏溪沙"
+      ]
+    },
+    {
+      "id": "hk-ae",
+      "name": "機場快綫",
+      "name_en": "Airport Express",
+      "color": "#1c7670",
+      "directions": [
+        "開往博覽館",
+        "開往香港"
+      ]
+    },
+    {
+      "id": "hk-si",
+      "name": "南港島綫",
+      "name_en": "South Island Line",
+      "color": "#b5bd00",
+      "directions": [
+        "開往海怡半島",
+        "開往金鐘"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "hk-001",
+      "name_cn": "堅尼地城",
+      "name_en": "Kennedy Town",
+      "alias": [],
+      "lines": [
+        "hk-i"
+      ]
+    },
+    {
+      "id": "hk-002",
+      "name_cn": "香港大學",
+      "name_en": "HKU",
+      "alias": [],
+      "lines": [
+        "hk-i"
+      ]
+    },
+    {
+      "id": "hk-003",
+      "name_cn": "西營盤",
+      "name_en": "Sai Ying Pun",
+      "alias": [],
+      "lines": [
+        "hk-i"
+      ]
+    },
+    {
+      "id": "hk-004",
+      "name_cn": "上環",
+      "name_en": "Sheung Wan",
+      "alias": [],
+      "lines": [
+        "hk-i"
+      ]
+    },
+    {
+      "id": "hk-005",
+      "name_cn": "中環",
+      "name_en": "Central",
+      "alias": [],
+      "lines": [
+        "hk-i",
+        "hk-tw"
+      ]
+    },
+    {
+      "id": "hk-006",
+      "name_cn": "金鐘",
+      "name_en": "Admiralty",
+      "alias": [],
+      "lines": [
+        "hk-i",
+        "hk-tw",
+        "hk-er",
+        "hk-si"
+      ]
+    },
+    {
+      "id": "hk-007",
+      "name_cn": "灣仔",
+      "name_en": "Wan Chai",
+      "alias": [],
+      "lines": [
+        "hk-i"
+      ]
+    },
+    {
+      "id": "hk-008",
+      "name_cn": "銅鑼灣",
+      "name_en": "Causeway Bay",
+      "alias": [],
+      "lines": [
+        "hk-i"
+      ]
+    },
+    {
+      "id": "hk-009",
+      "name_cn": "天后",
+      "name_en": "Tin Hau",
+      "alias": [],
+      "lines": [
+        "hk-i"
+      ]
+    },
+    {
+      "id": "hk-010",
+      "name_cn": "炮台山",
+      "name_en": "Fortress Hill",
+      "alias": [],
+      "lines": [
+        "hk-i"
+      ]
+    },
+    {
+      "id": "hk-011",
+      "name_cn": "北角",
+      "name_en": "North Point",
+      "alias": [],
+      "lines": [
+        "hk-i",
+        "hk-tk"
+      ]
+    },
+    {
+      "id": "hk-012",
+      "name_cn": "鰂魚涌",
+      "name_en": "Quarry Bay",
+      "alias": [],
+      "lines": [
+        "hk-i",
+        "hk-tk"
+      ]
+    },
+    {
+      "id": "hk-013",
+      "name_cn": "太古",
+      "name_en": "Tai Koo",
+      "alias": [],
+      "lines": [
+        "hk-i"
+      ]
+    },
+    {
+      "id": "hk-014",
+      "name_cn": "西灣河",
+      "name_en": "Sai Wan Ho",
+      "alias": [],
+      "lines": [
+        "hk-i"
+      ]
+    },
+    {
+      "id": "hk-015",
+      "name_cn": "筲箕灣",
+      "name_en": "Shau Kei Wan",
+      "alias": [],
+      "lines": [
+        "hk-i"
+      ]
+    },
+    {
+      "id": "hk-016",
+      "name_cn": "杏花邨",
+      "name_en": "Heng Fa Chuen",
+      "alias": [],
+      "lines": [
+        "hk-i"
+      ]
+    },
+    {
+      "id": "hk-017",
+      "name_cn": "柴灣",
+      "name_en": "Chai Wan",
+      "alias": [],
+      "lines": [
+        "hk-i"
+      ]
+    },
+    {
+      "id": "hk-018",
+      "name_cn": "黃埔",
+      "name_en": "Whampoa",
+      "alias": [],
+      "lines": [
+        "hk-kt"
+      ]
+    },
+    {
+      "id": "hk-019",
+      "name_cn": "何文田",
+      "name_en": "Ho Man Tin",
+      "alias": [],
+      "lines": [
+        "hk-kt",
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-020",
+      "name_cn": "油麻地",
+      "name_en": "Yau Ma Tei",
+      "alias": [],
+      "lines": [
+        "hk-kt",
+        "hk-tw"
+      ]
+    },
+    {
+      "id": "hk-021",
+      "name_cn": "旺角",
+      "name_en": "Mong Kok",
+      "alias": [],
+      "lines": [
+        "hk-kt",
+        "hk-tw"
+      ]
+    },
+    {
+      "id": "hk-022",
+      "name_cn": "太子",
+      "name_en": "Prince Edward",
+      "alias": [],
+      "lines": [
+        "hk-kt",
+        "hk-tw"
+      ]
+    },
+    {
+      "id": "hk-023",
+      "name_cn": "石硤尾",
+      "name_en": "Shek Kip Mei",
+      "alias": [],
+      "lines": [
+        "hk-kt"
+      ]
+    },
+    {
+      "id": "hk-024",
+      "name_cn": "九龍塘",
+      "name_en": "Kowloon Tong",
+      "alias": [],
+      "lines": [
+        "hk-kt",
+        "hk-er"
+      ]
+    },
+    {
+      "id": "hk-025",
+      "name_cn": "樂富",
+      "name_en": "Lok Fu",
+      "alias": [],
+      "lines": [
+        "hk-kt"
+      ]
+    },
+    {
+      "id": "hk-026",
+      "name_cn": "黃大仙",
+      "name_en": "Wong Tai Sin",
+      "alias": [],
+      "lines": [
+        "hk-kt"
+      ]
+    },
+    {
+      "id": "hk-027",
+      "name_cn": "鑽石山",
+      "name_en": "Diamond Hill",
+      "alias": [],
+      "lines": [
+        "hk-kt",
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-028",
+      "name_cn": "彩虹",
+      "name_en": "Choi Hung",
+      "alias": [],
+      "lines": [
+        "hk-kt"
+      ]
+    },
+    {
+      "id": "hk-029",
+      "name_cn": "九龍灣",
+      "name_en": "Kowloon Bay",
+      "alias": [],
+      "lines": [
+        "hk-kt"
+      ]
+    },
+    {
+      "id": "hk-030",
+      "name_cn": "牛頭角",
+      "name_en": "Ngau Tau Kok",
+      "alias": [],
+      "lines": [
+        "hk-kt"
+      ]
+    },
+    {
+      "id": "hk-031",
+      "name_cn": "觀塘",
+      "name_en": "Kwun Tong",
+      "alias": [],
+      "lines": [
+        "hk-kt"
+      ]
+    },
+    {
+      "id": "hk-032",
+      "name_cn": "藍田",
+      "name_en": "Lam Tin",
+      "alias": [],
+      "lines": [
+        "hk-kt"
+      ]
+    },
+    {
+      "id": "hk-033",
+      "name_cn": "油塘",
+      "name_en": "Yau Tong",
+      "alias": [],
+      "lines": [
+        "hk-kt",
+        "hk-tk"
+      ]
+    },
+    {
+      "id": "hk-034",
+      "name_cn": "調景嶺",
+      "name_en": "Tiu Keng Leng",
+      "alias": [],
+      "lines": [
+        "hk-kt",
+        "hk-tk"
+      ]
+    },
+    {
+      "id": "hk-035",
+      "name_cn": "尖沙咀",
+      "name_en": "Tsim Sha Tsui",
+      "alias": [],
+      "lines": [
+        "hk-tw"
+      ]
+    },
+    {
+      "id": "hk-036",
+      "name_cn": "佐敦",
+      "name_en": "Jordan",
+      "alias": [],
+      "lines": [
+        "hk-tw"
+      ]
+    },
+    {
+      "id": "hk-037",
+      "name_cn": "深水埗",
+      "name_en": "Sham Shui Po",
+      "alias": [],
+      "lines": [
+        "hk-tw"
+      ]
+    },
+    {
+      "id": "hk-038",
+      "name_cn": "長沙灣",
+      "name_en": "Cheung Sha Wan",
+      "alias": [],
+      "lines": [
+        "hk-tw"
+      ]
+    },
+    {
+      "id": "hk-039",
+      "name_cn": "荔枝角",
+      "name_en": "Lai Chi Kok",
+      "alias": [],
+      "lines": [
+        "hk-tw"
+      ]
+    },
+    {
+      "id": "hk-040",
+      "name_cn": "美孚",
+      "name_en": "Mei Foo",
+      "alias": [],
+      "lines": [
+        "hk-tw",
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-041",
+      "name_cn": "荔景",
+      "name_en": "Lai King",
+      "alias": [],
+      "lines": [
+        "hk-tw",
+        "hk-tc"
+      ]
+    },
+    {
+      "id": "hk-042",
+      "name_cn": "葵芳",
+      "name_en": "Kwai Fong",
+      "alias": [],
+      "lines": [
+        "hk-tw"
+      ]
+    },
+    {
+      "id": "hk-043",
+      "name_cn": "葵興",
+      "name_en": "Kwai Hing",
+      "alias": [],
+      "lines": [
+        "hk-tw"
+      ]
+    },
+    {
+      "id": "hk-044",
+      "name_cn": "大窩口",
+      "name_en": "Tai Wo Hau",
+      "alias": [],
+      "lines": [
+        "hk-tw"
+      ]
+    },
+    {
+      "id": "hk-045",
+      "name_cn": "荃灣",
+      "name_en": "Tsuen Wan",
+      "alias": [],
+      "lines": [
+        "hk-tw"
+      ]
+    },
+    {
+      "id": "hk-046",
+      "name_cn": "將軍澳",
+      "name_en": "Tseung Kwan O",
+      "alias": [],
+      "lines": [
+        "hk-tk"
+      ]
+    },
+    {
+      "id": "hk-047",
+      "name_cn": "康城",
+      "name_en": "LOHAS Park",
+      "alias": [],
+      "lines": [
+        "hk-tk"
+      ]
+    },
+    {
+      "id": "hk-048",
+      "name_cn": "坑口",
+      "name_en": "Hang Hau",
+      "alias": [],
+      "lines": [
+        "hk-tk"
+      ]
+    },
+    {
+      "id": "hk-049",
+      "name_cn": "寶琳",
+      "name_en": "Po Lam",
+      "alias": [],
+      "lines": [
+        "hk-tk"
+      ]
+    },
+    {
+      "id": "hk-050",
+      "name_cn": "香港",
+      "name_en": "Hong Kong",
+      "alias": [],
+      "lines": [
+        "hk-tc",
+        "hk-ae"
+      ]
+    },
+    {
+      "id": "hk-051",
+      "name_cn": "九龍",
+      "name_en": "Kowloon",
+      "alias": [],
+      "lines": [
+        "hk-tc",
+        "hk-ae"
+      ]
+    },
+    {
+      "id": "hk-052",
+      "name_cn": "奧運",
+      "name_en": "Olympic",
+      "alias": [],
+      "lines": [
+        "hk-tc"
+      ]
+    },
+    {
+      "id": "hk-053",
+      "name_cn": "南昌",
+      "name_en": "Nam Cheong",
+      "alias": [],
+      "lines": [
+        "hk-tc",
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-054",
+      "name_cn": "青衣",
+      "name_en": "Tsing Yi",
+      "alias": [],
+      "lines": [
+        "hk-tc",
+        "hk-ae"
+      ]
+    },
+    {
+      "id": "hk-055",
+      "name_cn": "欣澳",
+      "name_en": "Sunny Bay",
+      "alias": [],
+      "lines": [
+        "hk-tc",
+        "hk-dr"
+      ]
+    },
+    {
+      "id": "hk-056",
+      "name_cn": "東涌",
+      "name_en": "Tung Chung",
+      "alias": [],
+      "lines": [
+        "hk-tc"
+      ]
+    },
+    {
+      "id": "hk-057",
+      "name_cn": "迪士尼",
+      "name_en": "Disneyland Resort",
+      "alias": [],
+      "lines": [
+        "hk-dr"
+      ]
+    },
+    {
+      "id": "hk-058",
+      "name_cn": "會展",
+      "name_en": "Exhibition Centre",
+      "alias": [],
+      "lines": [
+        "hk-er"
+      ]
+    },
+    {
+      "id": "hk-059",
+      "name_cn": "紅磡",
+      "name_en": "Hung Hom",
+      "alias": [],
+      "lines": [
+        "hk-er",
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-060",
+      "name_cn": "旺角東",
+      "name_en": "Mong Kok East",
+      "alias": [],
+      "lines": [
+        "hk-er"
+      ]
+    },
+    {
+      "id": "hk-061",
+      "name_cn": "大圍",
+      "name_en": "Tai Wai",
+      "alias": [],
+      "lines": [
+        "hk-er",
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-062",
+      "name_cn": "沙田",
+      "name_en": "Sha Tin",
+      "alias": [],
+      "lines": [
+        "hk-er"
+      ]
+    },
+    {
+      "id": "hk-063",
+      "name_cn": "火炭",
+      "name_en": "Fo Tan",
+      "alias": [],
+      "lines": [
+        "hk-er"
+      ]
+    },
+    {
+      "id": "hk-064",
+      "name_cn": "大學",
+      "name_en": "University",
+      "alias": [],
+      "lines": [
+        "hk-er"
+      ]
+    },
+    {
+      "id": "hk-065",
+      "name_cn": "大埔墟",
+      "name_en": "Tai Po Market",
+      "alias": [],
+      "lines": [
+        "hk-er"
+      ]
+    },
+    {
+      "id": "hk-066",
+      "name_cn": "太和",
+      "name_en": "Tai Wo",
+      "alias": [],
+      "lines": [
+        "hk-er"
+      ]
+    },
+    {
+      "id": "hk-067",
+      "name_cn": "粉嶺",
+      "name_en": "Fanling",
+      "alias": [],
+      "lines": [
+        "hk-er"
+      ]
+    },
+    {
+      "id": "hk-068",
+      "name_cn": "上水",
+      "name_en": "Sheung Shui",
+      "alias": [],
+      "lines": [
+        "hk-er"
+      ]
+    },
+    {
+      "id": "hk-069",
+      "name_cn": "落馬洲",
+      "name_en": "Lok Ma Chau",
+      "alias": [],
+      "lines": [
+        "hk-er"
+      ]
+    },
+    {
+      "id": "hk-070",
+      "name_cn": "羅湖",
+      "name_en": "Lo Wu",
+      "alias": [],
+      "lines": [
+        "hk-er"
+      ]
+    },
+    {
+      "id": "hk-071",
+      "name_cn": "烏溪沙",
+      "name_en": "Wu Kai Sha",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-072",
+      "name_cn": "馬鞍山",
+      "name_en": "Ma On Shan",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-073",
+      "name_cn": "恆安",
+      "name_en": "Heng On",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-074",
+      "name_cn": "大水坑",
+      "name_en": "Tai Shui Hang",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-075",
+      "name_cn": "石門",
+      "name_en": "Shek Mun",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-076",
+      "name_cn": "第一城",
+      "name_en": "City One",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-077",
+      "name_cn": "沙田圍",
+      "name_en": "Sha Tin Wai",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-078",
+      "name_cn": "車公廟",
+      "name_en": "Che Kung Temple",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-079",
+      "name_cn": "顯徑",
+      "name_en": "Hin Keng",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-080",
+      "name_cn": "啟德",
+      "name_en": "Kai Tak",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-081",
+      "name_cn": "宋皇台",
+      "name_en": "Sung Wong Toi",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-082",
+      "name_cn": "土瓜灣",
+      "name_en": "To Kwa Wan",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-083",
+      "name_cn": "尖東",
+      "name_en": "East Tsim Sha Tsui",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-084",
+      "name_cn": "柯士甸",
+      "name_en": "Austin",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-085",
+      "name_cn": "荃灣西",
+      "name_en": "Tsuen Wan West",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-086",
+      "name_cn": "錦上路",
+      "name_en": "Kam Sheung Road",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-087",
+      "name_cn": "元朗",
+      "name_en": "Yuen Long",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-088",
+      "name_cn": "朗屏",
+      "name_en": "Long Ping",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-089",
+      "name_cn": "天水圍",
+      "name_en": "Tin Shui Wai",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-090",
+      "name_cn": "兆康",
+      "name_en": "Siu Hong",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-091",
+      "name_cn": "屯門",
+      "name_en": "Tuen Mun",
+      "alias": [],
+      "lines": [
+        "hk-tm"
+      ]
+    },
+    {
+      "id": "hk-092",
+      "name_cn": "機場",
+      "name_en": "Airport",
+      "alias": [],
+      "lines": [
+        "hk-ae"
+      ]
+    },
+    {
+      "id": "hk-093",
+      "name_cn": "博覽館",
+      "name_en": "AsiaWorld-Expo",
+      "alias": [],
+      "lines": [
+        "hk-ae"
+      ]
+    },
+    {
+      "id": "hk-094",
+      "name_cn": "海洋公園",
+      "name_en": "Ocean Park",
+      "alias": [],
+      "lines": [
+        "hk-si"
+      ]
+    },
+    {
+      "id": "hk-095",
+      "name_cn": "黃竹坑",
+      "name_en": "Wong Chuk Hang",
+      "alias": [],
+      "lines": [
+        "hk-si"
+      ]
+    },
+    {
+      "id": "hk-096",
+      "name_cn": "利東",
+      "name_en": "Lei Tung",
+      "alias": [],
+      "lines": [
+        "hk-si"
+      ]
+    },
+    {
+      "id": "hk-097",
+      "name_cn": "海怡半島",
+      "name_en": "South Horizons",
+      "alias": [],
+      "lines": [
+        "hk-si"
+      ]
+    }
+  ],
+  "seed_answers": [
+    {
+      "station": "hk-006",
+      "from_line": "hk-i",
+      "from_dir": "開往柴灣",
+      "to_line": "hk-tw",
+      "to_dir": "開往荃灣",
+      "author_email": "hongkong@example.com",
+      "author_nick": "港鐵通勤",
+      "anon": true,
+      "position_type": "car",
+      "car_number": 4,
+      "description": "港島綫往柴灣方向坐第4節車廂，下車即對正上荃灣綫月台的扶手電梯，比走到車頭少繞半個月台。",
+      "likes": 22,
+      "dislikes": 2,
+      "version": 1,
+      "days_ago": 9,
+      "comments": [
+        {
+          "nick": "匿名",
+          "days_ago": 7,
+          "text": "金鐘四線交匯，荃灣綫月台早上很擠，提早一節車廂等會好上車。"
+        }
+      ]
+    }
+  ]
+}
