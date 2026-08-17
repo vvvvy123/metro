@@ -1,0 +1,1447 @@
+{
+  "city": {
+    "id": "jinan",
+    "country_id": "cn",
+    "country_cn": "中国",
+    "country_en": "China",
+    "name_cn": "济南",
+    "name_en": "Jinan",
+    "alias": [
+      "jinan",
+      "jn",
+      "济南市",
+      "泉城"
+    ],
+    "timezone": "Asia/Shanghai"
+  },
+  "system": {
+    "id": "jinan-rail-transit",
+    "name_cn": "济南轨道交通",
+    "name_en": "Jinan Rail Transit"
+  },
+  "lines": [
+    {
+      "id": "jn-l1",
+      "name": "1号线",
+      "name_en": "Line 1",
+      "color": "#C724B1",
+      "directions": [
+        "开往方特",
+        "开往工研院"
+      ]
+    },
+    {
+      "id": "jn-l2",
+      "name": "2号线",
+      "name_en": "Line 2",
+      "color": "#F0B323",
+      "directions": [
+        "开往彭家庄",
+        "开往王府庄"
+      ]
+    },
+    {
+      "id": "jn-l3",
+      "name": "3号线",
+      "name_en": "Line 3",
+      "color": "#003087",
+      "directions": [
+        "开往机场南",
+        "开往龙洞"
+      ]
+    },
+    {
+      "id": "jn-l4",
+      "name": "4号线",
+      "name_en": "Line 4",
+      "color": "#10883A",
+      "directions": [
+        "开往彭家庄",
+        "开往第一医科大学"
+      ]
+    },
+    {
+      "id": "jn-l6",
+      "name": "6号线",
+      "name_en": "Line 6",
+      "color": "#41B6E6",
+      "directions": [
+        "开往梁王",
+        "开往山东大学"
+      ]
+    },
+    {
+      "id": "jn-l8",
+      "name": "8号线",
+      "name_en": "Line 8",
+      "color": "#753BBD",
+      "directions": [
+        "开往清源大街",
+        "开往邢村立交桥东"
+      ]
+    },
+    {
+      "id": "jn-yb1",
+      "name": "云巴1号线",
+      "name_en": "Yunba Line 1",
+      "color": "#008AE6",
+      "directions": [
+        "内环",
+        "外环"
+      ]
+    },
+    {
+      "id": "jn-jy",
+      "name": "济阳线（有轨电车）",
+      "name_en": "Jiyang Tram Line",
+      "color": "#60C1BE",
+      "directions": [
+        "开往济阳北",
+        "开往济南东站（济阳线）"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "jn-001",
+      "name_cn": "工研院",
+      "name_en": "Gongyanyuan",
+      "alias": [],
+      "lines": [
+        "jn-l1"
+      ]
+    },
+    {
+      "id": "jn-002",
+      "name_cn": "创新谷",
+      "name_en": "Chuangxingu",
+      "alias": [],
+      "lines": [
+        "jn-l1"
+      ]
+    },
+    {
+      "id": "jn-003",
+      "name_cn": "园博园",
+      "name_en": "Yuanboyuan",
+      "alias": [],
+      "lines": [
+        "jn-l1"
+      ]
+    },
+    {
+      "id": "jn-004",
+      "name_cn": "大学城",
+      "name_en": "Daxuecheng",
+      "alias": [],
+      "lines": [
+        "jn-l1"
+      ]
+    },
+    {
+      "id": "jn-005",
+      "name_cn": "紫薇路",
+      "name_en": "Ziweilu",
+      "alias": [],
+      "lines": [
+        "jn-l1"
+      ]
+    },
+    {
+      "id": "jn-006",
+      "name_cn": "赵营",
+      "name_en": "Zhaoying",
+      "alias": [],
+      "lines": [
+        "jn-l1"
+      ]
+    },
+    {
+      "id": "jn-007",
+      "name_cn": "玉符河",
+      "name_en": "Yufuhe",
+      "alias": [],
+      "lines": [
+        "jn-l1"
+      ]
+    },
+    {
+      "id": "jn-008",
+      "name_cn": "王府庄",
+      "name_en": "Wangfuzhuang",
+      "alias": [],
+      "lines": [
+        "jn-l1",
+        "jn-l2"
+      ]
+    },
+    {
+      "id": "jn-009",
+      "name_cn": "大杨",
+      "name_en": "Dayang",
+      "alias": [],
+      "lines": [
+        "jn-l1",
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-010",
+      "name_cn": "济南西站",
+      "name_en": "Jinanxi Railway Station",
+      "alias": [],
+      "lines": [
+        "jn-l1"
+      ]
+    },
+    {
+      "id": "jn-011",
+      "name_cn": "方特",
+      "name_en": "Fangte",
+      "alias": [],
+      "lines": [
+        "jn-l1"
+      ]
+    },
+    {
+      "id": "jn-012",
+      "name_cn": "腊山南",
+      "name_en": "Lashannan",
+      "alias": [],
+      "lines": [
+        "jn-l2"
+      ]
+    },
+    {
+      "id": "jn-013",
+      "name_cn": "腊山",
+      "name_en": "Lashan",
+      "alias": [],
+      "lines": [
+        "jn-l2",
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-014",
+      "name_cn": "二环西路",
+      "name_en": "Erhuanxilu",
+      "alias": [],
+      "lines": [
+        "jn-l2"
+      ]
+    },
+    {
+      "id": "jn-015",
+      "name_cn": "老屯",
+      "name_en": "Laotun",
+      "alias": [],
+      "lines": [
+        "jn-l2"
+      ]
+    },
+    {
+      "id": "jn-016",
+      "name_cn": "八里桥",
+      "name_en": "Baliqiao",
+      "alias": [],
+      "lines": [
+        "jn-l2"
+      ]
+    },
+    {
+      "id": "jn-017",
+      "name_cn": "益康路",
+      "name_en": "Yikanglu",
+      "alias": [],
+      "lines": [
+        "jn-l2"
+      ]
+    },
+    {
+      "id": "jn-018",
+      "name_cn": "济南站北",
+      "name_en": "Jinan Railway Station North",
+      "alias": [],
+      "lines": [
+        "jn-l2"
+      ]
+    },
+    {
+      "id": "jn-019",
+      "name_cn": "济泺路",
+      "name_en": "Jiluolu",
+      "alias": [],
+      "lines": [
+        "jn-l2"
+      ]
+    },
+    {
+      "id": "jn-020",
+      "name_cn": "生产路",
+      "name_en": "Shengchanlu",
+      "alias": [],
+      "lines": [
+        "jn-l2"
+      ]
+    },
+    {
+      "id": "jn-021",
+      "name_cn": "北园",
+      "name_en": "Beiyuan",
+      "alias": [],
+      "lines": [
+        "jn-l2"
+      ]
+    },
+    {
+      "id": "jn-022",
+      "name_cn": "历山路",
+      "name_en": "Lishanlu",
+      "alias": [],
+      "lines": [
+        "jn-l2"
+      ]
+    },
+    {
+      "id": "jn-023",
+      "name_cn": "七里堡",
+      "name_en": "Qilipu",
+      "alias": [],
+      "lines": [
+        "jn-l2"
+      ]
+    },
+    {
+      "id": "jn-024",
+      "name_cn": "祝甸",
+      "name_en": "Zhudian",
+      "alias": [],
+      "lines": [
+        "jn-l2"
+      ]
+    },
+    {
+      "id": "jn-025",
+      "name_cn": "八涧堡",
+      "name_en": "Bajianpu",
+      "alias": [],
+      "lines": [
+        "jn-l2",
+        "jn-l3"
+      ]
+    },
+    {
+      "id": "jn-026",
+      "name_cn": "姜家庄",
+      "name_en": "Jiangjiazhuang",
+      "alias": [],
+      "lines": [
+        "jn-l2"
+      ]
+    },
+    {
+      "id": "jn-027",
+      "name_cn": "凤凰北路",
+      "name_en": "Fenghuang Beilu",
+      "alias": [],
+      "lines": [
+        "jn-l2",
+        "jn-l6"
+      ]
+    },
+    {
+      "id": "jn-028",
+      "name_cn": "鲍山",
+      "name_en": "Baoshan",
+      "alias": [],
+      "lines": [
+        "jn-l2"
+      ]
+    },
+    {
+      "id": "jn-029",
+      "name_cn": "彭家庄",
+      "name_en": "Pengjiazhuang",
+      "alias": [],
+      "lines": [
+        "jn-l2",
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-030",
+      "name_cn": "龙洞",
+      "name_en": "Longdong",
+      "alias": [],
+      "lines": [
+        "jn-l3"
+      ]
+    },
+    {
+      "id": "jn-031",
+      "name_cn": "孟家庄",
+      "name_en": "Mengjiazhuang",
+      "alias": [],
+      "lines": [
+        "jn-l3"
+      ]
+    },
+    {
+      "id": "jn-032",
+      "name_cn": "龙奥大厦",
+      "name_en": "Long'ao Building",
+      "alias": [],
+      "lines": [
+        "jn-l3"
+      ]
+    },
+    {
+      "id": "jn-033",
+      "name_cn": "奥体中心",
+      "name_en": "Olympic Sports Center",
+      "alias": [],
+      "lines": [
+        "jn-l3",
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-034",
+      "name_cn": "安成街",
+      "name_en": "Ancheng Jie",
+      "alias": [],
+      "lines": [
+        "jn-l3",
+        "jn-l6"
+      ]
+    },
+    {
+      "id": "jn-035",
+      "name_cn": "丁家庄",
+      "name_en": "Dingjiazhuang",
+      "alias": [],
+      "lines": [
+        "jn-l3"
+      ]
+    },
+    {
+      "id": "jn-036",
+      "name_cn": "花园东路",
+      "name_en": "Huayuandonglu",
+      "alias": [],
+      "lines": [
+        "jn-l3"
+      ]
+    },
+    {
+      "id": "jn-037",
+      "name_cn": "张马屯",
+      "name_en": "Zhangmatun",
+      "alias": [],
+      "lines": [
+        "jn-l3"
+      ]
+    },
+    {
+      "id": "jn-038",
+      "name_cn": "王舍人",
+      "name_en": "Wangsheren",
+      "alias": [],
+      "lines": [
+        "jn-l3"
+      ]
+    },
+    {
+      "id": "jn-039",
+      "name_cn": "裴家营",
+      "name_en": "Peijiaying",
+      "alias": [],
+      "lines": [
+        "jn-l3"
+      ]
+    },
+    {
+      "id": "jn-040",
+      "name_cn": "济南东站",
+      "name_en": "Jinandong Railway Station",
+      "alias": [],
+      "lines": [
+        "jn-l3",
+        "jn-l6"
+      ]
+    },
+    {
+      "id": "jn-041",
+      "name_cn": "滩头",
+      "name_en": "Tantou",
+      "alias": [],
+      "lines": [
+        "jn-l3"
+      ]
+    },
+    {
+      "id": "jn-042",
+      "name_cn": "曲家庄",
+      "name_en": "Qujiazhuang",
+      "alias": [],
+      "lines": [
+        "jn-l3"
+      ]
+    },
+    {
+      "id": "jn-043",
+      "name_cn": "川流",
+      "name_en": "Chuanliu",
+      "alias": [],
+      "lines": [
+        "jn-l3"
+      ]
+    },
+    {
+      "id": "jn-044",
+      "name_cn": "临港北路",
+      "name_en": "Lingangbeilu",
+      "alias": [],
+      "lines": [
+        "jn-l3"
+      ]
+    },
+    {
+      "id": "jn-045",
+      "name_cn": "临空",
+      "name_en": "Linkong",
+      "alias": [],
+      "lines": [
+        "jn-l3"
+      ]
+    },
+    {
+      "id": "jn-046",
+      "name_cn": "机场南",
+      "name_en": "Jinan International Airport South",
+      "alias": [],
+      "lines": [
+        "jn-l3"
+      ]
+    },
+    {
+      "id": "jn-047",
+      "name_cn": "第一医科大学",
+      "name_en": "Shandong First Medical University",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-048",
+      "name_cn": "春风悦动公园",
+      "name_en": "Chunfeng Yuedong Gongyuan",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-049",
+      "name_cn": "济南西站西广场",
+      "name_en": "Jinanxi Railway Station West Square",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-050",
+      "name_cn": "腊山河公园",
+      "name_en": "Lashanhe Gongyuan",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-051",
+      "name_cn": "段店",
+      "name_en": "Duandian",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-052",
+      "name_cn": "营市街",
+      "name_en": "Yingshi Jie",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-053",
+      "name_cn": "南辛庄",
+      "name_en": "Nanxinzhuang",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-054",
+      "name_cn": "五里牌坊",
+      "name_en": "Wuli Paifang",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-055",
+      "name_cn": "八一立交桥",
+      "name_en": "Bayi Lijiaoqiao",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-056",
+      "name_cn": "省体育中心",
+      "name_en": "Shandong Sports Center",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-057",
+      "name_cn": "泉城公园",
+      "name_en": "Quancheng Gongyuan",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-058",
+      "name_cn": "千佛山",
+      "name_en": "Qianfo Mountain",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-059",
+      "name_cn": "山师东路",
+      "name_en": "Shanshi Donglu",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-060",
+      "name_cn": "山大路南口",
+      "name_en": "Shandalu South",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-061",
+      "name_cn": "燕山立交桥",
+      "name_en": "Yanshan Lijiaoqiao",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-062",
+      "name_cn": "浆水泉路",
+      "name_en": "Jiangshuiquan Lu",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-063",
+      "name_cn": "山东博物馆",
+      "name_en": "Shandong Musuem",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-064",
+      "name_cn": "转山西路(万象城)",
+      "name_en": "Zhuanshan Xilu (MIXC)",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-065",
+      "name_cn": "奥体东路",
+      "name_en": "Aoti Donglu",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-066",
+      "name_cn": "舜泰广场",
+      "name_en": "Shuntai Guangchang",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-067",
+      "name_cn": "汉峪金谷",
+      "name_en": "Hanyu Jingu",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-068",
+      "name_cn": "林家庄",
+      "name_en": "Linjiazhuang",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-069",
+      "name_cn": "黄金产业园",
+      "name_en": "Gold Industrial Park",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-070",
+      "name_cn": "文旅城",
+      "name_en": "Wenlvcheng",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-071",
+      "name_cn": "邢村立交桥西",
+      "name_en": "Xingcun Lijiaoqiao West",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-072",
+      "name_cn": "邢村立交桥东",
+      "name_en": "Xingcun Lijiaoqiao East",
+      "alias": [],
+      "lines": [
+        "jn-l4",
+        "jn-l8"
+      ]
+    },
+    {
+      "id": "jn-073",
+      "name_cn": "唐冶公园",
+      "name_en": "Tangye Gongyuan",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-074",
+      "name_cn": "唐冶",
+      "name_en": "Tangye",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-075",
+      "name_cn": "历城二中唐冶校区",
+      "name_en": "Licheng No.2 High School Tangye Campus",
+      "alias": [],
+      "lines": [
+        "jn-l4"
+      ]
+    },
+    {
+      "id": "jn-076",
+      "name_cn": "山东大学",
+      "name_en": "Shandong University",
+      "alias": [],
+      "lines": [
+        "jn-l6"
+      ]
+    },
+    {
+      "id": "jn-077",
+      "name_cn": "山大南路东口",
+      "name_en": "Shanda'nanlu East",
+      "alias": [],
+      "lines": [
+        "jn-l6"
+      ]
+    },
+    {
+      "id": "jn-078",
+      "name_cn": "七里河路南口",
+      "name_en": "Qilihelu South",
+      "alias": [],
+      "lines": [
+        "jn-l6"
+      ]
+    },
+    {
+      "id": "jn-079",
+      "name_cn": "茂陵山",
+      "name_en": "Maoling Shan",
+      "alias": [],
+      "lines": [
+        "jn-l6"
+      ]
+    },
+    {
+      "id": "jn-080",
+      "name_cn": "中央商务区",
+      "name_en": "Central Business District",
+      "alias": [],
+      "lines": [
+        "jn-l6"
+      ]
+    },
+    {
+      "id": "jn-081",
+      "name_cn": "天泺路",
+      "name_en": "Tianluo Lu",
+      "alias": [],
+      "lines": [
+        "jn-l6"
+      ]
+    },
+    {
+      "id": "jn-082",
+      "name_cn": "齐鲁软件园",
+      "name_en": "Qilusoft Park",
+      "alias": [],
+      "lines": [
+        "jn-l6"
+      ]
+    },
+    {
+      "id": "jn-083",
+      "name_cn": "开拓路",
+      "name_en": "Kaituo Lu",
+      "alias": [],
+      "lines": [
+        "jn-l6"
+      ]
+    },
+    {
+      "id": "jn-084",
+      "name_cn": "世纪大道",
+      "name_en": "Shiji Dadao",
+      "alias": [],
+      "lines": [
+        "jn-l6"
+      ]
+    },
+    {
+      "id": "jn-085",
+      "name_cn": "徐家庄",
+      "name_en": "Xujiazhuang",
+      "alias": [],
+      "lines": [
+        "jn-l6"
+      ]
+    },
+    {
+      "id": "jn-086",
+      "name_cn": "王舍人立交桥",
+      "name_en": "Wangsheren Lijiaoqiao",
+      "alias": [],
+      "lines": [
+        "jn-l6"
+      ]
+    },
+    {
+      "id": "jn-087",
+      "name_cn": "响泉街",
+      "name_en": "Xiangquan Jie",
+      "alias": [],
+      "lines": [
+        "jn-l6"
+      ]
+    },
+    {
+      "id": "jn-088",
+      "name_cn": "梁王西",
+      "name_en": "Liangwang West",
+      "alias": [],
+      "lines": [
+        "jn-l6"
+      ]
+    },
+    {
+      "id": "jn-089",
+      "name_cn": "梁王",
+      "name_en": "Liangwang",
+      "alias": [],
+      "lines": [
+        "jn-l6"
+      ]
+    },
+    {
+      "id": "jn-090",
+      "name_cn": "青年政治学院",
+      "name_en": "Shandong Youth University of Political Science",
+      "alias": [],
+      "lines": [
+        "jn-l8"
+      ]
+    },
+    {
+      "id": "jn-091",
+      "name_cn": "超算中心",
+      "name_en": "Supercomputer Center",
+      "alias": [],
+      "lines": [
+        "jn-l8"
+      ]
+    },
+    {
+      "id": "jn-092",
+      "name_cn": "公路技师学院",
+      "name_en": "Shandong Highway Technician College",
+      "alias": [],
+      "lines": [
+        "jn-l8"
+      ]
+    },
+    {
+      "id": "jn-093",
+      "name_cn": "春博路",
+      "name_en": "Chunbolu",
+      "alias": [],
+      "lines": [
+        "jn-l8"
+      ]
+    },
+    {
+      "id": "jn-094",
+      "name_cn": "山东职业学院",
+      "name_en": "Shandong Polytechnic",
+      "alias": [],
+      "lines": [
+        "jn-l8"
+      ]
+    },
+    {
+      "id": "jn-095",
+      "name_cn": "山东现代学院",
+      "name_en": "Shandong Xiandai University",
+      "alias": [],
+      "lines": [
+        "jn-l8"
+      ]
+    },
+    {
+      "id": "jn-096",
+      "name_cn": "山财章丘校区",
+      "name_en": "Shandong University of Finance and Economics Zhangqiu Campus",
+      "alias": [],
+      "lines": [
+        "jn-l8"
+      ]
+    },
+    {
+      "id": "jn-097",
+      "name_cn": "黄土崖",
+      "name_en": "Huangtuya",
+      "alias": [],
+      "lines": [
+        "jn-l8"
+      ]
+    },
+    {
+      "id": "jn-098",
+      "name_cn": "黄旗山北",
+      "name_en": "Huangqishan North",
+      "alias": [],
+      "lines": [
+        "jn-l8"
+      ]
+    },
+    {
+      "id": "jn-099",
+      "name_cn": "圣井",
+      "name_en": "Shengjing",
+      "alias": [],
+      "lines": [
+        "jn-l8"
+      ]
+    },
+    {
+      "id": "jn-100",
+      "name_cn": "山大龙山",
+      "name_en": "Shandong University Longshan",
+      "alias": [],
+      "lines": [
+        "jn-l8"
+      ]
+    },
+    {
+      "id": "jn-101",
+      "name_cn": "绣源河",
+      "name_en": "Xiuyuan He",
+      "alias": [],
+      "lines": [
+        "jn-l8"
+      ]
+    },
+    {
+      "id": "jn-102",
+      "name_cn": "清源大街",
+      "name_en": "Qingyuan Dajie",
+      "alias": [],
+      "lines": [
+        "jn-l8"
+      ]
+    },
+    {
+      "id": "jn-103",
+      "name_cn": "徐马",
+      "name_en": "Xuma",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-104",
+      "name_cn": "大正路",
+      "name_en": "Dazheng Lu",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-105",
+      "name_cn": "西巨野河",
+      "name_en": "Xijuye He",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-106",
+      "name_cn": "高新一中",
+      "name_en": "Jinan Innovation Zone No.1 Middle School",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-107",
+      "name_cn": "高新实验中学",
+      "name_en": "Jinan Innovation Zone Experimental High School",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-108",
+      "name_cn": "春晖路",
+      "name_en": "Chunhui Lu",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-109",
+      "name_cn": "世纪大道春喧路",
+      "name_en": "Shijidadao Chunxuanlu",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-110",
+      "name_cn": "科远路",
+      "name_en": "Keyuan Lu",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-111",
+      "name_cn": "武将山东",
+      "name_en": "Wujiangshan East",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-112",
+      "name_cn": "武家庄",
+      "name_en": "Wujiazhuang",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-113",
+      "name_cn": "唐冶东路",
+      "name_en": "Tangye Donglu",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-114",
+      "name_cn": "彭家庄(云巴)",
+      "name_en": "Pengjiazhuang (Sky Shuttle)",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-115",
+      "name_cn": "历城二中唐冶校区(云巴)",
+      "name_en": "Licheng No.2 High School Tangye Campus (Sky Shuttle)",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-116",
+      "name_cn": "贞观街",
+      "name_en": "Zhenguan Jie",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-117",
+      "name_cn": "唐冶(云巴)",
+      "name_en": "Tangye (Sky Shuttle)",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-118",
+      "name_cn": "历城文博中心",
+      "name_en": "Licheng Wenbo Center",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-119",
+      "name_cn": "唐宣路",
+      "name_en": "Tangxuan Lu",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-120",
+      "name_cn": "春秀路",
+      "name_en": "Chunxiu Lu",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-121",
+      "name_cn": "科航路",
+      "name_en": "Kehang Lu",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-122",
+      "name_cn": "沙沟",
+      "name_en": "Shagou",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-123",
+      "name_cn": "春喧路",
+      "name_en": "Chunxuan Lu",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-124",
+      "name_cn": "春意路",
+      "name_en": "Chunyi Lu",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-125",
+      "name_cn": "彩虹湖",
+      "name_en": "Caihong Hu",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-126",
+      "name_cn": "彩虹湖东",
+      "name_en": "Caihonghu East",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-127",
+      "name_cn": "孙村",
+      "name_en": "Suncun",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-128",
+      "name_cn": "春博路(云巴)",
+      "name_en": "Chunbo Lu (Sky Shuttle)",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-129",
+      "name_cn": "科创城",
+      "name_en": "Kechuang Cheng",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-130",
+      "name_cn": "春景路",
+      "name_en": "Chunjing Lu",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-131",
+      "name_cn": "庄科",
+      "name_en": "Zhuangke",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-132",
+      "name_cn": "山东职业学院(云巴)",
+      "name_en": "Shandong Polytechnic (Sky Shuttle)",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-133",
+      "name_cn": "市妇幼东院",
+      "name_en": "Jinan Maternity and Child Care Hospital (East Area)",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-134",
+      "name_cn": "春园路",
+      "name_en": "Chunyuan Lu",
+      "alias": [],
+      "lines": [
+        "jn-yb1"
+      ]
+    },
+    {
+      "id": "jn-135",
+      "name_cn": "济南东站(济阳线)",
+      "name_en": "Jinandong Railway Station (Jiyang Line)",
+      "alias": [],
+      "lines": [
+        "jn-jy"
+      ]
+    },
+    {
+      "id": "jn-136",
+      "name_cn": "崔寨",
+      "name_en": "Cuizhai",
+      "alias": [],
+      "lines": [
+        "jn-jy"
+      ]
+    },
+    {
+      "id": "jn-137",
+      "name_cn": "黄河会展中心",
+      "name_en": "Huanghe Huizhan Zhongxin",
+      "alias": [],
+      "lines": [
+        "jn-jy"
+      ]
+    },
+    {
+      "id": "jn-138",
+      "name_cn": "英才学院北校区",
+      "name_en": "Yingcai Xueyuan Beixiaoqu",
+      "alias": [],
+      "lines": [
+        "jn-jy"
+      ]
+    },
+    {
+      "id": "jn-139",
+      "name_cn": "清宁",
+      "name_en": "Qingning",
+      "alias": [],
+      "lines": [
+        "jn-jy"
+      ]
+    },
+    {
+      "id": "jn-140",
+      "name_cn": "花二庄北街",
+      "name_en": "Huaerzhuang Beijie",
+      "alias": [],
+      "lines": [
+        "jn-jy"
+      ]
+    },
+    {
+      "id": "jn-141",
+      "name_cn": "回河",
+      "name_en": "Huihe",
+      "alias": [],
+      "lines": [
+        "jn-jy"
+      ]
+    },
+    {
+      "id": "jn-142",
+      "name_cn": "新元学校",
+      "name_en": "Xinyuan Xuexiao",
+      "alias": [],
+      "lines": [
+        "jn-jy"
+      ]
+    },
+    {
+      "id": "jn-143",
+      "name_cn": "济北小学",
+      "name_en": "Jibei Xiaoxue",
+      "alias": [],
+      "lines": [
+        "jn-jy"
+      ]
+    },
+    {
+      "id": "jn-144",
+      "name_cn": "济阳市民中心",
+      "name_en": "Jiyang Shimin Zhongxin",
+      "alias": [],
+      "lines": [
+        "jn-jy"
+      ]
+    },
+    {
+      "id": "jn-145",
+      "name_cn": "济阳北",
+      "name_en": "Jiyang North",
+      "alias": [],
+      "lines": [
+        "jn-jy"
+      ]
+    }
+  ],
+  "seed_answers": [
+    {
+      "station": "jn-008",
+      "from_line": "jn-l1",
+      "from_dir": "开往工研院",
+      "to_line": "jn-l2",
+      "to_dir": "开往彭家庄",
+      "author_email": "jinan@example.com",
+      "author_nick": "济南通勤",
+      "anon": true,
+      "position_type": "car",
+      "car_number": 2,
+      "description": "1号线往工研院方向坐第2节车厢，下车后右手边就是2号线往彭家庄的换乘扶梯；王府庄是2号线的终点站，站台上等车的位置很空。",
+      "likes": 14,
+      "dislikes": 1,
+      "version": 1,
+      "days_ago": 7,
+      "comments": [
+        {
+          "nick": "匿名",
+          "days_ago": 5,
+          "text": "王府庄换2号线要下一层，扶梯只有一部，赶时间的话走旁边的楼梯反而快。"
+        }
+      ]
+    }
+  ]
+}

@@ -8,12 +8,16 @@ MetroMan-format converter that takes the report's 运行方向 bullets as author
     metrodata/大连地铁线路信息.md      -> data/dalian.json     (prefix dl-)
     metrodata/合肥轨道交通线路信息.md  -> data/hefei.json      (prefix hf-)
     metrodata/长春轨道交通线路信息.md  -> data/changchun.json  (prefix cc-)
+    metrodata/昆明地铁线路信息.md      -> data/kunming.json    (prefix km-)
+    metrodata/宁波轨道交通线路信息.md  -> data/ningbo.json     (prefix nb-)
+    metrodata/青岛地铁线路信息.md      -> data/qingdao.json    (prefix qd-)
+    metrodata/济南轨道交通线路信息.md  -> data/jinan.json      (prefix jn-)
 
-Written for the branch networks (first three), but it is the better choice for
-plain ones too, so 大连/合肥/长春 are here rather than in convert_metroman.py:
-every line still gets the hard stated-vs-table-ends check below, where the
-sibling script only prints a warning. 大连/合肥/长春 have no branch, no loop and
-no through-running, so all 20 of their lines take the 2-direction path.
+Written for the branch networks, but it is the better choice for plain ones too,
+so every MetroMan-format city is here rather than in convert_metroman.py: each
+line gets the hard stated-vs-table-ends check below, where the sibling script
+only prints a warning. Of the ten, 大连/合肥/长春/宁波/青岛 are entirely plain —
+no branch, no loop, no through-running — and take the 2-direction path throughout.
 
 Why this is not convert_metroman.py
     That script DERIVES the two directions from the station table's ends
@@ -26,6 +30,12 @@ Why this is not convert_metroman.py
         香港 ER 東鐵綫      3 directions (上水 splits 羅湖 / 落馬洲)
         天津 4 号线         4 directions (西站—东南角 not yet connected, so the
                                          line runs as two independent segments)
+        昆明 1 号线         3 directions (春融街 splits 大学城南 / 昆明南火车站;
+                                         the report lists FOUR bullets because
+                                         主线 and 支线 each get a pair, and both
+                                         inbound ones read 开往环城南路 — see the
+                                         de-duplication in build())
+        济南 云巴1          2 RING directions (内环 / 外环), no terminus at all
 
     MetroMan flattens every branch into one linear table, so the ends of that
     table cannot express the real service pattern. Here the bullets are the
@@ -55,9 +65,15 @@ Other differences from the sibling script, all forced by these sources
       台北車站(A) / 三重(A) / 新北產業園區(A) / 頂埔(LB) / 板橋(Y) stay separate
       stations: the suffixes are part of the official names and those four are
       out-of-station transfers between different operators' station bodies.
-      Same convention as 重庆's 歇台子(1)/(5).
+      Same convention as 重庆's 歇台子(1)/(5). 济南 does the same in FULL-width
+      form — 济南东站(云巴)/(济阳线) are three different station bodies — which is
+      why the terminus test below normalises width instead of stripping parens.
+    * Station-row numbers are not always integers: 昆明's 支线 table numbers its
+      rows 支1…支4 and repeats the junction as `（接主线 13）`, and 济南's loop
+      closes with `→闭合`. The first must be kept, the other two skipped, or the
+      row count stops matching 线路清单 站数.
 
-Run:  python convert_metroman_branch.py           # all three
+Run:  python convert_metroman_branch.py           # every city
       python convert_metroman_branch.py taipei    # just one
 """
 import json
@@ -70,7 +86,13 @@ FALLBACK_COLOR = "#4b5563"
 
 # Line ids are URL path segments and end up inside every direction id, so keep
 # them ASCII even when the official code is not.
-ID_OVERRIDE = {"tianjin": {"6Ⅱ": "tj-l6ii"}}
+ID_OVERRIDE = {"tianjin": {"6Ⅱ": "tj-l6ii"}, "jinan": {"云巴1": "jn-yb1"}}
+
+# Loop lines have no terminus, so the project labels their directions by ring
+# instead (北京 内环/外环, 上海 内圈/外圈 — see the existing converters). A line
+# whose bullets use one of these is exempted from the terminus and table-ends
+# checks, but only after its 两端终点 cell has been confirmed to say 环线.
+RING = ("内环", "外环", "内圈", "外圈")
 
 CITIES = {
     "taipei": {
@@ -195,6 +217,84 @@ CITIES = {
             "comment": "长春站的1号线和3号线一个是地铁一个是轻轨，站台高差比较大，带箱子的话找电梯会省力。",
         },
     },
+    "kunming": {
+        "src": os.path.join(ROOT, "metrodata", "昆明地铁线路信息.md"),
+        "prefix": "km",
+        "city": {"name_cn": "昆明", "name_en": "Kunming",
+                 "alias": ["kunming", "km", "昆明市", "春城"],
+                 "timezone": "Asia/Shanghai"},
+        "system": {"id": "kunming-metro", "name_cn": "昆明地铁", "name_en": "Kunming Metro"},
+        "name_en": {},
+        "seed": {
+            "station": "火车北站",
+            "from_code": "2", "from_dir": "开往环城南路",
+            "to_code": "4", "to_dir": "开往昆明南火车站",
+            "email": "kunming@example.com", "nick": "昆明通勤",
+            "car": 3, "likes": 15, "dislikes": 1, "days_ago": 5,
+            "desc": "2号线往环城南路方向坐第3节车厢，下车后顺着人流直走就是4号线往昆明南火车站的换乘通道，比从车头绕站厅少走一半。",
+            "comment": "火车北站是昆明唯一的三线换乘站，2、4、5号线的指示牌在同一根柱子上，看清线路号再拐弯。",
+        },
+    },
+    "ningbo": {
+        "src": os.path.join(ROOT, "metrodata", "宁波轨道交通线路信息.md"),
+        "prefix": "nb",
+        "city": {"name_cn": "宁波", "name_en": "Ningbo",
+                 "alias": ["ningbo", "nb", "宁波市", "甬"],
+                 "timezone": "Asia/Shanghai"},
+        "system": {"id": "ningbo-rail-transit", "name_cn": "宁波轨道交通",
+                   "name_en": "Ningbo Rail Transit"},
+        "name_en": {},
+        "seed": {
+            "station": "鼓楼",
+            "from_code": "1", "from_dir": "开往霞浦",
+            "to_code": "2", "to_dir": "开往红联",
+            "email": "ningbo@example.com", "nick": "宁波通勤",
+            "car": 2, "likes": 17, "dislikes": 1, "days_ago": 6,
+            "desc": "1号线往霞浦方向坐第2节车厢，下车后左手边的楼梯直接下到2号线往红联的月台，不用走到站厅层再折回来。",
+            "comment": "鼓楼站出口通老城步行街，周末人很多，换乘走月台端头那条通道会顺畅得多。",
+        },
+    },
+    "qingdao": {
+        "src": os.path.join(ROOT, "metrodata", "青岛地铁线路信息.md"),
+        "prefix": "qd",
+        "city": {"name_cn": "青岛", "name_en": "Qingdao",
+                 "alias": ["qingdao", "qd", "青岛市"],
+                 "timezone": "Asia/Shanghai"},
+        "system": {"id": "qingdao-metro", "name_cn": "青岛地铁", "name_en": "Qingdao Metro"},
+        # 蓝谷快线 / 西海岸快线 carry the numbers 11 / 13, so the digit-code
+        # fallback already yields the right English (Line 11 / Line 13).
+        "name_en": {},
+        "seed": {
+            "station": "青岛北站",
+            "from_code": "3", "from_dir": "开往青岛北站",
+            "to_code": "8", "to_dir": "开往胶州北站",
+            "email": "qingdao@example.com", "nick": "青岛通勤",
+            "car": 4, "likes": 19, "dislikes": 2, "days_ago": 4,
+            "desc": "3号线往青岛北站方向坐第4节车厢，是最靠近8号线换乘口的一节，下车后不用穿过整个站厅就能上到8号线往胶州北站的月台。",
+            "comment": "青岛北站是1/3/8三线换乘，还连着火车站，跟着「8号线」的紫色指示牌走别跟着「出站」走。",
+        },
+    },
+    "jinan": {
+        "src": os.path.join(ROOT, "metrodata", "济南轨道交通线路信息.md"),
+        "prefix": "jn",
+        "city": {"name_cn": "济南", "name_en": "Jinan",
+                 "alias": ["jinan", "jn", "济南市", "泉城"],
+                 "timezone": "Asia/Shanghai"},
+        "system": {"id": "jinan-rail-transit", "name_cn": "济南轨道交通",
+                   "name_en": "Jinan Rail Transit"},
+        # Neither non-numeric code would reach the "Line <n>" fallback, and the
+        # 清单 name (云巴1号线 / 济阳线（有轨电车）) is not English, so spell both out.
+        "name_en": {"云巴1": "Yunba Line 1", "JY": "Jiyang Tram Line"},
+        "seed": {
+            "station": "王府庄",
+            "from_code": "1", "from_dir": "开往工研院",
+            "to_code": "2", "to_dir": "开往彭家庄",
+            "email": "jinan@example.com", "nick": "济南通勤",
+            "car": 2, "likes": 14, "dislikes": 1, "days_ago": 7,
+            "desc": "1号线往工研院方向坐第2节车厢，下车后右手边就是2号线往彭家庄的换乘扶梯；王府庄是2号线的终点站，站台上等车的位置很空。",
+            "comment": "王府庄换2号线要下一层，扶梯只有一部，赶时间的话走旁边的楼梯反而快。",
+        },
+    },
 }
 
 
@@ -212,7 +312,10 @@ def norm(s):
 
 
 def parse_overview(text):
-    """线路清单 table -> {code: (chinese name, '#rrggbb')} in document order.
+    """线路清单 table -> {code: (chinese name, '#rrggbb', 两端终点 cell)} in doc order.
+
+    The 两端终点 cell is kept as raw text and used for one thing only: proving a
+    line really is a loop before its ring-labelled directions are accepted.
 
     Rows are recognised by CONTAINING a `#rrggbb` cell rather than by the shape
     of the code, because 天津's `6Ⅱ` is not [0-9A-Za-z]; and the column count is
@@ -234,7 +337,7 @@ def parse_overview(text):
         code = re.sub(r"\*\*|\s", "", c[0])
         if code in out:
             raise SystemExit(f"duplicate line code '{code}' in 线路清单")
-        out[code] = (re.sub(r"\*\*|\s", "", c[1]), color)
+        out[code] = (re.sub(r"\*\*|\s", "", c[1]), color, c[-1])
     return out
 
 
@@ -261,7 +364,7 @@ def title_code(title, overview):
     for tok in paren_tokens(title):
         if tok in overview:
             return tok
-    by_name = {norm(n): code for code, (n, _) in overview.items()}
+    by_name = {norm(n): code for code, (n, *_) in overview.items()}
     for cand in (title, re.sub(r"（[^（）]*）\s*$", "", title)):
         code = by_name.get(norm(cand))
         if code:
@@ -284,11 +387,15 @@ def parse_transfer_cell(cell):
     differently-named stations is not an in-station interchange, and the whole
     point of those four 台北 rows is that they must NOT be merged.
     'Y ※' -> {'Y'} (footnote marker stripped).
+    '**支线分岔站**' -> empty: 昆明 uses the 换乘 column of 春融街 to annotate the
+    Y junction. It names no line, so it is not a transfer — and leaving it in
+    would make the cross-check invent a line code out of prose.
     """
     cell = cell.strip()
     if not cell or cell.startswith("—"):
         return set()
-    return {t.strip(" ※*") for t in re.split(r"[、,，]", cell) if t.strip(" ※*")}
+    toks = {t.strip(" ※*") for t in re.split(r"[、,，]", cell) if t.strip(" ※*")}
+    return {t for t in toks if "分岔站" not in t}
 
 
 def parse_sections(text, overview):
@@ -311,24 +418,42 @@ def parse_sections(text, overview):
             continue
         if cur is None:
             continue
-        # Two bullet layouts in the wild, both accepted:
+        # Three bullet layouts in the wild, all accepted. Dispatch on the BOLD
+        # LABEL, never on whether a body is present — both of those signals point
+        # the wrong way in at least one report:
         #   flat   (台北/香港/天津)  `- **運行方向①**：開往南港展覽館`
-        #   nested (大连/合肥/长春)  `- **运行方向**：` then `  - **方向①**：开往河口`
-        # The nested parent has an EMPTY body, so keying off a non-empty body is
-        # what separates the header from a real direction — matching only
-        # `运行方向` would append "" for the parent and miss all the children.
-        if re.match(r"^-\s*\*\*(?:[运運]行)?方向", raw.lstrip()):
-            body = raw.split("：", 1)[-1].strip()
+        #   nested (the seven others) `- **运行方向**：` + `  - **方向①**：开往河口`
+        #   nested with a branch prefix (昆明) `  - **主线 方向①**：开往大学城南`
+        # A label of exactly 运行方向 is the nested layout's HEADER and never a
+        # direction — 济南 云巴1 gives that header the body "闭合环线，无固定终点，
+        # 双向环形运行", so "body non-empty" would read the prose as a direction.
+        # Conversely its two real bullets carry NO body at all, putting the ring
+        # label inside the label's own parenthetical.
+        m = re.match(r"^-\s*\*\*(.+?)\*\*(.*)$", raw.lstrip())
+        if m and "方向" in m.group(1):
+            label, rest = m.group(1).strip(), m.group(2)
+            if re.fullmatch(r"[运運]行方向", label):
+                continue
+            body = rest.split("：", 1)[-1].strip() if "：" in rest else ""
             # drop a trailing "（起点 → 终点，方位）" that only restates the sequence;
             # 天津's "（北段）/（南段）" has no arrow and is deliberately kept.
             body = re.sub(r"（[^（）]*→[^（）]*）\s*$", "", body).strip()
-            if body:
-                cur[3].append(body)
+            if not body:
+                body = next((r for r in RING if r in label), "")
+                if not body:
+                    raise SystemExit(
+                        f"line {cur[0]}: direction bullet '{label}' has no "
+                        f"terminus and no ring label")
+            cur[3].append(body)
             continue
         if not raw.lstrip().startswith("|"):
             continue
         c = cells(raw)
-        if len(c) == 4 and c[0].isdigit():
+        # 支1…支4 are real rows of 昆明's 支线 table. `（接主线 13）` repeats the
+        # junction station already listed in the 主线 table and `→闭合` repeats
+        # 济南 云巴1's first station — both must be skipped or the row count
+        # overshoots 线路清单 站数 (which counts each station of a line once).
+        if len(c) == 4 and re.fullmatch(r"\d+|支\d+", c[0]):
             cur[2].append((c[1], c[2] if c[2] != "—" else "",
                            parse_transfer_cell(c[3])))
 
@@ -368,34 +493,68 @@ def build(city_id, cfg):
 
         if not stated:
             raise SystemExit(f"line {code}: no 运行方向 bullets")
-        # Every stated terminus must be a station of this line. The（北段）/（南段）
-        # segment annotation is not part of the station name, so strip it for the
-        # membership test only — 台北's 台北車站(A) / 頂埔(LB) use HALF-width
-        # parens and are real name suffixes, which is why only （） is stripped.
-        for d in stated:
-            term = re.sub(r"^开往|^開往", "", re.sub(r"（[^（）]*）\s*$", "", d))
-            if term not in names:
-                raise SystemExit(
-                    f"line {code}: direction '{d}' ends at '{term}', not a station on it")
+        name_cn, color, termini_cell = overview[code]
+
+        # A branch line's inbound direction is shared by both arms, so 昆明 1 号线
+        # states 开往环城南路 twice (once under 主线, once under 支线). Collapse it:
+        # two identical labels are one direction to any rider, and `dir_id()` would
+        # mint the same id for both anyway. Only ever collapse on a >2-bullet line —
+        # on a plain line two identical bullets mean a typo, and that stays fatal.
         if len(set(stated)) != len(stated):
-            raise SystemExit(f"line {code}: duplicate direction {stated}")
+            if len(stated) <= 2:
+                raise SystemExit(f"line {code}: duplicate direction {stated}")
+            dedup = list(dict.fromkeys(stated))
+            warnings.append(f"line {code}: {len(stated)} bullets collapse to "
+                            f"{len(dedup)} directions ({' / '.join(dedup)}) — the "
+                            f"branch arms share an inbound direction")
+            stated = dedup
 
-        # Safety net for the ordinary case: a 2-direction line must still be the
-        # two ends of the table, or a bullet has a typo. Compared as a set —
-        # 天津 1/2 号线 list them in the opposite order on purpose.
-        prefix_cn = "開往" if stated[0].startswith("開往") else "开往"
-        derived = [f"{prefix_cn}{seq[-1]}", f"{prefix_cn}{seq[0]}"]
-        if len(stated) == 2:
-            if {norm(s) for s in stated} != {norm(d) for d in derived}:
-                raise SystemExit(f"line {code}: stated {stated} != table ends {derived}")
-            if [norm(s) for s in stated] != [norm(d) for d in derived]:
-                warnings.append(f"line {code}: directions listed in the reverse "
-                                f"order from the table ends ({' / '.join(stated)})")
+        is_loop = any(d in RING for d in stated)
+        if is_loop:
+            # Accept ring labels only from a line the 线路清单 itself calls a 环线,
+            # and only if EVERY direction is one — a half-ring/half-terminus list
+            # would mean the bullets were misread.
+            if "环线" not in termini_cell:
+                raise SystemExit(f"line {code}: ring directions {stated} but 两端终点 "
+                                 f"reads '{termini_cell}'")
+            if not all(d in RING for d in stated):
+                raise SystemExit(f"line {code}: mixed ring and terminus directions {stated}")
+            warnings.append(f"line {code}: loop line, {len(stated)} ring directions "
+                            f"({' / '.join(stated)}); terminus and table-ends "
+                            f"checks skipped")
         else:
-            warnings.append(f"line {code}: branch line, {len(stated)} directions "
-                            f"({' / '.join(stated)})")
+            # Every stated terminus must be a station of this line. Compare
+            # width-normalised FIRST so a parenthetical that is part of the
+            # official name still matches — 济南's 济南东站（济阳线） is a different
+            # station body from 3/6 号线's 济南东站, and 台北's 台北車站(A) / 頂埔(LB)
+            # are the same idea in half-width. Only if that fails is the
+            # parenthetical treated as an annotation, which is what 天津's
+            # （北段）/（南段） are.
+            flat = {norm(n) for n in names}
+            for d in stated:
+                bare = re.sub(r"^开往|^開往", "", d)
+                if norm(bare) in flat:
+                    continue
+                term = re.sub(r"（[^（）]*）\s*$", "", bare)
+                if norm(term) not in flat:
+                    raise SystemExit(
+                        f"line {code}: direction '{d}' ends at '{term}', not a station on it")
 
-        name_cn, color = overview[code]
+            # Safety net for the ordinary case: a 2-direction line must still be
+            # the two ends of the table, or a bullet has a typo. Compared as a
+            # set — 天津 1/2 号线 list them in the opposite order on purpose.
+            prefix_cn = "開往" if stated[0].startswith("開往") else "开往"
+            derived = [f"{prefix_cn}{seq[-1]}", f"{prefix_cn}{seq[0]}"]
+            if len(stated) == 2:
+                if {norm(s) for s in stated} != {norm(d) for d in derived}:
+                    raise SystemExit(f"line {code}: stated {stated} != table ends {derived}")
+                if [norm(s) for s in stated] != [norm(d) for d in derived]:
+                    warnings.append(f"line {code}: directions listed in the reverse "
+                                    f"order from the table ends ({' / '.join(stated)})")
+            else:
+                warnings.append(f"line {code}: branch line, {len(stated)} directions "
+                                f"({' / '.join(stated)})")
+
         name_en = (cfg["name_en"].get(code) or header_name_en(title, code)
                    or (f"Line {code}" if re.fullmatch(r"[A-Za-z]?\d+", code) else name_cn))
         dirs_by_code[code] = list(stated)

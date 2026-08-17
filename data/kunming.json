@@ -1,0 +1,1052 @@
+{
+  "city": {
+    "id": "kunming",
+    "country_id": "cn",
+    "country_cn": "中国",
+    "country_en": "China",
+    "name_cn": "昆明",
+    "name_en": "Kunming",
+    "alias": [
+      "kunming",
+      "km",
+      "昆明市",
+      "春城"
+    ],
+    "timezone": "Asia/Shanghai"
+  },
+  "system": {
+    "id": "kunming-metro",
+    "name_cn": "昆明地铁",
+    "name_en": "Kunming Metro"
+  },
+  "lines": [
+    {
+      "id": "km-l1",
+      "name": "1号线（含支线）",
+      "name_en": "Line 1",
+      "color": "#DA322A",
+      "directions": [
+        "开往大学城南",
+        "开往环城南路",
+        "开往昆明南火车站"
+      ]
+    },
+    {
+      "id": "km-l2",
+      "name": "2号线",
+      "name_en": "Line 2",
+      "color": "#005A8C",
+      "directions": [
+        "开往环城南路",
+        "开往北部汽车站"
+      ]
+    },
+    {
+      "id": "km-l3",
+      "name": "3号线",
+      "name_en": "Line 3",
+      "color": "#943175",
+      "directions": [
+        "开往东部汽车站",
+        "开往西山公园"
+      ]
+    },
+    {
+      "id": "km-l4",
+      "name": "4号线",
+      "name_en": "Line 4",
+      "color": "#EC9531",
+      "directions": [
+        "开往昆明南火车站",
+        "开往金川路"
+      ]
+    },
+    {
+      "id": "km-l5",
+      "name": "5号线",
+      "name_en": "Line 5",
+      "color": "#499F46",
+      "directions": [
+        "开往宝丰",
+        "开往世博园"
+      ]
+    },
+    {
+      "id": "km-l6",
+      "name": "6号线",
+      "name_en": "Line 6",
+      "color": "#008588",
+      "directions": [
+        "开往机场中心",
+        "开往塘子巷"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "km-001",
+      "name_cn": "环城南路",
+      "name_en": "South Ring Road",
+      "alias": [],
+      "lines": [
+        "km-l1",
+        "km-l2"
+      ]
+    },
+    {
+      "id": "km-002",
+      "name_cn": "昆明火车站",
+      "name_en": "Kunming Railway Station",
+      "alias": [],
+      "lines": [
+        "km-l1"
+      ]
+    },
+    {
+      "id": "km-003",
+      "name_cn": "福德",
+      "name_en": "Fude",
+      "alias": [],
+      "lines": [
+        "km-l1"
+      ]
+    },
+    {
+      "id": "km-004",
+      "name_cn": "日新路",
+      "name_en": "Rixin Road",
+      "alias": [],
+      "lines": [
+        "km-l1"
+      ]
+    },
+    {
+      "id": "km-005",
+      "name_cn": "巫家坝",
+      "name_en": "Wujiaba",
+      "alias": [],
+      "lines": [
+        "km-l1"
+      ]
+    },
+    {
+      "id": "km-006",
+      "name_cn": "昌宏西路",
+      "name_en": "Changhong West Road",
+      "alias": [],
+      "lines": [
+        "km-l1"
+      ]
+    },
+    {
+      "id": "km-007",
+      "name_cn": "晓东村",
+      "name_en": "Xiaodongcun",
+      "alias": [],
+      "lines": [
+        "km-l1"
+      ]
+    },
+    {
+      "id": "km-008",
+      "name_cn": "珥季路",
+      "name_en": "Erji Road",
+      "alias": [],
+      "lines": [
+        "km-l1"
+      ]
+    },
+    {
+      "id": "km-009",
+      "name_cn": "星耀路",
+      "name_en": "Xingyao Road",
+      "alias": [],
+      "lines": [
+        "km-l1"
+      ]
+    },
+    {
+      "id": "km-010",
+      "name_cn": "新亚洲体育城",
+      "name_en": "New Asia Athletics Park",
+      "alias": [],
+      "lines": [
+        "km-l1"
+      ]
+    },
+    {
+      "id": "km-011",
+      "name_cn": "南部汽车站",
+      "name_en": "South Coach Station",
+      "alias": [],
+      "lines": [
+        "km-l1"
+      ]
+    },
+    {
+      "id": "km-012",
+      "name_cn": "斗南",
+      "name_en": "Dounan",
+      "alias": [],
+      "lines": [
+        "km-l1",
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-013",
+      "name_cn": "春融街",
+      "name_en": "Chunrong Street",
+      "alias": [],
+      "lines": [
+        "km-l1"
+      ]
+    },
+    {
+      "id": "km-014",
+      "name_cn": "驼峰街",
+      "name_en": "Tuofeng Street",
+      "alias": [],
+      "lines": [
+        "km-l1"
+      ]
+    },
+    {
+      "id": "km-015",
+      "name_cn": "联大街",
+      "name_en": "Lianda Street",
+      "alias": [],
+      "lines": [
+        "km-l1",
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-016",
+      "name_cn": "谊康南路",
+      "name_en": "Yikang South Road",
+      "alias": [],
+      "lines": [
+        "km-l1"
+      ]
+    },
+    {
+      "id": "km-017",
+      "name_cn": "大学城",
+      "name_en": "University Town",
+      "alias": [],
+      "lines": [
+        "km-l1"
+      ]
+    },
+    {
+      "id": "km-018",
+      "name_cn": "大学城南",
+      "name_en": "University Town South",
+      "alias": [],
+      "lines": [
+        "km-l1"
+      ]
+    },
+    {
+      "id": "km-019",
+      "name_cn": "市级行政中心",
+      "name_en": "City Administration Center",
+      "alias": [],
+      "lines": [
+        "km-l1"
+      ]
+    },
+    {
+      "id": "km-020",
+      "name_cn": "宜和路",
+      "name_en": "Yihe Road",
+      "alias": [],
+      "lines": [
+        "km-l1"
+      ]
+    },
+    {
+      "id": "km-021",
+      "name_cn": "白龙潭",
+      "name_en": "Bailongtan",
+      "alias": [],
+      "lines": [
+        "km-l1"
+      ]
+    },
+    {
+      "id": "km-022",
+      "name_cn": "昆明南火车站",
+      "name_en": "Kunming South Railway Station",
+      "alias": [],
+      "lines": [
+        "km-l1",
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-023",
+      "name_cn": "北部汽车站",
+      "name_en": "North Coach Station",
+      "alias": [],
+      "lines": [
+        "km-l2"
+      ]
+    },
+    {
+      "id": "km-024",
+      "name_cn": "龙头街",
+      "name_en": "Longtou Street",
+      "alias": [],
+      "lines": [
+        "km-l2"
+      ]
+    },
+    {
+      "id": "km-025",
+      "name_cn": "司家营",
+      "name_en": "Sijiaying",
+      "alias": [],
+      "lines": [
+        "km-l2"
+      ]
+    },
+    {
+      "id": "km-026",
+      "name_cn": "羊肠村",
+      "name_en": "Yangchangcun",
+      "alias": [],
+      "lines": [
+        "km-l2"
+      ]
+    },
+    {
+      "id": "km-027",
+      "name_cn": "霖雨桥",
+      "name_en": "Linyuqiao",
+      "alias": [],
+      "lines": [
+        "km-l2"
+      ]
+    },
+    {
+      "id": "km-028",
+      "name_cn": "北辰",
+      "name_en": "Beichen",
+      "alias": [],
+      "lines": [
+        "km-l2"
+      ]
+    },
+    {
+      "id": "km-029",
+      "name_cn": "金星",
+      "name_en": "Jinxing",
+      "alias": [],
+      "lines": [
+        "km-l2"
+      ]
+    },
+    {
+      "id": "km-030",
+      "name_cn": "白云路",
+      "name_en": "Baiyun Road",
+      "alias": [],
+      "lines": [
+        "km-l2"
+      ]
+    },
+    {
+      "id": "km-031",
+      "name_cn": "火车北站",
+      "name_en": "North Railway Station",
+      "alias": [],
+      "lines": [
+        "km-l2",
+        "km-l4",
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-032",
+      "name_cn": "穿心鼓楼",
+      "name_en": "Chuanxingulou",
+      "alias": [],
+      "lines": [
+        "km-l2"
+      ]
+    },
+    {
+      "id": "km-033",
+      "name_cn": "交三桥",
+      "name_en": "Jiaosanqiao",
+      "alias": [],
+      "lines": [
+        "km-l2"
+      ]
+    },
+    {
+      "id": "km-034",
+      "name_cn": "东风广场",
+      "name_en": "Dongfeng Square",
+      "alias": [],
+      "lines": [
+        "km-l2",
+        "km-l3"
+      ]
+    },
+    {
+      "id": "km-035",
+      "name_cn": "塘子巷",
+      "name_en": "Tangzixiang",
+      "alias": [],
+      "lines": [
+        "km-l2",
+        "km-l6"
+      ]
+    },
+    {
+      "id": "km-036",
+      "name_cn": "西山公园",
+      "name_en": "Western Hill Park",
+      "alias": [],
+      "lines": [
+        "km-l3"
+      ]
+    },
+    {
+      "id": "km-037",
+      "name_cn": "车家壁",
+      "name_en": "Chejiabi",
+      "alias": [],
+      "lines": [
+        "km-l3"
+      ]
+    },
+    {
+      "id": "km-038",
+      "name_cn": "普坪村",
+      "name_en": "Pupingcun",
+      "alias": [],
+      "lines": [
+        "km-l3"
+      ]
+    },
+    {
+      "id": "km-039",
+      "name_cn": "石咀",
+      "name_en": "Shiju",
+      "alias": [],
+      "lines": [
+        "km-l3"
+      ]
+    },
+    {
+      "id": "km-040",
+      "name_cn": "大渔路",
+      "name_en": "Dayu Road",
+      "alias": [],
+      "lines": [
+        "km-l3"
+      ]
+    },
+    {
+      "id": "km-041",
+      "name_cn": "西部汽车站",
+      "name_en": "West Coach Station",
+      "alias": [],
+      "lines": [
+        "km-l3"
+      ]
+    },
+    {
+      "id": "km-042",
+      "name_cn": "眠山",
+      "name_en": "Mianshan",
+      "alias": [],
+      "lines": [
+        "km-l3"
+      ]
+    },
+    {
+      "id": "km-043",
+      "name_cn": "昌源中路",
+      "name_en": "Changyuan Central Road",
+      "alias": [],
+      "lines": [
+        "km-l3"
+      ]
+    },
+    {
+      "id": "km-044",
+      "name_cn": "西苑",
+      "name_en": "Xiyuan",
+      "alias": [],
+      "lines": [
+        "km-l3"
+      ]
+    },
+    {
+      "id": "km-045",
+      "name_cn": "梁家河",
+      "name_en": "Liangjiahe",
+      "alias": [],
+      "lines": [
+        "km-l3"
+      ]
+    },
+    {
+      "id": "km-046",
+      "name_cn": "市体育馆",
+      "name_en": "Municipal Gymnasium",
+      "alias": [],
+      "lines": [
+        "km-l3"
+      ]
+    },
+    {
+      "id": "km-047",
+      "name_cn": "潘家湾",
+      "name_en": "Panjiawan",
+      "alias": [],
+      "lines": [
+        "km-l3"
+      ]
+    },
+    {
+      "id": "km-048",
+      "name_cn": "五一路",
+      "name_en": "Wuyi Road",
+      "alias": [],
+      "lines": [
+        "km-l3",
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-049",
+      "name_cn": "拓东体育馆",
+      "name_en": "Tuodong Stadium",
+      "alias": [],
+      "lines": [
+        "km-l3"
+      ]
+    },
+    {
+      "id": "km-050",
+      "name_cn": "大树营",
+      "name_en": "Dashuying",
+      "alias": [],
+      "lines": [
+        "km-l3",
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-051",
+      "name_cn": "金马寺",
+      "name_en": "Jinmasi",
+      "alias": [],
+      "lines": [
+        "km-l3"
+      ]
+    },
+    {
+      "id": "km-052",
+      "name_cn": "太平村",
+      "name_en": "Taipingcun",
+      "alias": [],
+      "lines": [
+        "km-l3"
+      ]
+    },
+    {
+      "id": "km-053",
+      "name_cn": "虹桥",
+      "name_en": "Hongqiao",
+      "alias": [],
+      "lines": [
+        "km-l3"
+      ]
+    },
+    {
+      "id": "km-054",
+      "name_cn": "东部汽车站",
+      "name_en": "East Coach Station",
+      "alias": [],
+      "lines": [
+        "km-l3",
+        "km-l6"
+      ]
+    },
+    {
+      "id": "km-055",
+      "name_cn": "金川路",
+      "name_en": "Jinchuan Road",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-056",
+      "name_cn": "大河埂",
+      "name_en": "Dahegeng",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-057",
+      "name_cn": "海屯路",
+      "name_en": "Haitun Road",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-058",
+      "name_cn": "小屯",
+      "name_en": "Xiaotun",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-059",
+      "name_cn": "金鼎山北路",
+      "name_en": "Jindingshan North Road",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-060",
+      "name_cn": "苏家塘",
+      "name_en": "Sujiatang",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-061",
+      "name_cn": "小菜园",
+      "name_en": "Xiaocaiyuan",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-062",
+      "name_cn": "白龙路",
+      "name_en": "Bailong Road",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-063",
+      "name_cn": "菊花村",
+      "name_en": "Juhuacun",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-064",
+      "name_cn": "菊华",
+      "name_en": "Juhua",
+      "alias": [],
+      "lines": [
+        "km-l4",
+        "km-l6"
+      ]
+    },
+    {
+      "id": "km-065",
+      "name_cn": "和甸营",
+      "name_en": "Hedianying",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-066",
+      "name_cn": "牛街庄",
+      "name_en": "Niujiezhuang",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-067",
+      "name_cn": "朱家村",
+      "name_en": "Zhujiacun",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-068",
+      "name_cn": "羊甫头",
+      "name_en": "Yangfutou",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-069",
+      "name_cn": "玉缘路",
+      "name_en": "Yuyuan Road",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-070",
+      "name_cn": "广卫",
+      "name_en": "Guangwei",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-071",
+      "name_cn": "塔密",
+      "name_en": "Tami",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-072",
+      "name_cn": "金桂街",
+      "name_en": "Jingui Street",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-073",
+      "name_cn": "梅子村",
+      "name_en": "Meizicun",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-074",
+      "name_cn": "古城",
+      "name_en": "Gucheng",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-075",
+      "name_cn": "可乐村",
+      "name_en": "Kelecun",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-076",
+      "name_cn": "祥丰街",
+      "name_en": "Xiangfeng Street",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-077",
+      "name_cn": "牛头山",
+      "name_en": "Niutoushan",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-078",
+      "name_cn": "吴家营",
+      "name_en": "Wujiaying",
+      "alias": [],
+      "lines": [
+        "km-l4"
+      ]
+    },
+    {
+      "id": "km-079",
+      "name_cn": "世博园",
+      "name_en": "World Horti-Expo Garden",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-080",
+      "name_cn": "白龙寺",
+      "name_en": "Bailongsi",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-081",
+      "name_cn": "石闸",
+      "name_en": "Shizha",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-082",
+      "name_cn": "穿金路",
+      "name_en": "Chuanjin Road",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-083",
+      "name_cn": "圆通山",
+      "name_en": "Yuantong Hill",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-084",
+      "name_cn": "华山西路",
+      "name_en": "Huashan West Road",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-085",
+      "name_cn": "弥勒寺",
+      "name_en": "Milesi",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-086",
+      "name_cn": "严家地",
+      "name_en": "Yanjiadi",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-087",
+      "name_cn": "金兰路",
+      "name_en": "Jinlan Road",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-088",
+      "name_cn": "福海",
+      "name_en": "Fuhai",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-089",
+      "name_cn": "广福路西口",
+      "name_en": "Guangfulu Xikou",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-090",
+      "name_cn": "大坝",
+      "name_en": "Daba",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-091",
+      "name_cn": "迎海路",
+      "name_en": "Yinghai Road",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-092",
+      "name_cn": "渔户村",
+      "name_en": "Yuhu Cun",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-093",
+      "name_cn": "兴体路",
+      "name_en": "Xingti Road",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-094",
+      "name_cn": "庄家塘立交桥",
+      "name_en": "Zhuangjiatang Overpass",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-095",
+      "name_cn": "金家河",
+      "name_en": "Jinjia River",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-096",
+      "name_cn": "福保",
+      "name_en": "Fubao",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-097",
+      "name_cn": "滇池国际会展中心",
+      "name_en": "Dianchi International Convention and Exhibition Center",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-098",
+      "name_cn": "宝丰",
+      "name_en": "Baofeng",
+      "alias": [],
+      "lines": [
+        "km-l5"
+      ]
+    },
+    {
+      "id": "km-099",
+      "name_cn": "岔街",
+      "name_en": "Chajie",
+      "alias": [],
+      "lines": [
+        "km-l6"
+      ]
+    },
+    {
+      "id": "km-100",
+      "name_cn": "东郊路",
+      "name_en": "Dongjiao Road",
+      "alias": [],
+      "lines": [
+        "km-l6"
+      ]
+    },
+    {
+      "id": "km-101",
+      "name_cn": "大板桥",
+      "name_en": "Dabanqiao",
+      "alias": [],
+      "lines": [
+        "km-l6"
+      ]
+    },
+    {
+      "id": "km-102",
+      "name_cn": "机场前",
+      "name_en": "Airport Front",
+      "alias": [],
+      "lines": [
+        "km-l6"
+      ]
+    },
+    {
+      "id": "km-103",
+      "name_cn": "机场中心",
+      "name_en": "Kunming Airport",
+      "alias": [],
+      "lines": [
+        "km-l6"
+      ]
+    }
+  ],
+  "seed_answers": [
+    {
+      "station": "km-031",
+      "from_line": "km-l2",
+      "from_dir": "开往环城南路",
+      "to_line": "km-l4",
+      "to_dir": "开往昆明南火车站",
+      "author_email": "kunming@example.com",
+      "author_nick": "昆明通勤",
+      "anon": true,
+      "position_type": "car",
+      "car_number": 3,
+      "description": "2号线往环城南路方向坐第3节车厢，下车后顺着人流直走就是4号线往昆明南火车站的换乘通道，比从车头绕站厅少走一半。",
+      "likes": 15,
+      "dislikes": 1,
+      "version": 1,
+      "days_ago": 5,
+      "comments": [
+        {
+          "nick": "匿名",
+          "days_ago": 3,
+          "text": "火车北站是昆明唯一的三线换乘站，2、4、5号线的指示牌在同一根柱子上，看清线路号再拐弯。"
+        }
+      ]
+    }
+  ]
+}

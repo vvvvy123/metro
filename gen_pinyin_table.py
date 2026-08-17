@@ -56,9 +56,14 @@ TONES = str.maketrans("āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜüêĕě�
 # data/*.json (see the mismatch list this table was derived from):
 #   长福路 Changfulu, 红土地 Hongtudi, 石佛 Shifo, 广都 Guangdu, 重光 Chongguang,
 #   小什字 Xiaoshizi, 曾家岩 Zengjiayan, 茄子溪 Qiezixi, 龙爪堰 Longzhuayan, 厦门 Xiamen
+# 长 and 厦 are the only two whose Traditional form is a SEPARATE character, and
+# 台北/香港 brought both into the corpus (the other eight are unified). Unihan
+# reads them zhang / sha, which is wrong for every occurrence in data/*.json:
+#   長沙灣 Cheung Sha Wan, 長庚醫院 Chang Gung, 長壽山 Changshoushan, 機場第一航廈
 OVERRIDE = {
     "长": "chang", "地": "di", "佛": "fo", "都": "du", "重": "chong",
     "什": "shi", "曾": "zeng", "茄": "qie", "爪": "zhua", "厦": "xia",
+    "長": "chang", "廈": "xia",
 }
 
 

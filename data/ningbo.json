@@ -1,0 +1,1692 @@
+{
+  "city": {
+    "id": "ningbo",
+    "country_id": "cn",
+    "country_cn": "中国",
+    "country_en": "China",
+    "name_cn": "宁波",
+    "name_en": "Ningbo",
+    "alias": [
+      "ningbo",
+      "nb",
+      "宁波市",
+      "甬"
+    ],
+    "timezone": "Asia/Shanghai"
+  },
+  "system": {
+    "id": "ningbo-rail-transit",
+    "name_cn": "宁波轨道交通",
+    "name_en": "Ningbo Rail Transit"
+  },
+  "lines": [
+    {
+      "id": "nb-l1",
+      "name": "1号线",
+      "name_en": "Line 1",
+      "color": "#138FC9",
+      "directions": [
+        "开往霞浦",
+        "开往高桥西"
+      ]
+    },
+    {
+      "id": "nb-l2",
+      "name": "2号线",
+      "name_en": "Line 2",
+      "color": "#D60B17",
+      "directions": [
+        "开往红联",
+        "开往栎社国际机场"
+      ]
+    },
+    {
+      "id": "nb-l3",
+      "name": "3号线",
+      "name_en": "Line 3",
+      "color": "#EAAE1A",
+      "directions": [
+        "开往金海路",
+        "开往大通桥"
+      ]
+    },
+    {
+      "id": "nb-l4",
+      "name": "4号线",
+      "name_en": "Line 4",
+      "color": "#80B82B",
+      "directions": [
+        "开往国际会议中心",
+        "开往慈城西"
+      ]
+    },
+    {
+      "id": "nb-l5",
+      "name": "5号线",
+      "name_en": "Line 5",
+      "color": "#091F8F",
+      "directions": [
+        "开往骆驼桥",
+        "开往布政"
+      ]
+    },
+    {
+      "id": "nb-l6",
+      "name": "6号线",
+      "name_en": "Line 6",
+      "color": "#007229",
+      "directions": [
+        "开往红联",
+        "开往古林"
+      ]
+    },
+    {
+      "id": "nb-l7",
+      "name": "7号线",
+      "name_en": "Line 7",
+      "color": "#855622",
+      "directions": [
+        "开往俞范",
+        "开往云龙"
+      ]
+    },
+    {
+      "id": "nb-l8",
+      "name": "8号线",
+      "name_en": "Line 8",
+      "color": "#E61477",
+      "directions": [
+        "开往寒松路",
+        "开往开元路"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "nb-001",
+      "name_cn": "高桥西",
+      "name_en": "Gaoqiao West",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-002",
+      "name_cn": "高桥",
+      "name_en": "Gaoqiao",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-003",
+      "name_cn": "梁祝",
+      "name_en": "Liangzhu",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-004",
+      "name_cn": "芦港",
+      "name_en": "Lugang",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-005",
+      "name_cn": "徐家漕长乐",
+      "name_en": "Xujiacao Changle",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-006",
+      "name_cn": "望春桥",
+      "name_en": "Wangchun Bridge",
+      "alias": [],
+      "lines": [
+        "nb-l1",
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-007",
+      "name_cn": "泽民",
+      "name_en": "Zemin",
+      "alias": [],
+      "lines": [
+        "nb-l1",
+        "nb-l8"
+      ]
+    },
+    {
+      "id": "nb-008",
+      "name_cn": "大卿桥",
+      "name_en": "Daqing Bridge",
+      "alias": [],
+      "lines": [
+        "nb-l1",
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-009",
+      "name_cn": "西门口",
+      "name_en": "Ximenkou",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-010",
+      "name_cn": "鼓楼",
+      "name_en": "Gulou",
+      "alias": [],
+      "lines": [
+        "nb-l1",
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-011",
+      "name_cn": "东门口(天一广场)",
+      "name_en": "Dongmenkou (Tianyi Square)",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-012",
+      "name_cn": "江厦桥东",
+      "name_en": "Jiangxia Bridge East",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-013",
+      "name_cn": "舟孟北路",
+      "name_en": "Zhoumeng North Road",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-014",
+      "name_cn": "樱花公园",
+      "name_en": "Sakura Park",
+      "alias": [],
+      "lines": [
+        "nb-l1",
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-015",
+      "name_cn": "福明路",
+      "name_en": "Fuming Road",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-016",
+      "name_cn": "世纪大道",
+      "name_en": "Shiji Avenue",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-017",
+      "name_cn": "海晏北路",
+      "name_en": "Haiyan North Road",
+      "alias": [],
+      "lines": [
+        "nb-l1",
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-018",
+      "name_cn": "福庆北路",
+      "name_en": "Fuqing North Road",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-019",
+      "name_cn": "盛莫路",
+      "name_en": "Shengmo Road",
+      "alias": [],
+      "lines": [
+        "nb-l1",
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-020",
+      "name_cn": "东环南路",
+      "name_en": "Donghuan South Road",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-021",
+      "name_cn": "邱隘东",
+      "name_en": "Qiuga East",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-022",
+      "name_cn": "五乡",
+      "name_en": "Wuxiang",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-023",
+      "name_cn": "宝幢",
+      "name_en": "Baozhuang",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-024",
+      "name_cn": "邬隘",
+      "name_en": "Wuga",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-025",
+      "name_cn": "大碶",
+      "name_en": "Daqi",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-026",
+      "name_cn": "松花江路",
+      "name_en": "Songhuajiang Road",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-027",
+      "name_cn": "中河路",
+      "name_en": "Zhonghe Road",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-028",
+      "name_cn": "长江路",
+      "name_en": "Changjiang Road",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-029",
+      "name_cn": "霞浦",
+      "name_en": "Xiapu",
+      "alias": [],
+      "lines": [
+        "nb-l1"
+      ]
+    },
+    {
+      "id": "nb-030",
+      "name_cn": "栎社国际机场",
+      "name_en": "Lishe International Airport",
+      "alias": [],
+      "lines": [
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-031",
+      "name_cn": "栎社",
+      "name_en": "Lishe",
+      "alias": [],
+      "lines": [
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-032",
+      "name_cn": "鄞州大道",
+      "name_en": "Yinzhou Avenue",
+      "alias": [],
+      "lines": [
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-033",
+      "name_cn": "石碶",
+      "name_en": "Shiqi",
+      "alias": [],
+      "lines": [
+        "nb-l2",
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-034",
+      "name_cn": "轻纺城",
+      "name_en": "Qingfangcheng",
+      "alias": [],
+      "lines": [
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-035",
+      "name_cn": "藕池",
+      "name_en": "Ouchi",
+      "alias": [],
+      "lines": [
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-036",
+      "name_cn": "客运中心",
+      "name_en": "Coach Terminal",
+      "alias": [],
+      "lines": [
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-037",
+      "name_cn": "丽园南路",
+      "name_en": "Liyuan South Road",
+      "alias": [],
+      "lines": [
+        "nb-l2",
+        "nb-l8"
+      ]
+    },
+    {
+      "id": "nb-038",
+      "name_cn": "云霞路",
+      "name_en": "Yunxia Road",
+      "alias": [],
+      "lines": [
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-039",
+      "name_cn": "宁波火车站",
+      "name_en": "Ningbo Railway Station",
+      "alias": [],
+      "lines": [
+        "nb-l2",
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-040",
+      "name_cn": "城隍庙",
+      "name_en": "Chenghuangmiao",
+      "alias": [],
+      "lines": [
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-041",
+      "name_cn": "外滩大桥",
+      "name_en": "Waitan Bridge",
+      "alias": [],
+      "lines": [
+        "nb-l2",
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-042",
+      "name_cn": "正大路",
+      "name_en": "Zhengda Road",
+      "alias": [],
+      "lines": [
+        "nb-l2",
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-043",
+      "name_cn": "倪家堰",
+      "name_en": "Nijiayan",
+      "alias": [],
+      "lines": [
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-044",
+      "name_cn": "压赛堰",
+      "name_en": "Yasaiyan",
+      "alias": [],
+      "lines": [
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-045",
+      "name_cn": "大通桥",
+      "name_en": "Datong Bridge",
+      "alias": [],
+      "lines": [
+        "nb-l2",
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-046",
+      "name_cn": "孔浦",
+      "name_en": "Kongpu",
+      "alias": [],
+      "lines": [
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-047",
+      "name_cn": "路林",
+      "name_en": "Lulin",
+      "alias": [],
+      "lines": [
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-048",
+      "name_cn": "三官堂",
+      "name_en": "Sanguantang",
+      "alias": [],
+      "lines": [
+        "nb-l2",
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-049",
+      "name_cn": "宁波大学",
+      "name_en": "Ningbo University",
+      "alias": [],
+      "lines": [
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-050",
+      "name_cn": "清水浦",
+      "name_en": "Qingshuipu",
+      "alias": [],
+      "lines": [
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-051",
+      "name_cn": "五里牌",
+      "name_en": "Wulipai",
+      "alias": [],
+      "lines": [
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-052",
+      "name_cn": "枫园",
+      "name_en": "Fengyuan",
+      "alias": [],
+      "lines": [
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-053",
+      "name_cn": "聪园路",
+      "name_en": "Congyuan Road",
+      "alias": [],
+      "lines": [
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-054",
+      "name_cn": "招宝山",
+      "name_en": "Zhaobaoshan",
+      "alias": [],
+      "lines": [
+        "nb-l2"
+      ]
+    },
+    {
+      "id": "nb-055",
+      "name_cn": "红联",
+      "name_en": "Honglian",
+      "alias": [],
+      "lines": [
+        "nb-l2",
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-056",
+      "name_cn": "中兴大桥南",
+      "name_en": "Zhongxing Bridge South",
+      "alias": [],
+      "lines": [
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-057",
+      "name_cn": "明楼",
+      "name_en": "Minglou",
+      "alias": [],
+      "lines": [
+        "nb-l3",
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-058",
+      "name_cn": "体育馆",
+      "name_en": "Sports Center",
+      "alias": [],
+      "lines": [
+        "nb-l3",
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-059",
+      "name_cn": "儿童公园",
+      "name_en": "Children's Park",
+      "alias": [],
+      "lines": [
+        "nb-l3",
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-060",
+      "name_cn": "仇毕",
+      "name_en": "Qiubi",
+      "alias": [],
+      "lines": [
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-061",
+      "name_cn": "钱湖北路",
+      "name_en": "Qianhu North Road",
+      "alias": [],
+      "lines": [
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-062",
+      "name_cn": "锦寓路",
+      "name_en": "Jinyu Road",
+      "alias": [],
+      "lines": [
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-063",
+      "name_cn": "四明中路",
+      "name_en": "Siming Middle Road",
+      "alias": [],
+      "lines": [
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-064",
+      "name_cn": "鄞州区政府",
+      "name_en": "Yinzhou Government",
+      "alias": [],
+      "lines": [
+        "nb-l3",
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-065",
+      "name_cn": "南部商务区",
+      "name_en": "Southern Business District",
+      "alias": [],
+      "lines": [
+        "nb-l3",
+        "nb-l8"
+      ]
+    },
+    {
+      "id": "nb-066",
+      "name_cn": "鄞州客运总站",
+      "name_en": "Yinzhou Coach Terminal",
+      "alias": [],
+      "lines": [
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-067",
+      "name_cn": "句章路",
+      "name_en": "Gouzhang Road",
+      "alias": [],
+      "lines": [
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-068",
+      "name_cn": "高塘桥",
+      "name_en": "Gaotang Bridge",
+      "alias": [],
+      "lines": [
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-069",
+      "name_cn": "姜山",
+      "name_en": "Jiangshan",
+      "alias": [],
+      "lines": [
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-070",
+      "name_cn": "狮山",
+      "name_en": "Shishan",
+      "alias": [],
+      "lines": [
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-071",
+      "name_cn": "明辉路",
+      "name_en": "Minghui Road",
+      "alias": [],
+      "lines": [
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-072",
+      "name_cn": "朝阳",
+      "name_en": "Chaoyang",
+      "alias": [],
+      "lines": [
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-073",
+      "name_cn": "方桥",
+      "name_en": "Fangqiao",
+      "alias": [],
+      "lines": [
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-074",
+      "name_cn": "璡琳",
+      "name_en": "Jinlin",
+      "alias": [],
+      "lines": [
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-075",
+      "name_cn": "南渡",
+      "name_en": "Nandu",
+      "alias": [],
+      "lines": [
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-076",
+      "name_cn": "大成东路",
+      "name_en": "Dacheng East Road",
+      "alias": [],
+      "lines": [
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-077",
+      "name_cn": "金海路",
+      "name_en": "Jinhai Road",
+      "alias": [],
+      "lines": [
+        "nb-l3"
+      ]
+    },
+    {
+      "id": "nb-078",
+      "name_cn": "慈城西",
+      "name_en": "Cicheng West",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-079",
+      "name_cn": "慈城",
+      "name_en": "Cicheng",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-080",
+      "name_cn": "官山河",
+      "name_en": "Guanshanhe",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-081",
+      "name_cn": "长兴路",
+      "name_en": "Changxing Road",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-082",
+      "name_cn": "金山路",
+      "name_en": "Jinshan Road",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-083",
+      "name_cn": "奥体中心",
+      "name_en": "Olympic Sports Center",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-084",
+      "name_cn": "洪塘中路",
+      "name_en": "Hongtang Middle Road",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-085",
+      "name_cn": "洪大路",
+      "name_en": "Hongda Road",
+      "alias": [],
+      "lines": [
+        "nb-l4",
+        "nb-l8"
+      ]
+    },
+    {
+      "id": "nb-086",
+      "name_cn": "庄桥火车站",
+      "name_en": "Zhuangqiao railway station",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-087",
+      "name_cn": "丽江路",
+      "name_en": "Lijiang Road",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-088",
+      "name_cn": "双东路",
+      "name_en": "Shuangdong Road",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-089",
+      "name_cn": "翠柏里",
+      "name_en": "Cuibaili",
+      "alias": [],
+      "lines": [
+        "nb-l4",
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-090",
+      "name_cn": "柳西",
+      "name_en": "Liuxi",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-091",
+      "name_cn": "兴宁桥西",
+      "name_en": "Xingning Bridge West",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-092",
+      "name_cn": "兴宁桥东",
+      "name_en": "Xingning Bridge East",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-093",
+      "name_cn": "白鹤",
+      "name_en": "Baihe",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-094",
+      "name_cn": "矮柳",
+      "name_en": "Ailiu",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-095",
+      "name_cn": "潘火路",
+      "name_en": "Panhuo Road",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-096",
+      "name_cn": "嵩江东路",
+      "name_en": "Songjiang East Road",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-097",
+      "name_cn": "南高教园区",
+      "name_en": "South Higher Education Park",
+      "alias": [],
+      "lines": [
+        "nb-l4",
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-098",
+      "name_cn": "金达南路",
+      "name_en": "Jinda South Road",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-099",
+      "name_cn": "小洋江",
+      "name_en": "Xiaoyangjiang",
+      "alias": [],
+      "lines": [
+        "nb-l4",
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-100",
+      "name_cn": "东钱湖",
+      "name_en": "Dongqian Lake",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-101",
+      "name_cn": "国际会议中心",
+      "name_en": "International Conference Center",
+      "alias": [],
+      "lines": [
+        "nb-l4"
+      ]
+    },
+    {
+      "id": "nb-102",
+      "name_cn": "布政",
+      "name_en": "Buzheng",
+      "alias": [],
+      "lines": [
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-103",
+      "name_cn": "张家潭",
+      "name_en": "Zhangjiatan",
+      "alias": [],
+      "lines": [
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-104",
+      "name_cn": "同德路",
+      "name_en": "Tongde Road",
+      "alias": [],
+      "lines": [
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-105",
+      "name_cn": "雅渡",
+      "name_en": "Yadu",
+      "alias": [],
+      "lines": [
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-106",
+      "name_cn": "庙堰",
+      "name_en": "Miaoyan",
+      "alias": [],
+      "lines": [
+        "nb-l5",
+        "nb-l8"
+      ]
+    },
+    {
+      "id": "nb-107",
+      "name_cn": "钟公庙",
+      "name_en": "Zhonggongmiao",
+      "alias": [],
+      "lines": [
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-108",
+      "name_cn": "钱湖南路",
+      "name_en": "Qianhu South Road",
+      "alias": [],
+      "lines": [
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-109",
+      "name_cn": "下应路",
+      "name_en": "Xiaying Road",
+      "alias": [],
+      "lines": [
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-110",
+      "name_cn": "大洋江",
+      "name_en": "Dayangjiang",
+      "alias": [],
+      "lines": [
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-111",
+      "name_cn": "泗港",
+      "name_en": "Sigang",
+      "alias": [],
+      "lines": [
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-112",
+      "name_cn": "曹隘",
+      "name_en": "Caoga",
+      "alias": [],
+      "lines": [
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-113",
+      "name_cn": "柳隘",
+      "name_en": "Liuga",
+      "alias": [],
+      "lines": [
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-114",
+      "name_cn": "民安东路",
+      "name_en": "Min'an East Road",
+      "alias": [],
+      "lines": [
+        "nb-l5",
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-115",
+      "name_cn": "会展中心",
+      "name_en": "International Convention and Exhibition Center",
+      "alias": [],
+      "lines": [
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-116",
+      "name_cn": "院士路",
+      "name_en": "Yuanshi Road",
+      "alias": [],
+      "lines": [
+        "nb-l5",
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-117",
+      "name_cn": "盎孟港",
+      "name_en": "Angmenggang",
+      "alias": [],
+      "lines": [
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-118",
+      "name_cn": "兴庄路",
+      "name_en": "Xingzhuang Road",
+      "alias": [],
+      "lines": [
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-119",
+      "name_cn": "兴海南路",
+      "name_en": "Xinghai South Road",
+      "alias": [],
+      "lines": [
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-120",
+      "name_cn": "梅堰",
+      "name_en": "Meiyan",
+      "alias": [],
+      "lines": [
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-121",
+      "name_cn": "永茂路",
+      "name_en": "Yongmao Road",
+      "alias": [],
+      "lines": [
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-122",
+      "name_cn": "镇海大道(慈海)",
+      "name_en": "Zhenhai Avenue (Cihai)",
+      "alias": [],
+      "lines": [
+        "nb-l5",
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-123",
+      "name_cn": "骆驼桥",
+      "name_en": "Luotuo Bridge",
+      "alias": [],
+      "lines": [
+        "nb-l5"
+      ]
+    },
+    {
+      "id": "nb-124",
+      "name_cn": "古林",
+      "name_en": "Gulin",
+      "alias": [],
+      "lines": [
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-125",
+      "name_cn": "云林西路",
+      "name_en": "Yunlin West Road",
+      "alias": [],
+      "lines": [
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-126",
+      "name_cn": "集士港",
+      "name_en": "Jishigang",
+      "alias": [],
+      "lines": [
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-127",
+      "name_cn": "汇士路",
+      "name_en": "Huishi Road",
+      "alias": [],
+      "lines": [
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-128",
+      "name_cn": "卖面桥",
+      "name_en": "Maimianqiao",
+      "alias": [],
+      "lines": [
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-129",
+      "name_cn": "宋家漕",
+      "name_en": "Songjiacao",
+      "alias": [],
+      "lines": [
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-130",
+      "name_cn": "市中医院",
+      "name_en": "Ningbo Traditional Chinese Medicine Hospital",
+      "alias": [],
+      "lines": [
+        "nb-l6",
+        "nb-l8"
+      ]
+    },
+    {
+      "id": "nb-131",
+      "name_cn": "新芝路",
+      "name_en": "Xinzhi Road",
+      "alias": [],
+      "lines": [
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-132",
+      "name_cn": "宁波大剧院",
+      "name_en": "Ningbo Grand Theatre",
+      "alias": [],
+      "lines": [
+        "nb-l6",
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-133",
+      "name_cn": "庆丰桥东",
+      "name_en": "Qingfeng Bridge East",
+      "alias": [],
+      "lines": [
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-134",
+      "name_cn": "明珠路",
+      "name_en": "Mingzhu Road",
+      "alias": [],
+      "lines": [
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-135",
+      "name_cn": "沧海北路",
+      "name_en": "Canghai North Road",
+      "alias": [],
+      "lines": [
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-136",
+      "name_cn": "聚贤路",
+      "name_en": "Juxian Road",
+      "alias": [],
+      "lines": [
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-137",
+      "name_cn": "梅墟",
+      "name_en": "Meixu",
+      "alias": [],
+      "lines": [
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-138",
+      "name_cn": "谢墅",
+      "name_en": "Xieshu",
+      "alias": [],
+      "lines": [
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-139",
+      "name_cn": "小港西",
+      "name_en": "Xiaogang West",
+      "alias": [],
+      "lines": [
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-140",
+      "name_cn": "衙前",
+      "name_en": "Yaqian",
+      "alias": [],
+      "lines": [
+        "nb-l6"
+      ]
+    },
+    {
+      "id": "nb-141",
+      "name_cn": "云龙",
+      "name_en": "Yunlong",
+      "alias": [],
+      "lines": [
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-142",
+      "name_cn": "安石路",
+      "name_en": "Anshi Road",
+      "alias": [],
+      "lines": [
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-143",
+      "name_cn": "回龙",
+      "name_en": "Huilong",
+      "alias": [],
+      "lines": [
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-144",
+      "name_cn": "尚德路",
+      "name_en": "Shangde Road",
+      "alias": [],
+      "lines": [
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-145",
+      "name_cn": "邱隘",
+      "name_en": "Qiuga",
+      "alias": [],
+      "lines": [
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-146",
+      "name_cn": "北明程路",
+      "name_en": "Beimingcheng Road",
+      "alias": [],
+      "lines": [
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-147",
+      "name_cn": "新天路",
+      "name_en": "Xintian Road",
+      "alias": [],
+      "lines": [
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-148",
+      "name_cn": "福民公园",
+      "name_en": "Fumin Park",
+      "alias": [],
+      "lines": [
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-149",
+      "name_cn": "曙光",
+      "name_en": "Shuguang",
+      "alias": [],
+      "lines": [
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-150",
+      "name_cn": "湾头",
+      "name_en": "Wantou",
+      "alias": [],
+      "lines": [
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-151",
+      "name_cn": "云飞路(康桥南)",
+      "name_en": "Yunfei Road (Kangqiao South)",
+      "alias": [],
+      "lines": [
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-152",
+      "name_cn": "宁慈东路",
+      "name_en": "Ningci East Road",
+      "alias": [],
+      "lines": [
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-153",
+      "name_cn": "应嘉路",
+      "name_en": "Yingjia Road",
+      "alias": [],
+      "lines": [
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-154",
+      "name_cn": "骆兴",
+      "name_en": "Luoxing",
+      "alias": [],
+      "lines": [
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-155",
+      "name_cn": "镇海市民广场",
+      "name_en": "Zhenhai Citizen Square",
+      "alias": [],
+      "lines": [
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-156",
+      "name_cn": "贵驷",
+      "name_en": "Guisi",
+      "alias": [],
+      "lines": [
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-157",
+      "name_cn": "明海北路",
+      "name_en": "Minghai North Road",
+      "alias": [],
+      "lines": [
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-158",
+      "name_cn": "俞范",
+      "name_en": "Yufan",
+      "alias": [],
+      "lines": [
+        "nb-l7"
+      ]
+    },
+    {
+      "id": "nb-159",
+      "name_cn": "开元路",
+      "name_en": "Kaiyuan Road",
+      "alias": [],
+      "lines": [
+        "nb-l8"
+      ]
+    },
+    {
+      "id": "nb-160",
+      "name_cn": "洪塘",
+      "name_en": "Hongtang",
+      "alias": [],
+      "lines": [
+        "nb-l8"
+      ]
+    },
+    {
+      "id": "nb-161",
+      "name_cn": "洪盛路",
+      "name_en": "Hongsheng Road",
+      "alias": [],
+      "lines": [
+        "nb-l8"
+      ]
+    },
+    {
+      "id": "nb-162",
+      "name_cn": "榭嘉",
+      "name_en": "Xiejia",
+      "alias": [],
+      "lines": [
+        "nb-l8"
+      ]
+    },
+    {
+      "id": "nb-163",
+      "name_cn": "青林湾",
+      "name_en": "Qinglinwan",
+      "alias": [],
+      "lines": [
+        "nb-l8"
+      ]
+    },
+    {
+      "id": "nb-164",
+      "name_cn": "联丰",
+      "name_en": "Lianfeng",
+      "alias": [],
+      "lines": [
+        "nb-l8"
+      ]
+    },
+    {
+      "id": "nb-165",
+      "name_cn": "南苑",
+      "name_en": "Nanyuan",
+      "alias": [],
+      "lines": [
+        "nb-l8"
+      ]
+    },
+    {
+      "id": "nb-166",
+      "name_cn": "段塘",
+      "name_en": "Duantang",
+      "alias": [],
+      "lines": [
+        "nb-l8"
+      ]
+    },
+    {
+      "id": "nb-167",
+      "name_cn": "堇山西路",
+      "name_en": "Jinshan West Road",
+      "alias": [],
+      "lines": [
+        "nb-l8"
+      ]
+    },
+    {
+      "id": "nb-168",
+      "name_cn": "鄞州公园南",
+      "name_en": "Yinzhou Park South",
+      "alias": [],
+      "lines": [
+        "nb-l8"
+      ]
+    },
+    {
+      "id": "nb-169",
+      "name_cn": "学府路",
+      "name_en": "Xuefu Road",
+      "alias": [],
+      "lines": [
+        "nb-l8"
+      ]
+    },
+    {
+      "id": "nb-170",
+      "name_cn": "寒松路",
+      "name_en": "Hansong Road",
+      "alias": [],
+      "lines": [
+        "nb-l8"
+      ]
+    }
+  ],
+  "seed_answers": [
+    {
+      "station": "nb-010",
+      "from_line": "nb-l1",
+      "from_dir": "开往霞浦",
+      "to_line": "nb-l2",
+      "to_dir": "开往红联",
+      "author_email": "ningbo@example.com",
+      "author_nick": "宁波通勤",
+      "anon": true,
+      "position_type": "car",
+      "car_number": 2,
+      "description": "1号线往霞浦方向坐第2节车厢，下车后左手边的楼梯直接下到2号线往红联的月台，不用走到站厅层再折回来。",
+      "likes": 17,
+      "dislikes": 1,
+      "version": 1,
+      "days_ago": 6,
+      "comments": [
+        {
+          "nick": "匿名",
+          "days_ago": 4,
+          "text": "鼓楼站出口通老城步行街，周末人很多，换乘走月台端头那条通道会顺畅得多。"
+        }
+      ]
+    }
+  ]
+}
