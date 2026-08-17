@@ -1,0 +1,1907 @@
+{
+  "city": {
+    "id": "hefei",
+    "country_id": "cn",
+    "country_cn": "中国",
+    "country_en": "China",
+    "name_cn": "合肥",
+    "name_en": "Hefei",
+    "alias": [
+      "hefei",
+      "hf",
+      "合肥市",
+      "庐州"
+    ],
+    "timezone": "Asia/Shanghai"
+  },
+  "system": {
+    "id": "hefei-rail-transit",
+    "name_cn": "合肥轨道交通",
+    "name_en": "Hefei Rail Transit"
+  },
+  "lines": [
+    {
+      "id": "hf-l1",
+      "name": "1号线",
+      "name_en": "Line 1",
+      "color": "#E71F24",
+      "directions": [
+        "开往九联圩",
+        "开往张洼"
+      ]
+    },
+    {
+      "id": "hf-l2",
+      "name": "2号线",
+      "name_en": "Line 2",
+      "color": "#0167B1",
+      "directions": [
+        "开往撮镇",
+        "开往南岗"
+      ]
+    },
+    {
+      "id": "hf-l3",
+      "name": "3号线",
+      "name_en": "Line 3",
+      "color": "#00863E",
+      "directions": [
+        "开往省儿童医院新区",
+        "开往相城路"
+      ]
+    },
+    {
+      "id": "hf-l4",
+      "name": "4号线",
+      "name_en": "Line 4",
+      "color": "#F79826",
+      "directions": [
+        "开往烧脉岗",
+        "开往综保区"
+      ]
+    },
+    {
+      "id": "hf-l5",
+      "name": "5号线",
+      "name_en": "Line 5",
+      "color": "#C0D92E",
+      "directions": [
+        "开往贵阳路",
+        "开往汲桥路"
+      ]
+    },
+    {
+      "id": "hf-l6",
+      "name": "6号线",
+      "name_en": "Line 6",
+      "color": "#C99FCD",
+      "directions": [
+        "开往龙塘",
+        "开往青龙岗"
+      ]
+    },
+    {
+      "id": "hf-l7",
+      "name": "7号线",
+      "name_en": "Line 7",
+      "color": "#F1CC40",
+      "directions": [
+        "开往省文化和非遗馆",
+        "开往翡翠公园"
+      ]
+    },
+    {
+      "id": "hf-l8",
+      "name": "8号线",
+      "name_en": "Line 8",
+      "color": "#64AEE3",
+      "directions": [
+        "开往一里井",
+        "开往北城高铁站"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "hf-001",
+      "name_cn": "张洼",
+      "name_en": "Zhangwa",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-002",
+      "name_cn": "兴华苑",
+      "name_en": "Xinghuayuan",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-003",
+      "name_cn": "瑶海公园",
+      "name_en": "Yaohai Gongyuan",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-004",
+      "name_cn": "合肥火车站",
+      "name_en": "Hefei Railway Station",
+      "alias": [],
+      "lines": [
+        "hf-l1",
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-005",
+      "name_cn": "长淮",
+      "name_en": "Changhuai",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-006",
+      "name_cn": "明光路",
+      "name_en": "Mingguang Lu",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-007",
+      "name_cn": "大东门",
+      "name_en": "Dadongmen",
+      "alias": [],
+      "lines": [
+        "hf-l1",
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-008",
+      "name_cn": "包公园",
+      "name_en": "Baogongyuan",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-009",
+      "name_cn": "合工大南区",
+      "name_en": "Hegongda Nanqu",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-010",
+      "name_cn": "朱岗",
+      "name_en": "Zhugang",
+      "alias": [],
+      "lines": [
+        "hf-l1",
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-011",
+      "name_cn": "秋浦河路",
+      "name_en": "Qiupuhe Lu",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-012",
+      "name_cn": "葛大店",
+      "name_en": "Gedadian",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-013",
+      "name_cn": "望湖城",
+      "name_en": "Wanghucheng",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-014",
+      "name_cn": "合肥南站",
+      "name_en": "Hefeinan Railway Station",
+      "alias": [],
+      "lines": [
+        "hf-l1",
+        "hf-l4",
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-015",
+      "name_cn": "南站南广场",
+      "name_en": "Nanzhan Nanguangchang",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-016",
+      "name_cn": "骆岗",
+      "name_en": "Luogang",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-017",
+      "name_cn": "高王",
+      "name_en": "Gaowang",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-018",
+      "name_cn": "滨湖会展中心",
+      "name_en": "Binhu Huizhan Zhongxin",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-019",
+      "name_cn": "紫庐",
+      "name_en": "Zilu",
+      "alias": [],
+      "lines": [
+        "hf-l1",
+        "hf-l7"
+      ]
+    },
+    {
+      "id": "hf-020",
+      "name_cn": "塘西河公园",
+      "name_en": "Tangxihe Gongyuan",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-021",
+      "name_cn": "金斗公园",
+      "name_en": "Jindou Gongyuan",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-022",
+      "name_cn": "云谷路",
+      "name_en": "Yungu Lu",
+      "alias": [],
+      "lines": [
+        "hf-l1",
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-023",
+      "name_cn": "万达城",
+      "name_en": "Wandacheng",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-024",
+      "name_cn": "万年埠",
+      "name_en": "Wannianbu",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-025",
+      "name_cn": "丙子铺",
+      "name_en": "Bingzipu",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-026",
+      "name_cn": "九联圩",
+      "name_en": "Jiulianwei",
+      "alias": [],
+      "lines": [
+        "hf-l1"
+      ]
+    },
+    {
+      "id": "hf-027",
+      "name_cn": "南岗",
+      "name_en": "Nangang",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-028",
+      "name_cn": "桂庄",
+      "name_en": "Guizhuang",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-029",
+      "name_cn": "汽车西站",
+      "name_en": "Qiche Xizhan",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-030",
+      "name_cn": "振兴路",
+      "name_en": "Zhenxing Lu",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-031",
+      "name_cn": "蜀山西",
+      "name_en": "Shushanxi",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-032",
+      "name_cn": "大蜀山",
+      "name_en": "Dashushan",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-033",
+      "name_cn": "天柱路",
+      "name_en": "Tianzhu Lu",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-034",
+      "name_cn": "科学大道",
+      "name_en": "Kexue Dadao",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-035",
+      "name_cn": "十里庙",
+      "name_en": "Shilimiao",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-036",
+      "name_cn": "西七里塘",
+      "name_en": "Xiqilitang",
+      "alias": [],
+      "lines": [
+        "hf-l2",
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-037",
+      "name_cn": "五里墩",
+      "name_en": "Wulidun",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-038",
+      "name_cn": "三里庵",
+      "name_en": "Sanli'an",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-039",
+      "name_cn": "安农大",
+      "name_en": "Annongda",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-040",
+      "name_cn": "三孝口",
+      "name_en": "Sanxiaokou",
+      "alias": [],
+      "lines": [
+        "hf-l2",
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-041",
+      "name_cn": "四牌楼",
+      "name_en": "Sipailou",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-042",
+      "name_cn": "三里街",
+      "name_en": "Sanlijie",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-043",
+      "name_cn": "东五里井",
+      "name_en": "Dongwulijing",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-044",
+      "name_cn": "东七里",
+      "name_en": "Dongqili",
+      "alias": [],
+      "lines": [
+        "hf-l2",
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-045",
+      "name_cn": "漕冲",
+      "name_en": "Caochong",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-046",
+      "name_cn": "东二十埠",
+      "name_en": "Dong'ershibu",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-047",
+      "name_cn": "龙岗",
+      "name_en": "Longgang",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-048",
+      "name_cn": "王岗",
+      "name_en": "Wanggang",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-049",
+      "name_cn": "三十埠",
+      "name_en": "Sanshibu",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-050",
+      "name_cn": "三十埠东",
+      "name_en": "Sanshibudong",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-051",
+      "name_cn": "祥和",
+      "name_en": "Xianghe",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-052",
+      "name_cn": "桂王",
+      "name_en": "Guiwang",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-053",
+      "name_cn": "对河",
+      "name_en": "Duihe",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-054",
+      "name_cn": "店埠河",
+      "name_en": "Dianbuhe",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-055",
+      "name_cn": "排头",
+      "name_en": "Paitou",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-056",
+      "name_cn": "肥东站",
+      "name_en": "Feidong Railway Station",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-057",
+      "name_cn": "和睦湖",
+      "name_en": "Hemuhu",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-058",
+      "name_cn": "马桥",
+      "name_en": "Maqiao",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-059",
+      "name_cn": "南沙河",
+      "name_en": "Nanshahe",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-060",
+      "name_cn": "撮镇",
+      "name_en": "Cuozhen",
+      "alias": [],
+      "lines": [
+        "hf-l2"
+      ]
+    },
+    {
+      "id": "hf-061",
+      "name_cn": "相城路",
+      "name_en": "Xiangcheng Lu",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-062",
+      "name_cn": "职教城东",
+      "name_en": "Zhijiaochengdong",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-063",
+      "name_cn": "职教城",
+      "name_en": "Zhijiaocheng",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-064",
+      "name_cn": "幼儿师范",
+      "name_en": "You'er Shifan",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-065",
+      "name_cn": "文浍苑",
+      "name_en": "Wenhuiyuan",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-066",
+      "name_cn": "勤劳村",
+      "name_en": "Qinlaocun",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-067",
+      "name_cn": "新海大道",
+      "name_en": "Xinhai Dadao",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-068",
+      "name_cn": "窦桥湾",
+      "name_en": "Douqiaowan",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-069",
+      "name_cn": "方庙",
+      "name_en": "Fangmiao",
+      "alias": [],
+      "lines": [
+        "hf-l3",
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-070",
+      "name_cn": "竹丝滩",
+      "name_en": "Zhusitan",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-071",
+      "name_cn": "鸭林冲",
+      "name_en": "Yalinchong",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-072",
+      "name_cn": "淮南路",
+      "name_en": "Huainan Lu",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-073",
+      "name_cn": "一里井",
+      "name_en": "Yilijing",
+      "alias": [],
+      "lines": [
+        "hf-l3",
+        "hf-l8"
+      ]
+    },
+    {
+      "id": "hf-074",
+      "name_cn": "海棠",
+      "name_en": "Haitang",
+      "alias": [],
+      "lines": [
+        "hf-l3",
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-075",
+      "name_cn": "郑河",
+      "name_en": "Zhenghe",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-076",
+      "name_cn": "四泉桥",
+      "name_en": "Siquanqiao",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-077",
+      "name_cn": "杏花村",
+      "name_en": "Xinghuacun",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-078",
+      "name_cn": "合肥西站",
+      "name_en": "Hefeixi Railway Station",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-079",
+      "name_cn": "南新庄",
+      "name_en": "Nanxinzhuang",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-080",
+      "name_cn": "国防科技大学",
+      "name_en": "Guofang Keji Daxue",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-081",
+      "name_cn": "洪岗",
+      "name_en": "Honggang",
+      "alias": [],
+      "lines": [
+        "hf-l3",
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-082",
+      "name_cn": "市政务中心",
+      "name_en": "Shi Zhengwu Zhongxin",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-083",
+      "name_cn": "合肥大剧院",
+      "name_en": "Hefei Dajuyuan",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-084",
+      "name_cn": "图书馆",
+      "name_en": "Tushuguan",
+      "alias": [],
+      "lines": [
+        "hf-l3",
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-085",
+      "name_cn": "省博物院",
+      "name_en": "Sheng Bowuyuan",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-086",
+      "name_cn": "安医大二附院",
+      "name_en": "Anyida 2 Fuyuan",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-087",
+      "name_cn": "繁华大道",
+      "name_en": "Fanhua Dadao",
+      "alias": [],
+      "lines": [
+        "hf-l3",
+        "hf-l7"
+      ]
+    },
+    {
+      "id": "hf-088",
+      "name_cn": "大学城北",
+      "name_en": "Daxuechengbei",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-089",
+      "name_cn": "工大翡翠湖校区",
+      "name_en": "Gongda Feicuihu Xiaoqu",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-090",
+      "name_cn": "安大磬苑校区",
+      "name_en": "Anda Qingyuan Xiaoqu",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-091",
+      "name_cn": "幸福坝",
+      "name_en": "Xingfuba",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-092",
+      "name_cn": "安医一附院南区",
+      "name_en": "Anyi 1 Fuyuan Nanqu",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-093",
+      "name_cn": "凉亭",
+      "name_en": "Liangting",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-094",
+      "name_cn": "李湾",
+      "name_en": "Liwan",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-095",
+      "name_cn": "四十埠",
+      "name_en": "Sishibu",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-096",
+      "name_cn": "芮祠",
+      "name_en": "Ruici",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-097",
+      "name_cn": "乐平",
+      "name_en": "Leping",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-098",
+      "name_cn": "省儿童医院新区",
+      "name_en": "Sheng Ertong Yiyuan Xinqu",
+      "alias": [],
+      "lines": [
+        "hf-l3"
+      ]
+    },
+    {
+      "id": "hf-099",
+      "name_cn": "综保区",
+      "name_en": "Zongbaoqu",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-100",
+      "name_cn": "安医一附院北区",
+      "name_en": "Anyi 1 Fuyuan Beiqu",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-101",
+      "name_cn": "陶冲湖东",
+      "name_en": "Taochonghudong",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-102",
+      "name_cn": "十里村",
+      "name_en": "Shilicun",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-103",
+      "name_cn": "新海公园",
+      "name_en": "Xinhai Gongyuan",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-104",
+      "name_cn": "站塘",
+      "name_en": "Zhantang",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-105",
+      "name_cn": "唐桥",
+      "name_en": "Tangqiao",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-106",
+      "name_cn": "五里庙",
+      "name_en": "Wulimiao",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-107",
+      "name_cn": "尧渡河路",
+      "name_en": "Yaoduhe Lu",
+      "alias": [],
+      "lines": [
+        "hf-l4",
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-108",
+      "name_cn": "工经学院",
+      "name_en": "Gongjing Xueyuan",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-109",
+      "name_cn": "葛大店南",
+      "name_en": "Gedadiannan",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-110",
+      "name_cn": "望湖城南",
+      "name_en": "Wanghuchengnan",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-111",
+      "name_cn": "淝南",
+      "name_en": "Feinan",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-112",
+      "name_cn": "竹西",
+      "name_en": "Zhuxi",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-113",
+      "name_cn": "薛河",
+      "name_en": "Xuehe",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-114",
+      "name_cn": "南屏路",
+      "name_en": "Nanping Lu",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-115",
+      "name_cn": "姚公庙",
+      "name_en": "Yaogongmiao",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-116",
+      "name_cn": "天鹅湖东",
+      "name_en": "Tian'ehudong",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-117",
+      "name_cn": "天鹅湖",
+      "name_en": "Tian'ehu",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-118",
+      "name_cn": "柳树塘",
+      "name_en": "Liushutang",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-119",
+      "name_cn": "金桂",
+      "name_en": "Jingui",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-120",
+      "name_cn": "玉兰大道",
+      "name_en": "Yulan Dadao",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-121",
+      "name_cn": "北雁湖",
+      "name_en": "Beiyanhu",
+      "alias": [],
+      "lines": [
+        "hf-l4",
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-122",
+      "name_cn": "复兴集",
+      "name_en": "Fuxingji",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-123",
+      "name_cn": "长安集",
+      "name_en": "Chang'anji",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-124",
+      "name_cn": "桃花潭",
+      "name_en": "Taohuatan",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-125",
+      "name_cn": "金小郢",
+      "name_en": "Jinxiaoying",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-126",
+      "name_cn": "铜锣寨路",
+      "name_en": "Tongluozhai Lu",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-127",
+      "name_cn": "魏庄",
+      "name_en": "Weizhuang",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-128",
+      "name_cn": "烧脉岗",
+      "name_en": "Shaomaigang",
+      "alias": [],
+      "lines": [
+        "hf-l4"
+      ]
+    },
+    {
+      "id": "hf-129",
+      "name_cn": "汲桥路",
+      "name_en": "Jiqiao Lu",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-130",
+      "name_cn": "六中菱湖校区",
+      "name_en": "Liuzhong Linghu Xiaoqu",
+      "alias": [],
+      "lines": [
+        "hf-l5",
+        "hf-l8"
+      ]
+    },
+    {
+      "id": "hf-131",
+      "name_cn": "菱湖公园",
+      "name_en": "Linghu Gongyuan",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-132",
+      "name_cn": "北五里井",
+      "name_en": "Beiwulijing",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-133",
+      "name_cn": "白水坝",
+      "name_en": "Baishuiba",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-134",
+      "name_cn": "杏花公园",
+      "name_en": "Xinghua Gongyuan",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-135",
+      "name_cn": "稻香楼",
+      "name_en": "Daoxianglou",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-136",
+      "name_cn": "中国科大东区",
+      "name_en": "Zhongguo Keda Dongqu",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-137",
+      "name_cn": "市第三医院",
+      "name_en": "Shi Di-3 Yiyuan",
+      "alias": [],
+      "lines": [
+        "hf-l5",
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-138",
+      "name_cn": "休宁路",
+      "name_en": "Xiuning Lu",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-139",
+      "name_cn": "凌大塘",
+      "name_en": "Lingdatang",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-140",
+      "name_cn": "望湖城西",
+      "name_en": "Wanghuchengxi",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-141",
+      "name_cn": "盛大",
+      "name_en": "Shengda",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-142",
+      "name_cn": "包河苑",
+      "name_en": "Baoheyuan",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-143",
+      "name_cn": "义兴",
+      "name_en": "Yixing",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-144",
+      "name_cn": "大连路",
+      "name_en": "Dalian Lu",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-145",
+      "name_cn": "花园大道",
+      "name_en": "Huayuan Dadao",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-146",
+      "name_cn": "黄河路",
+      "name_en": "Huanghe Lu",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-147",
+      "name_cn": "扬子江路",
+      "name_en": "Yangzijiang Lu",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-148",
+      "name_cn": "义城",
+      "name_en": "Yicheng",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-149",
+      "name_cn": "省行政中心东",
+      "name_en": "Sheng Xingzheng Zhongxindong",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-150",
+      "name_cn": "方兴湖",
+      "name_en": "Fangxinghu",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-151",
+      "name_cn": "渡江纪念馆",
+      "name_en": "Dujiang Jinianguan",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-152",
+      "name_cn": "沈湾",
+      "name_en": "Shenwan",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-153",
+      "name_cn": "华山路",
+      "name_en": "Huashan Lu",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-154",
+      "name_cn": "清水冲",
+      "name_en": "Qingshuichong",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-155",
+      "name_cn": "云川公园",
+      "name_en": "Yunchuan Gongyuan",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-156",
+      "name_cn": "滨湖竹园",
+      "name_en": "Binhu Zhuyuan",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-157",
+      "name_cn": "贵阳路",
+      "name_en": "Guiyang Lu",
+      "alias": [],
+      "lines": [
+        "hf-l5"
+      ]
+    },
+    {
+      "id": "hf-158",
+      "name_cn": "青龙岗",
+      "name_en": "Qinglonggang",
+      "alias": [],
+      "lines": [
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-159",
+      "name_cn": "合肥七中",
+      "name_en": "Hefei Qizhong",
+      "alias": [],
+      "lines": [
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-160",
+      "name_cn": "量子科学中心",
+      "name_en": "Liangzi Kexue Zhongxin",
+      "alias": [],
+      "lines": [
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-161",
+      "name_cn": "科大先研院",
+      "name_en": "Keda Xianyanyuan",
+      "alias": [],
+      "lines": [
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-162",
+      "name_cn": "开福寺",
+      "name_en": "Kaifusi",
+      "alias": [],
+      "lines": [
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-163",
+      "name_cn": "梦城",
+      "name_en": "Mengcheng",
+      "alias": [],
+      "lines": [
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-164",
+      "name_cn": "松荫桥",
+      "name_en": "Songyinqiao",
+      "alias": [],
+      "lines": [
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-165",
+      "name_cn": "陆军兵种大学",
+      "name_en": "Lujun Bingzhong Daxue",
+      "alias": [],
+      "lines": [
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-166",
+      "name_cn": "南七里",
+      "name_en": "Nanqili",
+      "alias": [],
+      "lines": [
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-167",
+      "name_cn": "卫岗",
+      "name_en": "Weigang",
+      "alias": [],
+      "lines": [
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-168",
+      "name_cn": "唐大楼",
+      "name_en": "Tangdalou",
+      "alias": [],
+      "lines": [
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-169",
+      "name_cn": "市儿童医院",
+      "name_en": "Shi Ertong Yiyuan",
+      "alias": [],
+      "lines": [
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-170",
+      "name_cn": "钢红",
+      "name_en": "Ganghong",
+      "alias": [],
+      "lines": [
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-171",
+      "name_cn": "大兴集",
+      "name_en": "Daxingji",
+      "alias": [],
+      "lines": [
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-172",
+      "name_cn": "伏龙",
+      "name_en": "Fulong",
+      "alias": [],
+      "lines": [
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-173",
+      "name_cn": "龙塘",
+      "name_en": "Longtang",
+      "alias": [],
+      "lines": [
+        "hf-l6"
+      ]
+    },
+    {
+      "id": "hf-174",
+      "name_cn": "翡翠公园",
+      "name_en": "Feicui Gongyuan",
+      "alias": [],
+      "lines": [
+        "hf-l7"
+      ]
+    },
+    {
+      "id": "hf-175",
+      "name_cn": "徽园",
+      "name_en": "Huiyuan",
+      "alias": [],
+      "lines": [
+        "hf-l7"
+      ]
+    },
+    {
+      "id": "hf-176",
+      "name_cn": "明珠广场",
+      "name_en": "Mingzhu Guangchang",
+      "alias": [],
+      "lines": [
+        "hf-l7"
+      ]
+    },
+    {
+      "id": "hf-177",
+      "name_cn": "天都路",
+      "name_en": "Tiandu Lu",
+      "alias": [],
+      "lines": [
+        "hf-l7"
+      ]
+    },
+    {
+      "id": "hf-178",
+      "name_cn": "南艳湖北",
+      "name_en": "Nanyanhubei",
+      "alias": [],
+      "lines": [
+        "hf-l7"
+      ]
+    },
+    {
+      "id": "hf-179",
+      "name_cn": "一六八中学",
+      "name_en": "Yiliuba Zhongxue",
+      "alias": [],
+      "lines": [
+        "hf-l7"
+      ]
+    },
+    {
+      "id": "hf-180",
+      "name_cn": "合肥大学",
+      "name_en": "Hefei Daxue",
+      "alias": [],
+      "lines": [
+        "hf-l7"
+      ]
+    },
+    {
+      "id": "hf-181",
+      "name_cn": "南艳湖南",
+      "name_en": "Nanyanhunan",
+      "alias": [],
+      "lines": [
+        "hf-l7"
+      ]
+    },
+    {
+      "id": "hf-182",
+      "name_cn": "要素大市场",
+      "name_en": "Yaosu Dashichang",
+      "alias": [],
+      "lines": [
+        "hf-l7"
+      ]
+    },
+    {
+      "id": "hf-183",
+      "name_cn": "滨湖医院",
+      "name_en": "Binhu Yiyuan",
+      "alias": [],
+      "lines": [
+        "hf-l7"
+      ]
+    },
+    {
+      "id": "hf-184",
+      "name_cn": "嵩山路",
+      "name_en": "Songshan Lu",
+      "alias": [],
+      "lines": [
+        "hf-l7"
+      ]
+    },
+    {
+      "id": "hf-185",
+      "name_cn": "省文化和非遗馆",
+      "name_en": "Sheng Wenhua He Feiyi Guan",
+      "alias": [],
+      "lines": [
+        "hf-l7"
+      ]
+    },
+    {
+      "id": "hf-186",
+      "name_cn": "北城高铁站",
+      "name_en": "Beicheng High-speed Railway Station",
+      "alias": [],
+      "lines": [
+        "hf-l8"
+      ]
+    },
+    {
+      "id": "hf-187",
+      "name_cn": "省立医院北区",
+      "name_en": "Shengli Yiyuan Beiqu",
+      "alias": [],
+      "lines": [
+        "hf-l8"
+      ]
+    },
+    {
+      "id": "hf-188",
+      "name_cn": "双墩",
+      "name_en": "Shuangdun",
+      "alias": [],
+      "lines": [
+        "hf-l8"
+      ]
+    },
+    {
+      "id": "hf-189",
+      "name_cn": "北城世纪城",
+      "name_en": "Beicheng Shijicheng",
+      "alias": [],
+      "lines": [
+        "hf-l8"
+      ]
+    },
+    {
+      "id": "hf-190",
+      "name_cn": "梅冲湖",
+      "name_en": "Meichonghu",
+      "alias": [],
+      "lines": [
+        "hf-l8"
+      ]
+    },
+    {
+      "id": "hf-191",
+      "name_cn": "金梅路",
+      "name_en": "Jinmei Lu",
+      "alias": [],
+      "lines": [
+        "hf-l8"
+      ]
+    },
+    {
+      "id": "hf-192",
+      "name_cn": "双凤",
+      "name_en": "Shuangfeng",
+      "alias": [],
+      "lines": [
+        "hf-l8"
+      ]
+    },
+    {
+      "id": "hf-193",
+      "name_cn": "荷塘路",
+      "name_en": "Hetang Lu",
+      "alias": [],
+      "lines": [
+        "hf-l8"
+      ]
+    },
+    {
+      "id": "hf-194",
+      "name_cn": "庐阳经开区",
+      "name_en": "Luyang Jingkaiqu",
+      "alias": [],
+      "lines": [
+        "hf-l8"
+      ]
+    },
+    {
+      "id": "hf-195",
+      "name_cn": "杏林",
+      "name_en": "Xinglin",
+      "alias": [],
+      "lines": [
+        "hf-l8"
+      ]
+    }
+  ],
+  "seed_answers": [
+    {
+      "station": "hf-014",
+      "from_line": "hf-l1",
+      "from_dir": "开往九联圩",
+      "to_line": "hf-l5",
+      "to_dir": "开往贵阳路",
+      "author_email": "hefei@example.com",
+      "author_nick": "合肥通勤",
+      "anon": true,
+      "position_type": "car",
+      "car_number": 4,
+      "description": "1号线往九联圩方向坐第4节车厢，下车后直走就是5号线往贵阳路的换乘通道，不用上到站厅再折回来。",
+      "likes": 16,
+      "dislikes": 1,
+      "version": 1,
+      "days_ago": 4,
+      "comments": [
+        {
+          "nick": "匿名",
+          "days_ago": 2,
+          "text": "合肥南站是全网唯一的三线换乘站，1/4/5 三条线的通道分得很开，看清导向牌上的线路号再走。"
+        }
+      ]
+    }
+  ]
+}

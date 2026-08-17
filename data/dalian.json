@@ -1,0 +1,1018 @@
+{
+  "city": {
+    "id": "dalian",
+    "country_id": "cn",
+    "country_cn": "中国",
+    "country_en": "China",
+    "name_cn": "大连",
+    "name_en": "Dalian",
+    "alias": [
+      "dalian",
+      "dl",
+      "大连市"
+    ],
+    "timezone": "Asia/Shanghai"
+  },
+  "system": {
+    "id": "dalian-metro",
+    "name_cn": "大连地铁",
+    "name_en": "Dalian Metro"
+  },
+  "lines": [
+    {
+      "id": "dl-l1",
+      "name": "1号线",
+      "name_en": "Line 1",
+      "color": "#43B02A",
+      "directions": [
+        "开往河口",
+        "开往姚家"
+      ]
+    },
+    {
+      "id": "dl-l2",
+      "name": "2号线",
+      "name_en": "Line 2",
+      "color": "#009CDD",
+      "directions": [
+        "开往海之韵",
+        "开往大连北站"
+      ]
+    },
+    {
+      "id": "dl-l3",
+      "name": "3号线",
+      "name_en": "Line 3",
+      "color": "#D60078",
+      "directions": [
+        "开往金石滩",
+        "开往大连站"
+      ]
+    },
+    {
+      "id": "dl-l5",
+      "name": "5号线",
+      "name_en": "Line 5",
+      "color": "#DA291C",
+      "directions": [
+        "开往后关",
+        "开往虎滩新区"
+      ]
+    },
+    {
+      "id": "dl-l12",
+      "name": "12号线",
+      "name_en": "Line 12",
+      "color": "#4C4298",
+      "directions": [
+        "开往河口",
+        "开往旅顺新港"
+      ]
+    },
+    {
+      "id": "dl-l13",
+      "name": "13号线",
+      "name_en": "Line 13",
+      "color": "#F0C600",
+      "directions": [
+        "开往开发区",
+        "开往普兰店振兴街"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "dl-001",
+      "name_cn": "姚家",
+      "name_en": "Yaojia",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-002",
+      "name_cn": "大连北站",
+      "name_en": "Dalian North Railway Station",
+      "alias": [],
+      "lines": [
+        "dl-l1",
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-003",
+      "name_cn": "华北路",
+      "name_en": "Huabei Road",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-004",
+      "name_cn": "华南北",
+      "name_en": "Hua'nan North",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-005",
+      "name_cn": "华南广场",
+      "name_en": "Hua'nan Square",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-006",
+      "name_cn": "千山路",
+      "name_en": "Qianshan Road",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-007",
+      "name_cn": "松江路",
+      "name_en": "Songjiang Road",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-008",
+      "name_cn": "东纬路",
+      "name_en": "Dongwei Road",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-009",
+      "name_cn": "春柳",
+      "name_en": "Chunliu",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-010",
+      "name_cn": "香工街",
+      "name_en": "Xianggong Street",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-011",
+      "name_cn": "中长街",
+      "name_en": "Zhongchang Street",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-012",
+      "name_cn": "兴工街",
+      "name_en": "Xinggong Street",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-013",
+      "name_cn": "西安路",
+      "name_en": "Xi'an Road",
+      "alias": [],
+      "lines": [
+        "dl-l1",
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-014",
+      "name_cn": "富国街",
+      "name_en": "Fuguo Street",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-015",
+      "name_cn": "会展中心",
+      "name_en": "Convention & Exhibition Center",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-016",
+      "name_cn": "星海广场",
+      "name_en": "Xinghai Square",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-017",
+      "name_cn": "大医二院",
+      "name_en": "2nd Hospital of Dalian Medical University",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-018",
+      "name_cn": "黑石礁",
+      "name_en": "Heishijiao",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-019",
+      "name_cn": "学苑广场",
+      "name_en": "Xueyuan Square",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-020",
+      "name_cn": "海事大学",
+      "name_en": "Dalian Maritime University",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-021",
+      "name_cn": "七贤岭",
+      "name_en": "Qixianling",
+      "alias": [],
+      "lines": [
+        "dl-l1"
+      ]
+    },
+    {
+      "id": "dl-022",
+      "name_cn": "河口",
+      "name_en": "Hekou",
+      "alias": [],
+      "lines": [
+        "dl-l1",
+        "dl-l12"
+      ]
+    },
+    {
+      "id": "dl-023",
+      "name_cn": "南关岭",
+      "name_en": "Nanguanling",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-024",
+      "name_cn": "体育中心",
+      "name_en": "Sports Center",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-025",
+      "name_cn": "卫生中心",
+      "name_en": "Hygiene Center",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-026",
+      "name_cn": "后革",
+      "name_en": "Houge",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-027",
+      "name_cn": "革镇堡",
+      "name_en": "Gezhenpu",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-028",
+      "name_cn": "中革",
+      "name_en": "Zhongge",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-029",
+      "name_cn": "前革",
+      "name_en": "Qiange",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-030",
+      "name_cn": "辛寨子",
+      "name_en": "Xinzhaizi",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-031",
+      "name_cn": "机场",
+      "name_en": "Airport",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-032",
+      "name_cn": "虹港路",
+      "name_en": "Honggang Road",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-033",
+      "name_cn": "虹锦路",
+      "name_en": "Hongjin Road",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-034",
+      "name_cn": "红旗西路",
+      "name_en": "Hongqi West Road",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-035",
+      "name_cn": "湾家",
+      "name_en": "Wanjia",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-036",
+      "name_cn": "马栏广场",
+      "name_en": "Manlan Square",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-037",
+      "name_cn": "辽师大",
+      "name_en": "Liaoning Normal University",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-038",
+      "name_cn": "交通大学",
+      "name_en": "Dalian Jiaotong University",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-039",
+      "name_cn": "联合路",
+      "name_en": "Lianhe Road",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-040",
+      "name_cn": "人民广场",
+      "name_en": "Renmin Square",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-041",
+      "name_cn": "一二九街",
+      "name_en": "Yi'erjiu Street",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-042",
+      "name_cn": "青泥洼桥",
+      "name_en": "Qingniwaqiao",
+      "alias": [],
+      "lines": [
+        "dl-l2",
+        "dl-l5"
+      ]
+    },
+    {
+      "id": "dl-043",
+      "name_cn": "友好广场",
+      "name_en": "Youhao Square",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-044",
+      "name_cn": "中山广场",
+      "name_en": "Zhongshan Square",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-045",
+      "name_cn": "港湾广场",
+      "name_en": "Gangwan Square",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-046",
+      "name_cn": "会议中心",
+      "name_en": "Conference Center",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-047",
+      "name_cn": "东港",
+      "name_en": "Donggang",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-048",
+      "name_cn": "东海",
+      "name_en": "Donghai",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-049",
+      "name_cn": "海之韵",
+      "name_en": "Haizhiyun",
+      "alias": [],
+      "lines": [
+        "dl-l2"
+      ]
+    },
+    {
+      "id": "dl-050",
+      "name_cn": "大连站",
+      "name_en": "Dalian Railway Station",
+      "alias": [],
+      "lines": [
+        "dl-l3",
+        "dl-l5"
+      ]
+    },
+    {
+      "id": "dl-051",
+      "name_cn": "香炉礁",
+      "name_en": "Xianglujiao",
+      "alias": [],
+      "lines": [
+        "dl-l3"
+      ]
+    },
+    {
+      "id": "dl-052",
+      "name_cn": "金家街",
+      "name_en": "Jinjia Street",
+      "alias": [],
+      "lines": [
+        "dl-l3"
+      ]
+    },
+    {
+      "id": "dl-053",
+      "name_cn": "泉水",
+      "name_en": "Quanshui",
+      "alias": [],
+      "lines": [
+        "dl-l3"
+      ]
+    },
+    {
+      "id": "dl-054",
+      "name_cn": "后盐",
+      "name_en": "Houyan",
+      "alias": [],
+      "lines": [
+        "dl-l3",
+        "dl-l5"
+      ]
+    },
+    {
+      "id": "dl-055",
+      "name_cn": "大连湾",
+      "name_en": "Dalian Bay",
+      "alias": [],
+      "lines": [
+        "dl-l3"
+      ]
+    },
+    {
+      "id": "dl-056",
+      "name_cn": "金马路",
+      "name_en": "Jinma Road",
+      "alias": [],
+      "lines": [
+        "dl-l3"
+      ]
+    },
+    {
+      "id": "dl-057",
+      "name_cn": "开发区",
+      "name_en": "Development Zone",
+      "alias": [],
+      "lines": [
+        "dl-l3",
+        "dl-l13"
+      ]
+    },
+    {
+      "id": "dl-058",
+      "name_cn": "保税区",
+      "name_en": "Free Trade Zone",
+      "alias": [],
+      "lines": [
+        "dl-l3"
+      ]
+    },
+    {
+      "id": "dl-059",
+      "name_cn": "双D港",
+      "name_en": "DD Port",
+      "alias": [],
+      "lines": [
+        "dl-l3"
+      ]
+    },
+    {
+      "id": "dl-060",
+      "name_cn": "小窑湾",
+      "name_en": "Xiaoyao Bay",
+      "alias": [],
+      "lines": [
+        "dl-l3"
+      ]
+    },
+    {
+      "id": "dl-061",
+      "name_cn": "金石滩",
+      "name_en": "Jinshitan",
+      "alias": [],
+      "lines": [
+        "dl-l3"
+      ]
+    },
+    {
+      "id": "dl-062",
+      "name_cn": "虎滩新区",
+      "name_en": "Hutan Xinqu",
+      "alias": [],
+      "lines": [
+        "dl-l5"
+      ]
+    },
+    {
+      "id": "dl-063",
+      "name_cn": "虎滩公园",
+      "name_en": "Tigerbeach Park",
+      "alias": [],
+      "lines": [
+        "dl-l5"
+      ]
+    },
+    {
+      "id": "dl-064",
+      "name_cn": "秀月街",
+      "name_en": "Xiuyue Street",
+      "alias": [],
+      "lines": [
+        "dl-l5"
+      ]
+    },
+    {
+      "id": "dl-065",
+      "name_cn": "桃源",
+      "name_en": "Taoyuan",
+      "alias": [],
+      "lines": [
+        "dl-l5"
+      ]
+    },
+    {
+      "id": "dl-066",
+      "name_cn": "青云街",
+      "name_en": "Qingyun Street",
+      "alias": [],
+      "lines": [
+        "dl-l5"
+      ]
+    },
+    {
+      "id": "dl-067",
+      "name_cn": "石葵路",
+      "name_en": "Shikui Road",
+      "alias": [],
+      "lines": [
+        "dl-l5"
+      ]
+    },
+    {
+      "id": "dl-068",
+      "name_cn": "劳动公园",
+      "name_en": "Labor Park",
+      "alias": [],
+      "lines": [
+        "dl-l5"
+      ]
+    },
+    {
+      "id": "dl-069",
+      "name_cn": "梭鱼湾南",
+      "name_en": "Suoyuwan South",
+      "alias": [],
+      "lines": [
+        "dl-l5"
+      ]
+    },
+    {
+      "id": "dl-070",
+      "name_cn": "梭鱼湾",
+      "name_en": "Suoyuwan",
+      "alias": [],
+      "lines": [
+        "dl-l5"
+      ]
+    },
+    {
+      "id": "dl-071",
+      "name_cn": "甘井子街",
+      "name_en": "Ganjingzi Street",
+      "alias": [],
+      "lines": [
+        "dl-l5"
+      ]
+    },
+    {
+      "id": "dl-072",
+      "name_cn": "甘北路",
+      "name_en": "Ganbei Road",
+      "alias": [],
+      "lines": [
+        "dl-l5"
+      ]
+    },
+    {
+      "id": "dl-073",
+      "name_cn": "中华东路",
+      "name_en": "Zhonghua East Road",
+      "alias": [],
+      "lines": [
+        "dl-l5"
+      ]
+    },
+    {
+      "id": "dl-074",
+      "name_cn": "泉水东",
+      "name_en": "Quanshui East",
+      "alias": [],
+      "lines": [
+        "dl-l5"
+      ]
+    },
+    {
+      "id": "dl-075",
+      "name_cn": "龙华路",
+      "name_en": "Longhua Road",
+      "alias": [],
+      "lines": [
+        "dl-l5"
+      ]
+    },
+    {
+      "id": "dl-076",
+      "name_cn": "后关",
+      "name_en": "Houguan",
+      "alias": [],
+      "lines": [
+        "dl-l5"
+      ]
+    },
+    {
+      "id": "dl-077",
+      "name_cn": "旅顺新港",
+      "name_en": "Lushun New Port",
+      "alias": [],
+      "lines": [
+        "dl-l12"
+      ]
+    },
+    {
+      "id": "dl-078",
+      "name_cn": "铁山",
+      "name_en": "Tieshan",
+      "alias": [],
+      "lines": [
+        "dl-l12"
+      ]
+    },
+    {
+      "id": "dl-079",
+      "name_cn": "旅顺",
+      "name_en": "Lushun",
+      "alias": [],
+      "lines": [
+        "dl-l12"
+      ]
+    },
+    {
+      "id": "dl-080",
+      "name_cn": "塔河湾",
+      "name_en": "Tahewan",
+      "alias": [],
+      "lines": [
+        "dl-l12"
+      ]
+    },
+    {
+      "id": "dl-081",
+      "name_cn": "龙王塘",
+      "name_en": "Longwangtang",
+      "alias": [],
+      "lines": [
+        "dl-l12"
+      ]
+    },
+    {
+      "id": "dl-082",
+      "name_cn": "黄泥川",
+      "name_en": "Huangnichuan",
+      "alias": [],
+      "lines": [
+        "dl-l12"
+      ]
+    },
+    {
+      "id": "dl-083",
+      "name_cn": "蔡大岭",
+      "name_en": "Caidaling",
+      "alias": [],
+      "lines": [
+        "dl-l12"
+      ]
+    },
+    {
+      "id": "dl-084",
+      "name_cn": "普兰店振兴街",
+      "name_en": "Pulandian Zhenxing Street",
+      "alias": [],
+      "lines": [
+        "dl-l13"
+      ]
+    },
+    {
+      "id": "dl-085",
+      "name_cn": "普兰店开发区",
+      "name_en": "Pulandian Development Zone",
+      "alias": [],
+      "lines": [
+        "dl-l13"
+      ]
+    },
+    {
+      "id": "dl-086",
+      "name_cn": "海湾高中",
+      "name_en": "Haiwan High School",
+      "alias": [],
+      "lines": [
+        "dl-l13"
+      ]
+    },
+    {
+      "id": "dl-087",
+      "name_cn": "大医三院",
+      "name_en": "The Third Hospital of Dalian Medical University",
+      "alias": [],
+      "lines": [
+        "dl-l13"
+      ]
+    },
+    {
+      "id": "dl-088",
+      "name_cn": "长店堡",
+      "name_en": "Changdianpu",
+      "alias": [],
+      "lines": [
+        "dl-l13"
+      ]
+    },
+    {
+      "id": "dl-089",
+      "name_cn": "石河北海",
+      "name_en": "Shihe Beihai",
+      "alias": [],
+      "lines": [
+        "dl-l13"
+      ]
+    },
+    {
+      "id": "dl-090",
+      "name_cn": "普湾体育场",
+      "name_en": "Puwan Stadium",
+      "alias": [],
+      "lines": [
+        "dl-l13"
+      ]
+    },
+    {
+      "id": "dl-091",
+      "name_cn": "石河黄旗",
+      "name_en": "Shihe Huangqi",
+      "alias": [],
+      "lines": [
+        "dl-l13"
+      ]
+    },
+    {
+      "id": "dl-092",
+      "name_cn": "三十里堡",
+      "name_en": "Sanshilipu",
+      "alias": [],
+      "lines": [
+        "dl-l13"
+      ]
+    },
+    {
+      "id": "dl-093",
+      "name_cn": "二十里堡",
+      "name_en": "Ershilipu",
+      "alias": [],
+      "lines": [
+        "dl-l13"
+      ]
+    },
+    {
+      "id": "dl-094",
+      "name_cn": "十三里",
+      "name_en": "Shisanli",
+      "alias": [],
+      "lines": [
+        "dl-l13"
+      ]
+    },
+    {
+      "id": "dl-095",
+      "name_cn": "九里",
+      "name_en": "Jiuli",
+      "alias": [],
+      "lines": [
+        "dl-l13"
+      ]
+    },
+    {
+      "id": "dl-096",
+      "name_cn": "十九局",
+      "name_en": "19th Bureau",
+      "alias": [],
+      "lines": [
+        "dl-l13"
+      ]
+    },
+    {
+      "id": "dl-097",
+      "name_cn": "和平路",
+      "name_en": "Heping Road",
+      "alias": [],
+      "lines": [
+        "dl-l13"
+      ]
+    },
+    {
+      "id": "dl-098",
+      "name_cn": "东山路",
+      "name_en": "Dongshan Road",
+      "alias": [],
+      "lines": [
+        "dl-l13"
+      ]
+    },
+    {
+      "id": "dl-099",
+      "name_cn": "鸿玮澜山",
+      "name_en": "Phoenix Peak",
+      "alias": [],
+      "lines": [
+        "dl-l13"
+      ]
+    },
+    {
+      "id": "dl-100",
+      "name_cn": "通世泰",
+      "name_en": "Tostem",
+      "alias": [],
+      "lines": [
+        "dl-l13"
+      ]
+    }
+  ],
+  "seed_answers": [
+    {
+      "station": "dl-013",
+      "from_line": "dl-l1",
+      "from_dir": "开往河口",
+      "to_line": "dl-l2",
+      "to_dir": "开往海之韵",
+      "author_email": "dalian@example.com",
+      "author_nick": "大连通勤",
+      "anon": true,
+      "position_type": "car",
+      "car_number": 2,
+      "description": "1号线往河口方向坐第2节车厢，下车后右手边的楼梯直接上到2号线往海之韵的月台，比走站厅层换乘少绕一半路。",
+      "likes": 14,
+      "dislikes": 1,
+      "version": 1,
+      "days_ago": 6,
+      "comments": [
+        {
+          "nick": "匿名",
+          "days_ago": 4,
+          "text": "西安路站连着几个商场，早高峰站厅层人特别多，走月台端头的通道会快不少。"
+        }
+      ]
+    }
+  ]
+}

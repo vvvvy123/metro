@@ -1,0 +1,1178 @@
+{
+  "city": {
+    "id": "changchun",
+    "country_id": "cn",
+    "country_cn": "中国",
+    "country_en": "China",
+    "name_cn": "长春",
+    "name_en": "Changchun",
+    "alias": [
+      "changchun",
+      "cc",
+      "长春市"
+    ],
+    "timezone": "Asia/Shanghai"
+  },
+  "system": {
+    "id": "changchun-rail-transit",
+    "name_cn": "长春轨道交通",
+    "name_en": "Changchun Rail Transit"
+  },
+  "lines": [
+    {
+      "id": "cc-l1",
+      "name": "1号线",
+      "name_en": "Line 1",
+      "color": "#E50011",
+      "directions": [
+        "开往红嘴子",
+        "开往北环城路"
+      ]
+    },
+    {
+      "id": "cc-l2",
+      "name": "2号线",
+      "name_en": "Line 2",
+      "color": "#3B6A96",
+      "directions": [
+        "开往雾开河大街",
+        "开往汽车公园"
+      ]
+    },
+    {
+      "id": "cc-l3",
+      "name": "3号线",
+      "name_en": "Line 3",
+      "color": "#009943",
+      "directions": [
+        "开往长影世纪城",
+        "开往伪满皇宫"
+      ]
+    },
+    {
+      "id": "cc-l4",
+      "name": "4号线",
+      "name_en": "Line 4",
+      "color": "#7D4697",
+      "directions": [
+        "开往天新路",
+        "开往长春站北"
+      ]
+    },
+    {
+      "id": "cc-l6",
+      "name": "6号线",
+      "name_en": "Line 6",
+      "color": "#E88F99",
+      "directions": [
+        "开往长影世纪城",
+        "开往双丰"
+      ]
+    },
+    {
+      "id": "cc-l8",
+      "name": "8号线",
+      "name_en": "Line 8",
+      "color": "#25B7BC",
+      "directions": [
+        "开往广通路",
+        "开往北环城路"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "cc-001",
+      "name_cn": "北环城路",
+      "name_en": "Beihuanchenglu",
+      "alias": [],
+      "lines": [
+        "cc-l1",
+        "cc-l8"
+      ]
+    },
+    {
+      "id": "cc-002",
+      "name_cn": "庆丰路",
+      "name_en": "Qingfeng Lu",
+      "alias": [],
+      "lines": [
+        "cc-l1"
+      ]
+    },
+    {
+      "id": "cc-003",
+      "name_cn": "一匡街",
+      "name_en": "Yikuang Jie",
+      "alias": [],
+      "lines": [
+        "cc-l1"
+      ]
+    },
+    {
+      "id": "cc-004",
+      "name_cn": "长春站北",
+      "name_en": "Changchunzhan Bei",
+      "alias": [],
+      "lines": [
+        "cc-l1",
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-005",
+      "name_cn": "长春站",
+      "name_en": "Changchun Zhan",
+      "alias": [],
+      "lines": [
+        "cc-l1",
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-006",
+      "name_cn": "胜利公园",
+      "name_en": "Shengli Gongyuan",
+      "alias": [],
+      "lines": [
+        "cc-l1"
+      ]
+    },
+    {
+      "id": "cc-007",
+      "name_cn": "人民广场",
+      "name_en": "Renmin Guangchang",
+      "alias": [],
+      "lines": [
+        "cc-l1"
+      ]
+    },
+    {
+      "id": "cc-008",
+      "name_cn": "解放大路",
+      "name_en": "Jiefang Dalu",
+      "alias": [],
+      "lines": [
+        "cc-l1",
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-009",
+      "name_cn": "东北师大",
+      "name_en": "Dongbei Shida",
+      "alias": [],
+      "lines": [
+        "cc-l1"
+      ]
+    },
+    {
+      "id": "cc-010",
+      "name_cn": "工农广场",
+      "name_en": "Gongnong Guangchang",
+      "alias": [],
+      "lines": [
+        "cc-l1"
+      ]
+    },
+    {
+      "id": "cc-011",
+      "name_cn": "繁荣路",
+      "name_en": "Fanrong Lu",
+      "alias": [],
+      "lines": [
+        "cc-l1"
+      ]
+    },
+    {
+      "id": "cc-012",
+      "name_cn": "卫星广场",
+      "name_en": "Weixing Guangchang",
+      "alias": [],
+      "lines": [
+        "cc-l1",
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-013",
+      "name_cn": "市政府",
+      "name_en": "Shizhengfu",
+      "alias": [],
+      "lines": [
+        "cc-l1"
+      ]
+    },
+    {
+      "id": "cc-014",
+      "name_cn": "华庆路",
+      "name_en": "Huaqing Lu",
+      "alias": [],
+      "lines": [
+        "cc-l1",
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-015",
+      "name_cn": "红嘴子",
+      "name_en": "Hongzuizi",
+      "alias": [],
+      "lines": [
+        "cc-l1"
+      ]
+    },
+    {
+      "id": "cc-016",
+      "name_cn": "汽车公园",
+      "name_en": "Qiche Gongyuan",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-017",
+      "name_cn": "捷达大路",
+      "name_en": "Jieda Dalu",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-018",
+      "name_cn": "西湖",
+      "name_en": "Xihu",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-019",
+      "name_cn": "双丰",
+      "name_en": "Shuangfeng",
+      "alias": [],
+      "lines": [
+        "cc-l2",
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-020",
+      "name_cn": "长春西站",
+      "name_en": "Changchunxi Zhan",
+      "alias": [],
+      "lines": [
+        "cc-l2",
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-021",
+      "name_cn": "兴隆堡",
+      "name_en": "Xinglongpu",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-022",
+      "name_cn": "西环城路",
+      "name_en": "Xihuanchenglu",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-023",
+      "name_cn": "和平大街",
+      "name_en": "Heping Dajie",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-024",
+      "name_cn": "万福街",
+      "name_en": "Wanfu Jie",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-025",
+      "name_cn": "景阳广场",
+      "name_en": "Jingyang Guangchang",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-026",
+      "name_cn": "解放桥",
+      "name_en": "Jiefang Qiao",
+      "alias": [],
+      "lines": [
+        "cc-l2",
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-027",
+      "name_cn": "建设广场",
+      "name_en": "Jianshe Guangchang",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-028",
+      "name_cn": "文化广场",
+      "name_en": "Wenhua Guangchang",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-029",
+      "name_cn": "平阳街",
+      "name_en": "Pingyang Jie",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-030",
+      "name_cn": "南关",
+      "name_en": "Nanguan",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-031",
+      "name_cn": "吉林大路",
+      "name_en": "Jilin Dalu",
+      "alias": [],
+      "lines": [
+        "cc-l2",
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-032",
+      "name_cn": "东盛大街",
+      "name_en": "Dongsheng Dajie",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-033",
+      "name_cn": "东环城路",
+      "name_en": "Donghuanchenglu",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-034",
+      "name_cn": "长青",
+      "name_en": "Changqing",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-035",
+      "name_cn": "东方广场",
+      "name_en": "Dongfang Guangchang",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-036",
+      "name_cn": "哈尔滨大街",
+      "name_en": "Ha'erbin Dajie",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-037",
+      "name_cn": "窦家沟",
+      "name_en": "Doujiagou",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-038",
+      "name_cn": "英俊大街",
+      "name_en": "Yingjun Dajie",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-039",
+      "name_cn": "英凯大街",
+      "name_en": "Yingkai Dajie",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-040",
+      "name_cn": "林溪大街",
+      "name_en": "Linxi Dajie",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-041",
+      "name_cn": "雾开河大街",
+      "name_en": "Wukaihe Dajie",
+      "alias": [],
+      "lines": [
+        "cc-l2"
+      ]
+    },
+    {
+      "id": "cc-042",
+      "name_cn": "伪满皇宫",
+      "name_en": "Weimanhuanggong",
+      "alias": [],
+      "lines": [
+        "cc-l3",
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-043",
+      "name_cn": "东广场",
+      "name_en": "Dongguangchang",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-044",
+      "name_cn": "芙蓉桥",
+      "name_en": "Furong Qiao",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-045",
+      "name_cn": "西安桥",
+      "name_en": "Xi'an Qiao",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-046",
+      "name_cn": "南昌路",
+      "name_en": "Nanchang Lu",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-047",
+      "name_cn": "朝阳桥",
+      "name_en": "Chaoyang Qiao",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-048",
+      "name_cn": "湖西桥",
+      "name_en": "Huxi Qiao",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-049",
+      "name_cn": "宽平桥",
+      "name_en": "Kuanping Qiao",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-050",
+      "name_cn": "抚松路",
+      "name_en": "Fusong Lu",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-051",
+      "name_cn": "孟家屯",
+      "name_en": "Mengjiatun",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-052",
+      "name_cn": "湖光路",
+      "name_en": "Huguang Lu",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-053",
+      "name_cn": "电台街",
+      "name_en": "Diantai Jie",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-054",
+      "name_cn": "前进西",
+      "name_en": "Qianjinxi",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-055",
+      "name_cn": "前进大街",
+      "name_en": "Qianjin Dajie",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-056",
+      "name_cn": "卫明街",
+      "name_en": "Weiming Jie",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-057",
+      "name_cn": "卫光街",
+      "name_en": "Weiguang Jie",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-058",
+      "name_cn": "亚泰立交桥",
+      "name_en": "Yatai Lijiaoqiao",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-059",
+      "name_cn": "伊通河",
+      "name_en": "Yitong He",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-060",
+      "name_cn": "职业学院",
+      "name_en": "Zhiye Xueyuan",
+      "alias": [],
+      "lines": [
+        "cc-l3",
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-061",
+      "name_cn": "吉林广电",
+      "name_en": "Jilin Guangdian",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-062",
+      "name_cn": "会展中心",
+      "name_en": "Huizhan Zhongxin",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-063",
+      "name_cn": "世纪广场",
+      "name_en": "Shiji Guangchang",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-064",
+      "name_cn": "金鑫街",
+      "name_en": "Jinxin Jie",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-065",
+      "name_cn": "博硕路",
+      "name_en": "Boshuo Lu",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-066",
+      "name_cn": "金河街",
+      "name_en": "Jinhe Jie",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-067",
+      "name_cn": "农博园",
+      "name_en": "Nongboyuan",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-068",
+      "name_cn": "净月潭公园",
+      "name_en": "Jingyuetan Gongyuan",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-069",
+      "name_cn": "紫杉路",
+      "name_en": "Zishan Lu",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-070",
+      "name_cn": "宝相街",
+      "name_en": "Baoxiang Jie",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-071",
+      "name_cn": "滑雪场",
+      "name_en": "Huaxuechang",
+      "alias": [],
+      "lines": [
+        "cc-l3"
+      ]
+    },
+    {
+      "id": "cc-072",
+      "name_cn": "长影世纪城",
+      "name_en": "Changying Shijicheng",
+      "alias": [],
+      "lines": [
+        "cc-l3",
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-073",
+      "name_cn": "北亚泰大街",
+      "name_en": "Beiyatai Dajie",
+      "alias": [],
+      "lines": [
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-074",
+      "name_cn": "东大桥",
+      "name_en": "Dongdaqiao",
+      "alias": [],
+      "lines": [
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-075",
+      "name_cn": "东新路",
+      "name_en": "Dongxin Lu",
+      "alias": [],
+      "lines": [
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-076",
+      "name_cn": "公平路",
+      "name_en": "Gongping Lu",
+      "alias": [],
+      "lines": [
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-077",
+      "name_cn": "海口路",
+      "name_en": "Haikou Lu",
+      "alias": [],
+      "lines": [
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-078",
+      "name_cn": "浦东路",
+      "name_en": "Pudong Lu",
+      "alias": [],
+      "lines": [
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-079",
+      "name_cn": "威海路",
+      "name_en": "Weihai Lu",
+      "alias": [],
+      "lines": [
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-080",
+      "name_cn": "北海路",
+      "name_en": "Beihai Lu",
+      "alias": [],
+      "lines": [
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-081",
+      "name_cn": "世荣路",
+      "name_en": "Shirong Lu",
+      "alias": [],
+      "lines": [
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-082",
+      "name_cn": "南环城路",
+      "name_en": "Nanhuanchenglu",
+      "alias": [],
+      "lines": [
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-083",
+      "name_cn": "宜盛街",
+      "name_en": "Yisheng Jie",
+      "alias": [],
+      "lines": [
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-084",
+      "name_cn": "天工路",
+      "name_en": "Tiangong Lu",
+      "alias": [],
+      "lines": [
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-085",
+      "name_cn": "福祉大路",
+      "name_en": "Fuzhi Dalu",
+      "alias": [],
+      "lines": [
+        "cc-l4",
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-086",
+      "name_cn": "天青路",
+      "name_en": "Tianqing Lu",
+      "alias": [],
+      "lines": [
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-087",
+      "name_cn": "天普路",
+      "name_en": "Tianpu Lu",
+      "alias": [],
+      "lines": [
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-088",
+      "name_cn": "前十里堡",
+      "name_en": "Qianshilipu",
+      "alias": [],
+      "lines": [
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-089",
+      "name_cn": "天新路",
+      "name_en": "Tianxin Lu",
+      "alias": [],
+      "lines": [
+        "cc-l4"
+      ]
+    },
+    {
+      "id": "cc-090",
+      "name_cn": "腾跃街",
+      "name_en": "Tengyue Jie",
+      "alias": [],
+      "lines": [
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-091",
+      "name_cn": "支农大街",
+      "name_en": "Zhinong Dajie",
+      "alias": [],
+      "lines": [
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-092",
+      "name_cn": "飞跃广场",
+      "name_en": "Feiyue Guangchang",
+      "alias": [],
+      "lines": [
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-093",
+      "name_cn": "欧亚卖场",
+      "name_en": "Ouya Maichang",
+      "alias": [],
+      "lines": [
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-094",
+      "name_cn": "光谷大街",
+      "name_en": "Guanggu Dajie",
+      "alias": [],
+      "lines": [
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-095",
+      "name_cn": "硅谷广场(吉大中心校区)",
+      "name_en": "Guigu Guangchang (Jida Zhongxin Xiaoqu)",
+      "alias": [],
+      "lines": [
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-096",
+      "name_cn": "百花园",
+      "name_en": "Baihuayuan",
+      "alias": [],
+      "lines": [
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-097",
+      "name_cn": "市法院",
+      "name_en": "Shifayuan",
+      "alias": [],
+      "lines": [
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-098",
+      "name_cn": "兰桡湖公园",
+      "name_en": "Lanraohu Gongyuan",
+      "alias": [],
+      "lines": [
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-099",
+      "name_cn": "轨道集团",
+      "name_en": "Guidao Jituan",
+      "alias": [],
+      "lines": [
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-100",
+      "name_cn": "新明街",
+      "name_en": "Xinming Jie",
+      "alias": [],
+      "lines": [
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-101",
+      "name_cn": "南溪湿地公园",
+      "name_en": "Nanxi Shidi Gongyuan",
+      "alias": [],
+      "lines": [
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-102",
+      "name_cn": "吴家店",
+      "name_en": "Wujiadian",
+      "alias": [],
+      "lines": [
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-103",
+      "name_cn": "亚泰足球基地",
+      "name_en": "Yatai Zuqiu Jidi",
+      "alias": [],
+      "lines": [
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-104",
+      "name_cn": "樱花街",
+      "name_en": "Yinghua Jie",
+      "alias": [],
+      "lines": [
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-105",
+      "name_cn": "聚业大街",
+      "name_en": "Juye Dajie",
+      "alias": [],
+      "lines": [
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-106",
+      "name_cn": "省博物院",
+      "name_en": "Shengbowuyuan",
+      "alias": [],
+      "lines": [
+        "cc-l6"
+      ]
+    },
+    {
+      "id": "cc-107",
+      "name_cn": "一二三中学",
+      "name_en": "Yi'ersan Zhongxue",
+      "alias": [],
+      "lines": [
+        "cc-l8"
+      ]
+    },
+    {
+      "id": "cc-108",
+      "name_cn": "小南",
+      "name_en": "Xiaonan",
+      "alias": [],
+      "lines": [
+        "cc-l8"
+      ]
+    },
+    {
+      "id": "cc-109",
+      "name_cn": "小城子街",
+      "name_en": "Xiaochengzi Jie",
+      "alias": [],
+      "lines": [
+        "cc-l8"
+      ]
+    },
+    {
+      "id": "cc-110",
+      "name_cn": "北湖大桥",
+      "name_en": "Beihu Daqiao",
+      "alias": [],
+      "lines": [
+        "cc-l8"
+      ]
+    },
+    {
+      "id": "cc-111",
+      "name_cn": "北湖公园",
+      "name_en": "Beihu Gongyuan",
+      "alias": [],
+      "lines": [
+        "cc-l8"
+      ]
+    },
+    {
+      "id": "cc-112",
+      "name_cn": "和安街",
+      "name_en": "He'an Jie",
+      "alias": [],
+      "lines": [
+        "cc-l8"
+      ]
+    },
+    {
+      "id": "cc-113",
+      "name_cn": "光机路",
+      "name_en": "Guangji Lu",
+      "alias": [],
+      "lines": [
+        "cc-l8"
+      ]
+    },
+    {
+      "id": "cc-114",
+      "name_cn": "大学城路",
+      "name_en": "Daxuecheng Lu",
+      "alias": [],
+      "lines": [
+        "cc-l8"
+      ]
+    },
+    {
+      "id": "cc-115",
+      "name_cn": "地理所",
+      "name_en": "Dilisuo",
+      "alias": [],
+      "lines": [
+        "cc-l8"
+      ]
+    },
+    {
+      "id": "cc-116",
+      "name_cn": "奥林匹克公园",
+      "name_en": "Aolinpike Gongyuan",
+      "alias": [],
+      "lines": [
+        "cc-l8"
+      ]
+    },
+    {
+      "id": "cc-117",
+      "name_cn": "广通路",
+      "name_en": "Guangtong Lu",
+      "alias": [],
+      "lines": [
+        "cc-l8"
+      ]
+    }
+  ],
+  "seed_answers": [
+    {
+      "station": "cc-005",
+      "from_line": "cc-l1",
+      "from_dir": "开往红嘴子",
+      "to_line": "cc-l3",
+      "to_dir": "开往长影世纪城",
+      "author_email": "changchun@example.com",
+      "author_nick": "长春通勤",
+      "anon": true,
+      "position_type": "car",
+      "car_number": 3,
+      "description": "1号线往红嘴子方向坐第3节车厢，下车后跟着轻轨指示牌走，换3号线往长影世纪城不用出站厅绕行。",
+      "likes": 13,
+      "dislikes": 1,
+      "version": 1,
+      "days_ago": 8,
+      "comments": [
+        {
+          "nick": "匿名",
+          "days_ago": 6,
+          "text": "长春站的1号线和3号线一个是地铁一个是轻轨，站台高差比较大，带箱子的话找电梯会省力。"
+        }
+      ]
+    }
+  ]
+}

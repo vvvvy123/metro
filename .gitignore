@@ -10,9 +10,18 @@ metro.db-shm
 .env.*
 !.env.example
 
-# 数据库快照（含设备身份）应放在仓库外，这条只是兜底
+# 数据库快照（含 300 条设备身份）。原先只列举了几种命名，
+# 2026-08-17 发现 metro-verify/metro-before-3cities.db 两条都不匹配 ——
+# 仓库是公开的，任何一次 `git add -A` 就会把设备身份推上去。
+# 因此改为忽略全部 .db：本仓库没有任何需要入库的 .db 文件。
+*.db
 *.bak.db
 metro.pre-*.db
+
+# 一次性核对脚本与基线快照（scratch，不入版本库）
+metro-verify/
+metro-baseline-*/
+metro-db-snapshots/
 
 # Python
 __pycache__/
